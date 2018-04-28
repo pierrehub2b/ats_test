@@ -11,8 +11,9 @@ groups ->
 
 [ats-actions]
 
+comment -> step -> Ce script appelle 4 fois le même sous-script en passant le navigateur sur lequel il doit s'éxécuter en entrée
 subscript -> subscripts.Demofrais [chrome]
 subscript -> subscripts.Demofrais [opera]
 subscript -> subscripts.Demofrais [edge]
 subscript -> subscripts.Demofrais [firefox]
-comment -> step -> Ce script appelle 4 fois le même sous-script en passant le navigateur sur lequel il doit s'éxécuter en entrée
+comment -> script -> Fin de script

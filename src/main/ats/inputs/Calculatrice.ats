@@ -13,4 +13,3 @@ groups -> default
 
 subscript -> subscripts.DemoCalculatrice [assets:///data/browsers.csv]
 comment -> script -> Ce script va cycler sur les quatre principaux navigateurs du marché (Chrome, Firefox, Edge et Opéra)
-comment -> script -> Pour lancer un test commun de démonstration d'un calcul simple suivi de la vérification du résultat
