@@ -1,0 +1,29 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created-at -> 2018-04-07 at 14:11:14
+prerequisite -> 
+description -> 
+groups -> 
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> Select -> $param(0,chrome)
+goto-url -> http://www.agilitest.com/fichiers/test.html
+scroll -> 1550 -> BODY [text =~ (?i).*Calculatrice.*]
+select -> text = Saab -> SELECT [text = Volvo&sp;Saab&sp;Mercedes&sp;Audi] -> FORM [index(1), text = Volvo&sp;Saab&sp;Mercedes&sp;Audi]
+select -> text = Mercedes -> SELECT [text = Volvo&sp;Saab&sp;Mercedes&sp;Audi] -> FORM [index(1), text = Volvo&sp;Saab&sp;Mercedes&sp;Audi]
+select -> text = Audi -> SELECT [text = Volvo&sp;Saab&sp;Mercedes&sp;Audi] -> FORM [index(1), text = Volvo&sp;Saab&sp;Mercedes&sp;Audi]
+select -> text = Saab -> SELECT [text = Volvo&sp;Saab&sp;Mercedes&sp;Audi] -> FORM [index(2), text = Volvo&sp;Saab&sp;Mercedes&sp;Audi]
+scroll -> 25 -> SELECT [text = Volvo&sp;Saab&sp;Mercedes&sp;Audi] -> FORM [index(2), text = Volvo&sp;Saab&sp;Mercedes&sp;Audi]
+select -> text = Mercedes -> SELECT [text = Volvo&sp;Saab&sp;Mercedes&sp;Audi] -> FORM [index(2), text = Volvo&sp;Saab&sp;Mercedes&sp;Audi]
+select -> text = Saab -> SELECT [text = Volvo&sp;Saab&sp;Mercedes&sp;Audi] -> FORM [index(3), text = Volvo&sp;Saab&sp;Mercedes&sp;Audi]
+select -> text = Mercedes -> SELECT [text = Volvo&sp;Saab&sp;Mercedes&sp;Audi] -> FORM [index(3), text = Volvo&sp;Saab&sp;Mercedes&sp;Audi]
+select -> index = 0 -> SELECT [text = Volvo&sp;Saab&sp;Mercedes&sp;Audi] -> FORM [index(4), text = Volvo&sp;Saab&sp;Mercedes&sp;Audi]
+select -> index = 1 -> SELECT [text = Volvo&sp;Saab&sp;Mercedes&sp;Audi] -> FORM [index(4), text = Volvo&sp;Saab&sp;Mercedes&sp;Audi]
+select -> index = 2 -> SELECT [text = Volvo&sp;Saab&sp;Mercedes&sp;Audi] -> FORM [index(4), text = Volvo&sp;Saab&sp;Mercedes&sp;Audi]
+select -> index = 3 -> SELECT [text = Volvo&sp;Saab&sp;Mercedes&sp;Audi] -> FORM [index(4), text = Volvo&sp;Saab&sp;Mercedes&sp;Audi]
+channel-close -> Select

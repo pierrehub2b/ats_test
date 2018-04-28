@@ -1,0 +1,15 @@
+[ats-header]
+
+author -> pc_pierre\huber
+created-at -> 2018-04-27 at 16:03:49
+prerequisite -> 
+description -> 
+groups -> default
+
+[ats-variables]
+
+
+[ats-actions]
+
+subscript -> subscripts.window.WindowManagement [assets:///data/browsers.csv]
+comment -> script -> end of script

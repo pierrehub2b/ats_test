@@ -1,0 +1,30 @@
+[ats-header]
+
+author -> 
+created-at -> 2017-12-13 at 13:29:20
+prerequisite -> 
+description -> 
+groups -> 
+
+[ats-variables]
+
+var -> url -> http://www.agilitest.com/fichiers/test.html
+
+[ats-actions]
+
+goto-url -> $var(url)
+comment -> script -> Ce sous-script reçoit en paramètre les actions de la calculatrice à activer et le résultat attendu qu'il faut vérifier
+
+click -> INPUT [type = button, value = CE]
+comment -> script -> Remise à zéro et saisie de l'opération passée en paramètres
+click -> INPUT [class = calc_btn, value = $param(0)]
+click -> INPUT [type = button, value = $param(1)]
+click -> INPUT [class = calc_btn, value = $param(2)]
+click -> INPUT [type = button, value = &eq;]
+comment -> script -> Récupération du résultat et vérification de l'égalité avec le résultat attendu passé en paramètres
+
+check-property -> value = $param(3) -> INPUT [class = calc_resultat, id = calc_resultat]
+
+[ats-returns]
+
+return -> nope

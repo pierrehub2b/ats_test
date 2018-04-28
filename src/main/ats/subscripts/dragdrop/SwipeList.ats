@@ -1,0 +1,28 @@
+[ats-header]
+
+author -> pc_pierre\huber
+created-at -> 2017-12-16 at 17:28:53
+prerequisite -> 
+description -> 
+groups -> 
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> 1 -> $param(0,chrome)
+goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/kitchensink/?modern#basic-accordion-swiper
+scroll [try(30)] -> 200 -> DIV [class = x-list-outer-ct&sp;x-scroller] -> DIV [class = x-body-el&sp;x-list-body-el&sp;x-dataview-body-el&sp;x-container-body-el&sp;x-component-body-el&sp;x-size-monitored&sp;x-paint-monitored] -> DIV [class = x-list&sp;x-dataview&sp;x-container&sp;x-component&sp;x-infinite&sp;x-heighted&sp;x-widthed&sp;x-shadow&sp;x-layout-center-item]
+over [try(-3)] -> DIV [class = x-inner-el&sp;x-listitem-inner-el&sp;x-component-inner-el, text = Allan&sp;Brummer]
+click -> DIV [class =~ x-inner-el&sp;x-listitem-inner-el&sp;x-component-inner-el.*?, text = Ashlee&sp;Ricco]
+click -> DIV [class =~ x-inner-el&sp;x-listitem-inner-el&sp;x-component-inner-el.*?, text = Allan&sp;Ricca]
+swipe -> horizontal = -60 -> DIV [class =~ x-inner-el&sp;x-listitem-inner-el&sp;x-component-inner-el.*?, text = Allan&sp;Ricca]
+click -> DIV [class =~ x-body-el&sp;x-listitem-body-el&sp;x-component-body-el.*?, text =~ (?i).*MESSAGE.*GEAR.*Allan&sp;Ricca]
+keyboard -> Hello -> INPUT [class = x-input-el]
+click -> BUTTON [class = x-button-el] -> DIV [class = x-component&sp;x-button&sp;x-has-text&sp;x-icon-align-left&sp;x-arrow-align-right&sp;x-layout-box-item&sp;x-layout-hbox-item, text = OK] -> DIV [class = x-body-el&sp;x-toolbar-body-el&sp;x-container-body-el&sp;x-component-body-el&sp;x-layout-box&sp;x-layout-hbox&sp;x-horizontal&sp;x-pack-end&sp;x-align-center&sp;x-toolbar-footer-body-el&sp;x-container-footer-body-el&sp;x-component-footer-body-el]
+scroll -> 0 -> DIV [class =~ x-inner-el&sp;x-listitem-inner-el&sp;x-component-inner-el.*?, text = Allan&sp;Brummer]
+scroll -> 400 -> DIV [class = x-list-outer-ct&sp;x-scroller] -> DIV [class = x-body-el&sp;x-list-body-el&sp;x-dataview-body-el&sp;x-container-body-el&sp;x-component-body-el&sp;x-size-monitored&sp;x-paint-monitored] -> DIV [class = x-list&sp;x-dataview&sp;x-container&sp;x-component&sp;x-infinite&sp;x-heighted&sp;x-widthed&sp;x-shadow&sp;x-layout-center-item]
+scroll -> -200 -> DIV [class = x-list-outer-ct&sp;x-scroller] -> DIV [class = x-body-el&sp;x-list-body-el&sp;x-dataview-body-el&sp;x-container-body-el&sp;x-component-body-el&sp;x-size-monitored&sp;x-paint-monitored] -> DIV [class = x-list&sp;x-dataview&sp;x-container&sp;x-component&sp;x-infinite&sp;x-heighted&sp;x-widthed&sp;x-shadow&sp;x-layout-center-item]
+click -> DIV [class =~ x-inner-el&sp;x-listitem-inner-el&sp;x-component-inner-el.*?, text = Allan&sp;Brummer]
+channel-close -> 1

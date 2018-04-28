@@ -1,0 +1,36 @@
+[ats-header]
+
+author -> pc_pierre\huber
+created-at -> 2017-12-11 at 20:24:00
+prerequisite -> 
+description -> 
+groups -> 
+
+[ats-variables]
+
+
+[ats-actions]
+
+//channel-start -> 2 -> chrome
+goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/classic/desktop/index.html
+comment -> script -> Script démontrant le fonctionnement d'un éditeur type notepad sous environnement sencha
+click [try(40)] -> DIV [class = ux-desktop-shortcut-icon&sp;notepad-shortcut]
+comment -> script -> Saisie de texte
+keyboard [try(15)] -> $key(CONTROL-A)$key(BACK_SPACE)Enter text with ATS -> BODY -> IFRAME [class = x-htmleditor-iframe]
+comment -> script -> Sélection de tous le texte saisi
+keyboard -> $key(CONTROL-A) -> BODY -> IFRAME [class = x-htmleditor-iframe]
+comment -> script -> Clic sur le bouton B permettant de passer le texte sélectionné en GRAS
+click -> A [index(1), class = x-btn&sp;x-btn-icon&sp;x-unselectable&sp;x-box-item&sp;x-toolbar-item&sp;x-btn-plain-toolbar-small, role = button]
+comment -> script -> Nouveau texte
+keyboard -> $key(CONTROL-A)$key(BACK_SPACE)And now an example of drag drop element on Sencha desktop ... -> BODY [text =~ .*] -> IFRAME [class = x-htmleditor-iframe]
+comment -> script -> On resélectionne tout
+keyboard [try(12)] -> $key(CONTROL-A) -> BODY [text =~ .*] -> IFRAME [class = x-htmleditor-iframe]
+comment -> script -> On sélectionne le fronton de la fenêtre pour commencer un déplacement
+drag -> DIV [id = notepad_header]
+comment -> script -> On survole la partie haut-gauche de la fenetre
+over -> DIV [class = ux-desktop-shortcut-icon&sp;grid-shortcut]
+comment -> script -> Et on dépose la fenetre au milieu gauche de la fenêtre
+drop -> DIV [class = ux-desktop-shortcut-icon&sp;cpu-shortcut]
+comment -> script -> On ferme l'éditeur notepad
+click -> DIV [data-ref = toolEl] -> DIV [data-qtip = Close&sp;dialog]
+//channel-close -> 2

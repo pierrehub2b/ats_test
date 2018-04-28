@@ -1,0 +1,32 @@
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------
+//  ATS Header data
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+author -> 
+
+created-at -> 2018-02-19 at 22:48:52
+
+prerequisite -> 
+
+description -> 
+
+groups -> 
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------
+//  Variables
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------
+//  Actions list
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+property -> outline-color => disabled_radio_color -> INPUT [ name = gender, value = $param(0) ]
+click -> INPUT [ name = gender, value = $param(0) ]
+property -> outline-color => enabled_radio_color -> INPUT [ name = gender, value = $param(0) ]
+check-property -> outline-color = $var(disabled_radio_color) -> INPUT [ name = gender, value = $param(1) ]
+click -> INPUT [ name = gender, value = $param(1) ]
+check-property -> outline-color = $var(enabled_radio_color) -> INPUT [ name = gender, value = $param(1) ]
+check-property -> outline-color = $var(disabled_radio_color) -> INPUT [ name = gender, value = $param(2) ]
+click -> INPUT [ name = gender, value = $param(2) ]
+check-property -> outline-color = $var(enabled_radio_color) -> INPUT [ name = gender, value = $param(2) ]

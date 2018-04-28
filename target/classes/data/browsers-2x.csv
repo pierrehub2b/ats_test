@@ -1,0 +1,12 @@
+chrome,firefox
+chrome,opera
+chrome,edge
+firefox,chrome
+firefox,opera
+firefox,edge
+opera,chrome
+opera,firefox
+opera,edge
+edge,chrome
+edge,firefox
+edge,opera

@@ -1,0 +1,31 @@
+[ats-header]
+
+author -> agilitest
+created-at -> 2017-12-20 at 18:46:26
+prerequisite -> nope
+description -> Simple ATS script with start channel action and only one variable
+groups -> 
+
+[ats-variables]
+
+var -> browser -> $param(0,chrome)
+var -> url -> http://www.agilitest.com/fichiers/test.html
+
+[ats-actions]
+
+channel-start -> inputs -> $var(browser)
+comment -> script -> Ouverture du canal sur le navigateur passé en paramètre et navigation vers le site Agilitest
+
+goto-url -> $var(url)
+comment -> script -> Itération d'opérations de calcul définies dans un fichier csv
+
+subscript -> subscripts.inputs.InputsCalculator [assets:///data/calc.csv]
+comment -> script -> Itérations de saisie de noms différents dans un champ texte
+
+subscript -> subscripts.inputs.InputsNames [assets:///data/names.csv]
+comment -> script -> Itérations de modifications d'un champ couleur
+
+subscript -> subscripts.inputs.InputsUpdateColor [assets:///data/colors.csv]
+subscript -> subscripts.inputs.InputsRadio [other, female, male]
+subscript -> subscripts.inputs.InputsValues
+channel-close -> inputs

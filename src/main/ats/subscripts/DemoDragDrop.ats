@@ -1,0 +1,20 @@
+[ats-header]
+
+author -> pc_pierre\huber
+created-at -> 2017-12-15 at 19:32:28
+prerequisite -> 
+description -> 
+groups -> 
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> dragdrop -> $param(0,chrome)
+comment -> script -> ouverture d'un canal sous chrome
+subscript -> subscripts.dragdrop.DragDrop1
+comment -> script -> puis appel de 4 sous scripts qui n'ouvrent pas eux-même de canal
+subscript -> subscripts.dragdrop.DragDrop2
+comment -> script -> ils auraient pu eux-même ouvrir leur canal, cependant ouvrir un canal déja ouvert n'impacte pas le fonctionnement de l'application
+channel-close -> dragdrop

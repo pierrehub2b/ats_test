@@ -1,0 +1,20 @@
+[ats-header]
+
+author -> pc_pierre\huber
+created-at -> 2018-01-31 at 19:05:22
+prerequisite -> 
+description -> 
+groups -> default
+
+[ats-variables]
+
+
+[ats-actions]
+
+subscript -> subscripts.CheckoutForm [assets:///data/browsers.csv]
+comment -> script -> End of script
+
+
+[ats-returns]
+
+return -> nope

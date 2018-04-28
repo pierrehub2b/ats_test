@@ -1,0 +1,34 @@
+[ats-header]
+
+author -> pc_pierre\huber
+created-at -> 2018-02-08 at 17:08:50
+prerequisite -> 
+description -> 
+groups -> default
+
+[ats-variables]
+
+var -> inputName -> Pierre Huber
+
+[ats-actions]
+
+channel-start -> alpha -> $param(0,chrome)
+goto-url -> https://www.w3schools.com/html/tryit.asp?filename=tryhtml_iframe
+check-count -> 1 -> H1 [text =~ .*] -> IFRAME [src = demo_iframe.htm] -> IFRAME [id = iframeResult]
+goto-url -> https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_alert
+click -> BUTTON [text = Try&sp;it] -> IFRAME [id = iframeResult]
+property -> text => propertyVar -> dialog
+check-property -> text =~ (?i)hello.* -> dialog
+check-count -> 1 -> dialog
+click -> dialog [type = accept]
+goto-url -> https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_confirm
+goto-url -> refresh
+click [try(9)] -> BUTTON [text = Try&sp;it] -> IFRAME [id = iframeResult]
+click -> dialog [type = dismiss]
+goto-url -> https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prompt
+click -> BUTTON [text = Try&sp;it] -> IFRAME [id = iframeResult]
+property -> text => propertyVar -> dialog
+keyboard -> $var(inputName) -> dialog
+click -> dialog [type = accept]
+check-property [try(-10)] -> text =~ Hello&sp;$var(inputName).* -> P [id = demo] -> IFRAME [id = iframeResult]
+channel-close -> alpha

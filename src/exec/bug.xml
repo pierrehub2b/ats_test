@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="bug" verbose="1">
+  <test name="testMain">
+    <groups>
+      <run>
+        <include name="bug"/>
+        <exclude name="default"/>
+        <exclude name="toverify"/>
+      </run>
+    </groups>
+    <packages>
+      <package name=".*"/>
+    </packages>
+  </test>
+</suite>

@@ -1,0 +1,20 @@
+[ats-header]
+
+author -> pc_pierre\huber
+created-at -> 2018-04-27 at 12:02:23
+prerequisite -> 
+description -> 
+groups -> 
+
+[ats-variables]
+
+var -> firstName -> regexp [(.*)\s, 1] -> $var(textValue)
+var -> lastName -> regexp [\s(.*), 1] -> $var(textValue)
+
+[ats-actions]
+
+property -> text => textValue -> DIV [index(1), class = x-inner-el&sp;x-listitem-inner-el&sp;x-component-inner-el]
+
+[ats-returns]
+
+return -> $var(firstName) -> $var(lastName)

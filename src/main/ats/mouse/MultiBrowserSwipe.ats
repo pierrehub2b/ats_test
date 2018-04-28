@@ -1,0 +1,19 @@
+[ats-header]
+
+author -> pc_pierre\huber
+created-at -> 2018-04-27 at 10:54:18
+prerequisite -> 
+description -> 
+groups -> default
+
+[ats-variables]
+
+
+[ats-actions]
+
+subscript -> subscripts.dragdrop.SwipeList [assets:///data/browsers.csv]
+comment -> script -> End of script
+
+[ats-returns]
+
+return -> 

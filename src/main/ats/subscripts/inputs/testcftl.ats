@@ -1,0 +1,4 @@
+comment -> script -> Remise à zéro et saisie de l'opération passée en paramètres
+click -> INPUT [class = calc_btn, value = 0]
+click -> INPUT [class = calc_btn, value = 0]
+click -> INPUT [type = button, value = $param(1)]

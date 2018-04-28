@@ -1,0 +1,16 @@
+[ats-header]
+
+author -> pc_pierre\huber
+created-at -> 2018-04-27 at 11:54:38
+prerequisite -> 
+description -> 
+groups -> 
+
+[ats-variables]
+
+
+[ats-actions]
+
+click [try(20)] -> DIV [id = ext-element-120]
+keyboard -> $param(0) -> INPUT [id = ext-element-70]
+keyboard -> $param(1) -> INPUT [id = ext-element-83]

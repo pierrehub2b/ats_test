@@ -1,0 +1,18 @@
+[ats-header]
+
+author -> 
+created-at -> 2018-04-08 at 13:55:19
+prerequisite -> 
+description -> 
+groups -> 
+
+[ats-variables]
+
+
+[ats-actions]
+
+keyboard [try(5)] -> $param(0) -> INPUT [name = fname]
+comment -> script -> Ce script positionne une valeur de type texte dans un champ input d'un formulaire et appuye ensuite sur submit
+
+keyboard [try(5)] -> $param(1) -> INPUT [name = lname]
+click [try(5)] -> INPUT [type = submit, value = Submit] -> TD [text = Input&sp;Text&sp;:]

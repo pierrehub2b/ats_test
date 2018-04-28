@@ -1,0 +1,18 @@
+channel-start -> Saisie -> $param(0,chrome)
+goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/kitchensink/?modern#binding-selection
+click [try(20)] -> DIV [id = ext-element-120]
+keyboard -> Prénom_1 -> INPUT [id = ext-element-70]
+keyboard -> Nom_1 -> INPUT [id = ext-element-83]
+click -> DIV [id = ext-element-123]
+keyboard -> Prénom_2 -> INPUT [id = ext-element-70]
+keyboard -> Nom_2 -> INPUT [id = ext-element-83]
+click -> DIV [id = ext-element-126]
+keyboard -> Prénom_3 -> INPUT [id = ext-element-70]
+keyboard -> Nom_3 -> INPUT [id = ext-element-83]
+click -> DIV [id = ext-element-129]
+keyboard -> Prénom_4 -> INPUT [id = ext-element-70]
+keyboard -> Nom_4 -> INPUT [id = ext-element-83]
+click -> DIV [id = ext-element-132]
+keyboard -> Prénom_5 -> INPUT [id = ext-element-70]
+keyboard -> Nom_5 -> INPUT [id = ext-element-83]
+channel-close -> Saisie

@@ -1,0 +1,15 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created-at -> 2018-03-29 at 14:04:40
+prerequisite -> 
+description -> 
+groups -> 
+
+[ats-variables]
+
+
+[ats-actions]
+
+subscript -> subscripts.DemoVerification [assets:///data/browsers.csv]
+comment -> script -> Fin d'exécution

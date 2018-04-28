@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="toverify" verbose="1">
+  <test name="testMain">
+    <groups>
+      <run>
+        <exclude name="bug"/>
+        <exclude name="default"/>
+        <include name="toverify"/>
+      </run>
+    </groups>
+  </test>
+</suite>

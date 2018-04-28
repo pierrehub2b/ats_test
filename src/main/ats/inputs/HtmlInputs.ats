@@ -1,0 +1,18 @@
+[ats-header]
+
+author -> 
+created-at -> 2017-12-05 at 10:51:03
+prerequisite -> 
+description -> 
+groups -> default , web
+
+[ats-variables]
+
+
+[ats-actions]
+
+subscript -> subscripts.DemoInputs [chrome]
+subscript -> subscripts.DemoInputs [opera]
+subscript -> subscripts.DemoInputs [edge]
+subscript -> subscripts.DemoInputs [firefox]
+comment -> script -> Ce script va lancer le même script successivement sur les quatre principaux navigateurs du marché.

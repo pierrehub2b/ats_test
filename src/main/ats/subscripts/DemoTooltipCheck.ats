@@ -1,0 +1,44 @@
+[ats-header]
+
+author -> pc_pierre\huber
+created-at -> 2018-02-01 at 15:53:12
+prerequisite -> 
+description -> 
+groups -> 
+
+[ats-variables]
+
+var -> firstValue -> regexp [.*of.*(\$\d+).*to.*, 1] -> $var(tooltip)
+var -> secondValue -> regexp [.*to.*(\$\d+).*of.*, 1] -> $var(tooltip)
+
+[ats-actions]
+
+channel-start -> grids -> $param(0, chrome)
+goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/kitchensink/?modern#d3-view-heatmap-purchases
+comment -> script -> Sélection des ventes par jour
+click [try(15)] -> BUTTON [type = button] -> DIV [id =~ ext-button.*, text =~ (?i)PURCHASES&sp;BY&sp;DAY]
+comment -> script -> Survol de la case 138...
+over -> g [index(69), class = x-d3-tile]
+comment -> script -> On récupère la propriété qui vient de s'afficher dans le tooltip
+
+property -> text => tooltip -> DIV [id = ext-tooltip-1]
+comment -> script -> Récupération des valeurs dans des variables
+ et comparaison avec les valeurs attendues
+
+check-value -> $var(firstValue) = $2500
+comment -> script -> firstValue et secondValue sont extraites de la même variable tooltip récupérée du DIV
+check-value -> $var(secondValue) = $2600
+comment -> script -> Elles sont calculées en utilisant des expressions régul
+ières
+
+over -> g [index(48), class = x-d3-tile]
+property -> text => tooltip -> DIV [id = ext-tooltip-1]
+check-value -> $var(firstValue) = $2400
+check-value -> $var(secondValue) = $2500
+over -> g [index(44), class = x-d3-tile]
+property -> text => tooltip -> DIV [id = ext-tooltip-1]
+check-value -> $var(firstValue) = $2000
+check-value -> $var(secondValue) = $2100
+comment -> script -> Après que plusieurs contrôles aient été effectués, fermeture du canal
+
+channel-close -> grids

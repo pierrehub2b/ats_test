@@ -1,0 +1,19 @@
+[ats-header]
+
+author -> 
+created-at -> 2018-04-08 at 13:21:39
+prerequisite -> 
+description -> 
+groups -> 
+
+[ats-variables]
+
+var -> colorParam -> $param(0, ffffff)
+
+[ats-actions]
+
+scroll [bottom(0)] -> 0 -> H1 [text = Color&sp;:]
+comment -> script -> Ce script va positionner l'attribut color d'un composant et vérifie ensuite que la propriété du composant est bien modifiée
+
+javascript -> value='#$var(colorParam)' -> INPUT [name = color]
+check-property -> value = #$var(colorParam) -> INPUT [name = color]

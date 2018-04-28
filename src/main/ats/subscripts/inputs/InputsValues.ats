@@ -1,0 +1,39 @@
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------
+//  ATS Header data
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+author -> 
+
+created-at -> 2018-02-19 at 23:30:21
+
+prerequisite -> 
+
+description -> 
+
+groups -> 
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------
+//  Variables
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+var -> datePast -> date [-5y, 7m] -> $today
+var -> capturedDate -> date [4y, 3m]
+var -> newMonth -> regexp [(.*\-.*)(\-.*), 1] -> $var(capturedDate)
+var -> phone -> regexp [(.\d*), 1] -> $var(capturedDate)
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------
+//  Actions list
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+javascript -> value='5' -> INPUT [ name = range ]
+javascript -> value='20' -> INPUT [ name = range ]
+javascript -> value='80' -> INPUT [ name = range ]
+javascript -> value='60' -> INPUT [ name = range ]
+javascript -> value='10' -> INPUT [ name = range ]
+javascript -> value='90' -> INPUT [ name = range ]
+javascript -> value='40' -> INPUT [ name = range ]
+javascript -> value='$var(datePast)' -> INPUT [ name = date ]
+property -> value => capturedDate -> INPUT [ name = date ]
+javascript -> value='$var(newMonth)' -> INPUT [ name = month ]
+keyboard -> 113245658765464 -> INPUT [ name = number ]
+keyboard -> 05$var(phone)8812 -> INPUT [ name = tel ]

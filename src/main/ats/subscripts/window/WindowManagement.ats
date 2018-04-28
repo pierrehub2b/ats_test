@@ -1,0 +1,31 @@
+[ats-header]
+
+author -> pc_pierre\huber
+created-at -> 2018-02-04 at 12:53:21
+prerequisite -> 
+description -> 
+groups -> 
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> win -> $param(0,chrome)
+goto-url -> https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_a_target
+window-resize -> x = 10, width = 500
+window-resize -> y = 445, width = 1000, height = 789
+window-resize -> x = -310
+window-resize -> width = 800, height = 800
+click -> A [text =~ (?i)Visit\s*W3Schools!] -> IFRAME [id = iframeResult]
+window-switch -> 0
+window-switch -> 1
+click -> A [href = /html/tryit.asp?filename&eq;tryhtml_default, text = Try&sp;it&sp;Yourself&sp;»]
+window-switch -> 3
+goto-url -> refresh
+//click -> BUTTON [class = w3-button&sp;w3-bar-item&sp;w3-green&sp;w3-hover-white&sp;w3-hover-text-green, text = Run&sp;»]
+window-close -> 2
+window-close -> 1
+goto-url -> https://www.w3schools.com/html/tryit.asp?filename=tryhtml_iframe
+check-property -> text =~ .*displayed.*iframe -> H1 [text = This&sp;page&sp;is&sp;displayed&sp;in&sp;an&sp;iframe] -> IFRAME [src = demo_iframe.htm] -> IFRAME [name = iframeResult]
+channel-close -> win

@@ -1,0 +1,21 @@
+[ats-header]
+
+author -> pc_pierre\huber
+created-at -> 2018-04-27 at 11:57:03
+prerequisite -> 
+description -> 
+groups -> 
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> 1 -> $param(0,chrome)
+goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/kitchensink/?modern#basic-list
+subscript -> subscripts.data.GetName => firstName, lastName
+channel-start -> 2 -> $param(1,edge)
+goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/kitchensink/?modern#binding-selection
+subscript -> subscripts.inputs.InputData [$var(firstName), $var(lastName)]
+channel-close -> 2
+channel-close -> 1

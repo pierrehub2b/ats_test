@@ -1,0 +1,16 @@
+<atsProject>
+  <domain>com.functional</domain>
+  <name>ats_test</name>
+  <version>0.0.2</version>
+  <description>ATS project testing scripts</description>
+  <groups>
+    <group>bug</group>
+    <group>default</group>
+    <group>toverify</group>
+    <group>web</group>
+    <group>desktop</group>
+  </groups>
+  <environment>
+    <property>browser</property>
+  </environment>
+</atsProject>

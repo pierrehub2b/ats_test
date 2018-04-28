@@ -1,0 +1,16 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created-at -> 2018-03-24 at 15:08:56
+prerequisite -> 
+description -> Tests sur calculatrice google:<br>- simple clic<br>- récupération de propriété "résultat"<br>- comparaison au résultat attendu
+groups -> default
+
+[ats-variables]
+
+
+[ats-actions]
+
+subscript -> subscripts.DemoCalculatrice [assets:///data/browsers.csv]
+comment -> script -> Ce script va cycler sur les quatre principaux navigateurs du marché (Chrome, Firefox, Edge et Opéra)
+comment -> script -> Pour lancer un test commun de démonstration d'un calcul simple suivi de la vérification du résultat

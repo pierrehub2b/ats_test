@@ -1,0 +1,68 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created-at -> 2018-03-29 at 11:44:35
+prerequisite -> 
+description -> 
+groups -> 
+
+[ats-variables]
+
+var -> total -> regexp [(.*): (.*), 2]
+var -> valuelog -> regexp [(.*)\$(.*).00, 2]
+var -> SantaTravelValue -> 15,000
+
+[ats-actions]
+
+channel-start -> chrome -> $param(0,chrome)
+comment -> script -> Démarrage du canal sur le navigateur passé en paramètre ($param(0,chrome)), avec le navigateur chrome par défaut.
+goto-url -> https://home-expenses.cxjs.io/dashboard
+comment -> script -> Nous cliquons successivement sur les différents rectangles
+click -> rect [class = cxe-legend-shape&sp;cxs-color-15]
+click -> rect [class = cxe-legend-shape&sp;cxs-color-14]
+click -> rect [class = cxe-legend-shape&sp;cxs-color-12]
+click -> rect [class = cxe-legend-shape&sp;cxs-color-11]
+click -> rect [class = cxe-legend-shape&sp;cxs-color-10]
+click -> rect [class = cxe-legend-shape&sp;cxs-color-9]
+click -> rect [class = cxe-legend-shape&sp;cxs-color-7]
+click -> rect [class = cxe-legend-shape&sp;cxs-color-6]
+click -> rect [class = cxe-legend-shape&sp;cxs-color-5]
+click -> rect [class = cxe-legend-shape&sp;cxs-color-4]
+click -> rect [class = cxe-legend-shape&sp;cxs-color-2]
+click -> rect [class = cxe-legend-shape&sp;cxs-color-1]
+comment -> script -> Clic sur le bouton 'clear selection' pour supprimer la dernière sélection
+click -> BUTTON [class = cxb-button&sp;cxm-hollow, type = button]
+comment -> script -> Navigation sur la liste des postes de dépense
+click -> A [class = cxb-link, href = /entry/new]
+comment -> script -> Ajout d'une nouvelle dépense de voyage
+click -> DIV [class = category, text = Travel]
+comment -> script -> Saisie de la date de la dépense
+keyboard -> Dec 25, 2018$key(ENTER) -> INPUT [class = cxe-datetimefield-input]
+comment -> script -> Saisie du montant de la dépense
+keyboard -> $var(SantaTravelValue)$key(ENTER) -> INPUT [class = cxe-numberfield-input]
+comment -> script -> et de la description du déplacement
+keyboard -> Santa travel$key(ENTER) -> INPUT [class = cxe-textfield-input]
+comment -> script -> Puis nous sauvons cette dépense en cliquant sur SAVE
+click -> BUTTON [class = cxb-button&sp;cxm-primary, type = button]
+comment -> script -> Nous naviguons ensuite vers le tableau de bord des dépenses
+click -> A [class = cxb-link, href = /dashboard]
+comment -> script -> Nous faisons un survol permettant de faire apparaitre le montant de la dernière dépense
+over -> rect [class = cxe-column-rect, y =~ \d*]
+comment -> script -> Nous récupérons le montant total cumulé des dépenses
+property -> text => total -> DIV [class = cxe-flexbox-flexbox&sp;cxs-align-center&sp;cxs-target-any&sp;cxs-row, text =~ (?i)Timeline.*TOTAL.*]
+comment -> script -> et sélectionnons ensuite le menu log permettant d'afficher l'historique des dépenses
+click -> A [text = Log]
+comment -> script -> Nous filtrons par montant, du plus faible au plus élevé
+click -> TH [class = cxe-grid-col-header&sp;cxs-aligned-right&sp;cxs-sortable, text =~ (?i).*Amount.*] -> TBODY [class = cxe-grid-header] -> DIV [class = cxe-grid-fixed-header]
+comment -> script -> Puis du plus élevé au plus faible.
+click -> TH [class = cxe-grid-col-header&sp;cxs-aligned-right&sp;cxs-sortable&sp;cxs-sorted-asc, text = Amountarrow_upward] -> TBODY [class = cxe-grid-header] -> DIV [class = cxe-grid-fixed-header]
+comment -> script -> Nous récupérons la valeur de la première entrée
+property -> text => valuelog -> TD [index(1), class = cxs-pad&sp;cxs-aligned-right]
+comment -> script -> Et vérifions qu'il s'agit bien de la valeur que nous avons entrée.
+check-value -> $var(valuelog) = $var(SantaTravelValue)
+comment -> script -> Puis nous supprimons cette entrée
+click -> BUTTON [index(1), class = cxb-button&sp;cxm-hollow, text =~ (?i)REMOVE, type = button]
+comment -> script -> (validation de la popup de suppression)
+click -> BUTTON [class = cxb-button&sp;cxm-flat-primary, text =~ (?i)YES, type = button]
+comment -> script -> Arrêt du canal
+channel-close -> chrome

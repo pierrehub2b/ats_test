@@ -1,0 +1,88 @@
+[ats-header]
+
+author -> Emmanuel DUPERRAY
+created-at -> 2018-03-23 at 15:43:09
+prerequisite -> Maîtrise des fonctions de base d'Agilitest
+description -> Test de démo pour les néo utilisateurs
+groups -> 
+
+[ats-variables]
+
+var -> First_And_Last_Name_1 -> regexp [\d..(.*) Actor, 1]
+var -> First_Name_1 -> regexp [(.*) (.*), 1] -> $var(First_And_Last_Name_1)
+var -> Last_Name_1 -> regexp [(.*) (.*), 2] -> $var(First_And_Last_Name_1)
+var -> First_And_Last_Name_2 -> regexp [\d..(.*) Actor, 1]
+var -> First_Name_2 -> regexp [(.*) (.*), 1] -> $var(First_And_Last_Name_2)
+var -> Last_Name_2 -> regexp [(.*) (.*), 2] -> $var(First_And_Last_Name_2)
+var -> First_And_Last_Name_6 -> regexp [\d..(.*) Actor, 1]
+var -> First_Name_6 -> regexp [(.*) (.*), 1] -> $var(First_And_Last_Name_6)
+var -> Last_Name_6 -> regexp [(.*) (.*), 2] -> $var(First_And_Last_Name_6)
+var -> First_And_Last_Name_8 -> regexp [\d..(.*) Actor, 1]
+var -> First_Name_8 -> regexp [(.*) (.*), 1] -> $var(First_And_Last_Name_8)
+var -> Last_Name_8 -> regexp [(.*) (.*), 2] -> $var(First_And_Last_Name_8)
+var -> First_And_Last_Name_9 -> regexp [\d..(.*) Actor, 1]
+var -> First_Name_9 -> regexp [(.*) (.*), 1] -> $var(First_And_Last_Name_9)
+var -> Last_Name_9 -> regexp [(.*) (.*), 2] -> $var(First_And_Last_Name_9)
+
+[ats-actions]
+
+channel-start -> alpha -> $param(0,chrome)
+comment -> script -> Ce script va récupérer des informations d'un site pour les utiliser dans un autre (noms d'acteurs)
+//goto-url -> google.com
+comment -> script -> Pour désactiver une ligne, sélectionner le cercle à gauche de l'action, puis bouton droit et désactiver
+//keyboard -> best actors$key(ENTER) -> INPUT [id = lst-ib]
+comment -> script -> Les lignes désactivées restent dans le script mais ne sont pas rejouées
+//click -> A [text = Top&sp;100&sp;Greatest&sp;Actors&sp;of&sp;All&sp;Time&sp;(The&sp;Ultimate&sp;List)&sp;-&sp;IMDb]
+comment -> script -> Dans ce cas, cela nous a permis d'aller chercher directement la page actors.html
+goto-url -> http://www.agilitest.com/fichiers/actors.html
+over -> DIV [index(1), class = lister-item&sp;mode-detail]
+comment -> step -> Récupération des données dans la page : Premier Acteur
+property -> text => First_And_Last_Name_1 -> DIV [index(1), class = lister-item&sp;mode-detail]
+comment -> script -> Démarrage d'un canal sur une page sencha pour utiliser les noms récupérés
+channel-start -> beta -> $param(1,firefox)
+goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/kitchensink/?modern&profile=material#binding-selection
+comment -> script -> Clic sur le premier nom (Keenan, Gareth) et remplacement par le nom du premier acteur (Jack Nickolson)
+click [try(40)] -> DIV [id = ext-element-119]
+keyboard [try(20)] -> $var(First_Name_1) -> INPUT [class = x-input-el, id = ext-element-70]
+keyboard -> $var(Last_Name_1) -> INPUT [class = x-input-el, id = ext-element-83]
+comment -> script -> Basculement de canal pour sélectionner le nom du deuxième acteur
+channel-switch -> alpha
+comment -> script -> Survol du deuxième acteur
+over -> DIV [index(2), class = lister-item&sp;mode-detail]
+comment -> step -> Récupération des données dans la page : Deuxième Acteur
+property -> text => First_And_Last_Name_2 -> DIV [index(2), class = lister-item&sp;mode-detail]
+comment -> script -> On repasse sur le canal sencha
+channel-switch -> beta
+comment -> script -> Clic sur le deuxième nom (Canterbury, Tim) et remplacement par le nom du deuxième acteur (Marlon Brando)
+click -> DIV [id = ext-element-123]
+keyboard -> $var(First_Name_2) -> INPUT [class = x-input-el, id = ext-element-70]
+keyboard -> $var(Last_Name_2) -> INPUT [class = x-input-el, id = ext-element-83]
+comment -> script -> et ainsi de suite pour les trois acteurs suivants...
+channel-switch -> alpha
+over -> DIV [index(6), class = lister-item&sp;mode-detail]
+comment -> step -> Récupération des données dans la page : Sixième Acteur
+property -> text => First_And_Last_Name_6 -> DIV [index(6), class = lister-item&sp;mode-detail]
+comment -> script -> Ce qui est intéressant est l'utiisation des variables récupérées sur des objets (orange) et des variables calculees (en violet)
+channel-switch -> beta
+click -> DIV [id = ext-element-126]
+keyboard -> $var(First_Name_6) -> INPUT [class = x-input-el, id = ext-element-70]
+keyboard -> $var(Last_Name_6) -> INPUT [class = x-input-el, id = ext-element-83]
+channel-switch -> alpha
+over -> DIV [index(8), class = lister-item&sp;mode-detail]
+comment -> step -> Récupération des données dans la page : Huitième Acteur
+property -> text => First_And_Last_Name_8 -> DIV [index(8), class = lister-item&sp;mode-detail]
+channel-switch -> beta
+click -> DIV [id = ext-element-129]
+keyboard -> $var(First_Name_8) -> INPUT [class = x-input-el, id = ext-element-70]
+keyboard -> $var(Last_Name_8) -> INPUT [class = x-input-el, id = ext-element-83]
+channel-switch -> alpha
+over -> DIV [index(9), class = lister-item&sp;mode-detail]
+comment -> step -> Récupération des données dans la page : Neuvième Acteur
+property -> text => First_And_Last_Name_9 -> DIV [index(9), class = lister-item&sp;mode-detail, id = ]
+channel-switch -> beta
+click -> DIV [id = ext-element-132]
+keyboard -> $var(First_Name_9) -> INPUT [class = x-input-el, id = ext-element-70]
+keyboard -> $var(Last_Name_9) -> INPUT [class = x-input-el, id = ext-element-83]
+comment -> script -> Arrêt des canaux et sortie
+channel-close -> alpha
+channel-close -> beta

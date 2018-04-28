@@ -1,0 +1,18 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created-at -> 2018-03-29 at 13:17:23
+prerequisite -> 
+description -> 
+groups -> 
+
+[ats-variables]
+
+
+[ats-actions]
+
+subscript -> subscripts.Demofrais [chrome]
+subscript -> subscripts.Demofrais [opera]
+subscript -> subscripts.Demofrais [edge]
+subscript -> subscripts.Demofrais [firefox]
+comment -> step -> Ce script appelle 4 fois le même sous-script en passant le navigateur sur lequel il doit s'éxécuter en entrée
