@@ -11,8 +11,8 @@ groups ->
 
 [ats-actions]
 
-channel-start -> Canal Google -> $param(0,chrome)
 comment -> script -> Lancement du canal et navigation sur le site : www.google.com
+channel-start -> Canal Google -> $param(0,chrome)
 goto-url -> www.google.fr
 comment -> script -> Nous faisons une recherche sur le mot 'calculatrice' dans le champ INPUT principal de Google, et appuyons sur ENTREE
 keyboard -> calculatrice$key(ENTER) -> INPUT [class = gsfi&sp;lst-d-f, id = lst-ib]

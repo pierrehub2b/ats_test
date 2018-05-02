@@ -11,5 +11,6 @@ groups -> default
 
 [ats-actions]
 
+comment -> script -> Call multichannel subscripts using cartesian product of browsers name in csv file
 subscript -> subscripts.channel.MultiChannel1 [assets:///data/browsers-2x.csv]
 comment -> script -> End of script

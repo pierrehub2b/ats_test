@@ -12,7 +12,7 @@ groups ->
 [ats-actions]
 
 channel-start -> dragdrop -> $param(0,chrome)
-comment -> script -> ouverture d'un canal sous chrome
+comment -> script -> ouverture d'un canal sous '$param(0)'
 subscript -> subscripts.dragdrop.DragDrop1
 comment -> script -> puis appel de 4 sous scripts qui n'ouvrent pas eux-même de canal
 subscript -> subscripts.dragdrop.DragDrop2

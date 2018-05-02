@@ -11,5 +11,6 @@ groups -> default
 
 [ats-actions]
 
+comment -> script -> Example of drag and drop actions on a web application. You can execute 'hover' action between 'start drag' and 'end drag' action.
 subscript -> subscripts.DemoDragDrop [assets:///data/browsers.csv]
 comment -> script -> End script
