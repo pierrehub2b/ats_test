@@ -1,6 +1,9 @@
 language: java
 jdk: oraclejdk9
 
+os:
+  - windows
+
 install:
  - mvn clean compile
  
