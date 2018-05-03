@@ -5,7 +5,9 @@ os:
   - windows
 
 install:
- - mvn clean compile -DskipTests=true
+ - mvn clean compile
+
+script:
  
 cache:
   directories:

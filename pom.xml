@@ -60,7 +60,6 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.21.0</version>
 				<configuration>
-					<skipTests>${skipTests}</skipTests>
 					<property>
 						<name>reporter</name>
 						<value>listenReport.Reporter</value>
