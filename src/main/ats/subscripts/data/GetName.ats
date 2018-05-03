@@ -13,7 +13,7 @@ var -> lastName -> regexp [\s(.*), 1] -> $var(textValue)
 
 [ats-actions]
 
-property -> text => textValue -> DIV [index(1), class = x-inner-el&sp;x-listitem-inner-el&sp;x-component-inner-el]
+property [try(20)] -> text => textValue -> DIV [index(1), class = x-inner-el&sp;x-listitem-inner-el&sp;x-component-inner-el]
 
 [ats-returns]
 
