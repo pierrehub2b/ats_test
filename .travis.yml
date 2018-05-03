@@ -5,7 +5,7 @@ os:
   - windows
 
 install:
- - mvn clean compile -Dmaven.test.skip=true
+ - mvn clean compile -DskipTests
  
 cache:
   directories:
