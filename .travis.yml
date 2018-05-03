@@ -4,10 +4,8 @@ jdk: oraclejdk9
 os:
   - windows
 
-install:
- - mvn clean compile
-
 script:
+ - mvn clean compile -DskipTests
  
 cache:
   directories:
