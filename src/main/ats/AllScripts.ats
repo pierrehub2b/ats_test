@@ -24,3 +24,4 @@ subscript -> mouse.HoverAndDrag
 subscript -> mouse.MultiBrowserSwipe
 subscript -> other.MultiBrowsersDialog
 subscript -> other.MultiBrowserWindow
+comment -> script -> end of scripts

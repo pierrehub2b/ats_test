@@ -1,3 +1,16 @@
+[ats-header]
+
+author -> 
+created-at -> 2018-05-20 at 13:40:12
+prerequisite -> 
+description -> 
+groups -> default
+
+[ats-variables]
+
+
+[ats-actions]
+
 channel-start -> Saisie -> $param(0,chrome)
 goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/kitchensink/?modern#binding-selection
 click [try(20)] -> DIV [id = ext-element-120]

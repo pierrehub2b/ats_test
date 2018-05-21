@@ -1,0 +1,16 @@
+[ats-header]
+
+author -> pc_pierre\huber
+created-at -> 2018-05-21 at 10:14:02
+prerequisite -> 
+description -> 
+groups -> 
+
+[ats-variables]
+
+
+[ats-actions]
+
+comment -> script -> open sample windows application 'Enterprise Database', application can be downloaded here : https://www.microsoft.com/fr-fr/store/p/enterprise-database-developer-sample/9pf1wcv13501?rtc=1
+channel-start -> newChannel -> file:///C:/Program%20Files/WindowsApps/Microsoft.EnterpriseDatabaseDeveloperSample_1.0.6.0_x64__8wekyb3d8bbwe/ContosoApp.exe
+window-resize -> width = 800, height = 800

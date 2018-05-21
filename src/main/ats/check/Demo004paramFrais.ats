@@ -4,7 +4,7 @@ author -> AGILITEST-DUPER\Emmanuel DUPERRAY
 created-at -> 2018-03-29 at 13:17:23
 prerequisite -> 
 description -> 
-groups -> 
+groups -> default
 
 [ats-variables]
 
@@ -12,8 +12,8 @@ groups ->
 [ats-actions]
 
 comment -> step -> Ce script appelle 4 fois le même sous-script en passant le navigateur sur lequel il doit s'éxécuter en entrée
-subscript -> subscripts.Demofrais [chrome]
-subscript -> subscripts.Demofrais [opera]
-subscript -> subscripts.Demofrais [edge]
-subscript -> subscripts.Demofrais [firefox]
+subscript -> subscripts.DemoFrais [edge]
+subscript -> subscripts.DemoFrais [firefox]
+subscript -> subscripts.DemoFrais [chrome]
+subscript -> subscripts.DemoFrais [opera]
 comment -> script -> Fin de script

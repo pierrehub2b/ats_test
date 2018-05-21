@@ -1,0 +1,35 @@
+[ats-header]
+
+author -> pc_pierre\huber
+created-at -> 2018-05-20 at 15:39:35
+prerequisite -> 
+description -> 
+groups -> 
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> notepad -> notepad++
+click -> Button [AutomationId = Item&sp;41001]
+keyboard -> enter text on main edit panel with specials characters : &é"à@çè%$ -> Pane [ClassName = Scintilla]
+click -> Button [AutomationId = Item&sp;43001]
+keyboard -> enter text -> Edit [AutomationId = 1001]
+click -> Button [AutomationId = 1614]
+click -> TabItem [Name = Remplacer]
+keyboard -> enter text with Agilitest -> Edit [AccessKey = Alt+p, AutomationId = 1001]
+click -> Button [AutomationId = 1609]
+click -> Button [AutomationId = Close] -> TitleBar [Name = Remplacer]
+keyboard -> and now get some data on a web site in order to copy this data on main edit pane -> Pane [ClassName = Scintilla]
+channel-start -> web -> chrome
+goto-url -> www.agilitest.com
+property -> text => webText -> DIV [data-sr-id = 2]
+channel-switch -> notepad
+keyboard -> $var(webText) -> Pane [ClassName = Scintilla]
+click [right(8)] -> TabItem [Name =~ new&sp;\d]
+click -> Button [AutomationId = 6]
+keyboard -> agilitest-$uuid.txt -> Edit [AutomationId = 1148]
+click -> Button [AutomationId = 1]
+channel-close -> web
+channel-close -> notepad
