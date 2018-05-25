@@ -17,7 +17,7 @@ window-resize -> x = 10, width = 500
 window-resize -> y = 445, width = 1000, height = 789
 window-resize -> x = 310
 window-resize -> width = 800, height = 800
-click -> A [text =~ (?i)Visit\s*W3Schools!] -> IFRAME [id = iframeResult]
+click -> A [text =~ (?i)Visit\s*W3Schools!] -> IFRAME [id = iframeResultx]
 window-switch -> 0
 window-switch -> 1
 click -> A [href = /html/tryit.asp?filename&eq;tryhtml_default, text = Try&sp;it&sp;Yourself&sp;»]
