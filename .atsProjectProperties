@@ -12,5 +12,6 @@
   </groups>
   <environment>
     <property>browser</property>
+    <property>visual.report</property>
   </environment>
 </atsProject>
