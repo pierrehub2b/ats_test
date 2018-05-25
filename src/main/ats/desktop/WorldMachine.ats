@@ -17,4 +17,5 @@ click -> Button [AutomationId = Item&sp;32809]
 click -> Button [AutomationId = 6]
 click -> MenuItem [AutomationId = Item&sp;1, Name = File]
 click -> MenuItem [AutomationId = Item&sp;57665]
+click [nofail, try(-10)] -> Button [AutomationId = 7]
 channel-close -> wm
