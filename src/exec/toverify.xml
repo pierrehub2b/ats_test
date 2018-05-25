@@ -1,9 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="toverify" verbose="10">
   <test name="testMain">
-    <parameter name="visual.report" value="true"/>
     <classes>
-      <class name="other.MultiBrowserWindow"/>
+      <class name="desktop.NotepadPlusPlus"/>
     </classes>
   </test>
 </suite>
