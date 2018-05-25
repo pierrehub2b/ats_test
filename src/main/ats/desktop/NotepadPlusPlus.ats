@@ -8,6 +8,7 @@ groups ->
 
 [ats-variables]
 
+var -> webText -> regexp [(.*)\?, 1]
 
 [ats-actions]
 
@@ -32,4 +33,3 @@ click -> Button [AutomationId = 6]
 keyboard -> agilitest-$uuid.txt -> Edit [AutomationId = 1148]
 click -> Button [AutomationId = 1]
 channel-close -> web
-channel-close -> notepad

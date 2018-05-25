@@ -12,5 +12,5 @@ groups ->
 [ats-actions]
 
 comment -> script -> open sample windows application 'Enterprise Database', application can be downloaded here : https://www.microsoft.com/fr-fr/store/p/enterprise-database-developer-sample/9pf1wcv13501?rtc=1
-channel-start -> newChannel -> file:///C:/Program%20Files/WindowsApps/Microsoft.EnterpriseDatabaseDeveloperSample_1.0.6.0_x64__8wekyb3d8bbwe/ContosoApp.exe
+channel-start -> newChannel -> file:///D:/DevelopmentTools/hex_editor/HexFrame.exe
 window-resize -> width = 800, height = 800
