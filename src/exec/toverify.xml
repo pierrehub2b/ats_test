@@ -2,7 +2,8 @@
 <suite name="toverify" verbose="10">
   <test name="testMain">
     <classes>
-      <class name="desktop.NotepadPlusPlus"/>
+      <class name="check.Demo004paramFrais"/>
+      <class name="inputs.ParamsDataInput"/>
     </classes>
   </test>
 </suite>
