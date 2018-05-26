@@ -3,7 +3,6 @@
   <test name="testMain">
     <classes>
       <class name="check.Demo004paramFrais"/>
-      <class name="inputs.ParamsDataInput"/>
     </classes>
   </test>
 </suite>
