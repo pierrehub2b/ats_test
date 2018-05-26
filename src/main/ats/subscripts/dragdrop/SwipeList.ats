@@ -17,7 +17,7 @@ scroll [try(30)] -> 200 -> DIV [class = x-list-outer-ct&sp;x-scroller] -> DIV [c
 over [try(-3)] -> DIV [class = x-inner-el&sp;x-listitem-inner-el&sp;x-component-inner-el, text = Allan&sp;Brummer]
 click -> DIV [class =~ x-inner-el&sp;x-listitem-inner-el&sp;x-component-inner-el.*?, text = Ashlee&sp;Ricco]
 click -> DIV [class =~ x-inner-el&sp;x-listitem-inner-el&sp;x-component-inner-el.*?, text = Allan&sp;Ricca]
-swipe -> horizontal = -60 -> DIV [class =~ x-inner-el&sp;x-listitem-inner-el&sp;x-component-inner-el.*?, text = Allan&sp;Ricca]
+swipe -> horizontal = -80 -> DIV [class =~ x-inner-el&sp;x-listitem-inner-el&sp;x-component-inner-el.*?, text = Allan&sp;Ricca]
 click -> DIV [class =~ x-body-el&sp;x-listitem-body-el&sp;x-component-body-el.*?, text =~ (?i).*MESSAGE.*GEAR.*Allan&sp;Ricca]
 keyboard -> Hello -> INPUT [class = x-input-el]
 click -> BUTTON [class = x-button-el] -> DIV [data-componentid =~ ext-button.*, text =~ (?i)OK] -> DIV [id = ext-messagebox]
