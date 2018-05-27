@@ -11,7 +11,7 @@ groups ->
 
 [ats-actions]
 
-channel-start -> 1 -> $param(0,chrome)
+channel-start -> web -> $param(0,chrome)
 goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/kitchensink/?modern#basic-accordion-swiper
 scroll [try(30)] -> 200 -> DIV [class = x-list-outer-ct&sp;x-scroller] -> DIV [class = x-body-el&sp;x-list-body-el&sp;x-dataview-body-el&sp;x-container-body-el&sp;x-component-body-el&sp;x-size-monitored&sp;x-paint-monitored] -> DIV [class = x-list&sp;x-dataview&sp;x-container&sp;x-component&sp;x-infinite&sp;x-heighted&sp;x-widthed&sp;x-shadow&sp;x-layout-center-item]
 over [try(-3)] -> DIV [class = x-inner-el&sp;x-listitem-inner-el&sp;x-component-inner-el, text = Allan&sp;Brummer]
@@ -25,4 +25,4 @@ scroll -> 0 -> DIV [class =~ x-inner-el&sp;x-listitem-inner-el&sp;x-component-in
 scroll -> 400 -> DIV [class = x-list-outer-ct&sp;x-scroller] -> DIV [class = x-body-el&sp;x-list-body-el&sp;x-dataview-body-el&sp;x-container-body-el&sp;x-component-body-el&sp;x-size-monitored&sp;x-paint-monitored] -> DIV [class = x-list&sp;x-dataview&sp;x-container&sp;x-component&sp;x-infinite&sp;x-heighted&sp;x-widthed&sp;x-shadow&sp;x-layout-center-item]
 scroll -> -200 -> DIV [class = x-list-outer-ct&sp;x-scroller] -> DIV [class = x-body-el&sp;x-list-body-el&sp;x-dataview-body-el&sp;x-container-body-el&sp;x-component-body-el&sp;x-size-monitored&sp;x-paint-monitored] -> DIV [class = x-list&sp;x-dataview&sp;x-container&sp;x-component&sp;x-infinite&sp;x-heighted&sp;x-widthed&sp;x-shadow&sp;x-layout-center-item]
 click -> DIV [class =~ x-inner-el&sp;x-listitem-inner-el&sp;x-component-inner-el.*?, text = Allan&sp;Brummer]
-channel-close -> 1
+channel-close -> web

@@ -14,11 +14,11 @@ var -> SantaTravelValue -> 15,000
 
 [ats-actions]
 
-channel-start -> chrome -> $param(0,chrome)
+channel-start -> web -> $param(0,chrome)
 comment -> script -> Démarrage du canal sur le navigateur passé en paramètre ($param(0,chrome)), avec le navigateur chrome par défaut.
 goto-url -> https://home-expenses.cxjs.io/dashboard
 comment -> script -> Nous cliquons successivement sur les différents rectangles
-click -> rect [class = cxe-legend-shape&sp;cxs-color-15]
+click [try(10)] -> rect [class = cxe-legend-shape&sp;cxs-color-15]
 click -> rect [class = cxe-legend-shape&sp;cxs-color-14]
 click -> rect [class = cxe-legend-shape&sp;cxs-color-12]
 click -> rect [class = cxe-legend-shape&sp;cxs-color-11]
@@ -65,4 +65,4 @@ click -> BUTTON [index(1), class = cxb-button&sp;cxm-hollow, text =~ (?i)REMOVE,
 comment -> script -> (validation de la popup de suppression)
 click -> BUTTON [class = cxb-button&sp;cxm-flat-primary, text =~ (?i)YES, type = button]
 comment -> script -> Arrêt du canal
-channel-close -> chrome
+channel-close -> web
