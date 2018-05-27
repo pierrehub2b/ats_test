@@ -11,11 +11,11 @@ groups ->
 
 [ats-actions]
 
-channel-start -> 1 -> $param(0,chrome)
+channel-start -> web1 -> $param(0,chrome)
 goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/kitchensink/?modern#basic-list
 subscript -> subscripts.data.GetName => firstName, lastName
-channel-start -> 2 -> $param(1,edge)
+channel-start -> web2 -> $param(1,edge)
 goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/kitchensink/?modern#binding-selection
 subscript -> subscripts.inputs.InputData [$var(firstName), $var(lastName)]
-channel-close -> 2
-channel-close -> 1
+channel-close -> web2
+channel-close -> web1
