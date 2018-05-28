@@ -14,7 +14,7 @@ groups ->
 comment -> script -> This script will call all scripts in ats folder except subscripts folder
 subscript -> channel.CartesianChannels
 subscript -> check.Demo004paramFrais
-subscript -> check.Demo012csvVerification
+subscript -> check.Demo012csvVerification [assets:///data/browsers.csv]
 subscript -> inputs.Calculatrice
 subscript -> inputs.CheckoutForm
 subscript -> inputs.DataInput
