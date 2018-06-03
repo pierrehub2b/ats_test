@@ -16,8 +16,8 @@ goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/kitchensink/?modern#
 click [try(20)] -> DIV [class = x-innerhtml] -> DIV [index(1), class = x-inner-el x-listitem-inner-el x-component-inner-el]
 keyboard -> Prénom_1 -> INPUT [class = x-input-el] -> DIV [text = First Name]
 keyboard -> Nom_1 -> INPUT [class = x-input-el] -> DIV [text = Last Name]
-check-property -> text = Nom_1&co;Prénom_1 -> DIV [class = x-innerhtml] -> DIV [index(1), class = x-inner-el x-listitem-inner-el x-component-inner-el]
+check-property -> text =~ (?i)Nom_1&co;\s*?Prénom_1 -> DIV [class = x-innerhtml] -> DIV [index(1), class = x-inner-el x-listitem-inner-el x-component-inner-el]
 click [try(20)] -> DIV [class = x-innerhtml] -> DIV [index(4), class = x-inner-el x-listitem-inner-el x-component-inner-el]
 property -> text => valeur_recuperee -> DIV [class = x-innerhtml] -> DIV [index(1), class = x-inner-el x-listitem-inner-el x-component-inner-el]
-check-value -> $var(valeur_recuperee) =~ (?i)Nom_1&co;\s*Prénom_1
+check-value -> $var(valeur_recuperee) =~ (?i)Nom_1&co;\s*?Prénom_1
 channel-close -> Verification
