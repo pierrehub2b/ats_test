@@ -12,5 +12,5 @@ groups ->
 [ats-actions]
 
 comment -> script -> open sample windows application 'Enterprise Database', application can be downloaded here : https://www.microsoft.com/fr-fr/store/p/enterprise-database-developer-sample/9pf1wcv13501?rtc=1
-channel-start -> newChannel -> file:///D:/DevelopmentTools/hex_editor/HexFrame.exe
+channel-start -> newChannel -> file:///D:/ProgramFiles/nash/nash-3.10.0-x64/nash.exe
 window-resize -> width = 800, height = 800
