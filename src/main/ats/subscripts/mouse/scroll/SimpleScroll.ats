@@ -1,0 +1,21 @@
+[ats-header]
+
+author -> 
+created-at -> 2018-06-03 at 11:08:42
+prerequisite -> 
+description -> 
+groups -> 
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> myFirstChannel -> $param(0,chrome)
+goto-url -> google.com
+keyboard -> automated testing$key(ENTER) -> INPUT [id = lst-ib]
+click -> A [text = Test automation - Wikipedia]
+scroll -> 800
+scroll -> 0 -> A [font-style = italic, text = Graphical user interface testing]
+over -> IMG [src =~ .*Test_Automation_Interface.png]
+channel-close -> myFirstChannel
