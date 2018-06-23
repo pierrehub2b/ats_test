@@ -30,3 +30,4 @@ comment -> script -> Finalement nous effectuons le contrôle du résultat : 8 + 
 check-value -> $var(Resultat_Calculatrice) = 16
 comment -> script -> Fermeture du canal et sortie du script
 channel-close -> Canal Google
+comment -> script -> 

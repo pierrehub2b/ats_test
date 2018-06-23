@@ -3,22 +3,22 @@
 author -> pc_pierre\huber
 created-at -> 2018-01-31 at 19:05:22
 prerequisite -> 
-description -> 
-groups -> 
+description -> test script ....
+groups -> default , toverify
 
 [ats-variables]
 
 
 [ats-actions]
 
-channel-start -> checkout -> $param(0,chrome)
+channel-start -> checkout -> $param(0,edge)
 goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/kitchensink/?modern#form-checkout
 click [try(25)] -> button [class = x-button-el] -> DIV [data-componentid =~ ext-button.*, text =~ (?i)RESET]
 property -> name => propertyVar -> INPUT [class = x-input-el, name = firstName]
 keyboard -> Pierre -> INPUT [class = x-input-el, name = firstName]
 keyboard -> Huber -> INPUT [name = lastName]
 keyboard -> pierrehuber -> INPUT [name = email]
-click -> DIV [class = x-icon-el&sp;x-font-icon] -> DIV [id =~ ext-emailfield.*, text =~ (?i)Email]
+click -> DIV [class = x-icon-el x-font-icon] -> DIV [id =~ ext-emailfield.*, text =~ (?i)Email]
 keyboard -> pierrehuber@yahoo.fr -> INPUT [name = email]
 keyboard -> 55589774512 -> INPUT [name = phone]
 click -> BUTTON [type = button] -> DIV [data-componentid =~ ext-button-8, text =~ (?i)NEXT]
@@ -33,13 +33,14 @@ keyboard -> pierre huber -> INPUT [name = payment_name]
 keyboard -> 01234567896325412 -> INPUT [name = payment_number]
 keyboard -> june -> INPUT [name = payment_month]
 keyboard -> 2019 -> INPUT [name = payment_year]
-click -> BUTTON [type = button] -> DIV [class =~ x-component&sp;x-button&sp;x-has-text&sp;x-icon-align-left&sp;x-arrow-align-right&sp;x-layout-box-item&sp;x-layout-hbox-item, text =~ (?i)SUBMIT]
+click -> BUTTON [type = button] -> DIV [class =~ x-component x-button x-has-text x-icon-align-left x-arrow-align-right x-layout-box-item x-layout-hbox-item, text =~ (?i)SUBMIT]
 comment -> log -> First way to check message box :
-check-count -> 1 -> DIV [class = x-innerhtml, text = Your&sp;payment&sp;has&sp;been&sp;processed!]
+check-count -> 1 -> DIV [class = x-innerhtml, text = Your payment has been processed!]
 comment -> script -> An other way to check message box :
-check-property -> text =~ (?i).*Your&sp;payment&sp;has&sp;been&sp;processed!.* -> DIV [id = ext-messagebox]
-click -> BUTTON [type = button] -> DIV [class =~ x-component&sp;x-button&sp;x-has-text&sp;x-icon-align-left&sp;x-arrow-align-right&sp;x-layout-box-item&sp;x-layout-hbox-item&sp;x-focused, text = OK] -> DIV [id = ext-messagebox]
+check-property -> text =~ (?i).*Your payment has been processed!.* -> DIV [id = ext-messagebox]
+click -> BUTTON [type = button] -> DIV [class =~ x-component x-button x-has-text x-icon-align-left x-arrow-align-right x-layout-box-item x-layout-hbox-item x-focused, text = OK] -> DIV [id = ext-messagebox]
 channel-close -> checkout
+comment -> script -> 
 
 [ats-returns]
 
