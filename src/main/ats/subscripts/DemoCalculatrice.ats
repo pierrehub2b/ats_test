@@ -1,7 +1,8 @@
 [ats-header]
 
+id -> 
 author -> AGILITEST-DUPER\Emmanuel DUPERRAY
-created-at -> 2018-03-24 at 15:08:56
+created -> 2018-06-26 at 22:24:47
 prerequisite -> 
 description -> Tests sur calculatrice google:<br>- simple clic<br>- récupération de propriété "résultat"<br>- comparaison au résultat attendu
 groups -> 
@@ -12,18 +13,18 @@ groups ->
 [ats-actions]
 
 comment -> script -> Lancement du canal et navigation sur le site : www.google.com
-channel-start -> Canal Google -> $param(0,chrome)
+channel-start -> Canal Google -> $param(0nchrome)
 goto-url -> www.google.fr
 comment -> script -> Nous faisons une recherche sur le mot 'calculatrice' dans le champ INPUT principal de Google, et appuyons sur ENTREE
 keyboard -> calculatrice$key(ENTER) -> INPUT [class = gsfi lst-d-f, id = lst-ib]
 comment -> script -> La calculatrice google s'affiche, nous cliquons sur le bouton '8'
-click -> SPAN [class = cwbts] -> DIV [class = cwbtpl cwlgb-tpl, text = 8]
+click -> SPAN [class = cwbts, role = button, text = 8]
 comment -> script -> Puis sur le bouton '+'
-click -> SPAN [class = cwbts] -> DIV [class = cwbtpl cwdgb-tpl cwbbts, text = +]
+click -> SPAN [class = cwbts, role = button, text = +]
 comment -> script -> De nouveau sur le bouton  '8'
-click -> SPAN [class = cwbts] -> DIV [class = cwbtpl cwlgb-tpl, text = 8]
+click -> SPAN [class = cwbts, role = button, text = 8]
 comment -> script -> Et enfin sur le bouton '=' permettant d'obtenir le résultat
-click -> SPAN [class = cwbts] -> DIV [class = cwbtpl cwbb-tpl cwbbts]
+click -> SPAN [class = cwbts, role = button, text = &eq;]
 comment -> script -> Nous récupérons la valeur du résultat dans la variable 'Resultat_Calculatrice'
 property -> innerHTML => Resultat_Calculatrice -> SPAN [class = cwcot, id = cwos]
 comment -> script -> Finalement nous effectuons le contrôle du résultat : 8 + 8 = 16

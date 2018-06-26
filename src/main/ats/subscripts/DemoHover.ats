@@ -1,7 +1,8 @@
 [ats-header]
 
+id -> 
 author -> AGILITEST-DUPER\Emmanuel DUPERRAY
-created-at -> 2018-03-29 at 17:37:04
+created -> 2018-06-25 at 08:12:13
 prerequisite -> 
 description -> 
 groups -> 
@@ -13,7 +14,7 @@ groups ->
 
 channel-start -> Hover -> $param(0,chrome)
 goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/kitchensink/?modern#pie-3d
-over [try(5), left(250)] -> CANVAS [id = ext-element-116]
+over [try(10), left(250)] -> CANVAS [id = ext-element-116]
 over [right(250)] -> CANVAS [id = ext-element-116]
 over [bottom(250)] -> CANVAS [id = ext-element-116]
 over [top(200)] -> CANVAS [id = ext-element-116]

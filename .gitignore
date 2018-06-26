@@ -5,3 +5,4 @@ report/
 .settings/
 test-output/
 *.txt
+/bin/
