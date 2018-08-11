@@ -26,7 +26,7 @@ click -> SPAN [class = cwbts, role = button, text = 8]
 comment -> script -> Et enfin sur le bouton '=' permettant d'obtenir le résultat
 click -> SPAN [class = cwbts, role = button, text = &eq;]
 comment -> script -> Nous récupérons la valeur du résultat dans la variable 'Resultat_Calculatrice'
-property -> innerHTML => Resultat_Calculatrice -> SPAN [class = cwcot, id = cwos]
+property -> innerHTML => Resultat_Calculatrice -> SPAN [id = cwos]
 comment -> script -> Finalement nous effectuons le contrôle du résultat : 8 + 8 = 16
 check-value -> $var(Resultat_Calculatrice) = 16
 comment -> script -> Fermeture du canal et sortie du script
