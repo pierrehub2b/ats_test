@@ -1,10 +1,11 @@
 [ats-header]
 
+id -> 
 author -> AGILITEST-DUPER\Emmanuel DUPERRAY
-created-at -> 2018-03-29 at 14:04:40
+created -> 2018-09-03 at 13:44:42
 prerequisite -> 
 description -> 
-groups -> 
+groups -> default , web
 
 [ats-variables]
 

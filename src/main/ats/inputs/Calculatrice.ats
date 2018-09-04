@@ -1,10 +1,11 @@
 [ats-header]
 
+id -> 
 author -> AGILITEST-DUPER\Emmanuel DUPERRAY
-created-at -> 2018-03-24 at 15:08:56
+created -> 2018-09-03 at 13:44:19
 prerequisite -> 
 description -> Tests sur calculatrice google:<br>- simple clic<br>- récupération de propriété "résultat"<br>- comparaison au résultat attendu
-groups -> default
+groups -> default , web
 
 [ats-variables]
 

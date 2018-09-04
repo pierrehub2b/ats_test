@@ -5,7 +5,7 @@ author -> AGILITEST-DUPER\Emmanuel DUPERRAY
 created -> 2018-06-26 at 22:24:47
 prerequisite -> 
 description -> Tests sur calculatrice google:<br>- simple clic<br>- récupération de propriété "résultat"<br>- comparaison au résultat attendu
-groups -> 
+groups -> default , web
 
 [ats-variables]
 
@@ -13,7 +13,7 @@ groups ->
 [ats-actions]
 
 comment -> script -> Lancement du canal et navigation sur le site : www.google.com
-channel-start -> Canal Google -> $param(0nchrome)
+channel-start -> Canal Google -> $param(0,chrome)
 goto-url -> www.google.fr
 comment -> script -> Nous faisons une recherche sur le mot 'calculatrice' dans le champ INPUT principal de Google, et appuyons sur ENTREE
 keyboard -> calculatrice$key(ENTER) -> INPUT [class = gsfi lst-d-f, id = lst-ib]

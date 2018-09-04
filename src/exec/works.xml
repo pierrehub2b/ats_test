@@ -13,5 +13,8 @@
     <packages>
       <package name=".*"/>
     </packages>
+    <classes>
+      <class name="AllScripts"/>
+    </classes>
   </test>
 </suite>

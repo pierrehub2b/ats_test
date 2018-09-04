@@ -1,10 +1,11 @@
 [ats-header]
 
+id -> 
 author -> pc_pierre\huber
-created-at -> 2018-04-27 at 11:57:03
+created -> 2018-09-03 at 13:43:34
 prerequisite -> 
 description -> 
-groups -> 
+groups -> default , web
 
 [ats-variables]
 
@@ -19,3 +20,7 @@ goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/kitchensink/?modern#
 subscript -> subscripts.inputs.InputData [$var(firstName), $var(lastName)]
 channel-close -> web2
 channel-close -> web1
+
+[ats-returns]
+
+return -> 

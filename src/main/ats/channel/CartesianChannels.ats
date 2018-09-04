@@ -1,10 +1,11 @@
 [ats-header]
 
+id -> 
 author -> pc_pierre\huber
-created-at -> 2018-04-27 at 11:50:23
+created -> 2018-09-03 at 13:43:26
 prerequisite -> 
 description -> 
-groups -> bug
+groups -> default , web
 
 [ats-variables]
 
@@ -14,3 +15,7 @@ groups -> bug
 comment -> script -> Call multichannel subscripts using cartesian product of browsers name in csv file
 subscript -> subscripts.channel.MultiChannel1 [assets:///data/browsers-2x.csv]
 comment -> script -> End of script
+
+[ats-returns]
+
+return -> 
