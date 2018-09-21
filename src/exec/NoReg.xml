@@ -1,11 +1,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="NoReg" verbose="1">
-  <parameter name="xml.report" value="true"/>
-  <parameter name="visual.report" value="4"/>
+<suite name="NoReg" verbose="10">
   <test name="testMain">
     <groups>
       <run>
-        <exclude name="bug"/>
+        <include name="bug"/>
         <include name="default"/>
         <include name="web"/>
         <include name="desktop"/>

@@ -1,44 +1,45 @@
 [ats-header]
 
+id -> 
 author -> pc_pierre\huber
-created-at -> 2018-01-31 at 19:05:22
+created -> 2018-09-16 at 12:38:47
 prerequisite -> 
 description -> test script ....
-groups -> default , toverify
+groups -> bug
 
 [ats-variables]
 
 
 [ats-actions]
 
-channel-start -> checkout -> $param(0,edge)
+channel-start -> checkout -> $param(0,chrome)
 goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/kitchensink/?modern#form-checkout
-click [try(25)] -> button [class = x-button-el] -> DIV [data-componentid =~ ext-button.*, text =~ (?i)RESET]
-property -> name => propertyVar -> INPUT [class = x-input-el, name = firstName]
-keyboard -> Pierre -> INPUT [class = x-input-el, name = firstName]
-keyboard -> Huber -> INPUT [name = lastName]
-keyboard -> pierrehuber -> INPUT [name = email]
-click -> DIV [class = x-icon-el x-font-icon] -> DIV [id =~ ext-emailfield.*, text =~ (?i)Email]
-keyboard -> pierrehuber@yahoo.fr -> INPUT [name = email]
-keyboard -> 55589774512 -> INPUT [name = phone]
-click -> BUTTON [type = button] -> DIV [data-componentid =~ ext-button-8, text =~ (?i)NEXT]
-keyboard -> 25 sesam street -> INPUT [name = shipping_address]
-keyboard -> New York city -> INPUT [name = shipping_city]
-keyboard -> New York -> INPUT [name = shipping_state]
-keyboard -> 10001 -> INPUT [name = shipping_postalcode]
-click -> BUTTON [type = button] -> DIV [data-componentid =~ ext-button-8, text =~ (?i)NEXT]
-click -> BUTTON [type = button] -> DIV [data-componentid =~ ext-button-8, text =~ (?i)NEXT]
-click -> BUTTON [type = button] -> DIV [data-componentid =~ ext-button.*, text =~ (?i)AMEX]
-keyboard -> pierre huber -> INPUT [name = payment_name]
-keyboard -> 01234567896325412 -> INPUT [name = payment_number]
-keyboard -> june -> INPUT [name = payment_month]
-keyboard -> 2019 -> INPUT [name = payment_year]
-click -> BUTTON [type = button] -> DIV [class =~ x-component x-button x-has-text x-icon-align-left x-arrow-align-right x-layout-box-item x-layout-hbox-item, text =~ (?i)SUBMIT]
+click [try(25)] -> DIV [data-componentid =~ ext-button-.*, text =~ (?i)Reset] -> IFRAME [id = examples-iframe]
+property -> name => propertyVar -> INPUT [class = x-input-el, name = firstName] -> IFRAME [id = examples-iframe]
+keyboard -> Pierre -> INPUT [class = x-input-el, name = firstName] -> iframe [id = examples-iframe]
+keyboard -> Huber -> INPUT [name = lastName] -> iframe [id = examples-iframe]
+keyboard -> pierrehuber -> INPUT [name = email] -> iframe [id = examples-iframe]
+click -> DIV [class = x-icon-el x-font-icon] -> DIV [id =~ ext-emailfield.*, text =~ (?i)Email] -> iframe [id = examples-iframe]
+keyboard -> pierrehuber@yahoo.fr -> INPUT [name = email] -> iframe [id = examples-iframe]
+keyboard -> 55589774512 -> INPUT [name = phone] -> iframe [id = examples-iframe]
+click -> BUTTON [type = button] -> DIV [data-componentid =~ ext-button-8, text =~ (?i)NEXT] -> iframe [id = examples-iframe]
+keyboard -> 25 sesam street -> INPUT [name = shipping_address] -> iframe [id = examples-iframe]
+keyboard -> New York city -> INPUT [name = shipping_city] -> iframe [id = examples-iframe]
+keyboard -> New York -> INPUT [name = shipping_state] -> iframe [id = examples-iframe]
+keyboard -> 10001 -> INPUT [name = shipping_postalcode] -> iframe [id = examples-iframe]
+click -> BUTTON [type = button] -> DIV [data-componentid =~ ext-button-8, text =~ (?i)NEXT] -> iframe [id = examples-iframe]
+click -> BUTTON [type = button] -> DIV [data-componentid =~ ext-button-8, text =~ (?i)NEXT] -> iframe [id = examples-iframe]
+click -> BUTTON [type = button] -> DIV [data-componentid =~ ext-button.*, text =~ (?i)AMEX] -> iframe [id = examples-iframe]
+keyboard -> pierre huber -> INPUT [name = payment_name] -> iframe [id = examples-iframe]
+keyboard -> 01234567896325412 -> INPUT [name = payment_number] -> iframe [id = examples-iframe]
+keyboard -> june -> INPUT [name = payment_month] -> iframe [id = examples-iframe]
+keyboard -> 2019 -> INPUT [name = payment_year] -> iframe [id = examples-iframe]
+click -> BUTTON [type = button] -> DIV [class =~ x-component x-button x-has-text x-icon-align-left x-arrow-align-right x-layout-box-item x-layout-hbox-item, text =~ (?i)SUBMIT] -> iframe [id = examples-iframe]
 comment -> log -> First way to check message box :
-check-count -> 1 -> DIV [class = x-innerhtml, text = Your payment has been processed!]
+check-count -> 1 -> DIV [class = x-innerhtml, text = Your payment has been processed!] -> iframe [id = examples-iframe]
 comment -> script -> An other way to check message box :
-check-property -> text =~ (?i).*Your payment has been processed!.* -> DIV [id = ext-messagebox]
-click -> BUTTON [type = button] -> DIV [class =~ x-component x-button x-has-text x-icon-align-left x-arrow-align-right x-layout-box-item x-layout-hbox-item x-focused, text = OK] -> DIV [id = ext-messagebox]
+check-property -> text =~ (?i).*Your payment has been processed!.* -> DIV [id = ext-messagebox] -> iframe [id = examples-iframe]
+click -> BUTTON [type = button] -> DIV [class =~ (?i)x-component\s*x-button\s*x-has-text\s*.*, text =~ (?i)OK] -> IFRAME [id = examples-iframe]
 channel-close -> checkout
 comment -> script -> 
 

@@ -14,7 +14,7 @@ groups -> default , web
 
 channel-start -> Saisie -> $param(0,chrome)
 goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/kitchensink/?modern#binding-selection
-click [try(20)] -> DIV [id = ext-element-120]
-keyboard -> Prénom_1 -> INPUT [id = ext-element-70]
-keyboard -> Nom_1 -> INPUT [id = ext-element-83]
+click [try(20)] -> DIV [id = ext-element-120] -> iframe [id = examples-iframe]
+keyboard -> Prénom_1 -> INPUT [id = ext-element-70] -> IFRAME [id = examples-iframe]
+keyboard -> Nom_1 -> INPUT [id = ext-element-83] -> IFRAME [id = examples-iframe]
 channel-close -> Saisie

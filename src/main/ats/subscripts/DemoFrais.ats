@@ -1,7 +1,8 @@
 [ats-header]
 
+id -> 
 author -> AGILITEST-DUPER\Emmanuel DUPERRAY
-created-at -> 2018-03-29 at 11:44:35
+created -> 2018-09-19 at 16:24:36
 prerequisite -> 
 description -> 
 groups -> 
@@ -37,9 +38,10 @@ click -> A [class = cxb-link, href = /entry/new]
 comment -> script -> Ajout d'une nouvelle dépense de voyage
 click -> DIV [class = category, text = Travel]
 comment -> script -> Saisie de la date de la dépense
+click -> INPUT [class = cxe-datetimefield-input]
 keyboard -> Dec 25, 2018$key(ENTER) -> INPUT [class = cxe-datetimefield-input]
 comment -> script -> Saisie du montant de la dépense
-keyboard -> $var(SantaTravelValue)$key(ENTER) -> INPUT [class = cxe-numberfield-input]
+keyboard -> $var(SantaTravelValue) -> INPUT [class = cxe-numberfield-input]
 comment -> script -> et de la description du déplacement
 keyboard -> Santa travel$key(ENTER) -> INPUT [class = cxe-textfield-input]
 comment -> script -> Puis nous sauvons cette dépense en cliquant sur SAVE

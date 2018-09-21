@@ -1,7 +1,8 @@
 [ats-header]
 
+id -> 
 author -> 
-created-at -> 2018-06-03 at 11:08:42
+created -> 2018-09-16 at 12:11:27
 prerequisite -> 
 description -> 
 groups -> 
@@ -14,8 +15,10 @@ groups ->
 channel-start -> myFirstChannel -> $param(0,chrome)
 goto-url -> google.com
 keyboard -> automated testing$key(ENTER) -> INPUT [id = lst-ib]
-click -> A [text = Test automation - Wikipedia]
-scroll -> 800
+scroll -> 0 -> A [href = https://en.wikipedia.org/wiki/Test_automation, text =~ (?i)Test\s*automation\s*-\s*Wikipedia] -> H3 [text =~ (?i)Test\s*automation\s*-\s*Wikipedia]
+//click -> H3 [text =~ (?i)Test\s*automation\s*-\s*Wikipedia] -> A [text =~ (?i)Test\s*automation\s*-\s*Wikipedia.*]
+click -> A [href = https://en.wikipedia.org/wiki/Test_automation, text =~ (?i)Test\s*automation\s*-\s*Wikipedia] -> H3 [text =~ (?i)Test\s*automation\s*-\s*Wikipedia]
+//scroll -> 800
 scroll -> 0 -> A [font-style = italic, text = Graphical user interface testing]
 over -> IMG [src =~ .*Test_Automation_Interface.png]
 channel-close -> myFirstChannel

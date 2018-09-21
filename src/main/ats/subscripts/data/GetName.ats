@@ -1,7 +1,8 @@
 [ats-header]
 
+id -> 
 author -> pc_pierre\huber
-created-at -> 2018-04-27 at 12:02:23
+created -> 2018-09-14 at 18:30:20
 prerequisite -> 
 description -> 
 groups -> 
@@ -13,7 +14,8 @@ var -> lastName -> regexp [\s(.*), 1] -> $var(textValue)
 
 [ats-actions]
 
-property [try(20)] -> text => textValue -> DIV [index(1), class = x-inner-el&sp;x-listitem-inner-el&sp;x-component-inner-el]
+check-count -> 0 -> div [id = loadingSplash] -> IFRAME [id = examples-iframe]
+property [try(20)] -> text => textValue -> DIV [id = ext-element-97] -> IFRAME [id = examples-iframe]
 
 [ats-returns]
 
