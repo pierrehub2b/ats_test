@@ -15,9 +15,8 @@ groups ->
 channel-start -> myFirstChannel -> $param(0,chrome)
 goto-url -> google.com
 keyboard -> automated testing$key(ENTER) -> INPUT [id = lst-ib]
-scroll -> 0 -> A [href = https://en.wikipedia.org/wiki/Test_automation, text =~ (?i)Test\s*automation\s*-\s*Wikipedia] -> H3 [text =~ (?i)Test\s*automation\s*-\s*Wikipedia]
-//click -> H3 [text =~ (?i)Test\s*automation\s*-\s*Wikipedia] -> A [text =~ (?i)Test\s*automation\s*-\s*Wikipedia.*]
-click -> A [href = https://en.wikipedia.org/wiki/Test_automation, text =~ (?i)Test\s*automation\s*-\s*Wikipedia] -> H3 [text =~ (?i)Test\s*automation\s*-\s*Wikipedia]
+scroll -> 0 -> H3 [text =~ (?i)Test\s*automation\s*-\s*Wikipedia] -> A [href =~ (?i)https://en.wikipedia.org/wiki/Test_automation]
+click -> H3 [text =~ (?i)Test\s*automation\s*-\s*Wikipedia] -> A [href =~ (?i)https://en.wikipedia.org/wiki/Test_automation]
 //scroll -> 800
 scroll -> 0 -> A [font-style = italic, text = Graphical user interface testing]
 over -> IMG [src =~ .*Test_Automation_Interface.png]
