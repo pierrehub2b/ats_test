@@ -18,13 +18,13 @@ goto-url -> www.google.fr
 comment -> script -> Nous faisons une recherche sur le mot 'calculatrice' dans le champ INPUT principal de Google, et appuyons sur ENTREE
 keyboard -> calculatrice$key(ENTER) -> INPUT [class = gsfi lst-d-f, id = lst-ib]
 comment -> script -> La calculatrice google s'affiche, nous cliquons sur le bouton '8'
-click -> SPAN [class = cwbts, role = button, text = 8]
+click -> SPAN [role = button, text = 8]
 comment -> script -> Puis sur le bouton '+'
-click -> SPAN [class = cwbts, role = button, text = +]
+click -> SPAN [role = button, text = +]
 comment -> script -> De nouveau sur le bouton  '8'
-click -> SPAN [class = cwbts, role = button, text = 8]
+click -> SPAN [role = button, text = 8]
 comment -> script -> Et enfin sur le bouton '=' permettant d'obtenir le résultat
-click -> SPAN [class = cwbts, role = button, text = &eq;]
+click -> SPAN [role = button, text = &eq;]
 comment -> script -> Nous récupérons la valeur du résultat dans la variable 'Resultat_Calculatrice'
 property -> innerHTML => Resultat_Calculatrice -> SPAN [id = cwos]
 comment -> script -> Finalement nous effectuons le contrôle du résultat : 8 + 8 = 16
