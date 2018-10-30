@@ -15,8 +15,8 @@ groups ->
 channel-start -> web -> $param(0,chrome)
 goto-url -> www.google.fr
 keyboard -> calculatrice$key(ENTER) -> INPUT [class = gsfi lst-d-f, id = lst-ib]
-scroll -> 0 -> A [text = CALCULETTE / CALCULATRICE]
-click-wheel -> A [text = CALCULETTE / CALCULATRICE]
+scroll -> 0 -> H3 [text =~ (?i)CALCULETTE\s*/\s*CALCULATRICE]
+click-wheel -> H3 [text =~ (?i)CALCULETTE\s*/\s*CALCULATRICE]
 window-switch -> 1
 click -> INPUT [class = bouton-blanc, name = digit_7]
 click -> INPUT [class = bouton-blanc, name = digit_7]
