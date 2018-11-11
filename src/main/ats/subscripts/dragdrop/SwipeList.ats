@@ -19,7 +19,7 @@ scroll [try(30)] -> -10 -> DIV [class = x-list-outer-ct x-scroller] -> DIV [clas
 over [try(-3)] -> DIV [class = x-inner-el x-listitem-inner-el x-component-inner-el, text = Allan Brummer] -> iframe [id = examples-iframe]
 click -> DIV [class =~ x-inner-el x-listitem-inner-el x-component-inner-el.*?, text = Ashlee Ricco] -> iframe [id = examples-iframe]
 click -> DIV [class =~ x-inner-el x-listitem-inner-el x-component-inner-el.*?, text = Allan Ricca] -> iframe [id = examples-iframe]
-swipe -> horizontal = -80 -> DIV [class =~ x-inner-el x-listitem-inner-el x-component-inner-el.*?, text = Allan Ricca] -> iframe [id = examples-iframe]
+swipe -> left(70) -> DIV [class =~ x-inner-el x-listitem-inner-el x-component-inner-el.*?, text = Allan Ricca] -> iframe [id = examples-iframe]
 click -> DIV [class =~ x-body-el x-listitem-body-el x-component-body-el.*?, text =~ (?i).*MESSAGE.*GEAR.*Allan Ricca] -> iframe [id = examples-iframe]
 keyboard -> Hello -> INPUT [class = x-input-el] -> IFRAME [id = examples-iframe]
 click -> BUTTON [class = x-button-el] -> DIV [data-componentid =~ ext-button.*, text =~ (?i)OK] -> DIV [id = ext-messagebox] -> iframe [id = examples-iframe]
