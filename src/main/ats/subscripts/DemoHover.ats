@@ -5,7 +5,7 @@ author -> AGILITEST-DUPER\Emmanuel DUPERRAY
 created -> 2018-06-25 at 08:12:13
 prerequisite -> 
 description -> 
-groups -> 
+groups -> web , default
 
 [ats-variables]
 
@@ -14,12 +14,12 @@ groups ->
 
 channel-start -> Hover -> $param(0,chrome)
 goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/kitchensink/?modern#pie-3d
-over [try(10), left(250)] -> CANVAS [id = ext-element-116]
-over [right(250)] -> CANVAS [id = ext-element-116]
-over [bottom(250)] -> CANVAS [id = ext-element-116]
-over [top(200)] -> CANVAS [id = ext-element-116]
-over [left(200), top(200)] -> CANVAS [id = ext-element-116]
-over [right(250), bottom(200)] -> CANVAS [id = ext-element-116]
-over [right(200), top(200)] -> CANVAS [id = ext-element-116]
-over [left(200), bottom(250)] -> CANVAS [id = ext-element-116]
+over [try(10), left(250)] -> CANVAS [id = ext-element-116] -> IFRAME [id = examples-iframe]
+over [right(250)] -> CANVAS [id = ext-element-116] -> IFRAME [id = examples-iframe]
+over [bottom(250)] -> CANVAS [id = ext-element-116] -> IFRAME [id = examples-iframe]
+over [top(200)] -> CANVAS [id = ext-element-116] -> IFRAME [id = examples-iframe]
+over [right(200), bottom(200)] -> CANVAS [id = ext-element-116] -> IFRAME [id = examples-iframe]
+over [left(200), top(200)] -> CANVAS [id = ext-element-116] -> IFRAME [id = examples-iframe]
+over [right(200), top(200)] -> CANVAS [id = ext-element-116] -> IFRAME [id = examples-iframe]
+over [left(200), bottom(250)] -> CANVAS [id = ext-element-116] -> IFRAME [id = examples-iframe]
 channel-close -> Hover

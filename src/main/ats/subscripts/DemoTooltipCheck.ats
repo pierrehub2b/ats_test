@@ -1,10 +1,11 @@
 [ats-header]
 
+id -> 
 author -> pc_pierre\huber
-created-at -> 2018-02-01 at 15:53:12
+created -> 2018-11-12 at 14:38:58
 prerequisite -> 
 description -> 
-groups -> 
+groups -> web , toverify
 
 [ats-variables]
 
@@ -16,29 +17,23 @@ var -> secondValue -> regexp [.*to.*(\$\d+).*of.*, 1] -> $var(tooltip)
 channel-start -> grids -> $param(0, chrome)
 goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/kitchensink/?modern#d3-view-heatmap-purchases
 comment -> script -> Sélection des ventes par jour
-click [try(15)] -> BUTTON [type = button] -> DIV [id =~ ext-button.*, text =~ (?i)PURCHASES&sp;BY&sp;DAY]
-comment -> script -> Survol de la case 138...
-over -> g [index(69), class = x-d3-tile]
+//click [try(15)] -> BUTTON [type = button] -> DIV [id =~ ext-button.*, text =~ (?i)PURCHASES BY DAY]
+comment -> script -> Survol de la case 286...
+over -> text [text = 286] -> IFRAME [id = examples-iframe]
 comment -> script -> On récupère la propriété qui vient de s'afficher dans le tooltip
-
-property -> text => tooltip -> DIV [id = ext-tooltip-1]
+property -> text => tooltip -> DIV [id = ext-element-120] -> IFRAME [id = examples-iframe]
 comment -> script -> Récupération des valeurs dans des variables
- et comparaison avec les valeurs attendues
-
-check-value -> $var(firstValue) = $2500
+check-value -> $var(firstValue) = $1400
 comment -> script -> firstValue et secondValue sont extraites de la même variable tooltip récupérée du DIV
-check-value -> $var(secondValue) = $2600
-comment -> script -> Elles sont calculées en utilisant des expressions régul
-ières
-
-over -> g [index(48), class = x-d3-tile]
-property -> text => tooltip -> DIV [id = ext-tooltip-1]
-check-value -> $var(firstValue) = $2400
-check-value -> $var(secondValue) = $2500
-over -> g [index(44), class = x-d3-tile]
-property -> text => tooltip -> DIV [id = ext-tooltip-1]
-check-value -> $var(firstValue) = $2000
-check-value -> $var(secondValue) = $2100
+check-value -> $var(secondValue) = $1500
+comment -> script -> Elles sont calculées en utilisant des expressions régulières
+over -> text [text = 305] -> IFRAME [id = examples-iframe]
+property -> text => tooltip -> DIV [id = ext-element-120] -> IFRAME [id = examples-iframe]
+check-value -> $var(firstValue) = $1300
+check-value -> $var(secondValue) = $1400
+over -> text [text = 187] -> IFRAME [id = examples-iframe]
+property -> text => tooltip -> DIV [id = ext-element-120] -> IFRAME [id = examples-iframe]
+check-value -> $var(firstValue) = $1800
+check-value -> $var(secondValue) = $1900
 comment -> script -> Après que plusieurs contrôles aient été effectués, fermeture du canal
-
 channel-close -> grids

@@ -1,10 +1,11 @@
 [ats-header]
 
+id -> 
 author -> AGILITEST-DUPER\Emmanuel DUPERRAY
-created-at -> 2018-04-07 at 14:11:14
+created -> 2018-11-13 at 09:46:12
 prerequisite -> 
 description -> 
-groups -> 
+groups -> web
 
 [ats-variables]
 
@@ -13,17 +14,17 @@ groups ->
 
 channel-start -> Select -> $param(0,chrome)
 goto-url -> http://www.agilitest.com/fichiers/test.html
-scroll -> 1550 -> BODY [text =~ (?i).*Calculatrice.*]
-select -> text = Saab -> SELECT [text = Volvo&sp;Saab&sp;Mercedes&sp;Audi] -> FORM [index(1), text = Volvo&sp;Saab&sp;Mercedes&sp;Audi]
-select -> text = Mercedes -> SELECT [text = Volvo&sp;Saab&sp;Mercedes&sp;Audi] -> FORM [index(1), text = Volvo&sp;Saab&sp;Mercedes&sp;Audi]
-select -> text = Audi -> SELECT [text = Volvo&sp;Saab&sp;Mercedes&sp;Audi] -> FORM [index(1), text = Volvo&sp;Saab&sp;Mercedes&sp;Audi]
-select -> text = Saab -> SELECT [text = Volvo&sp;Saab&sp;Mercedes&sp;Audi] -> FORM [index(2), text = Volvo&sp;Saab&sp;Mercedes&sp;Audi]
-scroll -> 25 -> SELECT [text = Volvo&sp;Saab&sp;Mercedes&sp;Audi] -> FORM [index(2), text = Volvo&sp;Saab&sp;Mercedes&sp;Audi]
-select -> text = Mercedes -> SELECT [text = Volvo&sp;Saab&sp;Mercedes&sp;Audi] -> FORM [index(2), text = Volvo&sp;Saab&sp;Mercedes&sp;Audi]
-select -> text = Saab -> SELECT [text = Volvo&sp;Saab&sp;Mercedes&sp;Audi] -> FORM [index(3), text = Volvo&sp;Saab&sp;Mercedes&sp;Audi]
-select -> text = Mercedes -> SELECT [text = Volvo&sp;Saab&sp;Mercedes&sp;Audi] -> FORM [index(3), text = Volvo&sp;Saab&sp;Mercedes&sp;Audi]
-select -> index = 0 -> SELECT [text = Volvo&sp;Saab&sp;Mercedes&sp;Audi] -> FORM [index(4), text = Volvo&sp;Saab&sp;Mercedes&sp;Audi]
-select -> index = 1 -> SELECT [text = Volvo&sp;Saab&sp;Mercedes&sp;Audi] -> FORM [index(4), text = Volvo&sp;Saab&sp;Mercedes&sp;Audi]
-select -> index = 2 -> SELECT [text = Volvo&sp;Saab&sp;Mercedes&sp;Audi] -> FORM [index(4), text = Volvo&sp;Saab&sp;Mercedes&sp;Audi]
-select -> index = 3 -> SELECT [text = Volvo&sp;Saab&sp;Mercedes&sp;Audi] -> FORM [index(4), text = Volvo&sp;Saab&sp;Mercedes&sp;Audi]
+scroll -> 500 -> H1 [text = Password :]
+select -> text = Saab -> SELECT [text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi] -> FORM [text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi]
+select -> text = Mercedes -> SELECT [text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi] -> FORM [index(2), text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi]
+select -> text = Audi -> SELECT [text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi] -> FORM [index(1), text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi]
+select -> text = Saab -> SELECT [text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi] -> FORM [index(2), text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi]
+scroll -> 25 -> SELECT [text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi] -> FORM [index(2), text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi]
+select -> text = Mercedes -> SELECT [text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi] -> FORM [index(2), text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi]
+select -> text = Saab -> SELECT [text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi] -> FORM [index(3), text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi]
+select -> text = Mercedes -> SELECT [text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi] -> FORM [index(3), text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi]
+select -> index = 0 -> SELECT [text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi] -> FORM [index(4), text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi]
+select -> index = 1 -> SELECT [text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi] -> FORM [index(4), text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi]
+select -> index = 2 -> SELECT [text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi] -> FORM [index(4), text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi]
+select -> index = 3 -> SELECT [text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi] -> FORM [index(4), text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi]
 channel-close -> Select

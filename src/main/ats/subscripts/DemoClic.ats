@@ -1,10 +1,11 @@
 [ats-header]
 
+id -> 
 author -> AGILITEST-DUPER\Emmanuel DUPERRAY
-created-at -> 2018-03-29 at 14:04:09
+created -> 2018-11-12 at 14:38:16
 prerequisite -> 
 description -> 
-groups -> 
+groups -> web
 
 [ats-variables]
 
@@ -20,35 +21,35 @@ click -> DIV [class = cxe-legend-entry, text = Technology]
 click -> DIV [class = cxe-legend-entry, text = Travel]
 click -> DIV [class = cxe-legend-entry, text = Education]
 click -> A [text = Log]
-click -> TH [class = cxe-grid-col-header&sp;cxs-sortable, text =~ (?i)Date] -> TBODY [class = cxe-grid-header] -> DIV [class = cxe-grid-fixed-header]
-click -> TH [class = cxe-grid-col-header&sp;cxs-sortable, text =~ (?i)Category] -> TBODY [class = cxe-grid-header] -> DIV [class = cxe-grid-fixed-header]
-click -> TH [class = cxe-grid-col-header&sp;cxs-aligned-right&sp;cxs-sortable, text =~ (?i)Amount] -> TBODY [class = cxe-grid-header] -> DIV [class = cxe-grid-fixed-header]
-click -> A [class = cxb-button&sp;cxm-hollow, text =~ (?i)EDIT] -> TD [index(1), class = cxs-pad&sp;cxs-aligned-center] -> DIV [class = cxe-grid-scroll-area&sp;cxs-fixed-header]
-click -> I [class = material-icons&sp;cxe-lookupfield-icon, text = keyboard_arrow_down]
+click -> TH [class = cxe-grid-col-header cxs-sortable, text =~ (?i)Date] -> TBODY [class = cxe-grid-header] -> DIV [class = cxe-grid-fixed-header]
+click -> TH [class = cxe-grid-col-header cxs-sortable, text =~ (?i)Category] -> TBODY [class = cxe-grid-header] -> DIV [class = cxe-grid-fixed-header]
+click -> TH [class = cxe-grid-col-header cxs-aligned-right cxs-sortable, text =~ (?i)Amount] -> TBODY [class = cxe-grid-header] -> DIV [class = cxe-grid-fixed-header]
+click -> A [class = cxb-button cxm-hollow, text =~ (?i)EDIT] -> TD [index(1), class = cxs-pad cxs-aligned-center] -> DIV [class = cxe-grid-scroll-area cxs-fixed-header]
+click -> I [class = material-icons cxe-lookupfield-icon, text = keyboard_arrow_down]
 click -> LI [text =~ (?i)Children]
-click -> BUTTON [class = cxb-button&sp;cxm-primary, type = button]
-click -> BUTTON [class = cxb-button&sp;cxm-hollow, text =~ (?i)REMOVE, type = button] -> TD [index(1), class = cxs-pad&sp;cxs-aligned-center] -> DIV [class = cxe-grid-scroll-area&sp;cxs-fixed-header]
-click -> BUTTON [class = cxb-button&sp;cxm-flat-primary, text =~ (?i)YES, type = button]
+click -> BUTTON [class = cxb-button cxm-primary, type = button]
+click -> BUTTON [class = cxb-button cxm-hollow, text =~ (?i)REMOVE, type = button] -> TD [index(1), class = cxs-pad cxs-aligned-center] -> DIV [class = cxe-grid-scroll-area cxs-fixed-header]
+click -> BUTTON [class = cxb-button cxm-flat-primary, text =~ (?i)YES, type = button]
 click -> A [text =~ (?i)Dashboard]
-click -> I [class = hamburger&sp;open]
+click -> I [class = hamburger open]
 click -> I [class = hamburger]
 goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/classic/desktop/index.html
 comment -> script -> Affichage de la fenetre Accordion affichant les contacts actuellement en ligne
-click -> DIV [class = ux-desktop-shortcut-icon&sp;accordion-shortcut]
+click -> DIV [class = ux-desktop-shortcut-icon accordion-shortcut] -> IFRAME [id = examples-iframe]
 comment -> script -> Sélection de Matt
-click -> SPAN [text = Matt] -> TD [role = gridcell, text = Matt]
+click -> SPAN [text = Matt] -> IFRAME [id = examples-iframe]
 comment -> script -> Puis de Brian
-click -> SPAN [text = Brian] -> TD [role = gridcell, text = Brian]
+click -> SPAN [text = Brian] -> IFRAME [id = examples-iframe]
 comment -> script -> Puis de Kevin...
-click -> SPAN [text = Kevin] -> TD [role = gridcell, text = Kevin]
+click -> SPAN [text = Kevin] -> IFRAME [id = examples-iframe]
 comment -> script -> Sélection de la fenetre Settings
-click -> DIV [text = Settings] -> DIV [role = tab, text = Settings]
+click -> DIV [role = tab, text = Settings] -> IFRAME [id = examples-iframe]
 comment -> script -> Sélection de la fenetre 'even more stuff'
-click -> DIV [data-ref = textEl] -> DIV [role = tab, text = Even&sp;More&sp;Stuff]
+click -> DIV [role = tab, text = Even More Stuff] -> IFRAME [id = examples-iframe]
 comment -> script -> Sélection de la fenêtre 'Online users'
-click -> DIV [id = im-tree_header-title-textEl, text = Online&sp;Users]
+click -> DIV [role = tab, text = Online Users] -> IFRAME [id = examples-iframe]
 comment -> script -> Rechargement des informations en cliquant sur la flèche tournante en haut à droite
-click -> DIV [data-ref = toolEl, role = presentation] -> DIV [data-componentid = tool-1071]
+click -> DIV [id = tool-1071, role = button] -> IFRAME [id = examples-iframe]
 comment -> script -> Fermeture de la fenêtre
-click -> DIV [data-ref = toolEl] -> DIV [data-qtip = Close&sp;dialog] -> DIV [class = x-box-target, id = acc-win_header-targetEl, text = Accordion&sp;Window]
+click -> DIV [id = tool-1069-toolEl] -> IFRAME [id = examples-iframe]
 channel-close -> Clic

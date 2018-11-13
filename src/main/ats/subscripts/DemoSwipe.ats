@@ -1,10 +1,11 @@
 [ats-header]
 
+id -> 
 author -> AGILITEST-DUPER\Emmanuel DUPERRAY
-created-at -> 2018-03-29 at 18:02:43
+created -> 2018-11-12 at 14:38:45
 prerequisite -> 
 description -> 
-groups -> 
+groups -> web
 
 [ats-variables]
 
@@ -13,16 +14,16 @@ groups ->
 
 channel-start -> Swipe -> $param(0,chrome)
 goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/kitchensink/?modern#carousel-basic
-drag [try(5)] -> DIV [index(1), text =~ (?i)Swipe\s.*]
-over [left(-20)] -> DIV [index(1), text =~ (?i)Swipe\s.*]
-drop [left(-20)] -> DIV [index(1), text =~ (?i)Swipe\s.*]
-drag -> DIV [id = ext-element-71]
-over [left(-20)] -> DIV [id = ext-element-71]
-drop [left(-20)] -> DIV [id = ext-element-71]
-drag -> DIV [id = ext-element-75]
-over [right(-20)] -> DIV [id = ext-element-75]
-drop [right(-20)] -> DIV [id = ext-element-75]
-drag -> DIV [id = ext-element-71]
-over [right(-20)] -> DIV [id = ext-element-71]
-drop [right(-20)] -> DIV [id = ext-element-71]
+drag [try(5)] -> DIV [id = ext-element-65] -> IFRAME [id = examples-iframe]
+over [left(-20)] -> DIV [id = ext-element-65] -> IFRAME [id = examples-iframe]
+drop [left(-40)] -> DIV [id = ext-element-65] -> IFRAME [id = examples-iframe]
+drag -> DIV [id = ext-element-71] -> IFRAME [id = examples-iframe]
+over [left(-20)] -> DIV [id = ext-element-71] -> IFRAME [id = examples-iframe]
+drop [left(-40)] -> DIV [id = ext-element-71] -> IFRAME [id = examples-iframe]
+drag -> DIV [id = ext-element-75] -> IFRAME [id = examples-iframe]
+over [right(-20)] -> DIV [id = ext-element-75] -> IFRAME [id = examples-iframe]
+drop [right(-40)] -> DIV [id = ext-element-75] -> IFRAME [id = examples-iframe]
+drag -> DIV [id = ext-element-71] -> IFRAME [id = examples-iframe]
+over [right(-20)] -> DIV [id = ext-element-71] -> IFRAME [id = examples-iframe]
+drop [right(-40)] -> DIV [id = ext-element-71] -> IFRAME [id = examples-iframe]
 channel-close -> Swipe

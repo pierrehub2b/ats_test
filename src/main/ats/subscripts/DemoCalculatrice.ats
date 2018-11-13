@@ -16,7 +16,7 @@ comment -> script -> Lancement du canal et navigation sur le site : www.google.c
 channel-start -> Canal Google -> $param(0,chrome)
 goto-url -> www.google.fr
 comment -> script -> Nous faisons une recherche sur le mot 'calculatrice' dans le champ INPUT principal de Google, et appuyons sur ENTREE
-keyboard -> calculatrice$key(ENTER) -> INPUT [class = gsfi lst-d-f, id = lst-ib]
+keyboard -> calculatrice$key(ENTER) -> INPUT [type = text]
 comment -> script -> La calculatrice google s'affiche, nous cliquons sur le bouton '8'
 click -> SPAN [role = button, text = 8]
 comment -> script -> Puis sur le bouton '+'
