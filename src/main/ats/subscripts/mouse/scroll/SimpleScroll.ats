@@ -14,7 +14,7 @@ groups ->
 
 channel-start -> myFirstChannel -> $param(0,chrome)
 goto-url -> google.com
-keyboard -> automated testing$key(ENTER) -> INPUT [id = lst-ib]
+keyboard -> automated testing$key(ENTER) -> INPUT [title = Rechercher]
 scroll -> 0 -> A [href =~ (?i)https://en.wikipedia.org/wiki/Test_automation]
 click -> A [href =~ (?i)https://en.wikipedia.org/wiki/Test_automation]
 //scroll -> 800
