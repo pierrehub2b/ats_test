@@ -1,5 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="NoReg" verbose="10">
+  <parameter name="xml.report" value="true"/>
+  <parameter name="visual.report" value="4"/>
   <test name="testMain">
     <groups>
       <run>

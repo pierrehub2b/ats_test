@@ -16,7 +16,7 @@ channel-start -> myFirstChannel -> $param(0,chrome)
 goto-url -> google.com
 keyboard -> automated testing$key(ENTER) -> INPUT [title = Rechercher]
 scroll -> 0 -> A [href =~ (?i)https://en.wikipedia.org/wiki/Test_automation]
-click -> A [href =~ (?i)https://en.wikipedia.org/wiki/Test_automation]
+click -> A [index(2), href =~ (?i)https://en.wikipedia.org/wiki/Test_automation]
 //scroll -> 800
 scroll -> 0 -> A [font-style = italic, text = Graphical user interface testing]
 over -> IMG [src =~ .*Test_Automation_Interface.png]

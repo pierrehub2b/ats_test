@@ -14,6 +14,7 @@ groups -> default , web
 
 channel-start -> web1 -> $param(0,chrome)
 goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/kitchensink/?modern#basic-list
+check-count -> 0 -> div [id = loadingSplash] -> IFRAME [id = examples-iframe]
 subscript -> subscripts.data.GetName => firstName, lastName
 channel-start -> web2 -> $param(1,edge)
 goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/kitchensink/?modern#binding-selection

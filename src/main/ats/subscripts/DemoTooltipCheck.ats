@@ -5,7 +5,7 @@ author -> pc_pierre\huber
 created -> 2018-11-12 at 14:38:58
 prerequisite -> 
 description -> 
-groups -> web , toverify
+groups -> web
 
 [ats-variables]
 

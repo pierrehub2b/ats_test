@@ -1,7 +1,8 @@
 [ats-header]
 
+id -> 
 author -> agilitest
-created-at -> 2017-12-20 at 18:46:26
+created -> 2018-12-10 at 12:07:04
 prerequisite -> nope
 description -> Simple ATS script with start channel action and only one variable
 groups -> 
