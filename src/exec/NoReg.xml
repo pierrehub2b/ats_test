@@ -9,6 +9,7 @@
         <include name="default"/>
         <include name="web"/>
         <include name="desktop"/>
+        <include name="api"/>
       </run>
     </groups>
     <packages>

@@ -9,6 +9,7 @@
     <group>toverify</group>
     <group>web</group>
     <group>desktop</group>
+    <group>api</group>
   </groups>
   <environment>
     <property>browser</property>
