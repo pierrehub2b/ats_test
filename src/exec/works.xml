@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="works" verbose="1">
+<suite name="works" verbose="10">
   <parameter name="xml.report" value="true"/>
   <parameter name="visual.report" value="3"/>
   <test name="testMain">
@@ -11,10 +11,7 @@
       </run>
     </groups>
     <packages>
-      <package name=".*"/>
+      <package name="inputs.*"/>
     </packages>
-    <classes>
-      <class name="AllScripts"/>
-    </classes>
   </test>
 </suite>
