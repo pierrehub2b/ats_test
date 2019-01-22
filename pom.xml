@@ -61,7 +61,7 @@
 				<version>2.21.0</version>
 				<configuration>
 					<trimStackTrace>false</trimStackTrace>
-					<shutdown>kill</shutdown>
+					<shutdown>exit</shutdown>
 					<property>
 						<name>reporter</name>
 						<value>listenReport.Reporter</value>
