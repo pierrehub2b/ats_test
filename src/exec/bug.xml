@@ -27,9 +27,5 @@
       <package name="subscripts.mouse.scroll.*"/>
       <package name="subscripts.window.*"/>
     </packages>
-    <classes>
-      <class name="subscripts.DemoCalculatrice"/>
-      <class name="subscripts.DemoTooltipCheck"/>
-    </classes>
   </test>
 </suite>

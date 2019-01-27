@@ -1,5 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="NoReg" verbose="10">
+  <parameter name="xml.report" value="true"/>
+  <parameter name="visual.report" value="2"/>
   <test name="testMain">
     <groups>
       <run>
@@ -12,6 +14,7 @@
     </groups>
     <packages>
       <package name=".*"/>
+      <package name="api.*"/>
       <package name="channel.*"/>
       <package name="check.*"/>
       <package name="desktop.*"/>

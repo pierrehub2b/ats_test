@@ -1,13 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="toverify" verbose="6">
+<suite name="toverify" verbose="10">
   <parameter name="xml.report" value="true"/>
-  <parameter name="visual.report" value="1"/>
+  <parameter name="visual.report" value="3"/>
   <test name="testMain">
-    <groups>
-      <run>
-        <include name="desktop"/>
-      </run>
-    </groups>
     <packages>
       <package name=".*"/>
       <package name="channel.*"/>
@@ -25,5 +20,8 @@
       <package name="subscripts.mouse.scroll.*"/>
       <package name="subscripts.window.*"/>
     </packages>
+    <classes>
+      <class name="api.SAOP_flag"/>
+    </classes>
   </test>
 </suite>
