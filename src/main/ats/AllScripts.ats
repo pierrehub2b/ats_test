@@ -13,7 +13,7 @@ groups ->
 [ats-actions]
 
 comment -> script -> This script will call all scripts in ats folder except subscripts folder...
-subscript -> api.SAOP_flag
+subscript -> api.SOAP_flag
 subscript -> subscripts.DemoSwipe [chrome]
 subscript -> subscripts.DemoSwipe [firefox]
 subscript -> subscripts.DemoTooltipCheck [assets:///data/browsers.csv]

@@ -29,7 +29,7 @@ goto-url -> www.agilitest.com
 property -> text => webText -> DIV [data-sr-id = 2]
 channel-switch -> notepad
 keyboard -> $var(webText) -> Pane [ClassName = Scintilla]
-click [right(8)] -> TabItem [Name =~ new \d]
+click [right(6)] -> TabItem [Name =~ new \d]
 click -> Button [AutomationId = 6]
 keyboard -> agilitest-$rndstring(10) -> Edit [AutomationId = 1148]
 click -> Button [AutomationId = 1]

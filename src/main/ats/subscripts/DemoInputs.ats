@@ -21,8 +21,8 @@ comment -> script -> Itération d'opérations de calcul définies dans un fichie
 subscript -> subscripts.inputs.InputsCalculator [assets:///data/calc.csv]
 comment -> script -> Itérations de saisie de noms différents dans un champ texte
 subscript -> subscripts.inputs.InputsNames [assets:///data/names.csv]
-comment -> script -> Itérations de modifications d'un champ couleur
-subscript -> subscripts.inputs.InputsUpdateColor [assets:///data/colors.csv]
+//comment -> script -> Itérations de modifications d'un champ couleur
+//subscript -> subscripts.inputs.InputsUpdateColor [assets:///data/colors.csv]
 subscript -> subscripts.inputs.InputsRadio [other, female, male]
 subscript -> subscripts.inputs.InputsValues
 channel-close -> inputs

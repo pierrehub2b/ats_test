@@ -9,7 +9,7 @@ groups -> default , api
 
 [ats-variables]
 
-var -> Country1 -> Mexico
+var -> Country1 -> Spain
 var -> Country_ISO_Code2 -> JP
 var -> Country_ISO_Code3 -> GB
 
@@ -17,6 +17,7 @@ var -> Country_ISO_Code3 -> GB
 
 channel-start -> soapAdd -> http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL
 api-soap -> CountryISOCode -> <sCountryName>$var(Country1)</sCountryName>
+check-property -> value = ES -> ELEMENT [name = CountryISOCodeResult]
 property -> value => Country_ISO_Code1 -> ELEMENT [name = CountryISOCodeResult]
 api-soap -> CapitalCity -> <sCountryISOCode>$var(Country_ISO_Code1)</sCountryISOCode>
 property -> value => Capital1 -> ELEMENT [name = CapitalCityResult]
