@@ -13,5 +13,8 @@
     <packages>
       <package name="inputs.*"/>
     </packages>
+    <classes>
+      <class name="inputs.Calculatrice"/>
+    </classes>
   </test>
 </suite>
