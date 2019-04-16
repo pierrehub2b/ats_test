@@ -64,7 +64,7 @@
             <value>listenReport.Reporter</value>
           </property>
           <suiteXmlFiles>
-            <suiteXmlFile>src/exec/works.xml</suiteXmlFile>
+            <suiteXmlFile>src/exec/NoReg.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>
@@ -91,7 +91,7 @@
     <dependency>
       <groupId>com.actiontestscript</groupId>
       <artifactId>ats-automated-testing</artifactId>
-      <version>1.4.2</version>
+      <version>1.4.4</version>
     </dependency>
   </dependencies>
 </project>
