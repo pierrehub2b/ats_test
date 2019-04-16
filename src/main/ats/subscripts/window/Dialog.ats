@@ -28,7 +28,7 @@ click [try(9)] -> BUTTON [text = Try it] -> IFRAME [id = iframeResult]
 click -> dialog [type = dismiss]
 goto-url -> https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prompt
 click -> BUTTON [text =~ (?i)Try\s*it] -> IFRAME [name = iframeResult]
-check-count -> 1 -> dialog
+check-count [try(10)] -> 1 -> dialog
 property [try(5)] -> text => propertyVar -> dialog
 keyboard -> $var(inputName) -> dialog
 click -> dialog [type = accept]
