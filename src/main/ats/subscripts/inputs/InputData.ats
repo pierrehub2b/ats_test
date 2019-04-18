@@ -12,7 +12,7 @@ groups ->
 
 [ats-actions]
 
-check-count -> 0 -> div [id = loadingSplash] -> IFRAME [id = examples-iframe]
+check-count [try(10)] -> 0 -> div [id = loadingSplash] -> IFRAME [id = examples-iframe]
 click [try(20)] -> DIV [id = ext-element-120] -> IFRAME [id = examples-iframe]
 keyboard -> $param(0) -> INPUT [id = ext-element-70] -> IFRAME [id = examples-iframe]
 keyboard -> $param(1) -> INPUT [id = ext-element-83] -> IFRAME [id = examples-iframe]
