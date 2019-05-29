@@ -13,6 +13,7 @@
     <resources>
       <resource>
         <directory>./src/assets</directory>
+        <targetPath>assets</targetPath>
       </resource>
     </resources>
     <plugins>
