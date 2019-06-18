@@ -1,18 +1,31 @@
+{
+  "posts": [
     {
-         "type": "CLIENT",
-         "uuid": "20f00e1a-bfe4-4a5a-a141-41afe469c530",
-         "last_name": "NOM",
-         "address": {
-             "street_lines": [
-                "ligne1",
-                "ligne2",
-                "ligne3",
-                "ligne4"
-            ],
-             "city": {
-                 "name": "TADEN",
-                 "zipcode": 22100,
-                 "country": "FR"
-            }
-        }
+      "id": 1,
+      "title": "Post 1"
+    },
+    {
+      "id": 2,
+      "title": "Post 2"
+    },
+    {
+      "id": 3,
+      "title": "Post 3"
     }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
