@@ -3,8 +3,6 @@
          "uuid": "20f00e1a-bfe4-4a5a-a141-41afe469c530",
          "first_name": "PRENOM",
          "last_name": "NOM",
-         "marital_status": "MARI",
-         "ucrn": 150000000000022,
          "address": {
              "street_lines": [
                 "ligne1",
