@@ -5,10 +5,7 @@
          "last_name": "NOM",
          "address": {
              "street_lines": [
-                "ligne1",
-                "ligne2",
-                "ligne3",
-                "ligne4"
+
             ],
              "city": {
                  "name": "TADEN",
