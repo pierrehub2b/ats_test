@@ -1,11 +1,8 @@
 [ats-header]
 
-id -> 
 author -> pc_pierre\huber
 created -> 2018-09-16 at 12:38:47
-prerequisite -> 
 description -> test script ....
-groups -> bug
 
 [ats-variables]
 
@@ -14,7 +11,7 @@ groups -> bug
 
 channel-start -> checkout -> $param(0,chrome)
 goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/kitchensink/?modern#form-checkout
-click [try(25)] -> DIV [data-componentid =~ ext-button-.*, text =~ (?i)Reset] -> IFRAME [id = examples-iframe]
+click [try = 25] -> DIV [data-componentid =~ ext-button-.*, text =~ (?i)Reset] -> IFRAME [id = examples-iframe]
 property -> name => propertyVar -> INPUT [class = x-input-el, name = firstName] -> IFRAME [id = examples-iframe]
 keyboard -> Pierre -> INPUT [class = x-input-el, name = firstName] -> iframe [id = examples-iframe]
 keyboard -> Huber -> INPUT [name = lastName] -> iframe [id = examples-iframe]

@@ -1,7 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="NoReg" verbose="10">
   <parameter name="xml.report" value="true"/>
-  <parameter name="visual.report" value="4"/>
+  <parameter name="visual.report" value="2"/>
+  <parameter name="ats.log.level" value="warning"/>
   <test name="testMain">
     <groups>
       <run>
@@ -15,12 +16,7 @@
     <packages>
       <package name=".*"/>
       <package name="api.*"/>
-      <package name="channel.*"/>
-      <package name="check.*"/>
       <package name="desktop.*"/>
-      <package name="inputs.*"/>
-      <package name="mouse.*"/>
-      <package name="other.*"/>
       <package name="subscripts.*"/>
       <package name="subscripts.channel.*"/>
       <package name="subscripts.data.*"/>

@@ -1,0 +1,24 @@
+[ats-header]
+
+author -> 
+created -> 2019-02-13 at 19:04:18
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> web -> chrome
+goto-url -> https://www.dropzonejs.com/examples/simple.html
+channel-start -> explorer -> explorer
+goto-url -> c:/
+drag [try = -6, left = 6] -> Edit [Value = fileName.txt]
+channel-switch -> web
+over -> P [text =~ (?s)This is the most minimal example.*]
+//drop [bottom = 1] -> FORM [action = /upload-target]
+over -> BUTTON [text =~ (?i)Drop\s*files\s*here\s*to\s*upload]
+drop -> BUTTON [text =~ (?i)Drop\s*files\s*here\s*to\s*upload]
+over [try = 25] -> DIV [class = dz-preview dz-file-preview dz-processing dz-error dz-complete]
+check-count -> 1 -> DIV [class = dz-error-message]
+channel-close -> web
+channel-close -> explorer

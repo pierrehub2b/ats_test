@@ -1,5 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="bug" verbose="1">
+<suite name="bug" verbose="10">
+  <parameter name="ats.log.level" value="all"/>
   <test name="testMain">
     <groups>
       <run>
@@ -12,12 +13,7 @@
     </groups>
     <packages>
       <package name=".*"/>
-      <package name="channel.*"/>
-      <package name="check.*"/>
       <package name="desktop.*"/>
-      <package name="inputs.*"/>
-      <package name="mouse.*"/>
-      <package name="other.*"/>
       <package name="subscripts.*"/>
       <package name="subscripts.channel.*"/>
       <package name="subscripts.data.*"/>

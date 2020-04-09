@@ -1,0 +1,17 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2019-10-10 at 09:31:26
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> calc_web -> chrome
+goto-url -> www.google.fr
+keyboard -> calculatrice$key(ENTER) -> INPUT [title = Rechercher]
+click -> A [href = https://web2.0calc.fr/]
+click [nofail] -> BUTTON [id = cookieconsentallowall]
+subscript -> subscripts.sous_script_calc_web -> assets:///data/donnees_de_calcul.csv
+channel-close -> calc_web

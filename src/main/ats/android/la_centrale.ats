@@ -1,0 +1,40 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2019-02-25 at 13:33:08
+
+[ats-variables]
+
+var -> result -> regexp [(.*), 1]
+
+[ats-actions]
+
+channel-start -> newChannel -> mobile://192.168.0.19:8080/fr.carboatmedia.lacentrale
+click -> TextView [text = Marque]
+keyboard -> audi -> EditText [viewId = search_src_text]
+click -> TextView [innerText =~ AUDI.*]
+click -> TextView [viewId = filter_answer_menu_ok]
+click -> TextView [text = Modèle, viewId = criteria_title]
+click -> TextView [innerText =~ A4 \(.*]
+click -> TextView [viewId = filter_answer_menu_ok]
+click -> TextView [innerText = Génération]
+click -> TextView [innerText =~ A4 \(5E GENERATION\) AVANT.*]
+click -> TextView [viewId = filter_answer_menu_ok]
+click -> LinearLayout [innerText = Carburant, viewId = criteria_container]
+click -> TextView [innerText =~ Diesel.*]
+click -> ImageButton [description = Revenir en haut de la page]
+click -> TextView [innerText = Prix, viewId = criteria_title]
+keyboard -> 15000 -> EditText [viewId = min]
+keyboard -> 25000 -> EditText [viewId = max]
+click -> TextView [viewId = filter_answer_menu_ok]
+click -> TextView [innerText = Kilométrage, viewId = criteria_title]
+keyboard -> 40000 -> EditText [viewId = min]
+keyboard -> 150000 -> EditText [viewId = max]
+click -> TextView [viewId = filter_answer_menu_ok]
+//click -> TextView [viewId = more_items]
+click [center = 1, top = 0] -> TextView [viewId = search_button_text]
+property -> text => result -> TextView [text =~ .*résultats]
+click -> TextView [viewId = menu_announce_listing_sort]
+click -> CheckedTextView [innerText = Prix Croissant, viewId = text1]
+click -> Button [viewId = button1]
+channel-close -> newChannel

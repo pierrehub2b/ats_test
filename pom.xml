@@ -9,10 +9,11 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <build>
-    <sourceDirectory>./target/generated</sourceDirectory>
+    <sourceDirectory>target/generated</sourceDirectory>
     <resources>
       <resource>
-        <directory>./src/assets</directory>
+        <directory>src/assets</directory>
+        <targetPath>assets</targetPath>
       </resource>
     </resources>
     <plugins>
@@ -91,7 +92,7 @@
     <dependency>
       <groupId>com.actiontestscript</groupId>
       <artifactId>ats-automated-testing</artifactId>
-      <version>1.4.4</version>
+      <version>1.6.8</version>
     </dependency>
   </dependencies>
 </project>

@@ -3,6 +3,7 @@
   <name>ats_test</name>
   <version>0.0.2</version>
   <description>ATS project testing scripts</description>
+  <useMaven>false</useMaven>
   <groups>
     <group>bug</group>
     <group>default</group>

@@ -1,0 +1,21 @@
+[ats-header]
+
+id -> 
+author -> 
+created -> 2019-10-10 at 09:51:35
+prerequisite -> 
+description -> 
+groups -> 
+
+[ats-variables]
+
+
+[ats-actions]
+
+comment -> step -> <u><b>Opération N°$param(0)</b></u><br>Opérateur N°1 = $param(1)<br>Opérateur N°2 = $param(2)<br>Opérateur N°3 = $param(3)<br>Résultat de l'opération N°$param(0) = $param(4)
+click -> BUTTON [id = BtnClear]
+click -> BUTTON [id = Btn$param(1&co;5)]
+click -> BUTTON [id = Btn$param(2&co;Plus)]
+click -> BUTTON [id = Btn$param(3&co;5)]
+click -> BUTTON [id = BtnCalc]
+check-property -> value = $param(4&co;10) -> INPUT [name = input]

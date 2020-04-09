@@ -1,0 +1,26 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2019-04-25 at 11:00:35
+
+[ats-variables]
+
+var -> pays_1 -> $param(0,brazil)
+var -> pays_2 -> $param(1,france)
+
+[ats-actions]
+
+channel-start -> REST_pays -> https://restcountries.eu/rest/v2
+api-get -> name [Accept = application/json] -> $var(pays_1)
+property -> capital => capital_1 -> OBJECT [name =~ (?i)$var(pays_1)]
+property -> population => pop_1 -> OBJECT [name =~ (?i)$var(pays_1)]
+property -> flag => flag_1 -> OBJECT [name =~ (?i)$var(pays_1)]
+property -> region => zone_1 -> OBJECT [name =~ (?i)$var(pays_1)]
+comment -> script -> Capitale = <b>$var(capital_1)</b><br>Population = <b>$var(pop_1)</b><br>Zone géographique = <b>$var(zone_1)</b>
+api-get -> name [Accept = application/json] -> $var(pays_2)
+property -> capital => capital_2 -> OBJECT [name =~ (?i)$var(pays_2)]
+property -> population => pop_2 -> OBJECT [name =~ (?i)$var(pays_2)]
+property -> flag => flag_2 -> OBJECT [name =~ (?i)$var(pays_2)]
+property -> region => zone_2 -> OBJECT [name =~ (?i)$var(pays_2)]
+comment -> script -> Capitale = <b>$var(capital_2)</b><br>Population = <b>$var(pop_2)</b><br>Zone géographique = <b>$var(zone_2)</b>
+channel-close -> REST_pays

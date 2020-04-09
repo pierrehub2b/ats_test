@@ -1,0 +1,31 @@
+[ats-header]
+
+id -> 
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2018-09-28 at 18:09:35
+prerequisite -> 
+description -> 
+groups -> 
+
+[ats-variables]
+
+var -> URL_cible -> www.agilitest.com
+
+[ats-actions]
+
+channel-start -> Canal_Fenetre -> chrome
+goto-url -> $var(URL_cible)
+window-resize -> x = 10, y = 10, width = 600, height = 700
+window-resize -> x = 200, y = 200
+window-resize -> x = 200, y = 0
+window-resize -> x = 0, y = 0
+window-resize -> x = 0, y = 200
+click -> DIV [class = container]
+click-wheel -> A [href = https://www.agilitest.com/blog/] -> LI [id = menu-item-21]
+window-switch -> 1
+click-wheel -> A [class = titre, text =~ (?i)Retrouvez\s*nous\s*aux\s*Journées\s*Françaises\s*du\s*Test\s*Logiciel]
+window-switch -> 2
+window-close -> 2
+window-close -> 1
+window-switch -> 0
+channel-close -> Canal_Fenetre

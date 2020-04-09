@@ -1,0 +1,26 @@
+[ats-header]
+
+author -> 
+created -> 2019-09-12 at 17:10:12
+groups -> bug , desktop
+
+[ats-variables]
+
+
+[ats-actions]
+
+comment -> script -> Lancer manuellement la calc windows (ou par .bat)<br>...<br>Ou par un canal system
+channel-start -> system -> explorer
+click -> ToolBar [Name =~ Adresse.*]
+keyboard -> C:\Windows\SysWOW64$key(ENTER) -> ToolBar [Name =~ (?i)Adresse.*]
+keyboard -> calc$key(ENTER) -> Edit [Name = Zone de recherche]
+click-double [try = -10] -> ListItem [Name = calc.exe]
+channel-close -> system
+channel-start -> calc -> process://.*ApplicationFrameHost.exe
+window-resize -> x = 100, y = 100, width = 500, height = 700
+click -> @IMAGE [error = 0.5%, source = desktop/recup_process_calculatrice/20203994626.png]
+click -> @IMAGE [error = 0.5%, source = desktop/recup_process_calculatrice/20203994644.png]
+click -> @IMAGE [error = 0.5%, source = desktop/recup_process_calculatrice/2020399477.png]
+click -> @IMAGE [error = 0.5%, source = desktop/recup_process_calculatrice/20203994723.png]
+check-count -> 1 -> @IMAGE [error = 0.5%, source = desktop/recup_process_calculatrice/20203995017.png]
+channel-close -> calc

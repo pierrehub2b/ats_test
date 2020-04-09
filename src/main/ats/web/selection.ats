@@ -1,0 +1,23 @@
+[ats-header]
+
+id -> 
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2018-10-02 at 18:08:20
+prerequisite -> 
+description -> 
+groups -> 
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> Canal_selection -> chrome
+goto-url -> http://www.agilitest.com/fichiers/test.html
+scroll -> 0 -> H1 [text = Select :]
+select -> text = Audi -> SELECT [index(1), text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi]
+select -> value = volvo -> SELECT [index(2), text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi]
+select -> index = 2 -> SELECT [index(3), text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi]
+select -> index = 1 -> SELECT [index(4), text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi]
+select -> index = 0 -> SELECT [index(3), text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi]
+channel-close -> Canal_selection
