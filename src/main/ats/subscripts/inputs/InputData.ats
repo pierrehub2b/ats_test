@@ -1,0 +1,18 @@
+[ats-header]
+
+id -> 
+author -> pc_pierre\huber
+created -> 2018-09-14 at 18:33:33
+prerequisite -> 
+description -> 
+groups -> 
+
+[ats-variables]
+
+
+[ats-actions]
+
+check-count [try(10)] -> 0 -> div [id = loadingSplash] -> IFRAME [id = examples-iframe]
+click [try(20)] -> DIV [id = ext-element-120] -> IFRAME [id = examples-iframe]
+keyboard -> $param(0) -> INPUT [id = ext-element-70] -> IFRAME [id = examples-iframe]
+keyboard -> $param(1) -> INPUT [id = ext-element-83] -> IFRAME [id = examples-iframe]

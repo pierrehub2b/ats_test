@@ -16,6 +16,7 @@ var -> secondValue -> regexp [.*to.*(\$\d+).*of.*, 1] -> $var(tooltip)
 
 channel-start -> grids -> $param(0, chrome)
 goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/kitchensink/?modern#d3-view-heatmap-purchases
+check-count [try(20)] -> 0 -> DIV [class = loading-circle-12 loading-circle] -> IFRAME [id = examples-iframe]
 comment -> script -> Sélection des ventes par jour
 //click [try(15)] -> BUTTON [type = button] -> DIV [id =~ ext-button.*, text =~ (?i)PURCHASES BY DAY]
 comment -> script -> Survol de la case 286...

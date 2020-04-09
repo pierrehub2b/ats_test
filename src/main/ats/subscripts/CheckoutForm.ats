@@ -39,7 +39,3 @@ check-property -> text =~ (?i).*Your payment has been processed!.* -> DIV [id = 
 click -> BUTTON [type = button] -> DIV [class =~ (?i)x-component\s*x-button\s*x-has-text\s*.*, text =~ (?i)OK] -> IFRAME [id = examples-iframe]
 channel-close -> checkout
 comment -> script -> 
-
-[ats-returns]
-
-return -> nope
