@@ -1,20 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="toverify" verbose="10">
-  <parameter name="xml.report" value="true"/>
-  <parameter name="visual.report" value="2"/>
-  <parameter name="ats.log.level" value="all"/>
-  <test name="testMain">
-    <packages>
-      <package name=".*"/>
-      <package name="desktop.*"/>
-      <package name="subscripts.*"/>
-      <package name="subscripts.channel.*"/>
-      <package name="subscripts.data.*"/>
-      <package name="subscripts.dragdrop.*"/>
-      <package name="subscripts.inputs.*"/>
-      <package name="subscripts.mouse.*"/>
-      <package name="subscripts.mouse.scroll.*"/>
-      <package name="subscripts.window.*"/>
-    </packages>
-  </test>
+<suite name="toverify" verbose="0">
+  <parameter name="ats.log.level" value="silent"/>
+  <test name="testMain" preserve-order="true"/>
 </suite>

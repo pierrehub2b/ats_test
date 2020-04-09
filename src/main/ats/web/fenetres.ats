@@ -1,11 +1,8 @@
 [ats-header]
 
-id -> 
 author -> AGILITEST-DUPER\Emmanuel DUPERRAY
 created -> 2018-09-28 at 18:09:35
-prerequisite -> 
-description -> 
-groups -> 
+groups -> web
 
 [ats-variables]
 
@@ -25,7 +22,9 @@ click-wheel -> A [href = https://www.agilitest.com/blog/] -> LI [id = menu-item-
 window-switch -> 1
 click-wheel -> A [class = titre, text =~ (?i)Retrouvez\s*nous\s*aux\s*Journées\s*Françaises\s*du\s*Test\s*Logiciel]
 window-switch -> 2
-window-close -> 2
-window-close -> 1
+window-switch -> 2
+window-state -> close
+window-switch -> 1
+window-state -> close
 window-switch -> 0
 channel-close -> Canal_Fenetre

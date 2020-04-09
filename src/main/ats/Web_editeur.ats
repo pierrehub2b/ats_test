@@ -1,0 +1,14 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-04-09 at 13:21:41
+groups -> default
+
+[ats-variables]
+
+
+[ats-actions]
+
+subscript -> web.calc_web
+subscript -> web.fenetres
+subscript -> web.selection

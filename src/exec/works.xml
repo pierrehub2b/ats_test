@@ -1,14 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="works" verbose="10">
-  <parameter name="xml.report" value="true"/>
-  <parameter name="ats.log.level" value="all"/>
-  <test name="testMain">
-    <groups>
-      <run>
-        <exclude name="bug"/>
-        <include name="default"/>
-        <exclude name="toverify"/>
-      </run>
-    </groups>
-  </test>
+<suite name="works" verbose="0">
+  <parameter name="ats.log.level" value="silent"/>
+  <test name="testMain" preserve-order="true"/>
 </suite>

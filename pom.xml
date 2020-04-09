@@ -12,11 +12,7 @@
     <sourceDirectory>target/generated</sourceDirectory>
     <resources>
       <resource>
-<<<<<<< HEAD
         <directory>src/assets</directory>
-=======
-        <directory>./src/assets</directory>
->>>>>>> 17aaafb3ce10ef5d5c8dba925bf5fe84d02fbc51
         <targetPath>assets</targetPath>
       </resource>
     </resources>
@@ -62,15 +58,11 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>2.21.0</version>
         <configuration>
-          <trimStackTrace>false</trimStackTrace>
-          <shutdown>exit</shutdown>
           <property>
             <name>reporter</name>
             <value>listenReport.Reporter</value>
           </property>
-          <suiteXmlFiles>
-            <suiteXmlFile>src/exec/NoReg.xml</suiteXmlFile>
-          </suiteXmlFiles>
+          <suiteXmlFiles/>
         </configuration>
       </plugin>
     </plugins>
@@ -96,11 +88,7 @@
     <dependency>
       <groupId>com.actiontestscript</groupId>
       <artifactId>ats-automated-testing</artifactId>
-<<<<<<< HEAD
       <version>1.6.8</version>
-=======
-      <version>1.5.1</version>
->>>>>>> 17aaafb3ce10ef5d5c8dba925bf5fe84d02fbc51
     </dependency>
   </dependencies>
 </project>
