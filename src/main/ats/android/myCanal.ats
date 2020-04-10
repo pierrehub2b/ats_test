@@ -1,0 +1,32 @@
+[ats-header]
+
+author -> LAPTOP-LT8QHS42\Agilitest
+created -> 2020-04-10 at 14:01:26
+
+[ats-variables]
+
+var -> mobileEndPoint -> 192.168.1.14:8080
+var -> login -> contact.gabrielgil@gmail.com
+var -> motDePasse -> Caipture2017
+
+[ats-actions]
+
+comment -> script -> <i>Prérequis: avoir installé l'appliction myCanal sur le mobile</i>
+channel-start -> myCanal -> mobile://$var(mobileEndPoint)/com.canal.android.canal
+click [left = 642, top = 38] -> TextView [text =~ *.Se connecter, viewId = showcase_text_label]
+keyboard -> $var(login)$key(TAB) -> EditText [viewId = sso-email]
+keyboard -> $var(motDePasse)$key(ENTER) -> EditText [viewId = sso-pass]
+click -> FrameLayout [description = Recherche]
+click -> ImageView [@index = 1, viewId = diffusionImage]
+swipe -> top = 500 -> FrameLayout [@index = 1, checkable = false]
+click -> FrameLayout [description = Live TV]
+click -> FrameLayout [@index = 1, checkable = false] -> RecyclerView [viewId = recyclerView]
+click [delay = 5] -> FrameLayout [viewId = action_bar_root]
+click [left = 84, top = 102] -> FrameLayout [viewId = topBar]
+click -> FrameLayout [description = En Plus]
+swipe -> top = 1000 -> DrawerLayout [viewId = drawerLayout]
+click -> TextView [text = Mon compte, viewId = sectionlist_item_label]
+swipe -> top = 500 -> FrameLayout [viewId = nav_host_fragment]
+click -> Button [viewId = disconnect]
+click -> Button [text = CONTINUER]
+channel-close -> myCanal

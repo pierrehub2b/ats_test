@@ -1,0 +1,24 @@
+[ats-header]
+
+author -> LAPTOP-LT8QHS42\Agilitest
+created -> 2020-04-10 at 15:23:26
+
+[ats-variables]
+
+var -> login -> contact.gabrielgil@gmail.com
+var -> motDePasse -> Caipture2017
+
+[ats-actions]
+
+channel-start -> myCanal -> chrome
+goto-url -> https://www.canalplus.com/
+click -> A [e2e = loginButton]
+keyboard -> $var(login) -> INPUT [id = sso-email]
+keyboard -> $var(motDePasse) -> INPUT [id = sso-pass]
+click -> INPUT [id = sso-form_0]
+click -> A [title = Live TV] -> UL [e2e = navigation]
+click -> DIV [role = button] -> LI [@index = 1, class = liveTv__gridItem___3Ax1h]
+click -> Button [Name = Retour] -> syscomp
+click -> LI [e2e = userMenuButton]
+click -> SPAN [text = Se déconnecter]
+channel-close -> myCanal
