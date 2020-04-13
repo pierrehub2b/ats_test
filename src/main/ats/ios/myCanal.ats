@@ -1,0 +1,35 @@
+[ats-header]
+
+author -> LAPTOP-LT8QHS42\Agilitest
+created -> 2020-04-10 at 15:03:38
+
+[ats-variables]
+
+var -> mobileEndPoint -> 192.168.1.71:8080
+var -> login -> contact.gabrielgil@gmail.com
+var -> motDePasse -> Caipture2017
+
+[ats-actions]
+
+comment -> script -> <i>Prérequis: avoir téléchargé l'application depuis l'appStore</i>
+channel-start -> myCanal -> mobile://$var(mobileEndPoint)/com.canalplusdistrib.mycanal.prod
+click -> Button [text = Se connecter]
+keyboard -> $var(login) -> TextField [checkable = false]
+click -> Button [text = Done]
+keyboard -> $var(motDePasse) -> SecureTextField [checkable = false]
+click -> Button [text = Done]
+click -> Button [innerText = Valider]
+click -> Button [innerText = Recherche]
+keyboard -> TPMP -> SearchField [innerText = Rechercher]
+click -> Cell [@index = 1, checkable = false]
+click -> StaticText [@index = 1, checkable = false]
+click [delay = 5] -> Other [checkable = false] -> Window [checkable = false]
+click -> Button [text = OK]
+click -> Button [innerText = CPCloseButton]
+click -> Button [innerText = En plus]
+swipe -> top = 500 -> Window (Main) [checkable = false]
+click -> StaticText [innerText = Mon compte]
+swipe -> top = 500 -> Window (Main) [checkable = false]
+click -> StaticText [innerText = Connexion]
+click -> Button [innerText = Oui]
+channel-close -> myCanal
