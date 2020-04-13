@@ -1,0 +1,13 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-04-13 at 15:53:49
+
+[ats-variables]
+
+
+[ats-actions]
+
+subscript -> api.API_REST
+subscript -> api.API_SOAP
+subscript -> api.SOAP_flag

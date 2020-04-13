@@ -1,11 +1,8 @@
 [ats-header]
 
-id -> 
 author -> 
 created -> 2019-10-10 at 09:51:35
-prerequisite -> 
-description -> 
-groups -> 
+groups -> web
 
 [ats-variables]
 

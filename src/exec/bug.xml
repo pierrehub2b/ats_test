@@ -1,5 +1,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="bug" verbose="0">
   <parameter name="ats.log.level" value="silent"/>
-  <test name="testMain" preserve-order="true"/>
+  <test name="testMain" preserve-order="true">
+    <classes>
+      <class name="web.fenetres"/>
+      <class name="web.selection"/>
+    </classes>
+  </test>
 </suite>

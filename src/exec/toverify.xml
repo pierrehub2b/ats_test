@@ -1,5 +1,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="toverify" verbose="0">
   <parameter name="ats.log.level" value="silent"/>
-  <test name="testMain" preserve-order="true"/>
+  <test name="testMain" preserve-order="true">
+    <groups>
+      <run>
+        <include name="toverify"/>
+      </run>
+    </groups>
+  </test>
 </suite>

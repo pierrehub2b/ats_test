@@ -1,37 +1,14 @@
-[ats-header]
-
-id -> 
-author -> pc_pierre\huber
-created -> 2018-11-12 at 12:22:41
-prerequisite -> 
-description -> 
-groups -> default , desktop
-
-[ats-variables]
-
-var -> webText -> regexp [(.*)\?, 1]
-
-[ats-actions]
-
 channel-start -> notepad -> notepad++
-click -> Button [AutomationId = Item 41001]
-keyboard -> enter text on main edit panel with specials characters : &é"à@çè%$ -> Pane [ClassName = Scintilla]
-click -> Button [AutomationId = Item 43001]
-keyboard -> enter text -> Edit [AutomationId = 1001]
-click -> Button [AutomationId = 1614]
+keyboard -> saisie N°1 -> Pane [ClassName = Scintilla]
+click [try = -10] -> Button [ChildId = 1] -> ToolBar [ClassName = ToolbarWindow32]
+keyboard -> Ranorex is the best automation tool ever ! -> Pane [ClassName = Scintilla]
+keyboard -> Text remplaced -> Pane [ClassName = Scintilla]
+keyboard -> $key(CONTROL-A)$key(CONTROL-C)$key(CONTROL-V) -> Pane [ClassName = Scintilla]
+keyboard -> Ranorex is the best automation tool ever ! -> Pane [ClassName = Scintilla]
+click [try = -10] -> Button [ChildId = 17, IsVisible = True]
+keyboard -> Ranorex -> Edit [AutomationId = 1001]
 click -> TabItem [Name = Remplacer]
-keyboard -> enter text with Agilitest -> Edit [AutomationId = 1001] -> ComboBox [Name = Remplacer par :]
+keyboard -> Agilitest -> Edit [AutomationId = 1001, ClassName = Edit] -> ComboBox [AutomationId = 1602]
 click -> Button [AutomationId = 1609]
-click -> Button [AutomationId = Close] -> TitleBar [Name = Remplacer]
-keyboard -> and now get some data on a web site in order to copy this data on main edit pane -> Pane [ClassName = Scintilla]
-channel-start -> web -> chrome
-goto-url -> www.agilitest.com
-property -> text => webText -> DIV [data-sr-id = 2]
-channel-switch -> notepad
-keyboard -> $var(webText) -> Pane [ClassName = Scintilla]
-click [right(6)] -> TabItem [Name =~ new \d]
-click -> Button [AutomationId = 6]
-keyboard -> agilitest-$rndstring(10) -> Edit [AutomationId = 1148]
-click -> Button [AutomationId = 1]
-channel-close -> web
+click [try = -10] -> Button [AutomationId = 2, ClassName = Button]
 channel-close -> notepad

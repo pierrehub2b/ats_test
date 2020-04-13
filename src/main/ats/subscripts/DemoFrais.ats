@@ -1,11 +1,7 @@
 [ats-header]
 
-id -> 
 author -> AGILITEST-DUPER\Emmanuel DUPERRAY
 created -> 2018-09-19 at 16:24:36
-prerequisite -> 
-description -> 
-groups -> 
 
 [ats-variables]
 
@@ -20,8 +16,8 @@ comment -> script -> Démarrage du canal sur le navigateur passé en paramètre 
 goto-url -> https://home-expenses.cxjs.io/dashboard
 comment -> script -> Nous cliquons successivement sur les différents rectangles
 click -> INPUT [placeholder = Period]
-click -> TH [data-point = Y-2018]
-click [try(30)] -> rect [class = cxe-legend-shape cxs-color-15]
+click -> TH [data-point = Y-2020]
+click [try = 30] -> rect [class = cxe-legend-shape cxs-color-15]
 click -> rect [class = cxe-legend-shape cxs-color-14]
 click -> rect [class = cxe-legend-shape cxs-color-12]
 click -> rect [class = cxe-legend-shape cxs-color-11]
@@ -62,11 +58,11 @@ click -> A [text = Log]
 //comment -> script -> Puis du plus élevé au plus faible.
 //click -> TH [class = cxe-grid-col-header cxs-aligned-right cxs-sortable cxs-sorted-asc, text = Amountarrow_upward] -> TBODY [class = cxe-grid-header] -> DIV [class = cxe-grid-fixed-header]
 //comment -> script -> Nous récupérons la valeur de la première entrée
-//property -> text => valuelog -> TD [index(1), class = cxs-pad cxs-aligned-right]
+//property -> text => valuelog -> TD [class = cxs-pad cxs-aligned-right, id = true]
 //comment -> script -> Et vérifions qu'il s'agit bien de la valeur que nous avons entrée.
 //check-value -> $var(valuelog) = $var(SantaTravelValue)
 //comment -> script -> Puis nous supprimons cette entrée
-//click -> BUTTON [index(1), class = cxb-button cxm-hollow, text =~ (?i)REMOVE, type = button]
+//click -> BUTTON [class = cxb-button cxm-hollow, id = true, text =~ (?i)REMOVE, type = button]
 //comment -> script -> (validation de la popup de suppression)
 //click -> BUTTON [class = cxb-button cxm-flat-primary, text =~ (?i)YES, type = button]
 comment -> script -> Arrêt du canal

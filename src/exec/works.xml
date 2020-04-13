@@ -1,5 +1,27 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="works" verbose="0">
-  <parameter name="ats.log.level" value="silent"/>
-  <test name="testMain" preserve-order="true"/>
+<suite name="works" verbose="10">
+  <parameter name="xml.report" value="true"/>
+  <parameter name="visual.report" value="2"/>
+  <parameter name="ats.log.level" value="all"/>
+  <test name="testMain" preserve-order="true">
+    <classes>
+      <class name="desktop.recup_process_calculatrice"/>
+      <class name="multi_channel.API_REST_web"/>
+      <class name="multi_channel.API_SOAP_web"/>
+      <class name="multi_channel.dragdrop_SYST_web"/>
+      <class name="subscripts.CheckoutForm"/>
+      <class name="subscripts.DemoClic_iframe"/>
+      <class name="subscripts.DemoDragDrop"/>
+      <class name="subscripts.DemoFrais"/>
+      <class name="subscripts.DemoHover"/>
+      <class name="subscripts.DemoInputs"/>
+      <class name="subscripts.DemoSaisie"/>
+      <class name="subscripts.DemoSwipe"/>
+      <class name="subscripts.DemoTooltipCheck"/>
+      <class name="subscripts.DemoVerification"/>
+      <class name="web.calc_web"/>
+      <class name="web.fenetres"/>
+      <class name="web.selection"/>
+    </classes>
+  </test>
 </suite>
