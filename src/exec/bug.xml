@@ -3,6 +3,7 @@
   <parameter name="ats.log.level" value="silent"/>
   <test name="testMain" preserve-order="true">
     <classes>
+      <class name="desktop.recup_process_calculatrice"/>
       <class name="web.fenetres"/>
       <class name="web.selection"/>
     </classes>

@@ -1,11 +1,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="works" verbose="10">
   <parameter name="xml.report" value="true"/>
-  <parameter name="visual.report" value="2"/>
   <parameter name="ats.log.level" value="all"/>
   <test name="testMain" preserve-order="true">
     <classes>
-      <class name="desktop.recup_process_calculatrice"/>
       <class name="multi_channel.API_REST_web"/>
       <class name="multi_channel.API_SOAP_web"/>
       <class name="multi_channel.dragdrop_SYST_web"/>

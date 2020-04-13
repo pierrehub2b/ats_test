@@ -11,8 +11,8 @@ groups -> bug , desktop
 
 comment -> script -> Lancer manuellement la calc windows (ou par .bat)<br>...<br>Ou par un canal system
 channel-start -> system -> explorer
-click -> ToolBar [Name =~ Adresse.*]
-keyboard -> C:\Windows\SysWOW64$key(ENTER) -> ToolBar [Name =~ (?i)Adresse.*]
+click [center = 280, middle = -47] -> ToolBar [Name =~ (?i)Adresse.*]
+keyboard -> C:\Windows\SysWOW64$key(ENTER) -> MenuItem [Name =~ (?i)‎ats_.*]
 keyboard -> calc$key(ENTER) -> Edit [Name = Zone de recherche]
 click-double [try = -10] -> ListItem [Name = calc.exe]
 channel-close -> system
