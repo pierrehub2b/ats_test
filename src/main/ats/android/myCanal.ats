@@ -6,8 +6,6 @@ created -> 2020-04-10 at 14:01:26
 [ats-variables]
 
 var -> mobileEndPoint -> 192.168.1.14:8080
-var -> login -> contact.gabrielgil@gmail.com
-var -> motDePasse -> Caipture2017
 
 [ats-actions]
 
