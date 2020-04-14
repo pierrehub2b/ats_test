@@ -1,0 +1,17 @@
+[ats-header]
+
+author -> 
+created -> 2019-10-10 at 09:51:35
+
+[ats-variables]
+
+
+[ats-actions]
+
+comment -> step -> <u><b>Itération : $param(col0)</b></u><br>Opérateur N°1 = $param(col1)<br>Opérateur N°2 = $param(col2)<br>Opérateur N°3 = $param(col3)<br>Résultat de l'opération N°$param(col0) = $param(col4)
+click -> BUTTON [id = BtnClear]
+click -> BUTTON [id = Btn$param(col1&co;5)]
+click -> BUTTON [id = Btn$param(col2&co;Plus)]
+click -> BUTTON [id = Btn$param(col3&co;5)]
+click -> BUTTON [id = BtnCalc]
+check-property -> value = $param(col4&co;10) -> INPUT [name = input]

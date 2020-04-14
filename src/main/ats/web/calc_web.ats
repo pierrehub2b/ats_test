@@ -2,7 +2,6 @@
 
 author -> AGILITEST-DUPER\Emmanuel DUPERRAY
 created -> 2019-10-10 at 09:31:26
-groups -> web
 
 [ats-variables]
 
@@ -14,5 +13,6 @@ goto-url -> www.google.fr
 keyboard -> calculatrice$key(ENTER) -> INPUT [title = Rechercher]
 click -> A [href = https://web2.0calc.fr/]
 click [nofail] -> BUTTON [id = cookieconsentallowall]
-subscript -> subscripts.sous_script_calc_web -> assets:///data/donnees_de_calcul.csv
+subscript -> subscripts.sousscript_csv_calc_web -> assets:///data/donnees_de_calcul.csv
+subscript -> subscripts.sousscript_json_calc_web -> assets:///data/donnees_de_calcul.json
 channel-close -> calc_web
