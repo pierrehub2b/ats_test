@@ -9,7 +9,7 @@ var -> randomString -> $rndstring(5)
 
 [ats-actions]
 
-channel-start -> contact -> mobile://$env(p0)/com.android.contacts
+channel-start -> contact -> mobile://$param(0)/com.android.contacts
 click -> TextView [viewId = menu_add_contact]
 click -> EditText [text = Nom]
 keyboard [delay = 4] -> $var(randomString)$key(TAB) -> EditText [text = Nom]
