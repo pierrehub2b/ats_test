@@ -1,0 +1,15 @@
+[ats-header]
+
+author -> LAPTOP-LT8QHS42\Agilitest
+created -> 2020-04-14 at 10:29:01
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> notepadScript -> file:///C:/Program%20Files%20(x86)/Notepad%2b%2b/notepad%2b%2b.exe
+click -> MenuItem [Name = Fichier]
+click -> MenuItem [AccessKey = n]
+keyboard -> Hi from Agilitest !!  -> Pane [ClassName = Scintilla]
+channel-close -> notepadScript

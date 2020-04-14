@@ -1,0 +1,18 @@
+[ats-header]
+
+author -> LAPTOP-LT8QHS42\Agilitest
+created -> 2020-04-14 at 10:37:51
+
+[ats-variables]
+
+var -> randomString -> $rndstring(5)
+
+[ats-actions]
+
+channel-start -> contact -> mobile://$env(p0)/com.android.contacts
+click -> TextView [viewId = menu_add_contact]
+click -> EditText [text = Nom]
+keyboard [delay = 4] -> $var(randomString)$key(TAB) -> EditText [text = Nom]
+click -> ImageView [viewId = icon2]
+click -> ImageView [viewId = backImg]
+channel-close -> contact

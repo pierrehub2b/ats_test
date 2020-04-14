@@ -1,0 +1,19 @@
+[ats-header]
+
+author -> LAPTOP-LT8QHS42\Agilitest
+created -> 2020-04-14 at 11:18:30
+
+[ats-variables]
+
+var -> randomInput -> $rndstring(10)
+var -> randomPhone -> 0612345789
+
+[ats-actions]
+
+channel-start -> ios_newContact -> mobile://$param(0)/com.apple.MobileAddressBook
+click -> Button [text = Ajouter]
+keyboard -> $var(randomInput) -> TextField [identifier = Prénom]
+click -> StaticText [innerText = ajouter un numéro]
+keyboard -> $var(randomPhone) -> TextField [identifier = domicile]
+click -> Button [text = OK]
+channel-close -> ios_newContact
