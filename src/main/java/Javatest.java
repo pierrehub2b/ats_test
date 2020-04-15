@@ -46,7 +46,7 @@ System.out.println("path -> " + getCsvFilePath());
 System.out.println("param string by index -> " + getParameter(4).toString());
 System.out.println("param string by name -> " + getParameter("result").toString());
 
-//returnValues(param0 ,param1, param2, param3, "value");
+returnValues(param0 ,param1, param2, param3, "value");
 		
 		
 		// -----------------------------------------------
