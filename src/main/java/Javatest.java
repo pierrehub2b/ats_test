@@ -34,19 +34,19 @@ public class Javatest extends ActionTestScript{
 		// String url = getAssetsUrl("[relative path string]"); -> return url path of a file in the project's 'assets' folder
 		
 		
-String param0 = getParameter(0).toString();
-int param1 = getParameter(1).toInt();
-double param2 = getParameter(2).toDouble();
-boolean param3 = getParameter(3).toBoolean();
-
-
-System.out.println("it -> " + getIteration());
-System.out.println("path -> " + getCsvFilePath());
-
-System.out.println("param string by index -> " + getParameter(4).toString());
-System.out.println("param string by name -> " + getParameter("result").toString());
-
-returnValues(param0 ,param1, param2, param3, "value");
+		String param0 = getParameter(0).toString();
+		int param1 = getParameter(1).toInt();
+		double param2 = getParameter(2).toDouble();
+		boolean param3 = getParameter(3).toBoolean();
+		
+		
+		System.out.println("it -> " + getIteration());
+		System.out.println("path -> " + getCsvFilePath());
+		
+		System.out.println("param string by index -> " + getParameter(4).toString());
+		System.out.println("param string by name -> " + getParameter("result").toString());
+		
+		returnValues(param0 ,param1, param2, param3, "value");
 		
 		
 		// -----------------------------------------------
