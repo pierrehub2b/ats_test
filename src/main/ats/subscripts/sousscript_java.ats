@@ -1,0 +1,29 @@
+[ats-header]
+
+author -> 
+created -> 2020-04-15 at 11:19:55
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> java -> chrome
+scripting -> String param0 = getParameter(0).toString();
+int param0 = getParameter(0).toInt();
+double param0 = getParameter(0).toDouble();
+boolean param0 = getParameter(0).toBoolean();
+
+
+System.out.println("it -> " + getIteration());
+System.out.println("path -> " + getCsvFilePath());
+
+System.out.println("param string by index -> " + getParameter(4).toString());
+System.out.println("param string by name -> " + getParameter("result").toString());
+
+returnValues("value", param0);
+channel-close -> java
+
+[ats-returns]
+
+return -> eturnValues("value", param0);

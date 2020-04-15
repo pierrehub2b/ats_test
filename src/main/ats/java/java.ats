@@ -1,0 +1,18 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-04-15 at 12:57:39
+
+[ats-variables]
+
+
+[ats-actions]
+
+comment -> step -> DONNEES ENTRANTES<br><b>String param0</b> = getParameter(0).toString();<br><b>int param1</b> = getParameter(1).toInt();<br><b>double param2</b> = getParameter(2).toDouble();<br><b>boolean param3</b> = getParameter(3).toBoolean();<br><br>DONNEES SORTANTES<br>returnValues(param0 ,param1, param2, param3, "value");
+comment -> script -> <b>Compilation Java</b> requise (interface de gestion des exécutions)<br>(aucun process de fond ni canal ne doit être en cours d'exécution)
+subscript -> Javatest [123, 45.6, 7.89, true] => return0, return1, return2, return3, return4
+check-value -> $var(return0) = 123
+check-value -> $var(return1) = 45
+check-value -> $var(return2) = 7.89
+check-value -> $var(return3) = true
+check-value -> $var(return4) = value
