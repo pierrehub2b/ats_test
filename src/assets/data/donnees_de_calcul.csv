@@ -1,3 +1,4 @@
 Calcul N° 2,4,Mult,5,20
 Calcul N° 3,7,Minus,8,-1
 Calcul N° 4,9,Div,2,4.5
+Calcul N° 5,$var(1),$var(2),$var(3),$var(4)

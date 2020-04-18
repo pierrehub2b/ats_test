@@ -1,0 +1,15 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-04-18 at 17:33:10
+
+[ats-variables]
+
+
+[ats-actions]
+
+click -> INPUT [name = color]
+click [left = 71, top = 13] -> Text [AutomationId = 710] -> syscomp
+click [left = 6, top = 107] -> Text [AutomationId = 702] -> syscomp
+click -> Button [Name = OK] -> syscomp
+scripting -> value='#ff8000' -> INPUT [name = color]

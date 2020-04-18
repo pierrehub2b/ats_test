@@ -11,4 +11,4 @@ created -> 2020-04-10 at 15:22:35
 comment -> script -> <i>Ce script lance trois canaux sur myCanal, un sur iOS, un sur Web et un sur Android...<br>Le but est de se connecter à l'application, lancer une vidéo puis se déconnecter.</i>
 subscript -> ios.myCanal
 subscript -> web.myCanal
-subscript -> android.myCanal
+subscript -> android.myCanal_passKO
