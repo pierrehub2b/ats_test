@@ -2,5 +2,4 @@ bill,gates
 elon,musk
 steve,wozniack
 scarlett,johansson
-"$rnd",$rnd
 "$rndstring(10)",$rndstring(10)

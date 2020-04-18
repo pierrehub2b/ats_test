@@ -17,7 +17,7 @@ property -> text => ciel -> TextView [@index = 1, viewId = simbolo_descripcion]
 channel-start -> Gmail -> mobile://192.168.0.19:8080/com.google.android.gm
 click -> @IMAGE [error = 0.5%, source = android/meteo_android/2020313155217.png]
 keyboard -> caipture@gmail.com -> MultiAutoCompleteTextView [viewId = to]
-keyboard -> Bilan Météo -> EditText [viewId = subject]
+keyboard -> Bilan Météo $today $now -> EditText [viewId = subject]
 keyboard -> La météo du jour vous est donnée par  Agilitest  : $var(date) / $now,  $var(temp_ressentie),  $var(ciel) -> EditText [innerText = Rédigez votre message]
 click -> TextView [viewId = send]
 channel-close -> Gmail
