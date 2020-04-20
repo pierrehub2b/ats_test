@@ -8,16 +8,17 @@ created -> 2018-10-30 at 08:58:19
 
 [ats-actions]
 
-channel-start -> meteo -> mobile://192.168.0.19:8080/aplicacion.tiempo
+channel-start -> meteo -> mobile://192.168.1.58:8081/aplicacion.tiempo
 click [nofail, try = -10] -> Button [viewId = no_preguntes]
 property -> innerText => jour -> TextView [@index = 1, viewId = dia]
 property -> innerText => date -> TextView [@index = 1, viewId = fecha]
 property -> text => temp_ressentie -> TextView [@index = 1, viewId = sensacion_termica]
 property -> text => ciel -> TextView [@index = 1, viewId = simbolo_descripcion]
-channel-start -> Gmail -> mobile://192.168.0.19:8080/com.google.android.gm
-click -> @IMAGE [error = 0.5%, source = android/meteo_android/2020313155217.png]
+channel-start -> Gmail -> mobile://192.168.1.58:8081/com.google.android.gm
+click -> ImageButton [viewId = compose_button]
+//click -> @IMAGE [error = 0.5%, source = android/meteo_android/2020313155217.png]
 keyboard -> caipture@gmail.com -> MultiAutoCompleteTextView [viewId = to]
-keyboard -> Bilan Météo -> EditText [viewId = subject]
+keyboard -> Bilan Météo$key(TAB) -> EditText [viewId = subject]
 keyboard -> La météo du jour vous est donnée par  Agilitest  : $var(date) / $now,  $var(temp_ressentie),  $var(ciel) -> EditText [innerText = Rédigez votre message]
 click -> TextView [viewId = send]
 channel-close -> Gmail
