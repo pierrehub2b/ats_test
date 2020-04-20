@@ -5,6 +5,10 @@ created -> 2019-10-10 at 09:31:26
 
 [ats-variables]
 
+var -> terme1 -> 6
+var -> terme2 -> Mult
+var -> terme3 -> 8
+var -> terme4 -> 48
 
 [ats-actions]
 

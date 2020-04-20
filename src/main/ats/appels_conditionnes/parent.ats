@@ -1,0 +1,14 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-04-18 at 17:32:26
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> newChannel -> chrome
+subscript -> appels_conditionnes.scripts_enfants.enfant1 => result, titre
+subscript -> appels_conditionnes.scripts_enfants.enfant$var(result)_$var(titre)
+channel-close -> newChannel

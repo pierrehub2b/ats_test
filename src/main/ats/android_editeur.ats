@@ -1,0 +1,13 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-04-18 at 18:31:56
+
+[ats-variables]
+
+
+[ats-actions]
+
+subscript -> android.la_centrale
+subscript -> android.meteo_android
+subscript -> android.myCanal_passKO

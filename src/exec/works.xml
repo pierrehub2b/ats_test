@@ -5,6 +5,13 @@
   <parameter name="ats.log.level" value="all"/>
   <test name="testMain" preserve-order="true">
     <classes>
+      <class name="android.la_centrale"/>
+      <class name="android.meteo_android"/>
+      <class name="android.myCanal_passKO"/>
+      <class name="api.API_REST"/>
+      <class name="api.API_SOAP"/>
+      <class name="appels_conditionnes.parent"/>
+      <class name="desktop.notepadplusplus"/>
       <class name="multi_channel.API_REST_web"/>
       <class name="multi_channel.API_SOAP_web"/>
       <class name="multi_channel.dragdrop_SYST_web"/>

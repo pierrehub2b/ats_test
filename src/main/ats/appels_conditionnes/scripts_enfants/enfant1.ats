@@ -1,0 +1,23 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-04-18 at 17:32:58
+
+[ats-variables]
+
+var -> url -> http://www.agilitest.com/fichiers/test.html
+var -> titre -> regexp [(.*) :, 1]
+
+[ats-actions]
+
+goto-url -> $var(url)
+click -> INPUT [type = button, value = 1]
+click -> INPUT [type = button, value = +]
+click -> INPUT [type = button, value = 1]
+click -> INPUT [type = button, value = &eq;]
+property -> value => result -> INPUT [name = calc_resultat]
+property -> text => titre -> TD [@index = 5, valign = top]
+
+[ats-returns]
+
+return -> $var(result) -> $var(titre)

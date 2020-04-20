@@ -1,5 +1,5 @@
 bill,gates
-mark,zuckerberg
 elon,musk
 steve,wozniack
 scarlett,johansson
+"$rndstring(10)",$rndstring(10)

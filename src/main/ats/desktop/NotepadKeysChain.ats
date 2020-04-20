@@ -1,0 +1,16 @@
+[ats-header]
+
+author -> AGILITEST-COMPI\agilitest
+created -> 2020-04-20 at 11:30:03
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> newChannel -> notepad++
+click -> Button [ChildId = 1] -> ToolBar [ClassName = ToolbarWindow32]
+keyboard -> Text to replace -> Pane [ClassName = Scintilla]
+keyboard -> $key(CONTROL-A)replaced -> Pane [ClassName = Scintilla]
+check-property -> Name = replaced -> Pane [ClassName = Scintilla]
+channel-close -> newChannel
