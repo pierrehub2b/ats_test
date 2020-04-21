@@ -1,0 +1,32 @@
+[ats-header]
+
+author -> LAPTOP-LT8QHS42\Agilitest
+created -> 2020-04-21 at 11:18:19
+description -> Script relatif au bug suivant <a href="https://trello.com/c/0GDOgUoH">Trello</a>
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> calculator -> chrome
+comment -> step -> <a href="https://trello.com/c/0GDOgUoH">Lien vers le bug</a>
+comment -> step -> Lancement du script <br/><br/> Je créé un commentaire sur plusieurs lignes avec des balises HTML spéciales comme du texte en <b>gras</b> ou en <i>italic</i><br/> <br/> ou en ajoutant encore des sauts de ligne avec du texte dans une balise <br/><span>"SPAN"</span>
+click -> STRONG [text = ActionTestScript version :]
+goto-url -> http://google.fr
+keyboard -> calculator$key(ENTER) -> INPUT [title = Rechercher]
+click -> DIV [role = button, text = 1]
+comment -> script -> Adition
+click -> DIV [role = button, text = +]
+click -> DIV [role = button, text = 5]
+comment -> step -> Multiplication
+click -> DIV [role = button, text = ×]
+click -> DIV [role = button, text = 3]
+click -> DIV [role = button, text = 9]
+comment -> step -> Division
+click -> DIV [role = button, text = ÷]
+click -> DIV [role = button, text = 7]
+click -> DIV [role = button, text = &eq;]
+property -> text => result -> SPAN [id = cwos]
+comment -> step -> Résultat: $var(result)
+channel-close -> calculator
