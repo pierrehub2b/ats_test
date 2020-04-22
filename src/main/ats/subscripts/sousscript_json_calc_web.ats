@@ -8,7 +8,7 @@ created -> 2019-10-10 at 09:51:35
 
 [ats-actions]
 
-comment -> step -> <u><b>Itération : $param(col0)</b></u><br>Opérateur N°1 = $param(col1)<br>Opérateur N°2 = $param(col2)<br>Opérateur N°3 = $param(col3)<br>Résultat de l'opération N°$param(col0) = $param(col4)
+comment -> step -> <u><b>Itération : $param(col0)</b></u><br>Opérateur N°1 = $param(col1)<br>Opérateur N°2 = $param(col2)<br>Opérateur N°3 = $param(col3)<br>Résultat de l'opération N°$param(col0) = $param(col4)<br><br><i>Source des données : <b>fichier json</b> itération N°$iteration</i>
 click -> BUTTON [id = BtnClear]
 click -> BUTTON [id = Btn$param(col1&co;5)]
 click -> BUTTON [id = Btn$param(col2&co;Plus)]

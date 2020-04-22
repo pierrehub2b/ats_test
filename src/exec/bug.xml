@@ -1,9 +1,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="bug" verbose="0">
+  <parameter name="xml.report" value="true"/>
+  <parameter name="visual.report" value="2"/>
   <parameter name="ats.log.level" value="silent"/>
   <test name="testMain" preserve-order="true">
     <classes>
       <class name="desktop.recup_process_calculatrice"/>
+      <class name="web.calc_web"/>
       <class name="web.fenetres"/>
       <class name="web.selection"/>
     </classes>
