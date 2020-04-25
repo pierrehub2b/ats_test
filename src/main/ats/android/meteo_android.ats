@@ -5,16 +5,17 @@ created -> 2018-10-30 at 08:58:19
 
 [ats-variables]
 
+var -> ip_port -> 192.168.0.19:8080
 
 [ats-actions]
 
-channel-start -> meteo -> mobile://192.168.1.58:8081/aplicacion.tiempo
+channel-start -> meteo -> mobile://$var(ip_port)/aplicacion.tiempo
 click [nofail, try = -10] -> Button [viewId = no_preguntes]
 property -> innerText => jour -> TextView [@index = 1, viewId = dia]
 property -> innerText => date -> TextView [@index = 1, viewId = fecha]
 property -> text => temp_ressentie -> TextView [@index = 1, viewId = sensacion_termica]
 property -> text => ciel -> TextView [@index = 1, viewId = simbolo_descripcion]
-channel-start -> Gmail -> mobile://192.168.1.58:8081/com.google.android.gm
+channel-start -> Gmail -> mobile://$var(ip_port)/com.google.android.gm
 click -> ImageButton [viewId = compose_button]
 //click -> @IMAGE [error = 0.5%, source = android/meteo_android/2020313155217.png]
 keyboard -> caipture@gmail.com -> MultiAutoCompleteTextView [viewId = to]

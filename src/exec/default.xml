@@ -1,5 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="default" verbose="0">
-  <parameter name="ats.log.level" value="silent"/>
+<suite name="default" verbose="10">
+  <parameter name="xml.report" value="true"/>
+  <parameter name="visual.report" value="2"/>
+  <parameter name="ats.log.level" value="all"/>
   <test name="testMain" preserve-order="true"/>
 </suite>
