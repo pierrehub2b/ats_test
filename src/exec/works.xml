@@ -26,9 +26,7 @@
       <class name="subscripts.DemoSwipe"/>
       <class name="subscripts.DemoTooltipCheck"/>
       <class name="subscripts.DemoVerification"/>
-      <class name="web.calc_web"/>
-      <class name="web.fenetres"/>
-      <class name="web.selection"/>
+      <class name="Web_editeur"/>
     </classes>
   </test>
 </suite>

@@ -22,5 +22,5 @@ click -> @IMAGE [error = 0.5%, source = desktop/recup_process_calculatrice/20203
 click -> @IMAGE [error = 0.5%, source = desktop/recup_process_calculatrice/20203994644.png]
 click -> @IMAGE [error = 0.5%, source = desktop/recup_process_calculatrice/2020399477.png]
 click -> @IMAGE [error = 0.5%, source = desktop/recup_process_calculatrice/20203994723.png]
-check-count -> 1 -> @IMAGE [error = 0.5%, source = desktop/recup_process_calculatrice/20203995017.png]
+check-count -> 1 -> @IMAGE [error = 0.5%, source = desktop/recup_process_calculatrice/202032784730.png]
 channel-close -> calc
