@@ -1,0 +1,27 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-04-28 at 17:01:49
+
+[ats-variables]
+
+var -> chemin -> C:/Users/emman/Documents/GitHub/ats_test/
+
+[ats-actions]
+
+comment -> script -> Prérequis :<br>Actualiser la variable "chemin" avec le path window dans lequel est stoquée votre campagne de test<br><b>\src\assets\resources</b>
+channel-start -> newChannel -> file:///$var(chemin)src/assets/resources/SpaceMonger.exe
+//comment -> script -> Prérequis :<br>Récupérer l'exécutable <b>SpaceMonger.exe</b> dans le projet  :<br><b>\src\assets\resources</b><br><br><b>Déposer</b> l'exécutable SpaceMonger.exe <b>sur le bureau windows</b> de la machine.
+//channel-start -> desktop -> desktop
+//click-double -> ListItem [Name = SpaceMonger.exe]
+//channel-close -> desktop
+//channel-start -> spacemonger -> process://.*SpaceMonger.exe
+window-resize -> x = 100, y = 100, width = 1000, height = 900
+click -> Button [ChildId = 1]
+click -> ListItem [Name =~ .*C:.*]
+click -> Button [Name = OK]
+check-count [try = 10] -> 1 -> Button [BoundingWidth = 51, ChildId = 2, IsEnabled = True]
+click -> CheckBox [Toggle = On]
+click -> CheckBox [Toggle = Off]
+//click -> Button [Name = Fermer]
+channel-close -> spacemonger

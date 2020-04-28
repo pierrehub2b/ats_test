@@ -1,0 +1,12 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-04-28 at 11:56:20
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> newChannel -> desktop
+click -> Button [Name = Calculatrice]

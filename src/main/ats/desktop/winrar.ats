@@ -1,0 +1,25 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-04-28 at 14:32:27
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> winrar -> file:///C:/Program%20Files/WinRAR/WinRAR.exe
+check-count [try = 10] -> 1 -> Text [Name =~ (?i)WinRAR\s*n'est\s*pas\s*un\s*logiciel\s*gratuit.*]
+click -> Button [AutomationId = 1, Name = Fermer]
+click -> MenuItem [Name = Fichier]
+over -> MenuItem [Name = Options]
+over -> MenuItem [@index = 1, Name = Arborescence]
+click -> MenuItem [@index = 1, Name = Arborescence]
+click -> MenuItem [@index = 1, Name = Afficher les dossiers du disque	Ctrl+T]
+check-count [try = -10] -> 1 -> Tree [AutomationId = 120]
+over -> MenuItem [Name = Options]
+click -> MenuItem [Name = Options]
+over -> MenuItem [@index = 1, Name = Arborescence]
+click -> MenuItem [@index = 1, Name = Afficher les dossiers du disque	Ctrl+T]
+check-count [try = -10] -> 0 -> Tree [AutomationId = 120]
+channel-close -> winrar
