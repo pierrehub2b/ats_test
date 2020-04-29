@@ -1,0 +1,13 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-04-29 at 13:54:24
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> newChannel -> chrome
+goto-url -> http://www.agilitest.com/fichiers/test.html
+comment -> script -> Capturer les boutons de la calculatrice

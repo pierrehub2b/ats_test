@@ -15,6 +15,7 @@
       <class name="desktop.paint"/>
       <class name="desktop.procexp"/>
       <class name="desktop.SpaceMonger"/>
+      <class name="desktop.TeamViewer_NotePad"/>
       <class name="desktop.winrar"/>
       <class name="multi_channel.API_REST_web"/>
       <class name="multi_channel.API_SOAP_web"/>

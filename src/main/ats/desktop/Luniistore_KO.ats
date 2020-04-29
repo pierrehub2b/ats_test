@@ -1,0 +1,19 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-04-29 at 10:03:50
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> newChannel -> file:///C:/Program%20Files/Luniistore/Luniistore.exe
+channel-start -> luniistore -> process://.*Luniistore.exe.*
+window-resize -> x = 100, y = 100, width = 1500, height = 900
+click -> Text [Name =~ (?i)Le\s*Catalogue]
+click -> Text [Name = Promotions]
+click
+scroll -> 450
+channel-close -> newChannel
+channel-close -> Luniistore
