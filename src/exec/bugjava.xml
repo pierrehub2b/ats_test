@@ -5,7 +5,7 @@
   <parameter name="ats.log.level" value="all"/>
   <test name="testMain" preserve-order="true">
     <classes>
-      <class name="Web_editeur"/>
+      <class name="desktop.winrar"/>
     </classes>
   </test>
 </suite>

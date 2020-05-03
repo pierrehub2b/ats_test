@@ -12,7 +12,7 @@ channel-start -> newChannel -> file:///C:/Program%20Files%20(x86)/TeamViewer/Tea
 channel-start -> TeamViewer -> process://.*TeamViewer.*
 window-resize -> x = 100, y = 100, width = 1500, height = 900
 click -> Button [AutomationId = 1] -> Pane [ClassName = TVMenuBar]
-click -> Button [AutomationId = 2] -> Pane [ClassName = TVMenuBar]
+over -> Button [AutomationId = 2] -> Pane [ClassName = TVMenuBar]
 click -> MenuItem [Name = Options]
 click -> ListItem [Name = Sécurité]
 click -> ListItem [Name =~ (?i)Contrôle\s*à\s*distance]
