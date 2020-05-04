@@ -1,0 +1,26 @@
+[ats-header]
+
+author -> LAPTOP-LT8QHS42\Agilitest
+created -> 2020-04-22 at 16:35:36
+description -> <a href="https://intranet.agilitest.com/web#id=136&view_type=form&model=project.issue&action=200&active_id=3">Lien vers le bug</a>
+
+[ats-variables]
+
+var -> today -> $now
+var -> prjInfo -> $pgav
+
+[ats-actions]
+
+channel-start -> agilitest -> chrome
+comment -> log -> <i>comment ...</i>
+comment -> step -> <a href="https://intranet.agilitest.com/web#id=136&view_type=form&model=project.issue&action=200&active_id=3">Lien vers le bug</a>
+window-resize -> width = 1500, height = 800
+goto-url -> www.agilitest.com
+click [nofail, delay = 5] -> A [id = hs-eu-confirmation-button]
+comment -> step -> <b>Test d'affichage</b> en replay vidéo & PDF<br /><br>Affichage d'une variable $var(today)
+click -> A [text = Ressources] -> UL [id = menu-principal-1]
+comment -> step -> <b>Test d'affichage</b> en replay vidéo & PDF<br /><br>Affichage d'une variable $var(prjInfo)
+click -> A [text = Webinaires] -> UL [id = menu-principal-1]
+comment -> step -> <b>Test d'affichage</b> en replay vidéo & PDF<br /><br>Affichage de deux variables $var(today) pour le projet $var(prjInfo)
+click -> IMG [alt = Agilitest, class = logo-simple]
+channel-close -> agilitest
