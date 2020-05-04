@@ -1,0 +1,7 @@
+[ats-actions]
+channel-start -> canal_saisie -> chrome
+goto-url -> google.fr
+keyboard -> agilitest$key(ENTER) -> INPUT [title = Rechercher]
+keyboard -> $key(SHIFT-AGILITEST)$key(ENTER) -> INPUT [title = Rechercher]
+keyboard -> agiliest$key(LEFT)$key(LEFT)$key(LEFT)T -> INPUT [title = Rechercher]
+channel-close -> canal_saisie

@@ -10,17 +10,25 @@ groups -> bug , desktop
 [ats-actions]
 
 comment -> script -> Lancer manuellement la calc windows (ou par .bat)<br>...<br>Ou par un canal system
-channel-start -> system -> explorer
-click [center = 280, middle = -47] -> ToolBar [Name =~ (?i)Adresse.*]
-keyboard -> C:\Windows\SysWOW64$key(ENTER) -> MenuItem [Name =~ (?i)‎ats_.*]
-keyboard -> calc$key(ENTER) -> Edit [Name = Zone de recherche]
-click-double [try = -10] -> ListItem [Name = calc.exe]
-channel-close -> system
+//channel-start -> system -> explorer
+//click [center = 280, middle = -47] -> ToolBar [Name =~ (?i)Adresse.*]
+//keyboard -> C:\Windows\SysWOW64$key(ENTER) -> MenuItem [Name =~ (?i)‎ats_.*]
+//keyboard -> calc$key(ENTER) -> Edit [Name = Zone de recherche]
+//click-double [try = -10] -> ListItem [Name = calc.exe]
+//channel-close -> system
+channel-start -> desktop -> desktop
+click -> Button [Name =~ (?i)Calculatrice.*]
 channel-start -> calc -> process://.*ApplicationFrameHost.exe
 window-resize -> x = 100, y = 100, width = 500, height = 700
+//click -> Button [AutomationId = num3Button]
 click -> @IMAGE [error = 0.5%, source = desktop/recup_process_calculatrice/20203994626.png]
-click -> @IMAGE [error = 0.5%, source = desktop/recup_process_calculatrice/20203994644.png]
+//click -> Button [AutomationId = plusButton]
+click -> @IMAGE [error = 0.5%, source = desktop/recup_process_calculatrice/2020328121443.png]
+//click -> Button [AutomationId = num8Button]
 click -> @IMAGE [error = 0.5%, source = desktop/recup_process_calculatrice/2020399477.png]
-click -> @IMAGE [error = 0.5%, source = desktop/recup_process_calculatrice/20203994723.png]
-check-count -> 1 -> @IMAGE [error = 0.5%, source = desktop/recup_process_calculatrice/20203995017.png]
+//click -> Button [AutomationId = equalButton]
+click -> @IMAGE [error = 0.5%, source = desktop/recup_process_calculatrice/2020328121839.png]
+//check-property -> Name =~ (?i).*11 -> Text [AutomationId = CalculatorResults]
+check-count -> 1 -> @IMAGE [error = 0.5%, source = desktop/recup_process_calculatrice/202032784730.png]
 channel-close -> calc
+channel-close -> desktop

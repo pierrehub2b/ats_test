@@ -9,16 +9,16 @@ groups -> default
 
 [ats-actions]
 
-subscript -> web.calc_web
-subscript -> web.fenetres
-subscript -> web.selection
-subscript -> subscripts.CheckoutForm
-subscript -> subscripts.DemoClic_iframe
-subscript -> subscripts.DemoDragDrop
-subscript -> subscripts.DemoFrais
-subscript -> subscripts.DemoHover
-subscript -> subscripts.DemoInputs
-subscript -> subscripts.DemoSaisie
-subscript -> subscripts.DemoSwipe
-subscript -> subscripts.DemoTooltipCheck
-subscript -> subscripts.DemoVerification
+subscript -> web.calc_web -> assets:///data/browsers_x3.csv
+subscript -> web.fenetres -> assets:///data/browsers_x3.csv
+subscript -> web.selection -> assets:///data/browsers_x3.csv
+subscript -> subscripts.CheckoutForm -> assets:///data/browsers_x3.csv
+subscript -> subscripts.DemoClic_iframe -> assets:///data/browsers_x3.csv
+subscript -> subscripts.DemoDragDrop -> assets:///data/browsers_x3.csv
+subscript -> subscripts.DemoFrais -> assets:///data/browsers_x3.csv
+subscript -> subscripts.DemoHover -> assets:///data/browsers_x3.csv
+subscript -> subscripts.DemoInputs -> assets:///data/browsers_x3.csv
+subscript -> subscripts.DemoSaisie -> assets:///data/browsers_x3.csv
+subscript -> subscripts.DemoSwipe -> assets:///data/browsers_x3.csv
+subscript -> subscripts.DemoTooltipCheck -> assets:///data/browsers_x3.csv
+subscript -> subscripts.DemoVerification -> assets:///data/browsers_x3.csv

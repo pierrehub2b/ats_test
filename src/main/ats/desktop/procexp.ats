@@ -1,0 +1,30 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-04-28 at 17:01:49
+
+[ats-variables]
+
+var -> chemin -> C:/Users/emman/Documents/GitHub/ats_test/
+
+[ats-actions]
+
+comment -> script -> Prérequis :<br>Actualiser la variable "chemin" avec le path window dans lequel est stoquée votre campagne de test<br><b>\src\assets\resources</b>
+channel-start -> procexp -> file:///$var(chemin)src/assets/resources/procexp.exe
+channel-start -> procexp64 -> process://.*procexp64.exe
+window-resize -> x = 100, y = 100, width = 1000, height = 900
+click -> Pane [@index = 1, AutomationId = 2000]
+window-switch -> 1
+check-count -> 1 -> Text [Name = GPU Usage]
+click -> TabItem [Name = Summary]
+check-count -> 1 -> Text [Name = CPU]
+click -> Button [Name = OK]
+window-switch -> 0
+click -> MenuItem [Name = View]
+over -> MenuItem [Name = Opacity]
+click -> MenuItem [Name = 50%]
+click -> MenuItem [Name = View]
+over -> MenuItem [Name = Opacity]
+click -> MenuItem [Name = Opaque]
+channel-close -> procexp64
+channel-close -> procexp

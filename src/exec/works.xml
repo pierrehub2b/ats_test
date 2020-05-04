@@ -12,6 +12,11 @@
       <class name="api.API_SOAP"/>
       <class name="appels_conditionnes.parent"/>
       <class name="desktop.notepadplusplus"/>
+      <class name="desktop.paint"/>
+      <class name="desktop.procexp"/>
+      <class name="desktop.SpaceMonger"/>
+      <class name="desktop.TeamViewer_NotePad"/>
+      <class name="desktop.winrar"/>
       <class name="multi_channel.API_REST_web"/>
       <class name="multi_channel.API_SOAP_web"/>
       <class name="multi_channel.dragdrop_SYST_web"/>
@@ -26,9 +31,7 @@
       <class name="subscripts.DemoSwipe"/>
       <class name="subscripts.DemoTooltipCheck"/>
       <class name="subscripts.DemoVerification"/>
-      <class name="web.calc_web"/>
-      <class name="web.fenetres"/>
-      <class name="web.selection"/>
+      <class name="Web_editeur"/>
     </classes>
   </test>
 </suite>

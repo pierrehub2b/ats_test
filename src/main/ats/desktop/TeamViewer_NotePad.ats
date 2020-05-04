@@ -1,0 +1,32 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-04-29 at 10:42:25
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> newChannel -> file:///C:/Program%20Files%20(x86)/TeamViewer/TeamViewer.exe
+channel-start -> TeamViewer -> process://.*TeamViewer.*
+window-resize -> x = 100, y = 100, width = 1500, height = 900
+click -> Button [AutomationId = 1] -> Pane [ClassName = TVMenuBar]
+over -> Button [AutomationId = 2] -> Pane [ClassName = TVMenuBar]
+click -> MenuItem [Name = Options]
+click -> ListItem [Name = Sécurité]
+click -> ListItem [Name =~ (?i)Contrôle\s*à\s*distance]
+click -> ListItem [Name = Vidéo]
+check-count -> 1 -> Pane [Name = Scroll Options]
+click -> Button [Name = OK]
+click -> Button [AutomationId = 1] -> Pane [ClassName = TVMenuBar]
+click -> MenuItem [Name =~ (?i)Inviter\s*un\s*partenaire]
+click -> Button [ClassName = Button, Name =~ (?i)Copier\s*dans\s*le\s*presse-papier]
+click -> Button [Name = Annuler]
+channel-start -> notepad -> notepad++
+keyboard -> $key(CONTROL-V) -> Pane [ClassName = Scintilla]
+click -> MenuItem [Name = X]
+click -> Button [Name = Non]
+channel-close -> newChannel
+channel-close -> TeamViewer
+channel-close -> notepad

@@ -10,17 +10,20 @@ var -> URL_cible -> www.agilitest.com
 
 [ats-actions]
 
-channel-start -> Canal_Fenetre -> chrome
+channel-start -> Canal_Fenetre -> $param(0,chrome)
 goto-url -> $var(URL_cible)
 window-resize -> x = 10, y = 10, width = 600, height = 700
 window-resize -> x = 200, y = 200
 window-resize -> x = 200, y = 0
 window-resize -> x = 0, y = 0
 window-resize -> x = 0, y = 200
+check-count [try = 15] -> 1 -> A [id = hs-eu-confirmation-button]
+click -> A [id = hs-eu-confirmation-button]
 click -> DIV [class = container]
-click-wheel -> A [href = https://www.agilitest.com/blog/] -> LI [id = menu-item-21]
+//click-wheel -> A [href = https://www.agilitest.com/blog/] -> LI [id = menu-item-21]
+click-wheel [try = -10] -> A [href =~ .*blog.*]
 window-switch -> 1
-click-wheel -> A [class = titre, text =~ (?i)Retrouvez\s*nous\s*aux\s*Journées\s*Françaises\s*du\s*Test\s*Logiciel]
+click-wheel -> A [@index = 1, class = titre]
 window-switch -> 2
 window-switch -> 2
 window-state -> close

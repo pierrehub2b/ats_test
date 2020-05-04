@@ -12,10 +12,10 @@ var -> terme4 -> 48
 
 [ats-actions]
 
-channel-start -> calc_web -> chrome
+channel-start -> calc_web -> $param(0,chrome)
 goto-url -> www.google.fr
 keyboard -> calculatrice$key(ENTER) -> INPUT [title = Rechercher]
-click -> A [href = https://web2.0calc.fr/]
+click -> A [href =~ .*web2.0calc.fr/]
 click [nofail] -> BUTTON [id = cookieconsentallowall]
 subscript -> subscripts.sousscript_csv_calc_web -> assets:///data/donnees_de_calcul.csv
 subscript -> subscripts.sousscript_json_calc_web -> assets:///data/donnees_de_calcul.json
