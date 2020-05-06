@@ -1,0 +1,22 @@
+[ats-header]
+
+author -> LAPTOP-LT8QHS42\Agilitest
+created -> 2020-05-04 at 11:04:47
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> chrome -> chrome
+goto-url -> https://krono.corsica/index.php
+scroll -> 500 -> DIV [id = page-content]
+click -> A [text = TOUTES LES DATES]
+keyboard -> haute corse -> INPUT [type = search]
+scroll -> -500 -> DIV [@index = 1, class = container]
+click -> A [href = https://krono.corsica/contact.php]
+keyboard -> Name -> INPUT [id = name]
+keyboard -> name@gmail.com -> INPUT [id = email]
+scroll -> 200 -> DIV [id = main-content]
+select -> index = 1 -> SELECT [name = motif]
+channel-close -> chrome
