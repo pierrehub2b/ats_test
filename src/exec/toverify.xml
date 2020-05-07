@@ -5,7 +5,7 @@
   <parameter name="ats.log.level" value="all"/>
   <test name="testMain" preserve-order="true">
     <classes>
-      <class name="android.la_centrale"/>
+      <class name="web.selection"/>
     </classes>
   </test>
 </suite>

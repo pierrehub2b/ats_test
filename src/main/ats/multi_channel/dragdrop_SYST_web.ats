@@ -18,6 +18,7 @@ over -> P [text =~ (?s)This is the most minimal example.*]
 //drop [bottom = 1] -> FORM [action = /upload-target]
 over -> BUTTON [text =~ (?i)Drop\s*files\s*here\s*to\s*upload]
 drop -> BUTTON [text =~ (?i)Drop\s*files\s*here\s*to\s*upload]
+check-property -> text = fileName.txt -> DIV [class = dz-filename]
 over [try = 25] -> DIV [class = dz-preview dz-file-preview dz-processing dz-error dz-complete]
 check-count -> 1 -> DIV [class = dz-error-message]
 channel-close -> web

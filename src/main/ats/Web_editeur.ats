@@ -6,6 +6,7 @@ groups -> default
 
 [ats-variables]
 
+var -> today_transform -> date [] -> $today
 
 [ats-actions]
 

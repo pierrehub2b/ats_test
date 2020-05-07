@@ -1,0 +1,19 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-05-07 at 15:55:16
+
+[ats-variables]
+
+var -> ip_port -> 192.168.0.19:8080
+
+[ats-actions]
+
+channel-start -> Pinterest -> mobile://$var(ip_port)/com.pinterest
+click -> ImageView [viewId = tab_icon] -> LinearLayout [innerText = Enregistrés]
+click -> ImageView [viewId = primary_image]
+click -> View [@index = 1, description =~ Épingle.*] -> RecyclerView [viewId = recycler_adapter_view]
+click -> ImageButton [viewId = modular_closeup_back_button]
+click -> ImageView [viewId = board_host_navigation_icon]
+click -> ImageView [viewId = tab_icon] -> LinearLayout [innerText = Accueil]
+channel-close -> Pinterest

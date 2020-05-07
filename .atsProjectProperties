@@ -15,6 +15,5 @@
   <environment>
     <property>browser</property>
     <property>browsername</property>
-    <property>p0</property>
   </environment>
 </atsProject>

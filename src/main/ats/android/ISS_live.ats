@@ -1,0 +1,35 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-05-07 at 15:18:28
+
+[ats-variables]
+
+var -> Latitude -> regexp [Latitude: (.*), 1]
+var -> Longitude -> regexp [Longitude: (.*), 1]
+var -> Altitude -> regexp [Altitude: (.*), 1]
+var -> Vitesse -> regexp [Vitesse: (.*), 1]
+var -> ip_port -> 192.168.0.19:8080
+
+[ats-actions]
+
+channel-start -> ISS -> mobile://$var(ip_port)/com.nicedayapps.iss_free
+check-count -> 1 -> View [description =~ (?i)International\s*Space\s*Station.\s*]
+check-count -> 0 -> ProgressBar [viewId = video_spinner]
+//click [nofail] -> View [@index = 1, innerText = Fermer]
+click -> ImageButton [description =~ (?i)Ouvrez\s*le\s*tiroir\s*de\s*navigation]
+click -> CheckedTextView [innerText =~ (?i)Visite\s*virtuelle, viewId = design_menu_item_text]
+click -> ImageView [@index = 1, viewId = iss_module_img_cover]
+click -> Button [innerText = Retour]
+click -> ImageView [@index = 2, viewId = iss_module_img_cover]
+click -> Button [innerText = Retour]
+click -> ImageButton [description =~ (?i)Revenir\s*en\s*haut\s*de\s*la\s*page]
+click [nofail] -> ImageButton [description =~ (?i)Interstitial\s*close\s*button]
+click [nofail] -> View [viewId = close_button_icon]
+click -> ImageButton [viewId = button_cloud_disabled]
+click -> ImageButton [viewId = button_cloud]
+property -> text => Latitude -> TextView [viewId = latitude_textview_id]
+property -> text => Longitude -> TextView [viewId = longitude_textview_id]
+property -> text => Altitude -> TextView [viewId = alttitude_textview_id]
+property -> text => Vitesse -> TextView [viewId = speed_textview_id]
+channel-close -> ISS

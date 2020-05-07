@@ -1,0 +1,32 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-05-07 at 16:08:18
+
+[ats-variables]
+
+var -> ip_port -> 192.168.0.19:8080
+
+[ats-actions]
+
+channel-start -> RadioFrance -> mobile://$var(ip_port)/com.radiofrance.radio.radiofrance.android
+click -> ImageView [viewId = pcb_view_progress_circle_button_loading] -> ViewGroup [viewId = explore_main_highlight_play_pause_button]
+check-count -> 1 -> ImageView [viewId = pcb_view_progress_circle_button_loading] -> ViewGroup [viewId = view_collapsed_player_main_action_button]
+click -> ImageView [viewId = pcb_view_progress_circle_button_loading] -> ViewGroup [viewId = view_collapsed_player_main_action_button]
+check-count -> 1 -> ImageView [viewId = pcb_view_progress_circle_button_loading] -> ViewGroup [viewId = view_collapsed_player_main_action_button]
+click -> ImageView [viewId = pcb_view_progress_circle_button_loading] -> ViewGroup [viewId = view_collapsed_player_main_action_button]
+click -> ImageView [viewId = icon] -> FrameLayout [viewId = navigation_radio]
+click -> ImageView [tooltip = Plus d'options]
+click -> TextView [innerText = Réveil, viewId = title]
+check-count -> 1 -> TextView [viewId = alarms_no_content_title]
+click -> ImageButton [viewId = alarms_create_alarm_button]
+click -> RadialTimePickerView$RadialPickerTouchHelper [description = 6]
+click -> RadialTimePickerView$RadialPickerTouchHelper [description = 45]
+property -> innerText => heure_reveil -> RelativeLayout [viewId = time_header]
+check-property -> innerText = 06 : 45 -> RelativeLayout [viewId = time_header]
+click -> Button [innerText = OK, viewId = button1]
+check-property -> innerText =~ Prochain réveil : Dans.* -> TextView [viewId = alarms_next_alarm_label_textview]
+click -> ImageView [viewId = alarm_delete]
+check-property -> innerText = Aucun réveil programmé. -> TextView [viewId = alarms_no_content_title]
+click -> ImageButton [description =~ (?i)Revenir\s*en\s*haut\s*de\s*la\s*page]
+channel-close -> RadioFrance
