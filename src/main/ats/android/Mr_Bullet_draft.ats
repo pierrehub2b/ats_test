@@ -1,0 +1,17 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-05-07 at 16:36:01
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> newChannel -> mobile://192.168.0.19:8080/com.lionstudios.mrbullet
+click [nofail] -> @IMAGE [error = 0.5%, source = android/Mr_Bullet/202047163713.png]
+click [nofail] -> @IMAGE [error = 0.5%, source = android/Mr_Bullet/202047163745.png]
+click [nofail] -> @IMAGE [error = 0.5%, source = android/Mr_Bullet/202047163837.png]
+click -> @IMAGE [error = 0.5%, source = android/Mr_Bullet/202047163910.png]
+click [left = 55, top = 76] -> FrameLayout [viewId = content]
+channel-close -> newChannel

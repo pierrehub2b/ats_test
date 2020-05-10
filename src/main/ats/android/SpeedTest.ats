@@ -1,0 +1,34 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-05-07 at 16:53:14
+
+[ats-variables]
+
+var -> ping -> regexp [Ping (.*) (.*), 1]
+var -> gigue -> regexp [Gigue (.*) (.*), 1]
+var -> perte -> regexp [Perte (.*) (.*), 1]
+var -> ip_port -> 192.168.0.19:8080
+var -> today -> date [dd/MM/yy] -> $today
+
+[ats-actions]
+
+channel-start -> speedtest -> mobile://$var(ip_port)/org.zwanoo.android.speedtest
+check-count -> 1 -> View [viewId = go_button]
+click -> ImageView [viewId = icon] -> FrameLayout [innerText = Outils]
+click -> TextView [viewId = tool_selection_card_title_text] -> ViewGroup [viewId = tool_selection_card_content]
+check-count -> 1 -> TextView [viewId = coverageItemText]
+click -> ImageView [viewId = icon] -> FrameLayout [innerText = Vitesse]
+click -> View [viewId = go_button]
+check-count [try = 20, delay = 2] -> 0 -> View [viewId = gauge]
+property -> text => descendant -> TextView [viewId = txt_test_result_value] -> FrameLayout [description = DESCENDANT]
+property -> text => ascendant -> TextView [viewId = txt_test_result_value] -> FrameLayout [description = ASCENDANT]
+property -> innerText => gigue -> ViewGroup [viewId = test_result_item_jitter]
+property -> innerText => ping -> ViewGroup [viewId = test_result_item_ping]
+property -> innerText => perte -> ViewGroup [viewId = test_result_item_packet_loss]
+click -> View [viewId = closeIcon]
+click -> ImageView [viewId = icon] -> FrameLayout [innerText = Résultats]
+check-property -> innerText =~ (?i)$var(today)\s*.* -> TextView [viewId = table_cell_date] -> ViewGroup [viewId = table_cell]
+check-property -> innerText = $var(descendant) -> TextView [viewId = table_cell_download] -> ViewGroup [viewId = table_cell]
+check-property -> innerText = $var(ascendant) -> TextView [viewId = table_cell_upload] -> ViewGroup [viewId = table_cell]
+channel-close -> speedtest

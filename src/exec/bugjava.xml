@@ -5,7 +5,8 @@
   <parameter name="ats.log.level" value="all"/>
   <test name="testMain" preserve-order="true">
     <classes>
-      <class name="multi_channel.dragdrop_SYST_web"/>
+      <class name="desktop.notepadplusplus"/>
+      <class name="desktop.TeamViewer_NotePad"/>
     </classes>
   </test>
 </suite>

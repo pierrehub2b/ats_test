@@ -5,9 +5,13 @@
   <parameter name="ats.log.level" value="all"/>
   <test name="testMain" preserve-order="true">
     <classes>
+      <class name="android.ISS_live"/>
       <class name="android.la_centrale"/>
       <class name="android.meteo_android"/>
       <class name="android.myCanal_passKO"/>
+      <class name="android.Pinterest"/>
+      <class name="android.RadioFrance"/>
+      <class name="android.SpeedTest"/>
       <class name="api.API_REST"/>
       <class name="api.API_SOAP"/>
       <class name="appels_conditionnes.parent"/>
@@ -31,7 +35,6 @@
       <class name="subscripts.DemoSwipe"/>
       <class name="subscripts.DemoTooltipCheck"/>
       <class name="subscripts.DemoVerification"/>
-      <class name="Web_editeur"/>
     </classes>
   </test>
 </suite>
