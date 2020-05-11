@@ -5,7 +5,6 @@
   <parameter name="ats.log.level" value="all"/>
   <test name="testMain" preserve-order="true">
     <classes>
-      <class name="desktop.notepadplusplus"/>
       <class name="desktop.TeamViewer_NotePad"/>
     </classes>
   </test>

@@ -15,6 +15,7 @@ channel-start -> procexp64 -> process://.*procexp64.exe
 window-resize -> x = 100, y = 100, width = 1000, height = 900
 click -> Pane [@index = 1, AutomationId = 2000]
 window-switch -> 1
+click -> TabItem [Name = GPU]
 check-count -> 1 -> Text [Name = GPU Usage]
 click -> TabItem [Name = Summary]
 check-count -> 1 -> Text [Name = CPU]

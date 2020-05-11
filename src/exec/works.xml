@@ -35,6 +35,7 @@
       <class name="subscripts.DemoSwipe"/>
       <class name="subscripts.DemoTooltipCheck"/>
       <class name="subscripts.DemoVerification"/>
+      <class name="Web_editeur"/>
     </classes>
   </test>
 </suite>

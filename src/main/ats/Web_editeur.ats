@@ -7,7 +7,7 @@ groups -> default
 [ats-variables]
 
 var -> today_transform -> date [] -> $today
-var -> browser_csv -> browsers_x3
+var -> browser_csv -> browsers_x2
 
 [ats-actions]
 
