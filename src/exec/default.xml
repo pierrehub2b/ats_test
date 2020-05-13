@@ -5,7 +5,12 @@
   <parameter name="ats.log.level" value="all"/>
   <test name="testMain" preserve-order="true">
     <classes>
-      <class name="Web_editeur"/>
+      <class name="desktop.notepadplusplus"/>
+      <class name="desktop.paint"/>
+      <class name="desktop.procexp"/>
+      <class name="desktop.SpaceMonger"/>
+      <class name="desktop.TeamViewer_NotePad"/>
+      <class name="desktop.winrar"/>
     </classes>
   </test>
 </suite>

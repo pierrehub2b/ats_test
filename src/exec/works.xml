@@ -36,6 +36,7 @@
       <class name="subscripts.DemoTooltipCheck"/>
       <class name="subscripts.DemoVerification"/>
       <class name="Web_editeur"/>
+      <class name="zfeedback_execution"/>
     </classes>
   </test>
 </suite>

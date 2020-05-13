@@ -1,0 +1,29 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-05-11 at 10:15:49
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> newChannel -> file:///C:/Program%20Files/Microsoft%20Office/root/Office16/OUTLOOK.EXE
+channel-start -> outlook -> process://.*OUTLOOK.EXE.*
+click -> Button [Name = Nouveau courrier]
+window-switch [try = 3] -> 1
+keyboard -> caipture@gmail.com -> Edit [AutomationId = 4099]
+keyboard -> $today $now Résultat de campagne Java -> Edit [Name = Objet]
+keyboard -> C:\Users\emman\Documents\GitHub\ats_test\target\output\works\ -> Edit [AutomationId = Body]
+channel-start -> explorer -> explorer
+click -> TreeItem [Name = Accès rapide]
+click-double -> Edit [Value = output]
+//click -> SplitButton [Name = Nom]
+drag -> Image [ClassName = UIImage] -> ListItem [Name = emailable-report.html]
+channel-switch -> outlook
+over -> Edit [AutomationId = Body]
+drop -> Edit [AutomationId = Body]
+click -> Button [Name = Envoyer]
+channel-close -> explorer
+channel-close -> outlook
+channel-close -> newChannel

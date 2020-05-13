@@ -9,17 +9,18 @@ created -> 2020-04-28 at 14:32:27
 [ats-actions]
 
 channel-start -> winrar -> file:///C:/Program%20Files/WinRAR/WinRAR.exe
-check-count [try = 10] -> 1 -> Text [Name =~ (?i)WinRAR\s*n'est\s*pas\s*un\s*logiciel\s*gratuit.*]
-click -> Button [AutomationId = 1, Name = Fermer]
-click -> MenuItem [Name = Fichier]
+window-resize -> x = 0, y = 0, width = 1200, height = 900
+check-count [nofail, try = 10] -> 1 -> Text [Name =~ (?i)WinRAR\s*n'est\s*pas\s*un\s*logiciel\s*gratuit.*]
+click [nofail] -> Button [AutomationId = 1, Name = Fermer]
+click -> MenuItem [AccessKey = Alt+f]
 over -> MenuItem [Name = Options]
-over -> MenuItem [@index = 1, Name = Arborescence]
-click -> MenuItem [@index = 1, Name = Arborescence]
-click -> MenuItem [AccessKey = d, ChildId = 1] -> Menu [Name = Arborescence]
+over -> MenuItem [AccessKey = r] -> Menu [Name = Options]
+click -> MenuItem [AccessKey = r] -> Menu [Name = Options]
+click -> MenuItem [AccessKey = d, ChildId = 1] -> Menu [ChildId = 0]
 check-count [try = -10] -> 1 -> Tree [AutomationId = 120]
 over -> MenuItem [Name = Options]
 click -> MenuItem [Name = Options]
-over -> MenuItem [@index = 1, Name = Arborescence]
-click -> MenuItem [AccessKey = d, ChildId = 1] -> Menu [Name = Arborescence]
+over -> MenuItem [AccessKey = r] -> Menu [Name = Options]
+click -> MenuItem [AccessKey = d, ChildId = 1] -> Menu [ChildId = 0]
 check-count [try = -10] -> 0 -> Tree [AutomationId = 120]
 channel-close -> winrar
