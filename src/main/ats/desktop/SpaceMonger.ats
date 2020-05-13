@@ -10,7 +10,7 @@ var -> chemin -> C:/Users/emman/Documents/GitHub/ats_test/
 [ats-actions]
 
 comment -> script -> Prérequis :<br>Actualiser la variable "chemin" avec le path window dans lequel est stoquée votre campagne de test<br><b>\src\assets\resources</b>
-channel-start -> SpaceMonger -> file:///$var(chemin)src/assets/resources/SpaceMonger.exe
+channel-start -> SpaceMonger -> SpaceMonger
 //comment -> script -> Prérequis :<br>Récupérer l'exécutable <b>SpaceMonger.exe</b> dans le projet  :<br><b>\src\assets\resources</b><br><br><b>Déposer</b> l'exécutable SpaceMonger.exe <b>sur le bureau windows</b> de la machine.
 //channel-start -> desktop -> desktop
 //click-double -> ListItem [Name = SpaceMonger.exe]

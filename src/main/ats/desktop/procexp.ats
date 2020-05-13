@@ -10,7 +10,7 @@ var -> chemin -> C:/Users/emman/Documents/GitHub/ats_test/
 [ats-actions]
 
 comment -> script -> Prérequis :<br>Actualiser la variable "chemin" avec le path window dans lequel est stoquée votre campagne de test<br><b>\src\assets\resources</b>
-channel-start -> procexp -> file:///$var(chemin)src/assets/resources/procexp.exe
+channel-start -> procexp -> procexp
 channel-start -> procexp64 -> process://.*procexp64.exe
 window-resize -> x = 100, y = 100, width = 1000, height = 900
 click -> Pane [@index = 1, AutomationId = 2000]
