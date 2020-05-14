@@ -1,0 +1,18 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-05-14 at 14:45:21
+
+[ats-variables]
+
+var -> browser_1 -> chrome
+var -> browser_2 -> msedge
+var -> browser_3 -> opera
+var -> browser_4 -> ie
+
+[ats-actions]
+
+subscript -> web.subscripts.Web_$var(browser_1) [$var(browser_1)]
+subscript -> web.subscripts.Web_$var(browser_2) [$var(browser_2)]
+subscript -> web.subscripts.Web_$var(browser_3) [$var(browser_3)]
+subscript -> web.subscripts.Web_$var(browser_4) [$var(browser_4)]

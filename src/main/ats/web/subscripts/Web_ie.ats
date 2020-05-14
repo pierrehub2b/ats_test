@@ -1,0 +1,26 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-04-09 at 13:21:41
+groups -> default
+
+[ats-variables]
+
+var -> today_transform -> date [dd/MM/yyyy, 1y, 1m, 1d] -> $today
+var -> browser_csv -> browsers_x1
+
+[ats-actions]
+
+subscript -> web.calc_web [$param(0)]
+subscript -> web.fenetres [$param(0)]
+subscript -> web.selection [$param(0)]
+subscript -> sousscripts.CheckoutForm [$param(0)]
+subscript -> sousscripts.DemoClic_iframe [$param(0)]
+subscript -> sousscripts.DemoDragDrop [$param(0)]
+subscript -> sousscripts.DemoFrais [$param(0)]
+subscript -> sousscripts.DemoHover [$param(0)]
+subscript -> sousscripts.DemoInputs [$param(0)]
+subscript -> sousscripts.DemoSaisie [$param(0)]
+subscript -> sousscripts.DemoSwipe [$param(0)]
+subscript -> sousscripts.DemoTooltipCheck [$param(0)]
+subscript -> sousscripts.DemoVerification [$param(0)]

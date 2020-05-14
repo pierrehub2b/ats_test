@@ -7,20 +7,20 @@ groups -> default
 [ats-variables]
 
 var -> today_transform -> date [dd/MM/yyyy, 1y, 1m, 1d] -> $today
-var -> browser_csv -> browsers_x4
+var -> browser_csv -> browsers_x1
 
 [ats-actions]
 
-subscript -> web.calc_web -> assets:///data/$var(browser_csv).csv
-subscript -> web.fenetres -> assets:///data/$var(browser_csv).csv
-subscript -> web.selection -> assets:///data/$var(browser_csv).csv
-subscript -> subscripts.CheckoutForm -> assets:///data/$var(browser_csv).csv
-subscript -> subscripts.DemoClic_iframe -> assets:///data/$var(browser_csv).csv
-subscript -> subscripts.DemoDragDrop -> assets:///data/$var(browser_csv).csv
-subscript -> subscripts.DemoFrais -> assets:///data/$var(browser_csv).csv
-subscript -> subscripts.DemoHover -> assets:///data/$var(browser_csv).csv
-subscript -> subscripts.DemoInputs -> assets:///data/$var(browser_csv).csv
-subscript -> subscripts.DemoSaisie -> assets:///data/$var(browser_csv).csv
-subscript -> subscripts.DemoSwipe -> assets:///data/$var(browser_csv).csv
-subscript -> subscripts.DemoTooltipCheck -> assets:///data/$var(browser_csv).csv
-subscript -> subscripts.DemoVerification -> assets:///data/$var(browser_csv).csv
+subscript -> web.calc_web
+subscript -> web.fenetres
+subscript -> web.selection
+subscript -> sousscripts.CheckoutForm
+subscript -> sousscripts.DemoClic_iframe
+subscript -> sousscripts.DemoDragDrop
+subscript -> sousscripts.DemoFrais
+subscript -> sousscripts.DemoHover
+subscript -> sousscripts.DemoInputs
+subscript -> sousscripts.DemoSaisie
+subscript -> sousscripts.DemoSwipe
+subscript -> sousscripts.DemoTooltipCheck
+subscript -> sousscripts.DemoVerification
