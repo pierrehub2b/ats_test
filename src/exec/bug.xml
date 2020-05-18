@@ -5,7 +5,7 @@
   <parameter name="ats.log.level" value="silent"/>
   <test name="testMain" preserve-order="true">
     <classes>
-      <class name="web.calc_web"/>
+      <class name="sousscripts.iframe_tests"/>
     </classes>
   </test>
 </suite>
