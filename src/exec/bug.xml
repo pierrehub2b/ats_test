@@ -6,6 +6,7 @@
   <test name="testMain" preserve-order="true">
     <classes>
       <class name="sousscripts.iframe_tests"/>
+      <class name="web.passwords"/>
     </classes>
   </test>
 </suite>
