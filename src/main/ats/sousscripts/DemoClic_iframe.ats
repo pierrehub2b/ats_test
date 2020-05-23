@@ -1,10 +1,7 @@
 [ats-header]
 
-id -> 
 author -> AGILITEST-DUPER\Emmanuel DUPERRAY
 created -> 2018-11-12 at 14:38:16
-prerequisite -> 
-description -> 
 groups -> web
 
 [ats-variables]
@@ -14,9 +11,10 @@ groups -> web
 
 channel-start -> Clic -> $param(0,chrome)
 goto-url -> https://home-expenses.cxjs.io/dashboard
+check-count -> 4 -> DIV [class = cxe-section-body]
 click -> rect [x = 100, y = 22.5]
 click -> rect [x = 100, y = 47.5]
-click -> rect [x = 100, y = 172.5]
+click -> rect [x = 100]
 click -> DIV [class = cxe-legend-entry, text = Technology]
 click -> DIV [class = cxe-legend-entry, text = Travel]
 click -> DIV [class = cxe-legend-entry, text = Education]
@@ -24,17 +22,18 @@ click -> A [text = Log]
 click -> TH [class = cxe-grid-col-header cxs-sortable, text =~ (?i)Date] -> TBODY [class = cxe-grid-header] -> DIV [class = cxe-grid-fixed-header]
 click -> TH [class = cxe-grid-col-header cxs-sortable, text =~ (?i)Category] -> TBODY [class = cxe-grid-header] -> DIV [class = cxe-grid-fixed-header]
 click -> TH [class = cxe-grid-col-header cxs-aligned-right cxs-sortable, text =~ (?i)Amount] -> TBODY [class = cxe-grid-header] -> DIV [class = cxe-grid-fixed-header]
-//click -> A [class = cxb-button cxm-hollow, text =~ (?i)EDIT] -> TD [index(1), class = cxs-pad cxs-aligned-center] -> DIV [class = cxe-grid-scroll-area cxs-fixed-header]
+//click -> A [class = cxb-button cxm-hollow, text =~ (?i)EDIT] -> TD [class = cxs-pad cxs-aligned-center, id = true] -> DIV [class = cxe-grid-scroll-area cxs-fixed-header]
 //click -> I [class = material-icons cxe-lookupfield-icon, text = keyboard_arrow_down]
 //click -> LI [text =~ (?i)Children]
 //click -> BUTTON [class = cxb-button cxm-primary, type = button]
-//click -> BUTTON [class = cxb-button cxm-hollow, text =~ (?i)REMOVE, type = button] -> TD [index(1), class = cxs-pad cxs-aligned-center] -> DIV [class = cxe-grid-scroll-area cxs-fixed-header]
+//click -> BUTTON [class = cxb-button cxm-hollow, text =~ (?i)REMOVE, type = button] -> TD [class = cxs-pad cxs-aligned-center, id = true] -> DIV [class = cxe-grid-scroll-area cxs-fixed-header]
 //click -> BUTTON [class = cxb-button cxm-flat-primary, text =~ (?i)YES, type = button]
 click -> A [text =~ (?i)Dashboard]
 click -> I [class = hamburger open]
 click -> I [class = hamburger]
 goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/classic/desktop/index.html
 comment -> script -> Affichage de la fenetre Accordion affichant les contacts actuellement en ligne
+check-count [try = 20] -> 1 -> DIV [class = ux-desktop-shortcut-icon grid-shortcut] -> IFRAME [id = examples-iframe]
 click -> DIV [class = ux-desktop-shortcut-icon accordion-shortcut] -> IFRAME [id = examples-iframe]
 comment -> script -> Sélection de Matt
 click -> SPAN [text = Matt] -> IFRAME [id = examples-iframe]

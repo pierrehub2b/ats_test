@@ -9,7 +9,7 @@ var -> Latitude -> regexp [Latitude: (.*), 1]
 var -> Longitude -> regexp [Longitude: (.*), 1]
 var -> Altitude -> regexp [Altitude: (.*), 1]
 var -> Vitesse -> regexp [Vitesse: (.*), 1]
-var -> ip_port -> 192.168.0.19:8080
+var -> ip_port -> $env(android_ip_port)
 
 [ats-actions]
 
@@ -19,7 +19,7 @@ check-count -> 0 -> ProgressBar [viewId = video_spinner]
 //click [nofail] -> View [@index = 1, innerText = Fermer]
 click -> ImageButton [description =~ (?i)Ouvrez\s*le\s*tiroir\s*de\s*navigation]
 click -> CheckedTextView [innerText =~ (?i)Visite\s*virtuelle, viewId = design_menu_item_text]
-click -> ImageView [@index = 1, viewId = iss_module_img_cover]
+click [try = 10] -> ImageView [@index = 1, viewId = iss_module_img_cover]
 click -> Button [innerText = Retour]
 click -> ImageView [@index = 2, viewId = iss_module_img_cover]
 click -> Button [innerText = Retour]

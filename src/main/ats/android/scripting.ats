@@ -5,13 +5,15 @@ created -> 2020-04-21 at 16:09:26
 
 [ats-variables]
 
-var -> ip_port -> 192.168.0.19:8080
+var -> ip_port -> $env(android_ip_port)
 
 [ats-actions]
 
 channel-start -> newChannel -> mobile://$var(ip_port)/com.oneplus.calculator
 scripting -> tap=2 -> Button [viewId = digit_3]
 click -> Button [viewId = op_add]
+//click -> ImageButton [viewId = op_add]
 scripting -> tap=5 -> Button [viewId = digit_9]
 click -> Button [viewId = eq]
 scripting -> longPress=3 -> Button [viewId = clr]
+channel-close -> newChannel

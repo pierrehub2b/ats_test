@@ -4,8 +4,12 @@
   <parameter name="visual.report" value="2"/>
   <parameter name="ats.log.level" value="all"/>
   <test name="testMain" preserve-order="true">
+    <parameter name="android_ip_port" value="192.168.43.66:8080"/>
     <classes>
-      <class name="web.multibrowser_master"/>
+      <class name="web.subscripts.Web_chrome"/>
+      <class name="web.subscripts.Web_ie"/>
+      <class name="web.subscripts.Web_msedge"/>
+      <class name="web.subscripts.Web_opera"/>
     </classes>
   </test>
 </suite>

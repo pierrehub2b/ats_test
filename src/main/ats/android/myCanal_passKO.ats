@@ -5,17 +5,19 @@ created -> 2020-04-10 at 14:01:26
 
 [ats-variables]
 
-var -> ip_port -> 192.168.0.19:8080
+var -> ip_port -> $env(android_ip_port)
 var -> login -> caipture@gmail.com
-var -> motDePasse -> azerty123
+var -> motDePasse -> $pass(pass1)
 
 [ats-actions]
 
 comment -> script -> <i>Prérequis: avoir installé l'appliction myCanal sur le mobile</i>
 channel-start -> myCanal -> mobile://$var(ip_port)/com.canal.android.canal
 click [left = 642, top = 38] -> TextView [innerText =~ (?i).*connecter, viewId = showcase_text_label]
-keyboard -> $var(login)$key(TAB) -> EditText [viewId = sso-email]
-keyboard -> $var(motDePasse)$key(ENTER) -> EditText [viewId = sso-pass]
+check-count [try = 20] -> 0 -> TextView [viewId = message]
+keyboard [try = 10] -> $var(login)$key(TAB) -> EditText [viewId = sso-email]
+keyboard -> $var(motDePasse) -> EditText [viewId = sso-pass]
+click -> Button [viewId = sso-form_submitButton]
 check-count -> 1 -> TextView [viewId = alertTitle]
 property -> text => propertyVar -> TextView [viewId = message]
 click -> Button [innerText = OK]

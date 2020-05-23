@@ -10,6 +10,7 @@ created -> 2018-09-16 at 17:03:15
 
 channel-start -> Verification -> $param(0,chrome)
 goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/kitchensink/?modern#binding-selection
+check-count [try = 20] -> 0 -> DIV [class = loading-circle-12 loading-circle] -> IFRAME [id = examples-iframe]
 click [try = 20] -> DIV [id = ext-element-120] -> IFRAME [id = examples-iframe]
 keyboard -> Prénom_1 -> INPUT [id = ext-element-70] -> IFRAME [id = examples-iframe]
 keyboard -> Nom_1 -> INPUT [id = ext-element-83] -> IFRAME [id = examples-iframe]

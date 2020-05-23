@@ -4,6 +4,7 @@
   <parameter name="visual.report" value="2"/>
   <parameter name="ats.log.level" value="all"/>
   <test name="testMain" preserve-order="true">
+    <parameter name="android_ip_port" value="192.168.43.66:8080"/>
     <classes>
       <class name="android.ISS_live"/>
       <class name="android.la_centrale"/>
@@ -19,7 +20,6 @@
       <class name="desktop.paint"/>
       <class name="desktop.procexp"/>
       <class name="desktop.SpaceMonger"/>
-      <class name="desktop.TeamViewer_NotePad"/>
       <class name="desktop.winrar"/>
       <class name="multi_channel.API_REST_web"/>
       <class name="multi_channel.API_SOAP_web"/>
@@ -35,7 +35,10 @@
       <class name="subscripts.DemoSwipe"/>
       <class name="subscripts.DemoTooltipCheck"/>
       <class name="subscripts.DemoVerification"/>
-      <class name="Web_editeur"/>
+      <class name="web.subscripts.Web_chrome"/>
+      <class name="web.subscripts.Web_ie"/>
+      <class name="web.subscripts.Web_msedge"/>
+      <class name="web.subscripts.Web_opera"/>
       <class name="zfeedback_execution"/>
     </classes>
   </test>

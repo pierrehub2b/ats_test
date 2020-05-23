@@ -11,16 +11,16 @@ var -> browser_csv -> browsers_x1
 
 [ats-actions]
 
-subscript -> web.calc_web [$param(0)]
-subscript -> web.fenetres [$param(0)]
-subscript -> web.selection [$param(0)]
-subscript -> sousscripts.CheckoutForm [$param(0)]
-subscript -> sousscripts.DemoClic_iframe [$param(0)]
-subscript -> sousscripts.DemoDragDrop [$param(0)]
-subscript -> sousscripts.DemoFrais [$param(0)]
-subscript -> sousscripts.DemoHover [$param(0)]
-subscript -> sousscripts.DemoInputs [$param(0)]
-subscript -> sousscripts.DemoSaisie [$param(0)]
-subscript -> sousscripts.DemoSwipe [$param(0)]
-subscript -> sousscripts.DemoTooltipCheck [$param(0)]
-subscript -> sousscripts.DemoVerification [$param(0)]
+subscript -> web.calc_web [opera]
+subscript -> web.fenetres
+subscript -> web.selection
+subscript -> sousscripts.CheckoutForm
+subscript -> sousscripts.DemoClic_iframe
+subscript -> sousscripts.DemoDragDrop
+subscript -> sousscripts.DemoFrais
+subscript -> sousscripts.DemoHover
+subscript -> sousscripts.DemoInputs
+subscript -> sousscripts.DemoSaisie
+//subscript -> sousscripts.DemoSwipe
+//subscript -> sousscripts.DemoTooltipCheck [opera]
+subscript -> sousscripts.DemoVerification
