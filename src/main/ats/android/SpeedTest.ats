@@ -8,19 +8,21 @@ created -> 2020-05-07 at 16:53:14
 var -> ping -> regexp [Ping (.*) (.*), 1]
 var -> gigue -> regexp [Gigue (.*) (.*), 1]
 var -> perte -> regexp [Perte (.*) (.*), 1]
-var -> ip_port -> 192.168.0.19:8080
+var -> ip_port -> $env(android_ip_port)
 var -> today -> date [dd/MM/yy] -> $today
 
 [ats-actions]
 
 channel-start -> speedtest -> mobile://$var(ip_port)/org.zwanoo.android.speedtest
+check-count [try = 20] -> 0 -> ProgressBar [viewId = welcome_activity_progress_bar]
 check-count -> 1 -> View [viewId = go_button]
 click -> ImageView [viewId = icon] -> FrameLayout [innerText = Outils]
 click -> TextView [viewId = tool_selection_card_title_text] -> ViewGroup [viewId = tool_selection_card_content]
-check-count -> 1 -> TextView [viewId = coverageItemText]
+check-count [try = 20] -> 1 -> TextView [viewId = coverageItemText]
 click -> ImageView [viewId = icon] -> FrameLayout [innerText = Vitesse]
 click -> View [viewId = go_button]
-check-count [try = 20, delay = 2] -> 0 -> View [viewId = gauge]
+check-count [try = 20, delay = 2] -> 0 -> View [viewId = connecting_button]
+check-count [try = 20] -> 0 -> View [viewId = gauge]
 property -> text => descendant -> TextView [viewId = txt_test_result_value] -> FrameLayout [description = DESCENDANT]
 property -> text => ascendant -> TextView [viewId = txt_test_result_value] -> FrameLayout [description = ASCENDANT]
 property -> innerText => gigue -> ViewGroup [viewId = test_result_item_jitter]

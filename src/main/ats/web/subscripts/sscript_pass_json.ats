@@ -1,0 +1,11 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-05-23 at 09:18:03
+
+[ats-variables]
+
+
+[ats-actions]
+
+keyboard -> saisie password via param Json = $param(p0) -> INPUT [title = Rechercher]

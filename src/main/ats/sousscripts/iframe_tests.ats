@@ -1,0 +1,14 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-05-18 at 15:40:57
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> iframe -> ie
+goto-url -> https://developer.mozilla.org/fr/docs/Web/HTML/Element/iframe
+click -> H4 [class = output-label] -> IFRAME [src = https://interactive-examples.mdn.mozilla.net/pages/tabbed/iframe.html]
+channel-close -> iframe

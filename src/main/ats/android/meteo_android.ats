@@ -5,7 +5,7 @@ created -> 2018-10-30 at 08:58:19
 
 [ats-variables]
 
-var -> ip_port -> 192.168.0.19:8080
+var -> ip_port -> $env(android_ip_port)
 
 [ats-actions]
 

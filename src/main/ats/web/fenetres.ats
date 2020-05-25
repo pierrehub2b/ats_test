@@ -17,7 +17,7 @@ window-resize -> x = 200, y = 200
 window-resize -> x = 200, y = 0
 window-resize -> x = 0, y = 0
 window-resize -> x = 0, y = 200
-check-count [try = 15] -> 1 -> A [id = hs-eu-confirmation-button]
+check-count [try = 20] -> 1 -> A [id = hs-eu-confirmation-button]
 click -> A [id = hs-eu-confirmation-button]
 click -> DIV [class = container]
 //click-wheel -> A [href = https://www.agilitest.com/blog/] -> LI [id = menu-item-21]

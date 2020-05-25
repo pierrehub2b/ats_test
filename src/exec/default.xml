@@ -3,5 +3,7 @@
   <parameter name="xml.report" value="true"/>
   <parameter name="visual.report" value="2"/>
   <parameter name="ats.log.level" value="all"/>
-  <test name="testMain" preserve-order="true"/>
+  <test name="testMain" preserve-order="true">
+    <parameter name="android_ip_port" value="192.168.43.66:8080"/>
+  </test>
 </suite>

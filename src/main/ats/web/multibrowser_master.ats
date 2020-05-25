@@ -12,7 +12,11 @@ var -> browser_4 -> ie
 
 [ats-actions]
 
-subscript -> web.subscripts.Web_$var(browser_1) [$var(browser_1)]
-subscript -> web.subscripts.Web_$var(browser_2) [$var(browser_2)]
-subscript -> web.subscripts.Web_$var(browser_3) [$var(browser_3)]
-subscript -> web.subscripts.Web_$var(browser_4) [$var(browser_4)]
+//subscript -> web.subscripts.Web_$var(browser_1) [$var(browser_1)]
+//subscript -> web.subscripts.Web_$var(browser_2)
+//subscript -> web.subscripts.Web_$var(browser_3) [$var(browser_3)]
+//subscript -> web.subscripts.Web_$var(browser_4) [$var(browser_4)]
+subscript -> web.subscripts.Web_chrome
+subscript -> web.subscripts.Web_msedge
+subscript -> web.subscripts.Web_opera
+subscript -> web.subscripts.Web_ie

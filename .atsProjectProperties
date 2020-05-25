@@ -15,5 +15,6 @@
   <environment>
     <property>browser</property>
     <property>browsername</property>
+    <property>android_ip_port</property>
   </environment>
 </atsProject>

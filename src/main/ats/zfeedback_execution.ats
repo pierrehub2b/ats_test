@@ -17,6 +17,7 @@ keyboard -> $today $now Résultat de campagne Java -> Edit [Name = Objet]
 keyboard -> C:\Users\emman\Documents\GitHub\ats_test\target\output\works\ -> Edit [AutomationId = Body]
 channel-start -> explorer -> explorer
 click -> TreeItem [Name = Accès rapide]
+click-double -> Edit [Value = Ce PC\Documents\GitHub\ats_test]
 click-double -> Edit [Value = output]
 //click -> SplitButton [Name = Nom]
 drag -> Image [ClassName = UIImage] -> ListItem [Name = emailable-report.html]
