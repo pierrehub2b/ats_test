@@ -20,10 +20,12 @@ check-property -> Name = Copy/Paste result &eq; Text to copy paste -> Pane [Clas
 keyboard -> $key(CONTROL-A)$key(CONTROL-C)$key(BACK_SPACE) -> Pane [ClassName = Scintilla]
 check-property -> Name =  -> Pane [ClassName = Scintilla]
 keyboard -> $key(CONTROL-V) -> Pane [ClassName = Scintilla]
-check-property -> Name = replaced -> Pane [ClassName = Scintilla]
+check-property -> Name = Copy/Paste result &eq; Text to copy paste -> Pane [ClassName = Scintilla]
 keyboard -> first line$key(ENTER)second line -> Pane [ClassName = Scintilla]
 property -> Name => propertyVar -> Pane [ClassName = Scintilla]
 check-property -> Name =~ first line.*\n.*second line -> Pane [ClassName = Scintilla]
 keyboard -> first line$key(ENTER)$key(ENTER)second line -> Pane [ClassName = Scintilla]
 check-property -> Name =~ first line.*\n\n.*second line -> Pane [ClassName = Scintilla]
+click -> MenuItem [Name = X]
+click -> Button [Name = Non]
 channel-close -> newChannel
