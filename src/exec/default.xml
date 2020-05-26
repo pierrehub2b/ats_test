@@ -5,5 +5,8 @@
   <parameter name="ats.log.level" value="all"/>
   <test name="testMain" preserve-order="true">
     <parameter name="android_ip_port" value="192.168.43.66:8080"/>
+    <classes>
+      <class name="scripting.scripting"/>
+    </classes>
   </test>
 </suite>

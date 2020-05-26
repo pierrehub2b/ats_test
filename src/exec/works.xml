@@ -5,6 +5,7 @@
   <parameter name="ats.log.level" value="all"/>
   <test name="testMain" preserve-order="true">
     <parameter name="android_ip_port" value="192.168.0.19:8080"/>
+    <parameter name="browsername" value="chrome"/>
     <classes>
       <class name="android.ISS_live"/>
       <class name="android.la_centrale"/>

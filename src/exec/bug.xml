@@ -8,6 +8,7 @@
     <classes>
       <class name="android.myCanal_passKO"/>
       <class name="desktop.TeamViewer_NotePad"/>
+      <class name="password.OctoPerf_login"/>
     </classes>
   </test>
 </suite>
