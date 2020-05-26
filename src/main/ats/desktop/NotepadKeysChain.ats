@@ -13,4 +13,7 @@ click -> Button [ChildId = 1] -> ToolBar [ClassName = ToolbarWindow32]
 keyboard -> Text to replace -> Pane [ClassName = Scintilla]
 keyboard -> $key(CONTROL-A)replaced -> Pane [ClassName = Scintilla]
 check-property -> Name = replaced -> Pane [ClassName = Scintilla]
+keyboard -> Text to copy paste -> Pane [ClassName = Scintilla]
+keyboard -> $key(CONTROL-A)$key(CONTROL-C)$key(DELETE)Copy/Paste result = $key(CONTROL-V) -> Pane [ClassName = Scintilla]
+check-property -> Name = Copy/Paste result &eq; Text to copy paste -> Pane [ClassName = Scintilla]
 channel-close -> newChannel

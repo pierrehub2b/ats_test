@@ -7,6 +7,7 @@
     <parameter name="android_ip_port" value="192.168.43.66:8080"/>
     <classes>
       <class name="android.myCanal_passKO"/>
+      <class name="desktop.NotepadKeysChain"/>
       <class name="desktop.TeamViewer_NotePad"/>
       <class name="password.OctoPerf_login"/>
     </classes>
