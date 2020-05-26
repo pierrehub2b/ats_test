@@ -10,8 +10,11 @@ created -> 2020-05-26 at 11:05:12
 
 channel-start -> newChannel -> chrome
 goto-url -> http://google.Fr
-keyboard [delay = 5] -> test c/c -> INPUT [title = Rechercher]
+keyboard -> test c/c -> INPUT [title = Rechercher]
 keyboard -> $key(CONTROL-A)$key(CONTROL-X) -> INPUT [title = Rechercher]
-keyboard [delay = 5] -> $key(CONTROL-V) -> INPUT [title = Rechercher]
+keyboard -> $key(CONTROL-V) -> INPUT [title = Rechercher]
 keyboard -> $key(SHIFT-AZERTY) -> INPUT [title = Rechercher]
+keyboard -> $key(CONTROL-A)$key(BACK_SPACE) -> INPUT [title = Rechercher]
+keyboard -> agilitest$key(ENTER) -> INPUT [title = Rechercher]
+check-count -> 1 -> A [href = https://www.agilitest.com/]
 channel-close -> newChannel

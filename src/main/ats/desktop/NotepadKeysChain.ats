@@ -10,10 +10,20 @@ created -> 2020-04-20 at 11:30:03
 
 channel-start -> newChannel -> notepad++
 click -> Button [ChildId = 1] -> ToolBar [ClassName = ToolbarWindow32]
+keyboard -> $key(CONTROL-A)$key(BACK_SPACE) -> Pane [ClassName = Scintilla]
 keyboard -> Text to replace -> Pane [ClassName = Scintilla]
 keyboard -> $key(CONTROL-A)replaced -> Pane [ClassName = Scintilla]
 check-property -> Name = replaced -> Pane [ClassName = Scintilla]
 keyboard -> Text to copy paste -> Pane [ClassName = Scintilla]
 keyboard -> $key(CONTROL-A)$key(CONTROL-C)$key(DELETE)Copy/Paste result = $key(CONTROL-V) -> Pane [ClassName = Scintilla]
 check-property -> Name = Copy/Paste result &eq; Text to copy paste -> Pane [ClassName = Scintilla]
+keyboard -> $key(CONTROL-A)$key(CONTROL-C)$key(BACK_SPACE) -> Pane [ClassName = Scintilla]
+check-property -> Name =  -> Pane [ClassName = Scintilla]
+keyboard -> $key(CONTROL-V) -> Pane [ClassName = Scintilla]
+check-property -> Name = replaced -> Pane [ClassName = Scintilla]
+keyboard -> first line$key(ENTER)second line -> Pane [ClassName = Scintilla]
+property -> Name => propertyVar -> Pane [ClassName = Scintilla]
+check-property -> Name =~ first line.*\n.*second line -> Pane [ClassName = Scintilla]
+keyboard -> first line$key(ENTER)$key(ENTER)second line -> Pane [ClassName = Scintilla]
+check-property -> Name =~ first line.*\n\n.*second line -> Pane [ClassName = Scintilla]
 channel-close -> newChannel
