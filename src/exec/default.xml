@@ -4,9 +4,15 @@
   <parameter name="visual.report" value="4"/>
   <parameter name="ats.log.level" value="all"/>
   <test name="testMain" preserve-order="true">
-    <parameter name="android_ip_port" value="192.168.43.66:8080"/>
+    <parameter name="android_ip_port" value="192.168.0.19:8080"/>
     <classes>
-      <class name="desktop.NotepadKeysChain"/>
+      <class name="android.ISS_live"/>
+      <class name="android.la_centrale"/>
+      <class name="android.meteo_android"/>
+      <class name="android.myCanal_passKO"/>
+      <class name="android.Pinterest"/>
+      <class name="android.RadioFrance"/>
+      <class name="android.SpeedTest"/>
     </classes>
   </test>
 </suite>

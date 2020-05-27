@@ -5,11 +5,16 @@ created -> 2020-04-18 at 17:33:10
 
 [ats-variables]
 
+var -> month -> regexp [(.*)/(.*)/(.*), 1] -> $today
+var -> day -> regexp [(.*)/(.*)/(.*), 2] -> $today
+var -> year -> regexp [(.*)/(.*)/(.*), 3] -> $today
+var -> date -> date [YYYY-mm-DD] -> $today
 
 [ats-actions]
 
-click -> INPUT [name = color]
-click [left = 71, top = 13] -> Text [AutomationId = 710] -> syscomp
-click [left = 6, top = 107] -> Text [AutomationId = 702] -> syscomp
-click -> Button [Name = OK] -> syscomp
+keyboard -> $var(day) -> Spinner [Name = Jour] -> DataItem [Name = Date :] -> syscomp
+keyboard -> $var(month) -> Spinner [Name = Mois] -> DataItem [Name = Date :] -> syscomp
+keyboard -> $var(year) -> Spinner [Name = Année] -> DataItem [Name = Date :] -> syscomp
+check-property -> value = $var(date) -> INPUT [name = date]
 scripting -> value='#ff8000' -> INPUT [name = color]
+scripting -> value='#ff2000' -> INPUT [name = color]
