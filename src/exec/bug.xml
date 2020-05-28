@@ -4,9 +4,12 @@
   <parameter name="visual.report" value="2"/>
   <parameter name="ats.log.level" value="silent"/>
   <test name="testMain" preserve-order="true">
+    <parameter name="var_env3" value="msedge"/>
+    <parameter name="var_env2" value="chrome"/>
     <parameter name="android_ip_port" value="192.168.43.69:8080"/>
     <classes>
       <class name="android.myCanal_passKO"/>
+      <class name="appels_conditionnes.var_env"/>
       <class name="desktop.TeamViewer_NotePad"/>
       <class name="password.OctoPerf_login"/>
     </classes>

@@ -16,5 +16,8 @@
     <property>browser</property>
     <property>browsername</property>
     <property>android_ip_port</property>
+    <property>var_env1</property>
+    <property>var_env2</property>
+    <property>var_env3</property>
   </environment>
 </atsProject>

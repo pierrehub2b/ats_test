@@ -6,7 +6,6 @@
   <test name="testMain" preserve-order="true">
     <classes>
       <class name="desktop.NotepadKeysChain"/>
-      <class name="web.calc_web"/>
     </classes>
   </test>
 </suite>

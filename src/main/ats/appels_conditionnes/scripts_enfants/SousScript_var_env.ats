@@ -1,0 +1,14 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-05-28 at 12:47:15
+
+[ats-variables]
+
+var -> recup_var_env -> $param(0)
+
+[ats-actions]
+
+comment -> step -> <u>Récupération des données :</u><br>Param0 = $param(0)<br>Var. d'Env1 = $env(var_env1)<br>Var. d'Env2 = $env(var_env2)<br>Var. d'Env3 = $env(var_env3)<br><br>Var. d'Env1 ou d'Env2 = $env(var_env1,var_env2)<br>Var. d'Env2 ou d'Env3 = $env(var_env2,var_env3)
+subscript -> appels_conditionnes.scripts_enfants.SousScript2 [$var(recup_var_env)]
+channel-close -> canal_var_env1

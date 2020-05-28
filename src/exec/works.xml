@@ -17,6 +17,7 @@
       <class name="api.API_REST"/>
       <class name="api.API_SOAP"/>
       <class name="appels_conditionnes.parent"/>
+      <class name="desktop.large_input_notpad"/>
       <class name="desktop.notepadplusplus"/>
       <class name="desktop.paint"/>
       <class name="desktop.procexp"/>
