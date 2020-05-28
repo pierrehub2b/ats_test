@@ -9,5 +9,5 @@ created -> 2020-05-28 at 12:46:22
 [ats-actions]
 
 comment -> step -> <u>Récupération des données :</u><br>Param0 = $param(0)<br>Var. d'Env1 = $env(var_env1)<br>Var. d'Env2 = $env(var_env2)<br>Var. d'Env3 = $env(var_env3)<br><br>Var. d'Env1 ou d'Env2 = $env(var_env1,var_env2)<br>Var. d'Env2 ou d'Env3 = $env(var_env2,var_env3)
-subscript -> appels_conditionnes.scripts_enfants.SousScript_var_env
-subscript -> appels_conditionnes.scripts_enfants.SousScript_var_env
+subscript -> appels_conditionnes.scripts_enfants.SousScript_var_env [$env(var_env1&co;var_env2)]
+subscript -> appels_conditionnes.scripts_enfants.SousScript_var_env [$env(var_env2&co;var_env3)]
