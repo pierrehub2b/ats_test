@@ -10,10 +10,10 @@ var -> ip_port -> $env(android_ip_port)
 [ats-actions]
 
 channel-start -> Pinterest -> mobile://$var(ip_port)/com.pinterest
-click -> ImageView [viewId = tab_icon] -> LinearLayout [innerText = Enregistrés]
-click -> ImageView [viewId = primary_image]
+click -> ImageView [viewId = tab_avatar]
+click -> ImageView [@index = 1, viewId = primary_image]
 click -> View [@index = 1, description =~ Épingle.*] -> RecyclerView [viewId = recycler_adapter_view]
 click -> ImageButton [viewId = modular_closeup_back_button]
 click -> ImageView [viewId = board_host_navigation_icon]
-click -> ImageView [viewId = tab_icon] -> LinearLayout [innerText = Accueil]
+click -> ImageView [viewId = tab_icon] -> FrameLayout [viewId = bottom_nav_home_icon]
 channel-close -> Pinterest

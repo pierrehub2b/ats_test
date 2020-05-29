@@ -1,0 +1,13 @@
+[ats-header]
+
+author -> 
+created -> 2020-05-28 at 15:27:53
+
+[ats-variables]
+
+
+[ats-actions]
+
+comment -> step -> <u>Récupération des données :</u><br>Param0 = $param(0)<br>Var. d'Env1 = $env(var_env1)<br>Var. d'Env2 = $env(var_env2)<br>Var. d'Env3 = $env(var_env3)<br><br>Var. d'Env1 ou d'Env2 = $env(var_env1,var_env2)<br>Var. d'Env2 ou d'Env3 = $env(var_env2,var_env3)
+channel-start -> canal_var_env1 -> $param(0)
+check-property -> text =~ .*$param(0).* -> DIV [class = alert note]
