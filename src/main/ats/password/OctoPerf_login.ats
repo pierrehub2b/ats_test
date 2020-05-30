@@ -13,5 +13,7 @@ goto-url -> https://petstore.octoperf.com/
 click -> A
 click -> A [text = Sign In]
 keyboard -> saisie_non_cryptée -> INPUT [name = username]
+check-property -> value = saisie_non_cryptée -> INPUT [name = username]
 keyboard -> $pass(login) -> INPUT [name = username]
+check-property -> value = crypted_login -> INPUT [name = username]
 channel-close -> password_octoperf

@@ -12,6 +12,7 @@ var -> browser_csv -> browsers_x1
 [ats-actions]
 
 subscript -> web.calc_web [msedge]
+subscript -> web.subscripts.Dialog [msedge]
 subscript -> web.fenetres [msedge]
 subscript -> web.selection [msedge]
 subscript -> sousscripts.CheckoutForm [msedge]

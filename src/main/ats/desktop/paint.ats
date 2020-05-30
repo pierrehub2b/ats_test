@@ -10,7 +10,8 @@ created -> 2020-04-28 at 17:58:11
 
 channel-start -> mspaint -> file:///C:/WINDOWS/system32/mspaint.exe
 window-resize -> x = 100, y = 100, width = 1000, height = 900
-drag [center = -354, middle = -275] -> Pane [AutomationId = 59648]
+drag [center = -447, middle = -136] -> Pane [AutomationId = 59648]
+drop [center = 224, middle = -295] -> Pane [AutomationId = 59648]
 keyboard -> $key(CONTROL-Z) -> Pane [AutomationId = 59648]
 click -> Button [Name = Modifier les couleurs]
 click [left = 36, top = 78] -> Text [@index = 2, Name = Couleurs de base :]

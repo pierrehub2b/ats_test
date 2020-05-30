@@ -5,7 +5,7 @@
   <parameter name="ats.log.level" value="all"/>
   <test name="testMain" preserve-order="true">
     <classes>
-      <class name="desktop.large_input_notpad"/>
+      <class name="web.subscripts.Dialog_ie_desktop"/>
     </classes>
   </test>
 </suite>

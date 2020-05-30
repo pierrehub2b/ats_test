@@ -5,7 +5,10 @@ created -> 2020-05-23 at 09:14:13
 
 [ats-variables]
 
+var -> saisie_cryptee -> regexp [saisie password via param Json = (.*), 1]
 
 [ats-actions]
 
 keyboard -> saisie password via param CSV = $param(0) -> INPUT [title = Rechercher]
+property -> value => saisie_cryptee -> INPUT [title = Rechercher]
+check-property -> value = saisie password via param CSV &eq; $var(saisie_cryptee) -> INPUT [title = Rechercher]

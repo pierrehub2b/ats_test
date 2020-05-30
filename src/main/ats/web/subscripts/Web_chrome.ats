@@ -12,6 +12,7 @@ var -> browser_csv -> browsers_x1
 [ats-actions]
 
 subscript -> web.calc_web [chrome]
+subscript -> web.subscripts.Dialog [chrome]
 subscript -> web.fenetres [chrome]
 subscript -> web.selection [chrome]
 subscript -> sousscripts.CheckoutForm [chrome]
