@@ -13,13 +13,16 @@ var -> date -> date [YYYY-mm-DD] -> $today
 [ats-actions]
 
 click -> MenuItem [Name = Afficher le sélecteur de date] -> syscomp
-click [left = 172, top = 266] -> Document [ChildId = 0, ClassName = Chrome_RenderWidgetHostHWND, Text =~ (?i).*Aujourd'hui.*] -> syscomp
+click [left = 172, top = 266] -> Document [ClassName = Chrome_RenderWidgetHostHWND, Text =~ (?i).*Aujourd'hui.*] -> syscomp
+//check-property -> value = $var(date) -> INPUT [name = date]
+keyboard -> First_name_input -> INPUT [placeholder = First name]
+keyboard -> Last_name_input -> INPUT [placeholder = Last name]
+click -> INPUT [value = Submit] -> TD [text = Input Text :]
 //click -> Document [ChildId = 0, ClassName = Chrome_RenderWidgetHostHWND, Text = mai 0202    lu ma me je ve sa di  26 27 28 29 30 1 2  3 4 5 6 7 8 9  10 11 12 13 14 15 16  17 18 19 20 21 22 23  24 25 26 27 28 29 30  31 1 2 3 4 5 6    Aujourd'hui&sp;&sp;&sp;&sp;&sp;] -> syscomp
 //click -> Document [ChildId = 0, ClassName = Chrome_RenderWidgetHostHWND, Text =~ (?i).*Aujourd'hui.*] -> syscomp
 //keyboard -> $var(day) -> Spinner [Name = Jour] -> DataItem [Name = Date :] -> syscomp
 //keyboard -> $var(month) -> Spinner [Name = Mois] -> DataItem [Name = Date :] -> syscomp
 //keyboard -> 2020 -> Text [ChildId = 0] -> Spinner [Name = Année] -> syscomp
 //keyboard -> $var(year) -> Spinner [Name = Année] -> DataItem [Name = Date :] -> syscomp
-check-property -> value = $var(date) -> INPUT [name = date]
 scripting -> value='#ff8000' -> INPUT [name = color]
 scripting -> value='#ff2000' -> INPUT [name = color]

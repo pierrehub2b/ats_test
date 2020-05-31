@@ -5,7 +5,7 @@ created -> 2020-05-23 at 09:14:13
 
 [ats-variables]
 
-var -> saisie_cryptee -> regexp [saisie password via param Json = (.*), 1]
+var -> saisie_cryptee -> regexp [saisie password via param CSV = (.*), 1]
 
 [ats-actions]
 

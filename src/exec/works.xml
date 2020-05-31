@@ -42,6 +42,7 @@
       <class name="sousscripts.DemoTooltipCheck"/>
       <class name="sousscripts.DemoVerification"/>
       <class name="web.subscripts.Web_chrome"/>
+      <class name="web.subscripts.Web_firefox"/>
       <class name="web.subscripts.Web_ie"/>
       <class name="web.subscripts.Web_msedge"/>
       <class name="web.subscripts.Web_opera"/>
