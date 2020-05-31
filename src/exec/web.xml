@@ -14,6 +14,7 @@
       <class name="sousscripts.DemoSaisie"/>
       <class name="sousscripts.DemoSwipe"/>
       <class name="sousscripts.DemoVerification"/>
+      <class name="special_features.random_input"/>
       <class name="web.subscripts.Web_chrome"/>
       <class name="web.subscripts.Web_firefox"/>
       <class name="web.subscripts.Web_ie"/>

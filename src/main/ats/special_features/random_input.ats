@@ -12,19 +12,52 @@ var -> newVar -> regexp [( *[a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0
 
 channel-start -> random -> chrome
 goto-url -> http://www.agilitest.com/fichiers/test.html
-comment -> step -> <b>random (6)</b><br>--> $rnd(6)<br>--> $rndstring(6)
-keyboard -> $rnd(6) -> INPUT [placeholder = First name]
-check-property [try = -10] -> value =~ ( *&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;) -> INPUT [placeholder = First name]
-comment -> step -> <b>random (10,num)</b><br>--> $rnd(10,num)<br>--> $rndstring(10,num)
-keyboard -> $rnd(10,num) -> INPUT [placeholder = First name]
-check-property -> value =~ ( *&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;) -> INPUT [placeholder = First name]
-comment -> step -> <b>random (4,upp)</b><br>--> $rnd(4,upp)<br>--> $rndstring(4,upp)
-keyboard -> $rnd(4,upp) -> INPUT [placeholder = First name]
-check-property [try = -10] -> value =~ ( *&lb;A-Z&rb;&lb;A-Z&rb;&lb;A-Z&rb;&lb;A-Z&rb;) -> INPUT [placeholder = First name]
-comment -> step -> <b>random (5,low)</b><br>--> $rnd(5,low)<br>--> $rndstring(5,low)
-keyboard -> $rnd(5,low) -> INPUT [placeholder = First name]
-check-property [try = -10] -> value =~ ( *&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;) -> INPUT [placeholder = First name]
-comment -> step -> <b>random (5,chaîne_de_réréfence abbcccddddeeeeeBBCCDDDD)</b><br>--> $rnd(5,abbcccddddeeeeeBBCCDDDD)<br>--> $rndstring(5,abbcccddddeeeeeBBCCDDDD)
-keyboard -> $rnd(5,abbcccddddeeeeeBBCCDDDD) -> INPUT [placeholder = First name]
-check-property [try = -10] -> value =~ ( *&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;) -> INPUT [placeholder = First name]
+comment -> step -> <b>random (6)</b><br>- $rnd(6)<br>- $rndstring(6)
+keyboard -> random (6) -> INPUT [placeholder = First name]
+keyboard -> $rnd(6) -> INPUT [placeholder = Last name]
+check-property [try = -10] -> value =~ ( *&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;) -> INPUT [placeholder = Last name]
+comment -> step -> <b>random (11)</b><br>- $rnd(20)<br>- $rndstring(20)
+keyboard -> random (11) -> INPUT [placeholder = First name]
+keyboard -> $rnd(11) -> INPUT [placeholder = Last name]
+check-property [try = -10] -> value =~ ( *&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;) -> INPUT [placeholder = Last name]
+comment -> step -> <b>Large random (20)</b><br>- $rnd(20)<br>- $rndstring(20)
+keyboard -> random (20) -> INPUT [placeholder = First name]
+keyboard -> $rnd(20) -> INPUT [placeholder = Last name]
+check-property [try = -10] -> value =~ ( *&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;) -> INPUT [placeholder = Last name]
+comment -> step -> <b>Large random (80)</b><br>- $rnd(80)<br>- $rndstring(80)
+keyboard -> random (80) -> INPUT [placeholder = First name]
+keyboard -> $rnd(80) -> INPUT [placeholder = Last name]
+check-property [try = -10] -> value =~ ( *&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;&lb;a-zA-Z0-9&rb;) -> INPUT [placeholder = Last name]
+comment -> step -> <b>random (10,num)</b><br>- $rnd(10,num)<br>- $rndstring(10,num)
+keyboard -> random (10,num) -> INPUT [placeholder = First name]
+keyboard -> $rnd(10,num) -> INPUT [placeholder = Last name]
+check-property -> value =~ ( *&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;) -> INPUT [placeholder = Last name]
+comment -> step -> <b>Large random (15,num)</b><br>- $rnd(15,num)<br>- $rndstring(15,num)
+keyboard -> random (15,num) -> INPUT [placeholder = First name]
+keyboard -> $rnd(15,num) -> INPUT [placeholder = Last name]
+check-property -> value =~ ( *&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;&lb;0-9&rb;) -> INPUT [placeholder = Last name]
+comment -> step -> <b>random (4,upp)</b><br>- $rnd(4,upp)<br>- $rnd(4,upp)
+keyboard -> random (4,upp) -> INPUT [placeholder = First name]
+keyboard -> $rnd(4,upp) -> INPUT [placeholder = Last name]
+check-property [try = -10] -> value =~ ( *&lb;A-Z&rb;&lb;A-Z&rb;&lb;A-Z&rb;&lb;A-Z&rb;) -> INPUT [placeholder = Last name]
+comment -> step -> <b>Large random (20,upp)</b><br>- $rnd(20,upp)<br>- $rndstring(20,upp)
+keyboard -> random (20,upp) -> INPUT [placeholder = First name]
+keyboard -> $rnd(20,upp) -> INPUT [placeholder = Last name]
+check-property [try = -10] -> value =~ ( *&lb;A-Z&rb;&lb;A-Z&rb;&lb;A-Z&rb;&lb;A-Z&rb;&lb;A-Z&rb;&lb;A-Z&rb;&lb;A-Z&rb;&lb;A-Z&rb;&lb;A-Z&rb;&lb;A-Z&rb;&lb;A-Z&rb;&lb;A-Z&rb;&lb;A-Z&rb;&lb;A-Z&rb;&lb;A-Z&rb;&lb;A-Z&rb;&lb;A-Z&rb;&lb;A-Z&rb;&lb;A-Z&rb;&lb;A-Z&rb;) -> INPUT [placeholder = Last name]
+comment -> step -> <b>random (5,low)</b><br>- $rnd(5,low)<br>- $rnd(5,low)
+keyboard -> random (5,low) -> INPUT [placeholder = First name]
+keyboard -> $rnd(5,low) -> INPUT [placeholder = Last name]
+check-property [try = -10] -> value =~ ( *&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;) -> INPUT [placeholder = Last name]
+comment -> step -> <b>Large random (25,low)</b><br>- $rnd(25,low)<br>- $rnd(25,low)
+keyboard -> random (25,low) -> INPUT [placeholder = First name]
+keyboard -> $rnd(25,low) -> INPUT [placeholder = Last name]
+check-property [try = -10] -> value =~ ( *&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;&lb;a-z&rb;) -> INPUT [placeholder = Last name]
+comment -> step -> <b>random (5,chaîne_de_réréfence abbcccddddeeeeeBBCCCDDDD)</b><br>- $rnd(5,abbcccddddeeeeeBBCCDDDD)<br>- $rndstring(5,abbcccddddeeeeeBBCCDDDD)
+keyboard -> random (5,chaîne_de_réréfence abbcccddddeeeeeBBCCCDDDD) -> INPUT [placeholder = First name]
+keyboard -> $rnd(5,abbcccddddeeeeeBBCCCDDDD) -> INPUT [placeholder = Last name]
+check-property [try = -10] -> value =~ ( *&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;) -> INPUT [placeholder = Last name]
+comment -> step -> <b>Large random (20,chaîne_de_réréfence abbcccddddeeeeeBBCCCDDDD)</b><br>- $rnd(25,abbcccddddeeeeeBBCCDDDD)<br>- $rndstring(25,abbcccddddeeeeeBBCCDDDD)
+keyboard -> Large random (20,chaîne_de_réréfence abbcccddddeeeeeBBCCCDDDD) -> INPUT [placeholder = First name]
+keyboard -> $rnd(25,abbcccddddeeeeeBBCCCDDDD) -> INPUT [placeholder = Last name]
+check-property [try = -10] -> value =~ ( *&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;&lb;a-eB-D&rb;) -> INPUT [placeholder = Last name]
 channel-close -> random

@@ -3,9 +3,5 @@
   <parameter name="xml.report" value="true"/>
   <parameter name="visual.report" value="2"/>
   <parameter name="ats.log.level" value="all"/>
-  <test name="testMain" preserve-order="true">
-    <classes>
-      <class name="web.subscripts.Dialog_ie_desktop"/>
-    </classes>
-  </test>
+  <test name="testMain" preserve-order="true"/>
 </suite>
