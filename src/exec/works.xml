@@ -41,6 +41,8 @@
       <class name="sousscripts.DemoSwipe"/>
       <class name="sousscripts.DemoTooltipCheck"/>
       <class name="sousscripts.DemoVerification"/>
+      <class name="special_features.random_input"/>
+      <class name="web.subscripts.Dialog_ie_desktop"/>
       <class name="web.subscripts.Web_chrome"/>
       <class name="web.subscripts.Web_firefox"/>
       <class name="web.subscripts.Web_ie"/>

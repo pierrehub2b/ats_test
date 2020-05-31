@@ -1,12 +1,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="bugjava" verbose="10">
+<suite name="api" verbose="10">
   <parameter name="xml.report" value="true"/>
   <parameter name="visual.report" value="2"/>
   <parameter name="ats.log.level" value="all"/>
   <test name="testMain" preserve-order="true">
-    <parameter name="android_ip_port" value="192.168.0.19:8080"/>
     <classes>
-      <class name="web.subscripts.Dialog_ie_desktop"/>
+      <class name="api.API_REST"/>
+      <class name="api.API_SOAP"/>
     </classes>
   </test>
 </suite>
