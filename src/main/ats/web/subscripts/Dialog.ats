@@ -1,0 +1,51 @@
+[ats-header]
+
+author -> pc_pierre\huber
+created -> 2018-06-23 at 11:51:33
+groups -> bug
+
+[ats-variables]
+
+var -> inputName -> Agilitest_user
+var -> box_message -> regexp ["(.*)", 1]
+var -> box2_message -> regexp ["(.*)", 1]
+var -> box3_message -> regexp ["(.*)", 1]
+var -> get_harry -> regexp ["(.*)", 1]
+
+[ats-actions]
+
+channel-start -> dialog_box -> $param(0,ie)
+goto-url -> https://www.w3schools.com/html/tryit.asp?filename=tryhtml_iframe
+check-count -> 1 -> H1 [text =~ .*] -> IFRAME [src = demo_iframe.htm] -> IFRAME [id = iframeResult]
+goto-url -> https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_alert
+property -> text => box_message -> SPAN [class = cm-m-javascript cm-string]
+click -> BUTTON [text = Try it] -> IFRAME [id = iframeResult]
+check-count -> 1 -> dialog
+check-property -> text =~ (?i)hello.* -> dialog
+property -> text => box_displayed_message -> dialog
+check-value -> $var(box_message) = $var(box_displayed_message)
+click -> dialog [type = accept]
+check-count -> 0 -> dialog
+goto-url -> https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_confirm
+goto-url -> refresh
+property -> text => box2_message -> SPAN [class = cm-m-javascript cm-string]
+click [try = 9] -> BUTTON [text = Try it] -> IFRAME [id = iframeResult]
+check-count -> 1 -> dialog
+property -> text => box2_displayed_message -> dialog
+check-value -> $var(box2_message) = $var(box2_displayed_message)
+click -> dialog [type = dismiss]
+check-count -> 0 -> dialog
+click [try = 9] -> BUTTON [text = Try it] -> IFRAME [id = iframeResult]
+check-count -> 1 -> dialog
+click -> dialog [type = accept]
+check-count -> 0 -> dialog
+goto-url -> https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prompt
+property -> text => box3_message -> SPAN [@index = 1, class = cm-m-javascript cm-string]
+click -> BUTTON [text = Try it] -> IFRAME [id = iframeResult]
+property -> text => box3_displayed_message -> dialog
+check-value -> $var(box3_message) = $var(box3_displayed_message)
+//keyboard [try = -10] -> $var(inputName) -> dialog
+click -> dialog [type = accept]
+property -> text => get_harry -> SPAN [@index = 2, class = cm-m-javascript cm-string]
+check-property [try = -10] -> text =~ Hello $var(get_harry).* -> P [id = demo] -> IFRAME [id = iframeResult]
+channel-close -> dialog_box

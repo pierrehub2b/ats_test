@@ -17,7 +17,9 @@
       <class name="api.API_REST"/>
       <class name="api.API_SOAP"/>
       <class name="appels_conditionnes.parent"/>
+      <class name="appels_conditionnes.Var_env"/>
       <class name="desktop.large_input_notpad"/>
+      <class name="desktop.NotepadKeysChain"/>
       <class name="desktop.notepadplusplus"/>
       <class name="desktop.paint"/>
       <class name="desktop.procexp"/>
@@ -26,6 +28,8 @@
       <class name="multi_channel.API_REST_web"/>
       <class name="multi_channel.API_SOAP_web"/>
       <class name="multi_channel.dragdrop_SYST_web"/>
+      <class name="password.OctoPerf_login"/>
+      <class name="password.passwords"/>
       <class name="scripting.scripting"/>
       <class name="sousscripts.CheckoutForm"/>
       <class name="sousscripts.DemoClic_iframe"/>
@@ -37,7 +41,10 @@
       <class name="sousscripts.DemoSwipe"/>
       <class name="sousscripts.DemoTooltipCheck"/>
       <class name="sousscripts.DemoVerification"/>
+      <class name="special_features.random_input"/>
+      <class name="web.subscripts.Dialog_ie_desktop"/>
       <class name="web.subscripts.Web_chrome"/>
+      <class name="web.subscripts.Web_firefox"/>
       <class name="web.subscripts.Web_ie"/>
       <class name="web.subscripts.Web_msedge"/>
       <class name="web.subscripts.Web_opera"/>

@@ -10,5 +10,5 @@ created -> 2020-05-28 at 12:46:22
 
 comment -> step -> <u>Récupération des données :</u><br>Param0 = $param(0)<br>Var. d'Env1 = $env(var_env1)<br>Var. d'Env2 = $env(var_env2)<br>Var. d'Env3 = $env(var_env3)<br><br>Var. d'Env1 ou msedge = $env(var_env1,msedge)<br>Var. d'Env2 ou opera = $env(var_env2,opera)
 subscript -> appels_conditionnes.scripts_enfants.SousScript_var_env [chrome]
-//subscript -> appels_conditionnes.scripts_enfants.SousScript_var_env -> assets:///data/browsers_x1.csv
-//subscript -> appels_conditionnes.scripts_enfants.SousScript_var_env -> assets:///data/browsers_x1.json
+subscript -> appels_conditionnes.scripts_enfants.SousScript_var_env -> assets:///data/browsers_x1.csv
+subscript -> appels_conditionnes.scripts_enfants.SousScript_var_env -> assets:///data/browsers_x1.json

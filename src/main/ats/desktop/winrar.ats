@@ -12,6 +12,9 @@ channel-start -> winrar -> file:///C:/Program%20Files/WinRAR/WinRAR.exe
 window-resize -> x = 0, y = 0, width = 1200, height = 900
 check-count [nofail, try = 10] -> 1 -> Text [Name =~ (?i)WinRAR\s*n'est\s*pas\s*un\s*logiciel\s*gratuit.*]
 click [nofail] -> Button [AutomationId = 1, Name = Fermer]
+//window-switch -> 0
+//click -> Button [Name = OK]
+//window-switch -> 1
 click -> MenuItem [AccessKey = Alt+f]
 over -> MenuItem [Name = Options]
 over -> MenuItem [AccessKey = r] -> Menu [Name = Options]
