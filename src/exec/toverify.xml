@@ -3,5 +3,9 @@
   <parameter name="xml.report" value="true"/>
   <parameter name="visual.report" value="2"/>
   <parameter name="ats.log.level" value="all"/>
-  <test name="testMain" preserve-order="true"/>
+  <test name="testMain" preserve-order="true">
+    <classes>
+      <class name="special_features.check_null_versus_zero"/>
+    </classes>
+  </test>
 </suite>
