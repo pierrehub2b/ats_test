@@ -13,7 +13,7 @@ var -> browser_csv -> browsers_x1
 
 subscript -> web.calc_web [opera]
 subscript -> web.subscripts.Dialog [opera]
-subscript -> web.fenetres [opera]
+//subscript -> web.fenetres [opera]
 subscript -> web.selection [opera]
 subscript -> sousscripts.CheckoutForm [opera]
 subscript -> sousscripts.DemoClic_iframe [opera]

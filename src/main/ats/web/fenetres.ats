@@ -25,9 +25,9 @@ click-wheel [try = -10] -> A [href =~ .*blog.*]
 window-switch -> 1
 click-wheel -> A [@index = 1, class = titre]
 window-switch -> 2
-window-switch -> 2
-window-state -> close
-window-switch -> 1
-window-state -> close
-window-switch -> 0
+//window-switch -> 2
+//window-state -> close
+//window-switch -> 1
+//window-state -> close
+//window-switch -> 0
 channel-close -> Canal_Fenetre
