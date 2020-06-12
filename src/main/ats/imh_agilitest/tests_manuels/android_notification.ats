@@ -1,0 +1,13 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-06-08 at 09:57:03
+
+[ats-variables]
+
+
+[ats-actions]
+
+comment -> script -> Tester les notifications windows :<br>-  en device occupé<br>- en device libéré
+comment -> script -> Tester les notifications Agilitest :<br>-  Config > AMS Serveur : nb de devices<br>-  Config > AMS Status page
+comment -> script -> Tester les notifications AMS :<br>-  en device occupé<br>- en device libéré

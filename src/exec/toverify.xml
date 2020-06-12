@@ -3,5 +3,10 @@
   <parameter name="xml.report" value="true"/>
   <parameter name="visual.report" value="2"/>
   <parameter name="ats.log.level" value="all"/>
-  <test name="testMain" preserve-order="true"/>
+  <test name="testMain" preserve-order="true">
+    <parameter name="android_ip_port" value="192.168.0.50:8086"/>
+    <classes>
+      <class name="web.subscripts.Web_chrome"/>
+    </classes>
+  </test>
 </suite>

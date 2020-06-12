@@ -1,0 +1,50 @@
+[ats-header]
+
+author -> pc_pierre\huber
+created -> 2018-06-23 at 11:51:33
+groups -> bug
+
+[ats-variables]
+
+var -> inputName -> Agilitest_user
+var -> box_message -> regexp [(.*), 1]
+var -> box2_message -> regexp ["(.*)", 1]
+var -> box3_message -> regexp ["(.*)", 1]
+var -> get_harry -> regexp ["(.*)", 1]
+
+[ats-actions]
+
+channel-start -> dialog_box -> file:///C:/Program%20Files/Internet%20Explorer/iexplore.exe
+goto-url -> https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_alert
+check-count [delay = 2] -> 1 -> MenuItem [Name = Adresse]
+goto-url -> https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_alert
+check-count -> 2 -> Pane [Name = https://www.w3schools.com/jsref/tryit.asp?filename&eq;tryjsref_alert]
+check-count -> 1 -> Button [Name = Try it]
+click -> Button [Name = Try it]
+check-count -> 1 -> dialog
+check-property -> title = Message de la page Web -> dialog
+check-property -> text = Hello! I am an alert box! -> dialog
+property -> text => box_displayed_message -> dialog
+click -> dialog [type = accept]
+check-count -> 0 -> dialog
+goto-url -> https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_confirm
+click -> Button [Name = Try it]
+check-count -> 1 -> dialog
+property -> text => box2_displayed_message -> dialog
+click -> dialog [type = dismiss]
+check-count -> 0 -> dialog
+click -> Button [Name = Try it]
+check-count -> 1 -> dialog
+click -> dialog [type = accept]
+check-count -> 0 -> dialog
+goto-url -> https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prompt
+click [delay = 1] -> Button [Name = Try it]
+check-property -> title = w3schools.com nécessite des informations -> dialog
+keyboard [try = -10] -> $var(inputName) -> dialog
+click -> dialog [type = accept]
+keyboard -> $key(F12)
+click-right -> Button [Name = Try it]
+click [center = 86, middle = 192] -> Button [Name = Try it]
+check-count -> 2 -> Text [Name =~ (?i).*$var(inputName).*]
+check-property -> Name = Hello $var(inputName)! How are you today? -> Text [@index = 2, Name =~ (?i).*Agilitest_user.*]
+channel-close -> dialog_box

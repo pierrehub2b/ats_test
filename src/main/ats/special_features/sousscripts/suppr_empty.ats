@@ -1,0 +1,15 @@
+[ats-header]
+
+author -> 
+created -> 2020-06-03 at 14:45:18
+
+[ats-variables]
+
+var -> vide -> $param(0)
+
+[ats-actions]
+
+keyboard -> 123456789 -> INPUT [name = tel]
+check-property -> value = 123456789 -> INPUT [name = tel]
+keyboard -> $key(CONTROL-A)$key(DELETE) -> INPUT [name = tel]
+check-property -> value = $var(vide) -> INPUT [name = tel]

@@ -1,0 +1,20 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-06-02 at 10:37:56
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> index_ie -> file:///C:/Program%20Files/Internet%20Explorer/iexplore.exe
+goto-url -> http://www.agilitest.com/fichiers/test.html
+check-count -> 3 -> Button [Name =~ (?i).*Click.*]
+click -> Button [@index = 1, Name =~ (?i).*Click.*]
+check-count -> 1 -> Text [Name = OK]
+click-right -> Button [@index = 2, Name =~ (?i).*Click.*]
+check-count -> 2 -> Text [Name = OK]
+click-double -> Button [@index = 3, Name =~ (?i).*Click.*]
+check-count -> 3 -> Text [Name = OK]
+channel-close -> index_ie

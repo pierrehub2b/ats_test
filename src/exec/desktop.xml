@@ -13,6 +13,7 @@
       <class name="desktop.SpaceMonger"/>
       <class name="desktop.winrar"/>
       <class name="web.subscripts.Dialog_ie_desktop"/>
+      <class name="web.subscripts.Index_ie_desktop"/>
     </classes>
   </test>
 </suite>

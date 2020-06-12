@@ -1,0 +1,16 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-06-02 at 17:35:53
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> check_empty -> chrome
+goto-url -> http://www.agilitest.com/fichiers/test.html
+scroll -> 0 -> INPUT [name = tel]
+subscript -> special_features.sousscripts.suppr_empty []
+subscript -> special_features.sousscripts.empty2 -> assets:///data/empty_data.csv
+channel-close -> check_empty

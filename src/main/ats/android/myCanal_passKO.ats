@@ -16,6 +16,8 @@ channel-start -> myCanal -> mobile://$var(ip_port)/com.canal.android.canal
 click [left = 642, top = 38] -> TextView [innerText =~ (?i).*connecter, viewId = showcase_text_label]
 check-count [try = 20] -> 0 -> TextView [viewId = message]
 keyboard [try = 10] -> $var(login)$key(TAB) -> EditText [viewId = sso-email]
+click -> EditText [viewId = sso-pass]
+keyboard -> $key(CONTROL-A)$key(DELETE) -> EditText [viewId = sso-pass]
 keyboard -> $var(motDePasse) -> EditText [viewId = sso-pass]
 click -> Button [viewId = sso-form_submitButton]
 check-count -> 1 -> TextView [viewId = alertTitle]

@@ -1,0 +1,14 @@
+[ats-header]
+
+author -> 
+created -> 2020-06-03 at 14:47:49
+
+[ats-variables]
+
+var -> vide -> $param(0)
+
+[ats-actions]
+
+goto-url -> https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/null
+scroll -> 0 -> H2 [id = Compatibilité_des_navigateurs]
+check-property -> text = $var(vide) -> TD [@index = 1, text = ]
