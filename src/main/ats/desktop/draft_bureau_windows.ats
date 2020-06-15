@@ -9,5 +9,6 @@ created -> 2020-04-28 at 11:56:20
 [ats-actions]
 
 channel-start -> newChannel -> Excel
+click -> ListItem [Name = Nouveau classeur]
 channel-start -> procexp64 -> process://.*EXCEL.EXE
 click -> ListItem [Name = Nouveau classeur]

@@ -16,7 +16,7 @@ click -> INPUT [type = button, value = +]
 click -> INPUT [type = button, value = 1]
 click -> INPUT [type = button, value = &eq;]
 property -> value => result -> INPUT [name = calc_resultat]
-property -> text => titre -> TD [@index = 5, valign = top]
+property [try = -6] -> text => titre -> TD [@index = 5, valign = top]
 
 [ats-returns]
 
