@@ -64,7 +64,6 @@
           </property>
           <suiteXmlFiles>
             <suiteXmlFile>src/exec/works.xml</suiteXmlFile>
-            <suiteXmlFile>src/exec/web.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>
