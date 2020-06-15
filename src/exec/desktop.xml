@@ -5,6 +5,8 @@
   <parameter name="ats.log.level" value="all"/>
   <test name="testMain" preserve-order="true">
     <classes>
+      <class name="desktop.ie_desktop_Dialog"/>
+      <class name="desktop.ie_desktop_Index"/>
       <class name="desktop.large_input_notpad"/>
       <class name="desktop.NotepadKeysChain"/>
       <class name="desktop.notepadplusplus"/>
@@ -12,8 +14,6 @@
       <class name="desktop.procexp"/>
       <class name="desktop.SpaceMonger"/>
       <class name="desktop.winrar"/>
-      <class name="web.subscripts.Dialog_ie_desktop"/>
-      <class name="web.subscripts.Index_ie_desktop"/>
     </classes>
   </test>
 </suite>

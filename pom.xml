@@ -62,7 +62,9 @@
             <name>reporter</name>
             <value>listenReport.Reporter</value>
           </property>
-          <suiteXmlFiles/>
+          <suiteXmlFiles>
+            <suiteXmlFile>src/exec/works.xml</suiteXmlFile>
+          </suiteXmlFiles>
         </configuration>
       </plugin>
     </plugins>
