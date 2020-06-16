@@ -63,8 +63,11 @@
             <value>listenReport.Reporter</value>
           </property>
           <suiteXmlFiles>
-            <suiteXmlFile>src/exec/works.xml</suiteXmlFile>
             <suiteXmlFile>src/exec/web.xml</suiteXmlFile>
+            <suiteXmlFile>src/exec/desktop.xml</suiteXmlFile>
+            <suiteXmlFile>src/exec/api.xml</suiteXmlFile>
+            <suiteXmlFile>src/exec/toverify.xml</suiteXmlFile>
+            <suiteXmlFile>src/exec/scripting.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>
