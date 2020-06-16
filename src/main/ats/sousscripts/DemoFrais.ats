@@ -40,7 +40,7 @@ click -> INPUT [class = cxe-datetimefield-input]
 keyboard -> Dec 25, 2019$key(ENTER) -> INPUT [class = cxe-datetimefield-input]
 comment -> script -> Saisie du montant de la dépense
 keyboard -> $var(SantaTravelValue) -> INPUT [class = cxe-numberfield-input]
-check-property [nofail] -> text =~ (?i)Invalid\s*date\s*entered. -> LABEL [class = cxb-validationerror]
+//check-property [nofail] -> text =~ (?i)Invalid\s*date\s*entered. -> LABEL [class = cxb-validationerror]
 comment -> script -> et de la description du déplacement
 keyboard -> Santa travel$key(ENTER) -> INPUT [class = cxe-textfield-input]
 comment -> script -> Puis nous sauvons cette dépense en cliquant sur SAVE

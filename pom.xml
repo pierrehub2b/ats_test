@@ -63,11 +63,7 @@
             <value>listenReport.Reporter</value>
           </property>
           <suiteXmlFiles>
-            <suiteXmlFile>src/exec/web.xml</suiteXmlFile>
-            <suiteXmlFile>src/exec/desktop.xml</suiteXmlFile>
-            <suiteXmlFile>src/exec/api.xml</suiteXmlFile>
-            <suiteXmlFile>src/exec/toverify.xml</suiteXmlFile>
-            <suiteXmlFile>src/exec/scripting.xml</suiteXmlFile>
+            <suiteXmlFile>src/exec/works.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>
@@ -94,7 +90,7 @@
     <dependency>
       <groupId>com.actiontestscript</groupId>
       <artifactId>ats-automated-testing</artifactId>
-      <version>1.7.1</version>
+      <version>1.7.3</version>
     </dependency>
   </dependencies>
 </project>
