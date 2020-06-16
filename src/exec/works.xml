@@ -32,6 +32,7 @@
       <class name="password.OctoPerf_login"/>
       <class name="password.passwords"/>
       <class name="scripting.scripting"/>
+      <class name="scripting.scripting_to_csv"/>
       <class name="sousscripts.CheckoutForm"/>
       <class name="sousscripts.DemoClic_iframe"/>
       <class name="sousscripts.DemoDragDrop"/>

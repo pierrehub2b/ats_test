@@ -10,11 +10,12 @@ var -> ip_port -> $env(android_ip_port)
 [ats-actions]
 
 channel-start -> RadioFrance -> mobile://$var(ip_port)/com.radiofrance.radio.radiofrance.android
-click [nofail] -> Button [innerText =~ (?i)J'AI\s*COMPRIS]
-click [nofail] -> View [@index = 1, innerText = FERMER]
-click -> ImageView [viewId = pcb_view_progress_circle_button_loading] -> ViewGroup [viewId = explore_main_highlight_play_pause_button]
-check-count -> 1 -> ImageView [viewId = pcb_view_progress_circle_button_loading] -> ViewGroup [viewId = view_collapsed_player_main_action_button]
-click -> ImageView [viewId = pcb_view_progress_circle_button_loading] -> ViewGroup [viewId = view_collapsed_player_main_action_button]
+click [nofail, try = -5] -> Button [innerText =~ (?i)J'AI\s*COMPRIS]
+click [nofail, try = -5] -> View [@index = 1, innerText = FERMER]
+click [nofail, try = -5] -> View [@index = 2, enabled = true] -> View [viewId = portrait-large-image]
+click -> ImageView [viewId = pcb_view_progress_circle_button_loading] -> ViewGroup [viewId = explore_main_highlight_diffusion_play_pause_button]
+check-count -> 1 -> ImageView [viewId = pcb_view_progress_circle_button_loading] -> ViewGroup [viewId = explore_main_highlight_diffusion_play_pause_button]
+click -> ImageView [viewId = pcb_view_progress_circle_button_loading] -> ViewGroup [viewId = explore_main_highlight_diffusion_play_pause_button]
 check-count -> 1 -> ImageView [viewId = pcb_view_progress_circle_button_loading] -> ViewGroup [viewId = view_collapsed_player_main_action_button]
 click -> ImageView [viewId = pcb_view_progress_circle_button_loading] -> ViewGroup [viewId = view_collapsed_player_main_action_button]
 click -> ImageView [viewId = icon] -> FrameLayout [viewId = navigation_radio]
