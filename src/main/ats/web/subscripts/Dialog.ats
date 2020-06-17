@@ -15,6 +15,7 @@ var -> get_harry -> regexp ["(.*)", 1]
 [ats-actions]
 
 channel-start -> dialog_box -> $param(0,ie)
+window-resize -> width = 1200, height = 1200
 goto-url -> https://www.w3schools.com/html/tryit.asp?filename=tryhtml_iframe
 check-count -> 1 -> H1 [text =~ .*] -> IFRAME [src = demo_iframe.htm] -> IFRAME [id = iframeResult]
 goto-url -> https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_alert
