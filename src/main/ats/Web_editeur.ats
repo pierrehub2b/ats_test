@@ -12,6 +12,7 @@ var -> browser_csv -> browsers_x1
 [ats-actions]
 
 subscript -> web.calc_web
+subscript -> web.specialKey
 subscript -> web.fenetres
 subscript -> web.selection
 subscript -> sousscripts.CheckoutForm
