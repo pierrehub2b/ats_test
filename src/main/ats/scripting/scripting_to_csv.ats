@@ -11,8 +11,8 @@ created -> 2020-06-16 at 14:42:29
 comment -> script -> <b>Compilation Java</b> requise (interface de gestion des exécutions)<br>(aucun process de fond ni canal ne doit être en cours d'exécution)
 channel-start -> testjava -> chrome
 comment -> script -> <b>CVS édité par script Java</b><br>remplace la cellule<br>COLONNE = param(2)<br>LIGNE = itération(0)<br><br>par la data $today<br>Puis rétablissement à l'état initial
-subscript -> csvProcessor.cellProcessor [C:\Users\emman\Documents\GitHub\ats_test\src\assets\data\FichierCSV_java_edit.csv,Date du jour &eq; $today,2,0]
+subscript -> csvProcessor.cellProcessor [C:\Users\emman\git\ats_test\src\assets\data\FichierCSV_java_edit.csv,Date du jour &eq; $today,1,0]
 goto-url -> http://www.agilitest.com/fichiers/test.html
 subscript -> scripting.check_scripting_to_csv -> assets:///data/FichierCSV_java_edit.csv
-subscript -> csvProcessor.cellProcessor [C:\Users\emman\Documents\GitHub\ats_test\src\assets\data\FichierCSV_java_edit.csv,aaa,2,0]
+subscript -> csvProcessor.cellProcessor [C:\Users\emman\git\ats_test\src\assets\data\FichierCSV_java_edit.csv,aaa,2,0]
 channel-close -> testjava

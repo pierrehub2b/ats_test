@@ -14,7 +14,7 @@ var -> get_harry -> regexp ["(.*)", 1]
 
 [ats-actions]
 
-channel-start -> dialog_box -> $param(0,ie)
+channel-start -> dialog_box -> $param(0,chrome)
 window-resize -> width = 1200, height = 1200
 goto-url -> https://www.w3schools.com/html/tryit.asp?filename=tryhtml_iframe
 check-count -> 1 -> H1 [text =~ .*] -> IFRAME [src = demo_iframe.htm] -> IFRAME [id = iframeResult]
@@ -37,7 +37,7 @@ check-value -> $var(box2_message) = $var(box2_displayed_message)
 click -> dialog [type = dismiss]
 check-count -> 0 -> dialog
 click [try = 9] -> BUTTON [text = Try it] -> IFRAME [id = iframeResult]
-check-count -> 1 -> dialog
+check-count [delay = 1] -> 1 -> dialog
 click -> dialog [type = accept]
 check-count -> 0 -> dialog
 goto-url -> https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prompt

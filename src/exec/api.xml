@@ -1,12 +1,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="api" verbose="10">
   <parameter name="xml.report" value="true"/>
-  <parameter name="visual.report" value="2"/>
   <parameter name="ats.log.level" value="all"/>
   <test name="testMain" preserve-order="true">
     <classes>
       <class name="api.API_REST"/>
       <class name="api.API_SOAP"/>
+      <class name="api.SOAP_flag"/>
     </classes>
   </test>
 </suite>

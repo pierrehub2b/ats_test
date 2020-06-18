@@ -3,5 +3,10 @@
   <parameter name="xml.report" value="true"/>
   <parameter name="visual.report" value="2"/>
   <parameter name="ats.log.level" value="all"/>
-  <test name="testMain" preserve-order="true"/>
+  <test name="testMain" preserve-order="true">
+    <classes>
+      <class name="scripting.scripting"/>
+      <class name="scripting.scripting_to_csv"/>
+    </classes>
+  </test>
 </suite>

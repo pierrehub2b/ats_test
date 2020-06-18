@@ -63,7 +63,7 @@
             <value>listenReport.Reporter</value>
           </property>
           <suiteXmlFiles>
-            <suiteXmlFile>src/exec/works.xml</suiteXmlFile>
+            <suiteXmlFile>src/exec/bugjava.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>
