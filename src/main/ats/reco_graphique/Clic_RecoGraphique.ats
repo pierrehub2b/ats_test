@@ -1,0 +1,21 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2018-10-06 at 11:17:17
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> canal_reco_graphique -> chrome
+goto-url -> http://www.agilitest.com/fichiers/test.html
+click [center = -14, middle = -6] -> @IMAGE [error = 0.5%, source = DemoFormation_Clic_RecoGraphique/2020521112826.png]
+check-count -> 1 -> Text [Name = OK]
+click-right [center = -5, middle = -4] -> @IMAGE [error = 0.5%, source = DemoFormation_Clic_RecoGraphique/202052111329.png]
+check-count -> 2 -> Text [Name = OK]
+click -> @IMAGE [error = 0.5%, source = DemoFormation_Clic_RecoGraphique/202052111346.png]
+keyboard -> reco_graphique -> @IMAGE [error = 0.5%, source = DemoFormation_Clic_RecoGraphique/202052111352.png]
+keyboard -> reco_graphique -> @IMAGE [error = 0.5%, source = DemoFormation_Clic_RecoGraphique/2020521113544.png] -> INPUT [name = fname]
+keyboard -> reco_graphique -> INPUT [name = fname]
+channel-close -> canal_reco_graphique
