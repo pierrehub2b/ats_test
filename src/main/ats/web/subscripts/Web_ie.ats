@@ -11,10 +11,10 @@ var -> browser_csv -> browsers_x1
 
 [ats-actions]
 
-//subscript -> web.calc_web [ie]
+subscript -> web.calc_web [ie]
 subscript -> web.subscripts.Dialog [ie]
-subscript -> desktop.ie_desktop_Dialog
 subscript -> desktop.ie_desktop_Index
+subscript -> desktop.ie_desktop_Dialog
 //subscript -> web.fenetres [ie]
 //subscript -> web.selection [ie]
 //subscript -> sousscripts.CheckoutForm

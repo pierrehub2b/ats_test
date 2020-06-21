@@ -9,6 +9,7 @@ created -> 2020-04-29 at 09:44:34
 [ats-actions]
 
 channel-start -> notepad -> notepad++
+click -> Button [ChildId = 1] -> ToolBar [ClassName = ToolbarWindow32]
 keyboard -> saisie N°1 -> Pane [ClassName = Scintilla]
 click [try = -10] -> Button [ChildId = 1] -> ToolBar [ClassName = ToolbarWindow32]
 keyboard -> Ranorex is the best automation tool ever ! -> Pane [ClassName = Scintilla]
@@ -22,5 +23,5 @@ keyboard -> Agilitest -> Edit [AutomationId = 1001, ClassName = Edit] -> ComboBo
 click -> Button [AutomationId = 1609]
 click [try = -10] -> Button [AutomationId = 2, ClassName = Button]
 click -> MenuItem [Name = X]
-click -> Button [AutomationId = 7]
+click -> Button [Name = Non]
 channel-close -> notepad
