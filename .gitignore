@@ -7,3 +7,4 @@ test-output/
 *.txt
 /bin/
 src/main/ats/scripting/scripting_to_csv.ats
+src/main/ats/scripting/scripting_to_csv.ats
