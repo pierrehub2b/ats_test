@@ -9,8 +9,8 @@ created -> 2020-04-29 at 09:44:34
 [ats-actions]
 
 channel-start -> notepad -> notepad++
-keyboard -> saisie N°1 -> Pane [ClassName = Scintilla]
 click [try = -10] -> Button [ChildId = 1] -> ToolBar [ClassName = ToolbarWindow32]
+keyboard -> saisie N°1 -> Pane [ClassName = Scintilla]
 keyboard -> Ranorex is the best automation tool ever ! -> Pane [ClassName = Scintilla]
 keyboard -> Text remplaced -> Pane [ClassName = Scintilla]
 keyboard -> $key(CONTROL-A)$key(CONTROL-C) $key(CONTROL-V) -> Pane [ClassName = Scintilla]

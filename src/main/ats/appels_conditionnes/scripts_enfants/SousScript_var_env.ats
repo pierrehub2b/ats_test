@@ -6,6 +6,7 @@ created -> 2020-05-28 at 12:47:15
 [ats-variables]
 
 var -> recup_var_env -> $param(0)
+var -> var_env_test -> $env(var_env1,var_env2)
 
 [ats-actions]
 

@@ -10,9 +10,11 @@ var -> Longitude -> regexp [Longitude: (.*), 1]
 var -> Altitude -> regexp [Altitude: (.*), 1]
 var -> Vitesse -> regexp [Vitesse: (.*), 1]
 var -> ip_port -> $env(android_ip_port)
+var -> var_env_test -> $env(var_env1,var_env2)
 
 [ats-actions]
 
+comment -> script -> Variable d'env (var_env1,var_env2) = $env(var_env1,var_env2)
 channel-start -> ISS -> mobile://$var(ip_port)/com.nicedayapps.iss_free
 check-count -> 1 -> View [description =~ (?i)International\s*Space\s*Station.\s*]
 check-count -> 0 -> ProgressBar [viewId = video_spinner]

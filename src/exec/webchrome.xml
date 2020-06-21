@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="webchrome" verbose="10">
+  <parameter name="xml.report" value="true"/>
+  <parameter name="visual.report" value="2"/>
+  <parameter name="ats.log.level" value="all"/>
+  <test name="testMain" preserve-order="true">
+    <classes>
+      <class name="sousscripts.DemoDragDrop"/>
+      <class name="sousscripts.DemoFrais"/>
+      <class name="sousscripts.DemoHover"/>
+      <class name="sousscripts.DemoInputs"/>
+      <class name="sousscripts.DemoSaisie"/>
+      <class name="sousscripts.DemoSwipe"/>
+      <class name="sousscripts.DemoTooltipCheck"/>
+      <class name="sousscripts.DemoVerification"/>
+      <class name="web.calc_web"/>
+      <class name="web.fenetres"/>
+      <class name="web.selection"/>
+      <class name="web.specialKey"/>
+      <class name="web.subscripts.Dialog"/>
+    </classes>
+  </test>
+</suite>

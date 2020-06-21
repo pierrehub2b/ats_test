@@ -14,5 +14,5 @@ comment -> script -> <b>CVS édité par script Java</b><br>remplace la cellule<b
 subscript -> csvProcessor.cellProcessor [C:\Users\emman\git\ats_test\src\assets\data\FichierCSV_java_edit.csv,Date du jour &eq; $today,1,0]
 goto-url -> http://www.agilitest.com/fichiers/test.html
 subscript -> scripting.check_scripting_to_csv -> assets:///data/FichierCSV_java_edit.csv
-subscript -> csvProcessor.cellProcessor [C:\Users\emman\git\ats_test\src\assets\data\FichierCSV_java_edit.csv,aaa,2,0]
+subscript -> csvProcessor.cellProcessor [C:\Users\emman\git\ats_test\src\assets\data\FichierCSV_java_edit.csv,aa,1,0]
 channel-close -> testjava

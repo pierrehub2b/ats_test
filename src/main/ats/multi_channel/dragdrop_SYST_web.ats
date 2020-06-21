@@ -11,7 +11,7 @@ created -> 2019-02-13 at 19:04:18
 channel-start -> web -> chrome
 goto-url -> https://www.dropzonejs.com/examples/simple.html
 channel-start -> explorer -> explorer
-goto-url -> c:/
+goto-url -> C:\test_agilitest
 drag [try = -6, left = 6] -> Edit [Value = fileName.txt]
 channel-switch -> web
 over -> P [text =~ (?s)This is the most minimal example.*]
