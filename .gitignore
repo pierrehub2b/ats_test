@@ -20,3 +20,4 @@ src/exec/webchrome.xml
 src/main/ats/sousscripts/DemoClic_iframe.ats
 webchrome_pom.xml
 webmsedge_pom.xml
+src/exec/bugjava.xml

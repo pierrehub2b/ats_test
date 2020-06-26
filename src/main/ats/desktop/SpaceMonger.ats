@@ -20,7 +20,7 @@ window-resize -> x = 100, y = 100, width = 1000, height = 900
 click [try = 20] -> Button [BoundingX = 114, ChildId = 1, IsEnabled = True] -> ToolBar [AutomationId = 200]
 click -> ListItem [Name =~ .*C:.*]
 click -> Button [Name = OK]
-check-count [try = 10] -> 1 -> Button [BoundingWidth = 51, ChildId = 2, IsEnabled = True]
+check-count [try = 10] -> 1 -> Button [ChildId = 2] -> ToolBar [ChildId = 0]
 click -> CheckBox [Toggle = On]
 click -> CheckBox [Toggle = Off]
 //click -> Button [Name = Fermer]
