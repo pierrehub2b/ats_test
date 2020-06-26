@@ -8,7 +8,7 @@ created -> 2020-05-26 at 11:05:12
 
 [ats-actions]
 
-channel-start -> newChannel -> chrome
+channel-start -> newChannel -> $env(browser,chrome)
 goto-url -> http://google.Fr
 keyboard -> test c/c -> INPUT [title = Rechercher]
 keyboard -> $key(CONTROL-A)$key(CONTROL-X) -> INPUT [title = Rechercher]

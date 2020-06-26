@@ -9,7 +9,7 @@ groups -> default , web
 
 [ats-actions]
 
-channel-start -> Saisie -> $param(0,chrome)
+channel-start -> Saisie -> $env(browser,chrome)
 goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/kitchensink/?modern#binding-selection
 click [try = 20] -> DIV [id = ext-element-120] -> iframe [id = examples-iframe]
 keyboard -> Prénom_1 -> INPUT [@index = 1, id =~ ext-element-.*] -> IFRAME [id = examples-iframe]

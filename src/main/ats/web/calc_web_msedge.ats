@@ -13,7 +13,7 @@ var -> browser -> $env(browser)
 
 [ats-actions]
 
-channel-start -> calc_web -> $env(browser,chrome)
+channel-start -> calc_web -> $param(0,msedge)
 goto-url -> www.google.fr
 check-count [try = 20] -> 1 -> INPUT [title = Rechercher]
 keyboard -> web2.0calc.fr$key(ENTER) -> INPUT [title = Rechercher]

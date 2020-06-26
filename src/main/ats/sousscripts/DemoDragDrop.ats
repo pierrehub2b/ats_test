@@ -8,7 +8,7 @@ created -> 2017-12-15 at 19:32:28
 
 [ats-actions]
 
-channel-start -> dragdrop -> $param(0,chrome)
+channel-start -> dragdrop -> $env(browser,chrome)
 comment -> script -> ouverture d'un canal sous '$param(0)'
 subscript -> sousscripts.dragdrop.DragDrop1
 channel-close -> dragdrop

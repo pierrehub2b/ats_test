@@ -1,10 +1,7 @@
 [ats-header]
 
-id -> 
 author -> AGILITEST-DUPER\Emmanuel DUPERRAY
 created -> 2018-11-12 at 14:38:45
-prerequisite -> 
-description -> 
 groups -> web
 
 [ats-variables]
@@ -12,19 +9,19 @@ groups -> web
 
 [ats-actions]
 
-channel-start -> Swipe -> $param(0,chrome)
+channel-start -> Swipe -> $env(browser,chrome)
 goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/kitchensink/?modern#carousel-basic
-check-count [try(20)] -> 0 -> DIV [class = loading-circle-12 loading-circle] -> IFRAME [id = examples-iframe]
-drag [try(5)] -> DIV [id = ext-element-65] -> IFRAME [id = examples-iframe]
-over [left(-30)] -> DIV [id = ext-element-65] -> IFRAME [id = examples-iframe]
-drop [left(-50)] -> DIV [id = ext-element-65] -> IFRAME [id = examples-iframe]
+check-count [try = 20] -> 0 -> DIV [class = loading-circle-12 loading-circle] -> IFRAME [id = examples-iframe]
+drag [try = 5] -> DIV [id = ext-element-65] -> IFRAME [id = examples-iframe]
+over [left = -30] -> DIV [id = ext-element-65] -> IFRAME [id = examples-iframe]
+drop [left = -50] -> DIV [id = ext-element-65] -> IFRAME [id = examples-iframe]
 drag -> DIV [id = ext-element-71] -> IFRAME [id = examples-iframe]
-over [left(-30)] -> DIV [id = ext-element-71] -> IFRAME [id = examples-iframe]
-drop [left(-50)] -> DIV [id = ext-element-71] -> IFRAME [id = examples-iframe]
+over [left = -30] -> DIV [id = ext-element-71] -> IFRAME [id = examples-iframe]
+drop [left = -50] -> DIV [id = ext-element-71] -> IFRAME [id = examples-iframe]
 drag -> DIV [id = ext-element-75] -> IFRAME [id = examples-iframe]
-over [right(-30)] -> DIV [id = ext-element-75] -> IFRAME [id = examples-iframe]
-drop [right(-50)] -> DIV [id = ext-element-75] -> IFRAME [id = examples-iframe]
+over [right = -30] -> DIV [id = ext-element-75] -> IFRAME [id = examples-iframe]
+drop [right = -50] -> DIV [id = ext-element-75] -> IFRAME [id = examples-iframe]
 drag -> DIV [id = ext-element-71] -> IFRAME [id = examples-iframe]
-over [right(-30)] -> DIV [id = ext-element-71] -> IFRAME [id = examples-iframe]
-drop [right(-50)] -> DIV [id = ext-element-71] -> IFRAME [id = examples-iframe]
+over [right = -30] -> DIV [id = ext-element-71] -> IFRAME [id = examples-iframe]
+drop [right = -50] -> DIV [id = ext-element-71] -> IFRAME [id = examples-iframe]
 channel-close -> Swipe
