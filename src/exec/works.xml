@@ -8,6 +8,7 @@
     <parameter name="var_env1" value="chrome"/>
     <parameter name="android_ip_port" value="192.168.0.19:8080"/>
     <parameter name="browsername" value="chrome"/>
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="android.ISS_live"/>
       <class name="android.la_centrale"/>
@@ -21,7 +22,7 @@
       <class name="appels_conditionnes.parent"/>
       <class name="desktop.large_input_notpad"/>
       <class name="desktop.NotepadKeysChain"/>
-      <class name="desktop.notepadplusplus"/>
+      <class name="desktop.NotepadPlusPlus"/>
       <class name="desktop.paint"/>
       <class name="desktop.procexp"/>
       <class name="desktop.SpaceMonger"/>

@@ -6,7 +6,7 @@
   <test name="testMain" preserve-order="true">
     <parameter name="android_ip_port" value="192.168.0.50:8086"/>
     <classes>
-      <class name="reco_graphique.Clic_RecoGraphique"/>
+      <class name="desktop.large_input_notpad"/>
     </classes>
   </test>
 </suite>

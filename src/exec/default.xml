@@ -7,14 +7,9 @@
     <parameter name="var_env3" value="msedge"/>
     <parameter name="var_env2" value="chrome"/>
     <parameter name="android_ip_port" value="192.168.0.19:8077"/>
+    <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="android.ISS_live"/>
-      <class name="android.la_centrale"/>
-      <class name="android.meteo_android"/>
-      <class name="android.myCanal_passKO"/>
-      <class name="android.Pinterest"/>
-      <class name="android.RadioFrance"/>
-      <class name="android.SpeedTest"/>
+      <class name="desktop.paint"/>
     </classes>
   </test>
 </suite>

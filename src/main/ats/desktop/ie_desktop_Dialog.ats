@@ -16,9 +16,9 @@ var -> get_harry -> regexp ["(.*)", 1]
 
 channel-start -> dialog_box -> file:///C:/Program%20Files/Internet%20Explorer/iexplore.exe
 goto-url -> https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_alert
-check-count [delay = 2] -> 1 -> MenuItem [Name = Adresse]
+check-count [delay = 3] -> 1 -> MenuItem [Name = Adresse]
 goto-url -> https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_alert
-check-count -> 2 -> Pane [Name = https://www.w3schools.com/jsref/tryit.asp?filename&eq;tryjsref_alert]
+check-count [nofail] -> 2 -> Pane [Name = https://www.w3schools.com/jsref/tryit.asp?filename&eq;tryjsref_alert]
 check-count -> 1 -> Button [Name = Try it]
 click -> Button [Name = Try it]
 check-count -> 1 -> dialog

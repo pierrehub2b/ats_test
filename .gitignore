@@ -8,3 +8,9 @@ test-output/
 /bin/
 src/main/ats/scripting/scripting_to_csv.ats
 src/main/ats/scripting/scripting_to_csv.ats
+debug.log
+src/exec/bugjava.xml
+src/exec/default.xml
+src/exec/desktop.xml
+src/exec/toverify.xml
+src/exec/works.xml
