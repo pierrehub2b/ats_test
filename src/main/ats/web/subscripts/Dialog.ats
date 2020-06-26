@@ -11,10 +11,11 @@ var -> box_message -> regexp ["(.*)", 1]
 var -> box2_message -> regexp ["(.*)", 1]
 var -> box3_message -> regexp ["(.*)", 1]
 var -> get_harry -> regexp ["(.*)", 1]
+var -> newVar -> $env(browser)
 
 [ats-actions]
 
-channel-start -> dialog_box -> $param(0,chrome)
+channel-start -> dialog_box -> $env(browser,chrome)
 window-resize -> width = 1200, height = 1200
 goto-url -> https://www.w3schools.com/html/tryit.asp?filename=tryhtml_iframe
 check-count -> 1 -> H1 [text =~ .*] -> IFRAME [src = demo_iframe.htm] -> IFRAME [id = iframeResult]

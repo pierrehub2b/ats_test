@@ -11,7 +11,7 @@ var -> secondValue -> regexp [.*to.*(\$\d+).*of.*, 1] -> $var(tooltip)
 
 [ats-actions]
 
-channel-start -> grids -> $param(0, chrome)
+channel-start -> grids -> $env(browser,chrome)
 goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/kitchensink/?modern#d3-view-heatmap-purchases
 check-count [try = 20] -> 0 -> DIV [class = loading-circle-12 loading-circle] -> IFRAME [id = examples-iframe]
 comment -> script -> Sélection des ventes par jour

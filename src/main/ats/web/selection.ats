@@ -6,10 +6,11 @@ groups -> web
 
 [ats-variables]
 
+var -> browser -> $env(browser)
 
 [ats-actions]
 
-channel-start -> Canal_selection -> $param(0,chrome)
+channel-start -> Canal_selection -> $env(browser,chrome)
 goto-url -> http://www.agilitest.com/fichiers/test.html
 scroll -> 0 -> H1 [text = Select :]
 select -> text = Audi -> SELECT [@index = 1, text =~ (?i)Volvo\s*Saab\s*Mercedes\s*Audi]

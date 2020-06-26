@@ -8,7 +8,7 @@ created -> 2018-09-16 at 17:03:15
 
 [ats-actions]
 
-channel-start -> Verification -> $param(0,chrome)
+channel-start -> Verification -> $env(browser,chrome)
 goto-url -> http://examples.sencha.com/extjs/6.5.1/examples/kitchensink/?modern#binding-selection
 check-count [try = 20] -> 0 -> DIV [class = loading-circle-12 loading-circle] -> IFRAME [id = examples-iframe]
 click [try = 20] -> DIV [id = ext-element-120] -> IFRAME [id = examples-iframe]

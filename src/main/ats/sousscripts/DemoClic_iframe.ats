@@ -9,7 +9,7 @@ groups -> web
 
 [ats-actions]
 
-channel-start -> Clic -> $param(0,chrome)
+channel-start -> Clic -> $env(browser,chrome)
 goto-url -> https://home-expenses.cxjs.io/dashboard
 check-count -> 4 -> DIV [class = cxe-section-body]
 click -> rect [x = 100, y = 22.5]

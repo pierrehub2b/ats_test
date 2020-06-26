@@ -11,7 +11,7 @@ var -> url -> http://www.agilitest.com/fichiers/test.html
 
 [ats-actions]
 
-channel-start -> inputs -> $param(0,chrome)
+channel-start -> inputs -> $env(browser,chrome)
 comment -> script -> Ouverture du canal sur le navigateur passé en paramètre et navigation vers le site Agilitest
 goto-url -> $var(url)
 comment -> script -> Itération d'opérations de calcul définies dans un fichier csv

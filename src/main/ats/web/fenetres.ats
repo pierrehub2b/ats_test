@@ -7,10 +7,11 @@ groups -> web
 [ats-variables]
 
 var -> URL_cible -> www.agilitest.com
+var -> browser -> $env(browser)
 
 [ats-actions]
 
-channel-start -> Canal_Fenetre -> $param(0,chrome)
+channel-start -> Canal_Fenetre -> $env(browser,chrome)
 goto-url -> $var(URL_cible)
 window-resize -> x = 10, y = 10, width = 600, height = 700
 window-resize -> x = 200, y = 200

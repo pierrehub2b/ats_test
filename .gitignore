@@ -7,3 +7,16 @@ test-output/
 *.txt
 /bin/
 src/main/ats/scripting/scripting_to_csv.ats
+pom.xml
+api_pom.xml
+desktop_pom.xml
+src/exec/bugjava.xml
+src/exec/desktop.xml
+src/exec/toverify.xml
+src/exec/webchrome.xml
+src/exec/webie.xml
+src/exec/webmsedge.xml
+src/exec/webchrome.xml
+src/main/ats/sousscripts/DemoClic_iframe.ats
+webchrome_pom.xml
+webmsedge_pom.xml

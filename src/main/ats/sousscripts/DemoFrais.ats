@@ -11,7 +11,7 @@ var -> SantaTravelValue -> 15,000
 
 [ats-actions]
 
-channel-start -> web -> $param(0,chrome)
+channel-start -> web -> $env(browser,chrome)
 comment -> script -> Démarrage du canal sur le navigateur passé en paramètre ($param(0,chrome)), avec le navigateur chrome par défaut.
 goto-url -> https://home-expenses.cxjs.io/dashboard
 comment -> script -> Nous cliquons successivement sur les différents rectangles
