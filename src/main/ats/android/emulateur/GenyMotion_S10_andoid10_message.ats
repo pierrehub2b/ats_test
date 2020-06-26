@@ -1,0 +1,18 @@
+[ats-header]
+
+author -> 
+created -> 2020-06-26 at 14:40:37
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> message -> mobile://192.168.0.50:8081/com.android.messaging
+click -> ImageView [viewId = start_new_conversation_button]
+keyboard -> 0611017372 -> MultiAutoCompleteTextView [viewId = recipient_text_view]
+click -> HorizontalScrollView [viewId = tab_strip]
+keyboard -> Message envoyé automatiquement par Agilitest via GenyMotion -> EditText [viewId = compose_message_text]
+click -> ImageButton [viewId = send_message_button]
+click -> ImageButton [description = Navigate up]
+channel-close -> message
