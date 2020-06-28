@@ -1,0 +1,16 @@
+[ats-header]
+
+author -> 
+created -> 2020-06-28 at 17:03:45
+
+[ats-variables]
+
+
+[ats-actions]
+
+click -> TextView [viewId = stopwatch_time_text]
+property -> text => timer_stop -> TextView [viewId = stopwatch_time_text]
+
+[ats-returns]
+
+return -> $var(timer_stop)
