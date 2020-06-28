@@ -21,3 +21,6 @@ src/main/ats/sousscripts/DemoClic_iframe.ats
 webchrome_pom.xml
 webmsedge_pom.xml
 src/exec/bugjava.xml
+src/main/ats/scripting/scripting_to_csv.ats
+src/main/ats/scripting/scripting_to_csv.ats
+src/assets/data/FichierCSV_java_edit.csv
