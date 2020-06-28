@@ -1,0 +1,31 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-06-28 at 16:22:16
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> horloge -> mobile://192.168.0.50:8081/com.android.deskclock
+property -> text => date -> TextView [viewId = date]
+click -> ImageButton [viewId = fab]
+click -> ImageView [viewId = search_button]
+keyboard -> paris -> EditText [viewId = search_src_text]
+click -> CheckBox [viewId = city_onoff]
+click -> ImageButton [description = Navigate up]
+property -> text => time -> TextView [viewId = digital_clock] -> LinearLayout [innerText =~ Paris.*]
+click -> TextView [innerText = STOPWATCH, viewId = text1]
+click -> ImageButton [viewId = fab]
+property -> text => timer -> TextView [viewId = stopwatch_time_text]
+property -> description => pause -> ImageButton [description = Pause]
+subscript [pause = Pause] -> android.emulateur.sousscripts.stop_timer => timer_stop
+click -> Button [viewId = left_button]
+check-property -> text = 0 -> TextView [viewId = stopwatch_time_text]
+check-property -> text = 00 -> TextView [viewId = stopwatch_hundredths_text]
+click -> TextView [innerText = CLOCK]
+click -> ImageButton [viewId = fab]
+click -> CheckBox [checked = true, viewId = city_onoff]
+click -> ImageButton [description = Navigate up]
+channel-close -> horloge
