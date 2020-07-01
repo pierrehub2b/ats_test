@@ -1,0 +1,19 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-06-28 at 17:10:20
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> calendar -> mobile://192.168.0.50:8081/com.android.calendar
+property -> text => date_MMMMyyyy -> TextView [viewId = top_button_date]
+click -> TextView [viewId = top_button_date]
+click -> TextView [innerText = Day, viewId = button_view]
+property -> text => date_MMMMddyyyy -> TextView [viewId = top_button_date]
+click -> TextView [viewId = top_button_date]
+click -> TextView [innerText = Month, viewId = button_view]
+check-count -> 1 -> LinearLayout [innerText = SUN MON TUE WED THU FRI SAT, viewId = month]
+channel-close -> calendar

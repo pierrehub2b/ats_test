@@ -1,0 +1,25 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-06-28 at 17:44:56
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> contact -> mobile://192.168.0.50:8081/com.android.contacts
+click -> ImageButton [viewId = floating_action_button]
+keyboard -> John -> EditText [innerText = First name]
+keyboard -> Doe -> EditText [innerText = Last name]
+keyboard -> 0711223344 -> EditText [innerText = Phone]
+keyboard -> john.doe@agilitest.com -> EditText [innerText = Email]
+click -> Button [viewId = editor_menu_save_button]
+check-property -> text = John Doe -> TextView [viewId = large_title]
+check-property -> text = 0711223344 -> TextView [viewId = header] -> RelativeLayout [description =~ (?i)Call.*]
+check-property -> text = john.doe@agilitest.com -> TextView [viewId = header] -> RelativeLayout [description =~ (?i)Email.*]
+click -> ImageButton [tooltip = More options]
+click -> TextView [innerText = Delete, viewId = title]
+click -> Button [viewId = button1]
+check-property -> text = Your contacts list is empty -> TextView [viewId = empty_home_view_text]
+channel-close -> contact

@@ -14,6 +14,7 @@ var -> today -> date [dd/MM/yy] -> $today
 [ats-actions]
 
 channel-start -> speedtest -> mobile://$var(ip_port)/org.zwanoo.android.speedtest
+//click -> @IMAGE [error = 0.5%, source = android/SpeedTest/20206110418.png]
 check-count [try = 20] -> 0 -> ProgressBar [viewId = welcome_activity_progress_bar]
 check-count -> 1 -> View [viewId = go_button]
 click -> ImageView [viewId = icon] -> FrameLayout [innerText = Outils]

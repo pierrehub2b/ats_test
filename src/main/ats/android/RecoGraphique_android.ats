@@ -1,0 +1,31 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-07-01 at 10:05:54
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> reco_graphi_android -> mobile://192.168.0.19:8080/com.android.chrome
+click -> ImageButton [viewId = tab_switcher_button]
+click -> ImageButton [viewId = new_tab_button]
+click -> EditText [viewId = search_box_text]
+keyboard -> www.agilitest.com/fichiers/test.html -> EditText [viewId = url_bar]
+click -> TextView [innerText = www.agilitest.com/fichiers/test.html, viewId = line_2]
+click -> @IMAGE [error = 0.5%, source = android/RecoGraphique_android/20206110289.png]
+check-property -> innerText = CLICK BUTTON CLICK BUTTON OK -> View [innerText = CLICK BUTTON CLICK BUTTON OK]
+click -> Spinner [innerText = #000000]
+check-count -> 1 -> @IMAGE [error = 0.5%, source = android/RecoGraphique_android/202061103317.png]
+check-count -> 1 -> @IMAGE [error = 0.5%, source = android/RecoGraphique_android/202061103225.png]
+click -> Button [viewId = more_colors_button]
+click -> View [viewId = gradient] -> RelativeLayout [innerText = Valeur]
+click -> Button [innerText = DÉFINIR, viewId = button1]
+check-count -> 1 -> @IMAGE [error = 0.5%, source = android/RecoGraphique_android/20206111649.png]
+//click [middle = 10] -> @IMAGE [error = 0.5%, source = android/RecoGraphique_android/202061103656.png]
+//click -> @IMAGE [error = 0.5%, source = android/RecoGraphique_android/202061103225.png]
+//keyboard -> saisie sur élément en reco graphique -> @IMAGE [error = 0.5%, source = android/RecoGraphique_android/202061101233.png]
+click -> ImageButton [viewId = tab_switcher_button]
+click -> @IMAGE [error = 0.5%, source = android/RecoGraphique_android/20206111824.png]
+channel-close -> reco_graphi_android
