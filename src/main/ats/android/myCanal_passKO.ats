@@ -6,7 +6,7 @@ created -> 2020-04-10 at 14:01:26
 [ats-variables]
 
 var -> ip_port -> $env(android_ip_port)
-var -> login -> caipture@gmail.com
+var -> login -> caipture2test@gmail.com
 var -> motDePasse -> $pass(pass1)
 
 [ats-actions]

@@ -1,0 +1,28 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-06-28 at 17:30:40
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> webview -> mobile://192.168.0.50:8081/org.chromium.webview_shell
+keyboard -> agilitest -> EditText [viewId = url_field]
+click -> ImageButton [description = Load URL]
+check-count -> 1 -> View [text = Webpage not available]
+keyboard -> www.agilitest.com -> EditText [viewId = url_field]
+click -> ImageButton [description = Load URL]
+check-count [nofail] -> 1 -> View [viewId = hs-eu-confirmation-button]
+click [nofail] -> View [viewId = hs-eu-confirmation-button]
+click -> ImageButton [description = About WebView]
+click -> TextView [innerText = Animation test]
+click -> SeekBar [viewId = view_alpha]
+click -> Button [viewId = translate]
+click -> Button [viewId = scale]
+click -> Button [viewId = rotate]
+click -> sysbutton [type = back]
+click -> ImageButton [description = About WebView]
+click -> TextView [innerText = Clear cache]
+channel-close -> webview
