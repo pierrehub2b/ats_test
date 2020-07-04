@@ -9,8 +9,8 @@ created -> 2020-04-28 at 14:32:27
 [ats-actions]
 
 channel-start -> winrar -> file:///C:/Program%20Files/WinRAR/WinRAR.exe
-click -> Button [Name = Close]
 window-resize -> x = 0, y = 0, width = 1200, height = 900
+click [nofail] -> Button [Name = Close]
 check-count [nofail] -> 1 -> Text [Name =~ (?i)WinRAR\s*n'est\s*pas\s*un\s*logiciel\s*gratuit.*]
 click [nofail] -> Button [AutomationId = 1, Name = Fermer]
 //window-switch -> 0

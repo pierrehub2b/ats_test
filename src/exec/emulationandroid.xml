@@ -1,12 +1,15 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="toverify" verbose="10">
+<suite name="emulationandroid" verbose="10">
   <parameter name="xml.report" value="true"/>
   <parameter name="visual.report" value="2"/>
   <parameter name="ats.log.level" value="all"/>
   <test name="testMain" preserve-order="true">
-    <parameter name="browser" value="chrome"/>
     <classes>
+      <class name="android.emulateur.GenyMotion_S10_andoid10_calendar"/>
+      <class name="android.emulateur.GenyMotion_S10_andoid10_horloge"/>
+      <class name="android.emulateur.GenyMotion_S10_andoid10_message"/>
       <class name="android.emulateur.GenyMotion_S10_android10_contact"/>
+      <class name="android.emulateur.GenyMotion_S10_android10_WebviewTester"/>
     </classes>
   </test>
 </suite>

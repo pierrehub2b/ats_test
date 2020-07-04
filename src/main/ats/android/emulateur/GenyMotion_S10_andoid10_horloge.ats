@@ -8,7 +8,7 @@ created -> 2020-06-28 at 16:22:16
 
 [ats-actions]
 
-channel-start -> horloge -> mobile://192.168.0.50:8081/com.android.deskclock
+channel-start -> horloge -> mobile://192.168.0.20:8081/com.android.deskclock
 property -> text => date -> TextView [viewId = date]
 click -> ImageButton [viewId = fab]
 click -> ImageView [viewId = search_button]

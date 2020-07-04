@@ -1,0 +1,2 @@
+keyboard -> $param(1) -> INPUT [name = fname]
+check-property -> value = Date du jour &eq; $today -> INPUT [name = fname]
