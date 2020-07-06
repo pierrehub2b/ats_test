@@ -24,3 +24,7 @@ src/exec/bugjava.xml
 src/main/ats/scripting/scripting_to_csv.ats
 src/main/ats/scripting/scripting_to_csv.ats
 src/assets/data/FichierCSV_java_edit.csv
+src/main/ats/scripting/scripting_to_csv.ats
+src/exec/toverify.xml
+src/exec/toverify.xml
+src/main/ats/scripting/scripting_to_csv.ats
