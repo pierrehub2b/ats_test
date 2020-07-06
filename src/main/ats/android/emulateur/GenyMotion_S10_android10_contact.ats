@@ -8,8 +8,9 @@ created -> 2020-06-28 at 17:44:56
 
 [ats-actions]
 
-channel-start -> contact -> mobile://192.168.0.50:8081/com.android.contacts
+channel-start -> contact -> mobile://192.168.0.20:8081/com.android.contacts
 click -> ImageButton [viewId = floating_action_button]
+click [nofail] -> Button [viewId = left_button]
 keyboard -> John -> EditText [innerText = First name]
 keyboard -> Doe -> EditText [innerText = Last name]
 keyboard -> 0711223344 -> EditText [innerText = Phone]
@@ -21,5 +22,5 @@ check-property -> text = john.doe@agilitest.com -> TextView [viewId = header] ->
 click -> ImageButton [tooltip = More options]
 click -> TextView [innerText = Delete, viewId = title]
 click -> Button [viewId = button1]
-check-property -> text = Your contacts list is empty -> TextView [viewId = empty_home_view_text]
+check-property -> innerText =~ Your contacts list is empty -> TextView [viewId = message]
 channel-close -> contact

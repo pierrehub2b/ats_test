@@ -1,0 +1,24 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2019-10-10 at 09:31:26
+
+[ats-variables]
+
+var -> terme1 -> 6
+var -> terme2 -> Mult
+var -> terme3 -> 8
+var -> terme4 -> 48
+var -> browser -> $env(browser)
+
+[ats-actions]
+
+channel-start -> calc_web -> $param(0,firefox)
+goto-url -> www.google.fr
+check-count [try = 20] -> 1 -> INPUT [title = Rechercher]
+keyboard -> web2.0calc.fr$key(ENTER) -> INPUT [title = Rechercher]
+click -> A [text =~ (?i)Web\s*2.0\s*calculatrice\s*en\s*ligne]
+//click [nofail, try = -10] -> BUTTON [id = cookieconsentallowall]
+subscript -> sousscripts.sousscript_csv_calc_web -> assets:///data/donnees_de_calcul.csv
+subscript -> sousscripts.sousscript_json_calc_web -> assets:///data/donnees_de_calcul.json
+channel-close -> calc_web

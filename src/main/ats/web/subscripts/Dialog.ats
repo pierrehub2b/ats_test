@@ -29,7 +29,7 @@ check-value -> $var(box_message) = $var(box_displayed_message)
 click -> dialog [type = accept]
 check-count -> 0 -> dialog
 goto-url -> https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_confirm
-goto-url -> refresh
+//goto-url -> refresh
 property -> text => box2_message -> SPAN [class = cm-m-javascript cm-string]
 click [try = 9] -> BUTTON [text = Try it] -> IFRAME [id = iframeResult]
 check-count -> 1 -> dialog

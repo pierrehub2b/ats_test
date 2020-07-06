@@ -1,0 +1,15 @@
+[ats-header]
+
+author -> LAPTOP-DHEE7EBK\DUPERRAY_Test
+created -> 2020-06-30 at 12:38:08
+
+[ats-variables]
+
+
+[ats-actions]
+
+subscript -> android.emulateur.GenyMotion_S10_android10_WebviewTester
+subscript -> android.emulateur.GenyMotion_S10_android10_contact
+subscript -> android.emulateur.GenyMotion_S10_andoid10_message
+subscript -> android.emulateur.GenyMotion_S10_andoid10_horloge
+subscript -> android.emulateur.GenyMotion_S10_andoid10_calendar

@@ -8,5 +8,4 @@ created -> 2020-06-16 at 17:11:55
 
 [ats-actions]
 
-keyboard -> $param(1) -> INPUT [name = fname]
-check-property -> value = Date du jour &eq; $today -> INPUT [name = fname]
+subscript -> scripting.sous_script2 -> assets:///data/FichierCSV_java_edit.csv
