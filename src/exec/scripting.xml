@@ -6,7 +6,6 @@
   <test name="testMain" preserve-order="true">
     <classes>
       <class name="scripting.scripting"/>
-      <class name="scripting.scripting_to_csv"/>
     </classes>
   </test>
 </suite>
