@@ -63,7 +63,7 @@
             <value>listenReport.Reporter</value>
           </property>
           <suiteXmlFiles>
-            <suiteXmlFile>src/exec/scripting.xml</suiteXmlFile>
+            <suiteXmlFile>src/exec/android.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>

@@ -20,6 +20,8 @@ keyboard -> web2.0calc.fr$key(ENTER) -> INPUT [title = Rechercher]
 //click -> A [text =~ (?i)Web\s*2.0\s*calculatrice\s*en\s*ligne]
 click -> A [href = https://web2.0calc.fr/]
 //click [nofail, try = -10] -> BUTTON [id = cookieconsentallowall]
+click -> BUTTON [id = BtnClear]
+click [nofail, try = 10] -> BUTTON [name = cookies, text =~ (?i)Accepter]
 subscript -> sousscripts.sousscript_csv_calc_web -> assets:///data/donnees_de_calcul.csv
 subscript -> sousscripts.sousscript_json_calc_web -> assets:///data/donnees_de_calcul.json
 channel-close -> calc_web

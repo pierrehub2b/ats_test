@@ -28,3 +28,4 @@ src/main/ats/scripting/scripting_to_csv.ats
 src/exec/toverify.xml
 src/exec/toverify.xml
 src/main/ats/scripting/scripting_to_csv.ats
+pom.xml
