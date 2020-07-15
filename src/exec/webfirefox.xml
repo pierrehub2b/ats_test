@@ -15,7 +15,7 @@
       <class name="sousscripts.DemoSwipe"/>
       <class name="sousscripts.DemoTooltipCheck"/>
       <class name="sousscripts.DemoVerification"/>
-      <class name="web.calc_web_firefox"/>
+      <class name="web.calc_web"/>
       <class name="web.fenetres"/>
       <class name="web.selection"/>
       <class name="web.subscripts.Dialog"/>

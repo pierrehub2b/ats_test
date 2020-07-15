@@ -37,6 +37,7 @@ property -> text => box2_displayed_message -> dialog
 check-value -> $var(box2_message) = $var(box2_displayed_message)
 click -> dialog [type = dismiss]
 check-count -> 0 -> dialog
+check-property -> text = Try it -> BUTTON [onclick = myFunction()] -> IFRAME [id = iframeResult]
 click [try = 9] -> BUTTON [text = Try it] -> IFRAME [id = iframeResult]
 check-count [delay = 1] -> 1 -> dialog
 click -> dialog [type = accept]
