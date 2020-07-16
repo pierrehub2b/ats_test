@@ -5,10 +5,11 @@ created -> 2020-06-28 at 17:44:56
 
 [ats-variables]
 
+var -> ip_port -> $env(android_ip_port)
 
 [ats-actions]
 
-channel-start -> contact -> mobile://192.168.0.20:8081/com.android.contacts
+channel-start -> contact -> mobile://$env(android_ip_port)/com.android.contacts
 click -> ImageButton [viewId = floating_action_button]
 click [nofail] -> Button [viewId = left_button]
 keyboard -> John -> EditText [innerText = First name]

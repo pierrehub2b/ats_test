@@ -31,14 +31,14 @@ check-count -> 0 -> dialog
 goto-url -> https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_confirm
 //goto-url -> refresh
 property -> text => box2_message -> SPAN [class = cm-m-javascript cm-string]
-click [try = 9] -> BUTTON [text = Try it] -> IFRAME [id = iframeResult]
+click [try = 5, delay = 1] -> BUTTON [text = Try it] -> IFRAME [id = iframeResult]
 check-count [delay = 1] -> 1 -> dialog
 property -> text => box2_displayed_message -> dialog
 check-value -> $var(box2_message) = $var(box2_displayed_message)
 click -> dialog [type = dismiss]
 check-count -> 0 -> dialog
 check-property -> text = Try it -> BUTTON [onclick = myFunction()] -> IFRAME [id = iframeResult]
-click [try = 9] -> BUTTON [text = Try it] -> IFRAME [id = iframeResult]
+click [try = 5, delay = 1] -> BUTTON [text = Try it] -> IFRAME [id = iframeResult]
 check-count [delay = 1] -> 1 -> dialog
 click -> dialog [type = accept]
 check-count -> 0 -> dialog

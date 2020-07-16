@@ -5,10 +5,11 @@ created -> 2020-06-28 at 17:10:20
 
 [ats-variables]
 
+var -> ip_port -> $env(android_ip_port)
 
 [ats-actions]
 
-channel-start -> calendar -> mobile://192.168.0.20:8081/com.android.calendar
+channel-start -> calendar -> mobile://$env(android_ip_port)/com.android.calendar
 property -> text => date_MMMMyyyy -> TextView [viewId = top_button_date]
 click -> TextView [viewId = top_button_date]
 click -> TextView [innerText = Day, viewId = button_view]

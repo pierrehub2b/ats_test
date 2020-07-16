@@ -10,6 +10,7 @@ created -> 2020-06-02 at 10:37:56
 
 channel-start -> index_ie -> file:///C:/Program%20Files/Internet%20Explorer/iexplore.exe
 goto-url -> http://www.agilitest.com/fichiers/test.html
+click [nofail, try = -10] -> Button [Name =~ (?i)Atteindre.*]
 check-count -> 3 -> Button [Name =~ (?i).*Click.*]
 click -> Button [@index = 1, Name =~ (?i).*Click.*]
 check-count -> 1 -> Text [Name = OK]

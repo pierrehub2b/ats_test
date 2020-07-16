@@ -5,10 +5,11 @@ created -> 2020-06-26 at 14:40:37
 
 [ats-variables]
 
+var -> ip_port -> $env(android_ip_port)
 
 [ats-actions]
 
-channel-start -> message -> mobile://192.168.0.20:8081/com.android.messaging
+channel-start -> message -> mobile://$env(android_ip_port)/com.android.messaging
 click -> ImageView [viewId = start_new_conversation_button]
 keyboard -> 0611017372 -> MultiAutoCompleteTextView [viewId = recipient_text_view]
 click -> HorizontalScrollView [viewId = tab_strip]

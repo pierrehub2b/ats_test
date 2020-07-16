@@ -5,10 +5,11 @@ created -> 2020-06-28 at 17:30:40
 
 [ats-variables]
 
+var -> ip_port -> $env(android_ip_port)
 
 [ats-actions]
 
-channel-start -> webview -> mobile://192.168.0.20:8081/org.chromium.webview_shell
+channel-start -> webview -> mobile://$env(android_ip_port)/org.chromium.webview_shell
 keyboard -> agilitest -> EditText [viewId = url_field]
 click -> ImageButton [description = Load URL]
 check-count -> 1 -> View [text = Webpage not available]
