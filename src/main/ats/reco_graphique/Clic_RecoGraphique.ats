@@ -12,9 +12,9 @@ channel-start -> canal_reco_graphique -> chrome
 goto-url -> http://www.agilitest.com/fichiers/test.html
 window-resize -> width = 1200, height = 1000
 click [center = -14, middle = -6] -> @IMAGE [error = 0.5%, source = DemoFormation_Clic_RecoGraphique/2020521112826.png]
-check-count -> 1 -> Text [Name = OK]
+check-count -> 1 -> SPAN [class = result, text = OK]
 click-right [center = -5, middle = -4] -> @IMAGE [error = 0.5%, source = DemoFormation_Clic_RecoGraphique/202052111329.png]
-check-count -> 2 -> Text [Name = OK]
+check-count -> 2 -> SPAN [class = result, text = OK]
 click -> @IMAGE [error = 0.5%, source = DemoFormation_Clic_RecoGraphique/202052111346.png]
 keyboard -> reco_graphique -> @IMAGE [error = 0.5%, source = DemoFormation_Clic_RecoGraphique/202052111352.png]
 click -> @IMAGE [error = 0.5%, source = DemoFormation_Clic_RecoGraphique/2020521113544.png] -> INPUT [name = fname]

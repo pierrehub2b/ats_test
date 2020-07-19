@@ -23,5 +23,6 @@ check-property -> text = john.doe@agilitest.com -> TextView [viewId = header] ->
 click -> ImageButton [tooltip = More options]
 click -> TextView [innerText = Delete, viewId = title]
 click -> Button [viewId = button1]
-check-property -> innerText =~ Your contacts list is empty -> TextView [viewId = message]
+check-count -> 1 -> ImageView [viewId = empty_image]
+//check-property -> text =~ (?i)Your\s*contacts\s*list\s*is\s*empty -> TextView [viewId = empty_home_view_text]
 channel-close -> contact
