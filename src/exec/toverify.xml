@@ -4,9 +4,9 @@
   <parameter name="visual.report" value="2"/>
   <parameter name="ats.log.level" value="all"/>
   <test name="testMain" preserve-order="true">
-    <parameter name="browser" value="chrome"/>
+    <parameter name="browser" value="opera"/>
     <classes>
-      <class name="web.subscripts.Dialog"/>
+      <class name="reco_graphique.Clic_RecoGraphique"/>
     </classes>
   </test>
 </suite>

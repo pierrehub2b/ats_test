@@ -4,6 +4,7 @@
   <parameter name="visual.report" value="2"/>
   <parameter name="ats.log.level" value="all"/>
   <test name="testMain" preserve-order="true">
+    <parameter name="browser" value="msedge"/>
     <classes>
       <class name="sousscripts.CheckoutForm"/>
       <class name="sousscripts.DemoClic_iframe"/>
