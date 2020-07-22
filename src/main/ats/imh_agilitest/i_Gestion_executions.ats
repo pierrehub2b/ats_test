@@ -1,0 +1,15 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-06-12 at 15:20:52
+
+[ats-variables]
+
+
+[ats-actions]
+
+comment -> script -> tester ces IHM globalement
+comment -> script -> Vérifier qu'il existe les suites suivantes :<br>Sample<br>Suite (maven tag)
+comment -> script -> <b>Rapport TestNG</b><br>-- vérifier la coche
+comment -> script -> <b>Rapport PDF</b><br>-- vérifier la coche et le message sans configuration FOP <br><br>+/- ajouter les data de rapport PDF
+comment -> script -> <b>Générer - Compiler - Exécuter</b><br>-- vérifier l'exécution

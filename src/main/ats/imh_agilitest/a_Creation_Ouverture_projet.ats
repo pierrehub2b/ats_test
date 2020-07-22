@@ -1,0 +1,19 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-06-12 at 15:20:27
+
+[ats-variables]
+
+
+[ats-actions]
+
+comment -> script -> <b>Nommer le projet</b><br>-- vérifier les caractères interdits (spéciaux)
+comment -> script -> <b>Sélectionner folder</b><br>-- Vérifier qu'il faut un folder vide (test avec folder non vide)
+comment -> script -> <b>Projet Demo sélectionné</b><br>-- vérifier la coche (vérif de contenu à la création)
+comment -> script -> <b>Projet Maven</b><br>-- vérifier la coche (vérif de d'efficacité sur Jenkins)
+comment -> script -> <b>Créer suite testNG</b><br>-- vérifier la coche (vérif de création dans les exécutions)
+comment -> script -> <b>Sauver</b><br>-- Le projet est ouvert<br><u>libs</u><br><u>src</u><br><u>target</u>
+comment -> script -> <b>Vérif dossier sample</b><br>\src\main\ats\sample\Main.ats<br>\src\main\ats\sample\Subscript.ats<br>Exécuter le Main.ats<br><br><b>Vérif ats MyFirstScript</b><br>\src\main\ats\MyFirstScript.ats<br>Exécuter le MyFirstScript.ats
+comment -> script -> <b>Vérif Fermeture projet</b><br>Tester "pas maintenant"<br>Tester "Allons - y!"
+comment -> script -> <b>Vérif Ouverture projet</b><br>Sélectionner un dossier inapproprié : "Aucun projet ATS trouvé dans le répertoire"<br>Sélectionner le projet nouvellement créé:<br>-- Le projet est ouvert<br><u>libs</u><br><u>src</u><br><u>target</u>

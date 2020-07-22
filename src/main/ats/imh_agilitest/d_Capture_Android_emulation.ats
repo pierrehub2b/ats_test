@@ -1,0 +1,17 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-06-12 at 15:32:31
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> horloge -> mobile://$env(android_ip_port)/com.android.deskclock
+property -> text => date -> TextView [viewId = date]
+click -> ImageButton [viewId = fab]
+click -> ImageView [viewId = search_button]
+keyboard -> paris -> EditText [viewId = search_src_text]
+click -> CheckBox [viewId = city_onoff]
+click -> ImageButton [description = Navigate up]

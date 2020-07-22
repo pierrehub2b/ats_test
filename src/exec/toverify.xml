@@ -4,9 +4,11 @@
   <parameter name="visual.report" value="2"/>
   <parameter name="ats.log.level" value="all"/>
   <test name="testMain" preserve-order="true">
-    <parameter name="browser" value="opera"/>
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="reco_graphique.Clic_RecoGraphique"/>
+      <class name="scripting.scripting"/>
+      <class name="special_features.check_null_versus_zero"/>
+      <class name="special_features.random_input"/>
     </classes>
   </test>
 </suite>

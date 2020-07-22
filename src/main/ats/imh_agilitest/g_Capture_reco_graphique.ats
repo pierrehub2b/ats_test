@@ -1,0 +1,13 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-06-12 at 15:19:33
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> canal_reco_graphique -> chrome
+goto-url -> http://www.agilitest.com/fichiers/test.html
+window-resize -> width = 1200, height = 1000

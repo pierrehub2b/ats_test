@@ -1,0 +1,14 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-07-22 at 14:09:36
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> agilitest_server -> chrome
+goto-url -> www.agilitest.com
+check-count -> 1+ -> IMG [alt = Agilitest]
+channel-close -> agilitest_server

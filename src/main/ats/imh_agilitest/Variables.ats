@@ -5,5 +5,22 @@ created -> 2020-04-29 at 13:54:55
 
 [ats-variables]
 
+var -> Variable_data -> donnée appelée
 
 [ats-actions]
+
+comment -> script -> <b>tester les variables définies</b><br>-- vérifier les appels de données<br>-- vérifier les tranformations
+channel-start -> Canal_variables -> chrome
+click -> IMG [alt = ActionTestScript]
+goto-url -> $var(URL_cible)
+keyboard -> Appel de la variable : $var(Variable_data)
+check-property -> id = $var(Variable_data)
+check-value -> 11223344 = $var(Variable_data)
+select -> text = $var(Variable_data)
+comment -> script -> Afficher les données d'una variable calculée ici<br>- $var(Variable_data)<br>$uuid<br>$now<br>$today
+click -> A [id = hs-eu-confirmation-button]
+click -> A [text = Métiers] -> UL [id = menu-principal-1]
+over -> A [text = Métiers] -> UL [id = menu-principal-1]
+click -> A [text = $var(Variable_critere2)] -> UL [id = menu-principal-1]
+channel-close -> Canal_variables
+comment -> script -> <b>tester les variables affectées</b><br>-- vérifier les appels de données<br>-- vérifier les tranformations

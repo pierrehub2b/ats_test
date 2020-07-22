@@ -1,0 +1,26 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-06-12 at 15:32:06
+
+[ats-variables]
+
+var -> pays_1 -> FR
+var -> Country1 -> France
+
+[ats-actions]
+
+comment -> script -> REST
+channel-start -> REST_pays -> https://restcountries.eu/rest/v2
+api-get -> name [Accept = application/json] -> $var(pays_1)
+property -> capital => capital_1 -> OBJECT [name =~ (?i)$var(pays_1)]
+comment -> script -> SOAP
+channel-start -> soapAdd -> http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL
+api-soap -> CountryISOCode -> <sCountryName>$var(Country1)</sCountryName>
+check-property -> value = $var(pays_1) -> ELEMENT [name = CountryISOCodeResult]
+property -> value => Country_ISO_Code1 -> ELEMENT [name = CountryISOCodeResult]
+api-soap -> CapitalCity -> <sCountryISOCode>$var(Country_ISO_Code1)</sCountryISOCode>
+property -> value => Capital1 -> ELEMENT [name = CapitalCityResult]
+api-soap -> CountryFlag -> <sCountryISOCode>$var(Country_ISO_Code1)</sCountryISOCode>
+property -> value => flag1 -> ELEMENT [name = CountryFlagResult]
+comment -> step -> <b>Capitale : </b> $var(Capital1)<br><b>Apperçu du drapeau</b> <br><img src="$var(flag1)" width="90" height="50"/>
