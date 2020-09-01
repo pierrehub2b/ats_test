@@ -1,0 +1,21 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-09-01 at 21:43:51
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> newChannel -> procexp
+channel-start -> procexp64 -> process://.*procexp64.exe
+window-resize -> x = 100, y = 100, width = 1000, height = 900
+//click -> @IMAGE [error = 0.5%, source = reco_graphique/Reco_graphique_desktop/202081214820.png]
+click -> Button [Name = System Information (Ctrl+I)]
+window-switch -> 1
+click -> @IMAGE [error = 0.5%, source = reco_graphique/Reco_graphique_desktop/202081215016.png]
+check-count -> 1 -> Text [Name = Cores]
+click -> TabItem [Name = Summary]
+channel-close -> newChannel
+channel-close -> procexp64

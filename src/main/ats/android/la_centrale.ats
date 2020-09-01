@@ -10,7 +10,10 @@ var -> ip_port -> $env(android_ip_port)
 
 [ats-actions]
 
-channel-start -> newChannel -> mobile://$var(ip_port)/fr.carboatmedia.lacentrale
+channel-start -> newChannel -> mobile://192.168.0.19:8080/fr.carboatmedia.lacentrale
+//check-count -> 1 -> @IMAGE [error = 0.5%, source = android/la_centrale/202081211037.png]
+//click -> @IMAGE [error = 0.5%, source = android/la_centrale/202081211037.png]
+click [nofail] -> Button [innerText = J'accepte]
 click [nofail] -> TextView [viewId = dont_display]
 //click -> LinearLayoutCompat [viewId = rate_satisfied]
 //click -> LinearLayoutCompat [viewId = rate_dissatisfied]
