@@ -8,9 +8,9 @@ created -> 2020-09-01 at 22:12:11
 
 [ats-actions]
 
-channel-start -> calculator -> mobile://192.168.0.50:8081/com.android.calculator2
-click -> Button [viewId = del]
-check-count -> 1 -> @IMAGE [error = 0.5%, source = reco_graphique/Reco_graphique_Android/20208122134.png]
-click -> @IMAGE [error = 0.5%, source = reco_graphique/Reco_graphique_Android/20208122134.png]
-check-property -> innerText = 8 -> TextView [viewId = formula]
-channel-close -> calculator
+channel-start -> speedtest -> mobile://192.168.0.19:8080/org.zwanoo.android.speedtest
+click -> @IMAGE [error = 0.5%, source = reco_graphique/Reco_graphique_Android/202082151355.png]
+check-count -> 1 -> View [viewId = gauge]
+click -> @IMAGE [error = 0.5%, source = reco_graphique/Reco_graphique_Android/20208215161.png]
+check-count -> 1 -> View [viewId = go_button]
+channel-close -> speedtest

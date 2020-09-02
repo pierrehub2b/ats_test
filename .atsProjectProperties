@@ -3,7 +3,7 @@
   <name>ats_test_validation</name>
   <version>0.0.2</version>
   <description>ATS project testing scripts</description>
-  <useMaven>true</useMaven>
+  <useMaven>false</useMaven>
   <autoUpdateAts>true</autoUpdateAts>
   <groups>
     <group>bug</group>
