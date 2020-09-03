@@ -19,7 +19,7 @@ click -> @IMAGE [error = 0.5%, source = DemoFormation_Clic_RecoGraphique/2020521
 check-property -> value = 5 -> INPUT [id = calc_resultat]
 click -> @IMAGE [error = 0.5%, source = DemoFormation_Clic_RecoGraphique/2020521113544.png] -> INPUT [name = fname]
 keyboard -> reco_graphique -> @IMAGE [source = DemoFormation_Clic_RecoGraphique/2020521113544.png] -> INPUT [name = fname]
-keyboard -> reco_graphique -> @IMAGE [error = 0.5%, source = DemoFormation_Clic_RecoGraphique/202052111352.png]
-//check-property -> value = reco_graphique -> INPUT [placeholder = First name]
+//keyboard -> reco_graphique -> @IMAGE [error = 0.5%, source = DemoFormation_Clic_RecoGraphique/202052111352.png]
+check-property -> value = reco_graphique -> INPUT [placeholder = First name]
 keyboard -> reco_graphique -> INPUT [name = fname]
 channel-close -> canal_reco_graphique

@@ -1,10 +1,7 @@
 [ats-header]
 
-id -> 
 author -> AGILITEST-DUPER\Emmanuel DUPERRAY
 created -> 2019-01-17 at 11:09:52
-prerequisite -> 
-description -> 
 groups -> default , api
 
 [ats-variables]
@@ -37,10 +34,13 @@ comment -> step -> <b>Synthèse</b><br><br><b>Pays :</b> $var(Country_ISO_Code1)
 channel-close -> soapAdd
 channel-start -> Web_check -> chrome
 goto-url -> http://www.drapeauxdespays.fr/
+click -> BUTTON [id = search-toggler]
 keyboard -> $var(Country_ISO_Code1)$key(ENTER) -> INPUT [id = search-input]
 property -> src => Flag_Check1 -> IMG [alt =~ (?i)Drapeau.*] -> P [class = flag-detail]
+click -> BUTTON [id = search-toggler]
 keyboard -> $var(Country_ISO_Code2)$key(ENTER) -> INPUT [id = search-input]
 property -> src => Flag_Check2 -> IMG [alt =~ (?i)Drapeau.*] -> P [class = flag-detail]
+click -> BUTTON [id = search-toggler]
 keyboard -> $var(Country_ISO_Code3)$key(ENTER) -> INPUT [id = search-input]
 property -> src => Flag_Check3 -> IMG [alt =~ (?i)Drapeau.*] -> P [class = flag-detail]
 comment -> step -> <b>Synthèse de vérification</b><br><br><b>Pays :</b> $var(Country_ISO_Code1)<br><b>Capitale : </b> $var(Capital1)<br><b>Drapeau : <img src="$var(flag1)" width="50" height="30"/><br><b>Vérification : <img src="$var(Flag_Check1)" width="50" height="30"/><br><br><b>Pays :</b> $var(Country_ISO_Code2)<br><b>Capitale : </b> $var(Capital2)<br><b>Drapeau : <img src="$var(flag2)" width="50" height="30"/><br><b>Vérification : <img src="$var(Flag_Check2)" width="50" height="30"/><br><br><b>Pays :</b> $var(Country_ISO_Code3)<br><b>Capitale : </b> $var(Capital3)<br><b>Drapeau : <img src="$var(flag3)" width="50" height="30"/><br><b>Vérification : <img src="$var(Flag_Check3)" width="50" height="30"/>
