@@ -1,0 +1,47 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-09-04 at 16:02:36
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> pendu -> mobile://192.168.0.19:8080/com.tellmewow.senior.hangman
+click -> @IMAGE [error = 0.5%, source = android/pendu/202084161446.png]
+click -> @IMAGE [error = 0.5%, source = android/pendu/20208416167.png]
+click -> @IMAGE [error = 0.5%, source = android/pendu/202084161635.png]
+click -> @IMAGE [error = 0.5%, source = android/pendu/202084161648.png]
+click -> @IMAGE [error = 0.5%, source = android/pendu/20208416175.png]
+click -> @IMAGE [error = 0.5%, source = android/pendu/202084161648.png]
+click -> @IMAGE [error = 0.5%, source = android/pendu/202084161724.png]
+click -> @IMAGE [error = 0.5%, source = android/pendu/202084161737.png]
+click -> @IMAGE [error = 0.5%, source = android/pendu/202084161748.png]
+click -> @IMAGE [error = 0.5%, source = android/pendu/202084161724.png]
+click -> @IMAGE [error = 0.5%, source = android/pendu/202084161834.png]
+click -> @IMAGE [error = 0.5%, source = android/pendu/20208416458.png]
+click -> @IMAGE [error = 0.5%, source = android/pendu/20208416834.png]
+click -> @IMAGE [error = 0.5%, source = android/pendu/20208416924.png]
+click -> @IMAGE [error = 0.5%, source = android/pendu/202084162239.png]
+click -> @IMAGE [error = 0.5%, source = android/pendu/20208416234.png]
+click -> @IMAGE [error = 0.5%, source = android/pendu/20208416743.png]
+click -> @IMAGE [error = 0.5%, source = android/pendu/202084162354.png]
+check-count -> 1 -> @IMAGE [error = 0.5%, source = android/pendu/202084162654.png]
+check-count -> 1 -> @IMAGE [error = 0.5%, source = android/pendu/202084162812.png]
+//click -> @IMAGE [error = 0.5%, source = android/pendu/20208416290.png]
+//click -> @IMAGE [error = 0.5%, source = android/pendu/20208416413.png]
+//click -> @IMAGE [error = 0.5%, source = android/pendu/20208416458.png]
+//click -> @IMAGE [error = 0.5%, source = android/pendu/20208416538.png]
+//click -> @IMAGE [error = 0.5%, source = android/pendu/20208416552.png]
+//click -> @IMAGE [error = 0.5%, source = android/pendu/2020841667.png]
+//click -> @IMAGE [error = 0.5%, source = android/pendu/20208416743.png]
+//click -> @IMAGE [error = 0.5%, source = android/pendu/20208416814.png]
+//click -> @IMAGE [error = 0.5%, source = android/pendu/20208416834.png]
+//click -> @IMAGE [error = 0.5%, source = android/pendu/20208416910.png]
+//click -> @IMAGE [error = 0.5%, source = android/pendu/20208416924.png]
+//click -> @IMAGE [error = 0.5%, source = android/pendu/202084161022.png]
+//click -> @IMAGE [error = 0.5%, source = android/pendu/20208416110.png]
+//click -> @IMAGE [error = 0.5%, source = android/pendu/202084161158.png]
+//click -> @IMAGE [error = 0.5%, source = android/pendu/202084161347.png]
+channel-close -> pendu

@@ -8,7 +8,7 @@ created -> 2020-09-02 at 15:19:40
 
 [ats-actions]
 
-channel-start -> calculator -> mobile://192.168.0.50:8087/com.android.calculator2
+channel-start -> calculator -> mobile://192.168.0.50:8089/com.android.calculator2
 click -> Button [viewId = del]
 check-count -> 1 -> @IMAGE [error = 0.5%, source = reco_graphique/Reco_graphique_Android/20208122134.png]
 click -> @IMAGE [error = 0.5%, source = reco_graphique/Reco_graphique_Android/20208122134.png]
