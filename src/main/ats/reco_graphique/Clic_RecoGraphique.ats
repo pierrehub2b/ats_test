@@ -9,14 +9,11 @@ created -> 2018-10-06 at 11:17:17
 [ats-actions]
 
 channel-start -> canal_reco_graphique -> chrome
-click -> @IMAGE [error = 0.5%, source = reco_graphique/Clic_RecoGraphique/202084114855.png]
-click -> @IMAGE [error = 0.5%, source = reco_graphique/Clic_RecoGraphique/202084121810.png]
+click [center = 45, middle = 10] -> @IMAGE [error = 0.5%, source = reco_graphique/Clic_RecoGraphique/202084114855.png]
 check-count -> 1+ -> A [href = /pierrehub2b/actiontestscript]
 goto-url -> http://www.agilitest.com/fichiers/test.html
-goto-url -> back
 window-resize -> width = 1200, height = 1000
-click -> @IMAGE [error = 0.5%, source = DemoFormation_Clic_RecoGraphique/2020521112826.png]
-click -> @IMAGE [error = 0.5%, source = reco_graphique/Clic_RecoGraphique/202084115437.png]
+click-right -> @IMAGE [error = 0.5%, source = reco_graphique/Clic_RecoGraphique/202085112135.png]
 check-count -> 1 -> SPAN [class = result, text = OK]
 click-right [center = -5, middle = -4] -> @IMAGE [error = 0.5%, source = DemoFormation_Clic_RecoGraphique/202052111329.png]
 check-count -> 2 -> SPAN [class = result]
