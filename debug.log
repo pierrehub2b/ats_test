@@ -7719,3 +7719,5 @@
 [0808/180417.493:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ff9e3493978 of 48 bytes failed: Seule une partie d’une requête ReadProcessMemory ou WriteProcessMemory a été effectuée. (0x12B)
 [0808/180417.493:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7ff9e34994c0 of 64 bytes failed: Seule une partie d’une requête ReadProcessMemory ou WriteProcessMemory a été effectuée. (0x12B)
 [0808/180417.493:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Tentative d’accès à un processus en cours d’arrêt. (0xc000010a)
+[0904/002325.872:ERROR:prune_crash_reports.cc(36)] PruneCrashReportDatabase: Failed to get pending reports
+[0905/061001.357:ERROR:file_io.cc(90)] ReadExactly: expected 36, observed 0
