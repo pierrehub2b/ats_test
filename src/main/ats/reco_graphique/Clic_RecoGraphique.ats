@@ -13,15 +13,15 @@ click [center = 45, middle = 10] -> @IMAGE [error = 0.5%, source = reco_graphiqu
 check-count -> 1+ -> A [href = /pierrehub2b/actiontestscript]
 goto-url -> http://www.agilitest.com/fichiers/test.html
 window-resize -> width = 1200, height = 1000
-click-right -> @IMAGE [error = 0.5%, source = reco_graphique/Clic_RecoGraphique/202085112135.png]
+click -> @IMAGE [error = 0.5%, source = reco_graphique/Clic_RecoGraphique/202085112135.png]
 check-count -> 1 -> SPAN [class = result, text = OK]
 click-right [center = -5, middle = -4] -> @IMAGE [error = 0.5%, source = DemoFormation_Clic_RecoGraphique/202052111329.png]
-check-count -> 2 -> SPAN [class = result]
+check-count -> 2 -> SPAN [class = result, text = OK]
 click -> @IMAGE [error = 0.5%, source = DemoFormation_Clic_RecoGraphique/202052111346.png]
 check-property -> value = 5 -> INPUT [id = calc_resultat]
 click -> @IMAGE [error = 0.5%, source = DemoFormation_Clic_RecoGraphique/2020521113544.png] -> INPUT [name = fname]
 keyboard -> reco_graphique -> @IMAGE [source = DemoFormation_Clic_RecoGraphique/2020521113544.png] -> INPUT [name = fname]
 //keyboard -> reco_graphique -> @IMAGE [error = 0.5%, source = DemoFormation_Clic_RecoGraphique/202052111352.png]
 check-property -> value = reco_graphique -> INPUT [placeholder = First name]
-keyboard -> reco_graphique -> INPUT [name = fname]
+//keyboard -> reco_graphique -> INPUT [name = fname]
 channel-close -> canal_reco_graphique

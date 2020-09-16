@@ -1,0 +1,23 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-09-14 at 10:03:23
+
+[ats-variables]
+
+var -> var_name -> var1$param(0)
+
+[ats-actions]
+
+comment -> script -> Vérifier manuellement tous les menus d'accès rapide des variables : <br>- Var d'env : $env(browser...<br>- Var de script :  $var(var_name) $var(propertyVar...<br>- Param : $param(0...<br>
+property -> text => propertyVar -> button [id = $var(var_name)]
+property -> text => propertyVar2
+subscript -> $param(0)imh_agilitest.kbis_menu_rapide_$var(var2)variables -> assets:///data/donnees_de_calcul.csv
+subscript -> imh_agilitest.kbis_menu_rapide_variables [param1,param2,param3,param4] => var_retour1, var_retour2
+subscript [var_name = $env(browser...$env(browsername...$var(var_name...] -> imh_agilitest.kbis_menu_rapide_variables$env(browser<br>- Var de script :  $var(var_name<br>- Param : $param(0
+keyboard -> $env(browser)
+keyboard -> $env(browser<br>- Var de script :  $var(var_name<br>- Param : $param(0
+keyboard -> $env(browser)
+check-property -> id = $env(browser...
+check-value -> $env(browser...$env(browsername...$var(var_name... = $env(browsername...$var(var_name)
+select -> text = $var(var_name) $env(browser...$env(browsername...$var(var_name...

@@ -30,3 +30,5 @@ src/exec/toverify.xml
 src/main/ats/scripting/scripting_to_csv.ats
 pom.xml
 debug.log
+src/exec/android.xml
+.atsProjectProperties

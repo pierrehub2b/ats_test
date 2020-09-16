@@ -1,0 +1,30 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-09-08 at 09:06:19
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> ma_pharmacie -> mobile://192.168.43.206:8095/com.pharmagest.application
+click -> LinearLayout [viewId = home_menu_icon]
+click -> TextView [viewId = home_connect]
+keyboard -> Pharma -> EditText [viewId = account_details_firstname]
+keyboard -> GEST -> EditText [viewId = account_details_lastname]
+keyboard -> 0601020304 -> EditText [viewId = account_details_phone]
+click -> EditText [viewId = account_details_gender]
+click -> TextView [innerText = Masculin, viewId = text1]
+click -> EditText [viewId = account_details_birth_date]
+click -> Button [viewId = button1]
+keyboard -> parma.gest@pharmagest.com -> EditText [viewId = account_details_email]
+click -> sysbutton [type = back]
+click -> LinearLayout [viewId = layout_validate_preinscription]
+click -> LinearLayout [viewId = home_menu_icon]
+check-property -> innerText = Pharma -> TextView [viewId = home_account_name]
+check-property -> innerText = GEST -> TextView [viewId = home_account_surname]
+click -> ImageView [enabled = true]
+click -> TextView [tooltip = Supprimer]
+click -> Button [innerText = OUI, viewId = button1]
+channel-close -> ma_pharmacie

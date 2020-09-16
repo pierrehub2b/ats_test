@@ -1,0 +1,22 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-09-14 at 16:13:43
+
+[ats-variables]
+
+var -> var_sous_script -> valeur_1
+var -> var2 -> $param(0) : $param(1) $param(2) $param(3) = $param(4)
+
+[ats-actions]
+
+comment -> script -> Paramètres chargés :<br>$param(0) : $param(1) $param(2) $param(3) = $param(4)
+keyboard -> $param(0)
+keyboard -> $param(0) : $param(1) $param(2) $param(3) = $param(4)
+check-property -> id = $param(0) : $param(1) $param(2) $param(3) &eq; $param(4)
+check-value -> $param(0) : $param(1) $param(2) $param(3) &eq; $param(4) = 
+select -> text = $param(0) : $param(1) $param(2) $param(3) &eq; $param(4)
+
+[ats-returns]
+
+return -> $var(var_sous_script) -> $param(0) : $param(1) $param(2) $param(3) = $param(4)
