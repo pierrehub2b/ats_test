@@ -9,9 +9,8 @@
     <parameter name="android_ip_port" value="192.168.0.19:8077"/>
     <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="multi_channel.API_REST_web"/>
-      <class name="multi_channel.API_SOAP_web"/>
-      <class name="multi_channel.dragdrop_SYST_web"/>
+      <class name="reco_graphique.Reco_graphique_desktop"/>
+      <class name="scripting.scripting"/>
     </classes>
   </test>
 </suite>
