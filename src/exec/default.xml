@@ -9,7 +9,9 @@
     <parameter name="android_ip_port" value="192.168.0.19:8077"/>
     <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="desktop.paint"/>
+      <class name="multi_channel.API_REST_web"/>
+      <class name="multi_channel.API_SOAP_web"/>
+      <class name="multi_channel.dragdrop_SYST_web"/>
     </classes>
   </test>
 </suite>

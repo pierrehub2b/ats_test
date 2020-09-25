@@ -1,0 +1,32 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-09-18 at 09:39:15
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> newChannel -> chrome
+goto-url -> https://material.angular.io/components/select/overview
+comment -> script -> Basic mat-select (<b>MAT-SELECT</b>)<br>Vs<br>Basic <b>Native Select</b>
+scroll -> 0 -> DIV [id = mat-select-value-1]
+select -> index = 1 -> MAT-SELECT [id = mat-select-0]
+select -> value = Steak -> MAT-SELECT [id = mat-select-0]
+select -> text = Tacos -> MAT-SELECT [id = mat-select-0]
+select -> index = 0 -> SELECT [id = mat-input-0]
+scroll -> 0 -> MAT-SELECT [id = mat-select-2]
+select -> index = 1 -> MAT-SELECT [id = mat-select-2]
+select -> value = Option 3 -> MAT-SELECT [id = mat-select-2]
+select -> text = Option 1 -> MAT-SELECT [id = mat-select-2]
+scroll -> 0 -> MAT-SELECT [id = mat-select-4]
+select -> index = 0 -> MAT-SELECT [id = mat-select-4]
+scroll -> 0 -> MAT-SELECT [id = mat-select-6]
+select -> index = 2 -> MAT-SELECT [id = mat-select-6]
+select -> index = 3 -> SELECT [id = mat-input-2]
+scroll -> 0 -> MAT-SELECT [id = mat-select-10]
+select -> text = Hawaii -> MAT-SELECT [id = mat-select-10]
+scroll -> 0 -> MAT-SELECT [id = mat-select-12]
+select -> value = Mewtwo -> MAT-SELECT [id = mat-select-12]
+channel-close -> newChannel

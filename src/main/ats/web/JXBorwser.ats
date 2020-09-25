@@ -1,0 +1,19 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-09-21 at 12:08:22
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> newChannel -> file:///C:/pharmagest/pharmagest-browser/pharmagest-browser.exe
+channel-start -> pharmagest -> process://.*pharmagest.*
+window-resize -> width = 1200, height = 960
+window-state -> maximize
+click -> Button [HelpText = Ouvrir un nouvel onglet]
+check-count -> 1 -> Text [Name =~ (?i)Veuillez\s*patienter.*]
+click -> Text [Name = Se connecter]
+channel-close -> newChannel
+channel-close -> pharmagest

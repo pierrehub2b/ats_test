@@ -66,7 +66,7 @@
             <value>listenReport.Reporter</value>
           </property>
           <suiteXmlFiles>
-            <suiteXmlFile>src/exec/websitecheck.xml</suiteXmlFile>
+            <suiteXmlFile>src/exec/default.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>
@@ -93,7 +93,7 @@
     <dependency>
       <groupId>com.actiontestscript</groupId>
       <artifactId>ats-automated-testing</artifactId>
-      <version>1.8.0</version>
+      <version>1.8.1</version>
     </dependency>
   </dependencies>
 </project>
