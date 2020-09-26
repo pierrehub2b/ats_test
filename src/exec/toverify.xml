@@ -6,9 +6,14 @@
   <test name="testMain" preserve-order="true">
     <parameter name="browser" value="chrome"/>
     <classes>
+      <class name="API_editeur"/>
+      <class name="appels_conditionnes.parent"/>
+      <class name="desktop_editeur"/>
+      <class name="password.passwords"/>
       <class name="scripting.scripting"/>
       <class name="special_features.check_null_versus_zero"/>
       <class name="special_features.random_input"/>
+      <class name="Web_editeur"/>
     </classes>
   </test>
 </suite>
