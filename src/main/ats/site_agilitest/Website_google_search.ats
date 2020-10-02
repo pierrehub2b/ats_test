@@ -1,0 +1,17 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-10-02 at 17:06:47
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> google_search -> chrome
+goto-url -> www.google.fr
+click -> SPAN [text = J'accepte] -> SPAN [text = J'accepte] -> DIV [id = introAgreeButton] -> IFRAME [src =~ https://consent.google.com.*]
+keyboard -> agilitest$key(ENTER) -> INPUT [title = Rechercher]
+click -> A [href = https://www.agilitest.com/]
+check-count -> 2+ -> IMG [alt = Agilitest]
+channel-close -> google_search

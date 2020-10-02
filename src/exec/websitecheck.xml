@@ -5,6 +5,7 @@
   <parameter name="ats.log.level" value="all"/>
   <test name="testMain" preserve-order="true">
     <classes>
+      <class name="site_agilitest.Website_google_search"/>
       <class name="site_agilitest.website_up_check"/>
     </classes>
   </test>

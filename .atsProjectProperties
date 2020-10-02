@@ -21,12 +21,5 @@
     <property>var_env1</property>
     <property>var_env2</property>
     <property>var_env3</property>
-    <property>browser...&lt;br&gt;- Var de script :  $var(var_name</property>
-    <property>browser...$env(browsername...$var(var_name...] -&gt; imh_agilitest.kbis_menu_rapide_variables$env(browser&lt;br&gt;- Var de script :  $var(var_name&lt;br&gt;- Param : $param(0
-keyboard -&gt; $env(browser</property>
-    <property>browser&lt;br&gt;- Var de script :  $var(var_name&lt;br&gt;- Param : $param(0
-keyboard -&gt; $env(browser</property>
-    <property>browser...
-check-value -&gt; $env(browser...$env(browsername...$var(var_name... = $env(browsername...$var(var_name</property>
   </environment>
 </atsProject>

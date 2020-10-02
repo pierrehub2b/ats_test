@@ -8,7 +8,7 @@ created -> 2020-06-29 at 10:05:34
 
 [ats-actions]
 
-channel-start -> calculator -> mobile://192.168.0.50:8084/com.android.calculator2
+channel-start -> calculator -> mobile://192.168.0.50:8081/com.android.calculator2
 click -> Button [viewId = del]
 click -> Button [viewId = digit_7]
 click -> Button [viewId = op_mul]
