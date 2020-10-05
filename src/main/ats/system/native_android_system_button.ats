@@ -1,0 +1,55 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-10-05 at 13:58:00
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> native_android -> mobile://192.168.0.50:8096/com.android.chrome
+//click -> TextView [viewId = criteria_title]
+button -> app
+button -> app
+button -> app
+button -> app
+//keyboard -> audi -> EditText [viewId = search_src_text]
+//button -> delete
+//check-property -> innerText = aud -> EditText [viewId = search_src_text]
+comment -> script -> <i>comment ...</i>
+click -> ImageButton [viewId = tab_switcher_button]
+click -> ImageButton [viewId = new_tab_button]
+click -> EditText [viewId = search_box_text]
+keyboard -> www.agilitest.com -> LinearLayout [viewId = search_box]
+keyboard -> agilitest$key(ENTER) -> EditText [viewId = search_box_text]
+button -> back
+keyboard -> www.agilitest.com$key(ENTER) -> EditText [viewId = search_box_text]
+keyboard -> www.agilitest.com -> EditText [viewId = url_bar]
+button -> delete
+button -> enter
+check-property -> text = agilitest.co -> EditText [viewId = url_bar]
+button -> back
+button -> menu
+check-count -> 1+ -> TextView [viewId = menu_item_text]
+button -> home
+check-count -> 1 -> ScrollView [viewId = workspace]
+button -> volumeUp
+button -> volumeUp
+button -> volumeDown
+button -> volumeDown
+property-set -> wifiEnabled -> false
+property-set -> wifiEnabled -> true
+swipe -> bottom = 300 -> ScrollView [viewId = workspace]
+property-set -> bluetoothEnabled -> false
+check-property -> text = Désactivé -> Switch [description =~ Bluetooth.*]
+property-set -> bluetoothEnabled -> true
+check-property -> text = Activé -> Switch [description =~ Bluetooth.*]
+swipe -> bottom = 300 -> ScrollView [viewId = workspace]
+property-set -> lockOrientationEnabled -> true
+check-property -> text = Désactivé -> Switch [description = Rotation automatique de l'écran]
+property-set -> lockOrientationEnabled -> false
+check-property -> text = Activé -> Switch [description = Rotation automatique de l'écran]
+click -> ImageButton [viewId = tab_switcher_button]
+//click [nofail] -> @IMAGE [@index = 4, error = 0.5%, source = system/native_android_system_button/202095175458.png]
+channel-close -> native_android
