@@ -11,6 +11,7 @@ var -> browser_csv -> browsers_x1
 
 [ats-actions]
 
+comment -> summary -> app-name = $sys(app-name)<br>app-version = $sys(app-version)<br>manchine-name = $sys(manchine-name)<br>user-name = $sys(user-name)<br>os-name = $sys(os-name)
 subscript -> web.calc_web
 subscript -> web.specialKey
 subscript -> web.fenetres

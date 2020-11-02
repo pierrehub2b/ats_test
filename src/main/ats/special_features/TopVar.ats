@@ -1,0 +1,15 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-11-02 at 17:42:06
+
+[ats-variables]
+
+var -> var1 -> data_1-AZERTY_$today_$now
+var -> var2 -> data2_&é"'(-è_çà
+
+[ats-actions]
+
+channel-start -> topvar -> chrome
+subscript -> special_features.sousscripts.VarTop2
+channel-close -> topvar

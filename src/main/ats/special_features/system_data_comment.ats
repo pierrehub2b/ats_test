@@ -1,0 +1,22 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-10-14 at 15:10:33
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> horloge -> mobile://192.168.0.50:8081/com.android.deskclock
+comment -> summary -> app-name = $sys(app-name)<br>app-version = $sys(app-version)<br>manchine-name = $sys(manchine-name)<br>user-name = $sys(user-name)<br>os-name = $sys(os-name)
+channel-close -> horloge
+channel-start -> REST_pays -> https://restcountries.eu/rest/v2
+comment -> summary -> app-name = $sys(app-name)<br>app-version = $sys(app-version)<br>manchine-name = $sys(manchine-name)<br>user-name = $sys(user-name)<br>os-name = $sys(os-name)
+channel-close -> REST_pays
+channel-start -> chrome_chanel -> chrome
+comment -> summary -> app-name = $sys(app-name)<br>app-version = $sys(app-version)<br>manchine-name = $sys(manchine-name)<br>user-name = $sys(user-name)<br>os-name = $sys(os-name)
+channel-close -> chrome_chanel
+channel-start -> desktop_chanel -> SpaceMonger
+comment -> summary -> app-name = $sys(app-name)<br>app-version = $sys(app-version)<br>manchine-name = $sys(manchine-name)<br>user-name = $sys(user-name)<br>os-name = $sys(os-name)
+channel-close -> desktop_chanel

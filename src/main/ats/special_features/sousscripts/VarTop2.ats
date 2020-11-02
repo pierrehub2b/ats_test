@@ -1,0 +1,18 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-11-02 at 17:42:43
+
+[ats-variables]
+
+
+[ats-actions]
+
+comment -> summary -> <b>VAR_1 :</b> <br>$var(special_features.TopVar.var1)<br><br><b>VAR_2 :</b> <br>$var(special_features.TopVar.var2)
+goto-url -> http://www.agilitest.com/fichiers/test.html
+keyboard -> $var(special_features.TopVar.var1) -> INPUT [name = fname]
+check-property -> value =~ data_1-AZERTY_11/2/2020_.* -> INPUT [name = fname]
+check-value -> $var(special_features.TopVar.var1) =~ data_1-AZERTY_$today_.*
+keyboard -> $var(special_features.TopVar.var2) -> INPUT [name = lname]
+check-property -> value = data2_&é"'(-è_çà -> INPUT [name = lname]
+check-value -> $var(special_features.TopVar.var2) = data2_&é"'(-è_çà

@@ -1,6 +1,5 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="desktop" verbose="10">
-  <parameter name="xml.report" value="true"/>
   <parameter name="visual.report" value="2"/>
   <parameter name="ats.log.level" value="all"/>
   <test name="testMain" preserve-order="true">

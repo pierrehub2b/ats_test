@@ -11,6 +11,7 @@ var -> newVar -> regexp [( *[a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0
 [ats-actions]
 
 channel-start -> random -> chrome
+comment -> summary -> app-name = $sys(app-name)<br>app-version = $sys(app-version)<br>manchine-name = $sys(manchine-name)<br>user-name = $sys(user-name)<br>os-name = $sys(os-name)<br>os-version = $sys(os-version)<br>country =  $sys(country)
 goto-url -> http://www.agilitest.com/fichiers/test.html
 comment -> step -> <b>random (6)</b><br>- $rnd(6)<br>- $rndstring(6)
 keyboard -> random (6) -> INPUT [placeholder = First name]
