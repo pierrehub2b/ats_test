@@ -10,7 +10,7 @@ var -> iteration_sous_script -> $iteration
 [ats-actions]
 
 comment -> script -> $param(colonne1)<br>$iteration<br>doit etre égale à <br>$param(num_iter)
-check-value -> $iteration = $param(num_iter)
+check-value -> $iteration = $param(num_iter&co;0)
 
 [ats-returns]
 
