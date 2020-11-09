@@ -10,6 +10,8 @@ var -> iteration_sous_script -> $iteration
 [ats-actions]
 
 comment -> script -> $param(colonne1)<br>$iteration<br>doit etre égale à <br>$param(num_iter)
+subscript [iteration_sous_script = 1] -> special_features.sousscripts.SousScript_iteration_$iteration -> assets:///data/iterations.json
+subscript [iteration_sous_script = 2] -> special_features.sousscripts.SousScript_iteration_$iteration -> assets:///data/iterations.json
 check-value -> $iteration = $param(num_iter&co;0)
 
 [ats-returns]

@@ -1,0 +1,11 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-11-09 at 15:52:16
+
+[ats-variables]
+
+
+[ats-actions]
+
+comment -> script -> $param(colonne1)<br>$iteration<br>doit etre égale à <br>$param(num_iter)
