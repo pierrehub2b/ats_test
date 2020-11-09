@@ -66,12 +66,9 @@
             <value>listenReport.Reporter</value>
           </property>
           <suiteXmlFiles>
-            <suiteXmlFile>src/exec/default.xml</suiteXmlFile>
-            <suiteXmlFile>src/exec/android.xml</suiteXmlFile>
-            <suiteXmlFile>src/exec/bug.xml</suiteXmlFile>
             <suiteXmlFile>src/exec/desktop.xml</suiteXmlFile>
             <suiteXmlFile>src/exec/websitecheck.xml</suiteXmlFile>
-            <suiteXmlFile>src/exec/web.xml</suiteXmlFile>
+            <suiteXmlFile>src/exec/api.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>

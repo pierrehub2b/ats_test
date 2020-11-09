@@ -3,9 +3,10 @@
   <name>ats_test_validation</name>
   <version>0.0.2</version>
   <description>ATS project testing scripts</description>
-  <useMaven>true</useMaven>
+  <useMaven>false</useMaven>
   <autoUpdateAts>true</autoUpdateAts>
   <useProjectDomain>false</useProjectDomain>
+  <uuid>2D2A0861-7909-FCE4-2097-AD47919E09A8</uuid>
   <groups>
     <group>bug</group>
     <group>default</group>

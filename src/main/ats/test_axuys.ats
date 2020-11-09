@@ -1,0 +1,17 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-11-05 at 15:39:10
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> newChannel -> chrome
+goto-url -> www.axyus.com
+click -> SPAN [class = icon-contact btn-float--picto]
+scroll -> 0 -> INPUT [name = item_meta&lb;97&rb;]
+keyboard -> $param(0) -> INPUT [name = item_meta&lb;97&rb;]
+keyboard -> $param(1) -> INPUT [name = item_meta&lb;98&rb;]
+channel-close -> newChannel

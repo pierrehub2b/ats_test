@@ -1,0 +1,18 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-11-04 at 15:13:14
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> iteration -> chrome
+subscript -> special_features.sousscripts.SousScript_iteration -> assets:///data/iterations.json
+comment -> script -> valeur attendue = zéro<br>==> $iteration
+check-value -> $iteration = 0
+subscript -> special_features.sousscripts.SousScript_iteration => iteration_SousScript_retour
+check-value -> $var(iteration_SousScript_retour) = 0
+comment -> script -> valeur attendue = zéro<br>==> $iteration<br>itération Parent<br>==> $var(iteration_SousScript_retour)
+channel-close -> iteration

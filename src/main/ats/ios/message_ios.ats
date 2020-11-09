@@ -8,10 +8,10 @@ created -> 2020-10-17 at 16:41:42
 
 [ats-actions]
 
-channel-start -> newChannel -> mobile://192.168.0.35:8081/com.apple.MobileSMS
+channel-start -> newChannel -> mobile://192.168.0.35:8080/com.apple.MobileSMS
 click -> Button [identifier = composeButton]
 click -> Button [identifier = ComposeRecipientAddButton, innerText = Ajouter le contact]
-click -> StaticText [innerText = Annuler]
+click -> Button [innerText = Annuler]
 click -> TextField [identifier = messageBodyField]
 click -> Key [innerText = H]
 click -> Key [innerText = e]
@@ -19,6 +19,7 @@ click -> Key [innerText = l]
 click -> Key [innerText = l]
 click -> Key [innerText = o]
 click -> Button [identifier = sendButton]
+check-count -> 1 -> @IMAGE [error = 0.5%, source = ios/message_ios/20201061500.png]
 //keyboard -> Hello From Agilitest -> TextField [identifier = messageBodyField]
 //click -> Button [identifier = sendButton]
 //check-count -> 1 -> @IMAGE [error = 0.5%, source = ios/calc_ios/20209917326.png]
