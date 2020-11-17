@@ -71,6 +71,7 @@
             <suiteXmlFile>src/exec/api.xml</suiteXmlFile>
             <suiteXmlFile>src/exec/default.xml</suiteXmlFile>
             <suiteXmlFile>src/exec/bug.xml</suiteXmlFile>
+            <suiteXmlFile>src/exec/SpecialFeatures.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>
