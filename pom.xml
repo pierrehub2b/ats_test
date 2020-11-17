@@ -69,6 +69,8 @@
             <suiteXmlFile>src/exec/desktop.xml</suiteXmlFile>
             <suiteXmlFile>src/exec/websitecheck.xml</suiteXmlFile>
             <suiteXmlFile>src/exec/api.xml</suiteXmlFile>
+            <suiteXmlFile>src/exec/default.xml</suiteXmlFile>
+            <suiteXmlFile>src/exec/bug.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>
@@ -95,7 +97,7 @@
     <dependency>
       <groupId>com.actiontestscript</groupId>
       <artifactId>ats-automated-testing</artifactId>
-      <version>1.8.7</version>
+      <version>1.8.8</version>
     </dependency>
   </dependencies>
 </project>

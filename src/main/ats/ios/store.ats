@@ -8,4 +8,25 @@ created -> 2020-11-06 at 15:26:42
 
 [ats-actions]
 
-channel-start -> newChannel -> chrome
+channel-start -> store -> mobile://192.168.0.4:8080/com.apple.mobilecal
+click -> @IMAGE [error = 0.5%, source = ios/store/2020101016112.png]
+click -> Button [innerText = Search]
+keyboard -> 25 december -> SearchField [innerText = Search]
+click -> @IMAGE [error = 0.5%, source = ios/store/2020101015580.png]
+check-count [try = -10] -> 1 -> @IMAGE [error = 0.5%, source = ios/store/2020109174819.png]
+click [try = -10] -> @IMAGE [@index = 2, error = 0.5%, source = ios/store/2020109175048.png]
+click -> @IMAGE [error = 0.5%, source = ios/store/2020109175543.png]
+button -> soundDown
+comment -> script -> on / off
+property-set -> bluetoothEnabled -> true
+comment -> script -> no actions
+property-set -> bluetoothEnabled -> false
+comment -> summary -> <i>comment ...</i>
+click -> Button [innerText = Jeux]
+click -> Button [innerText = Apps]
+click -> Button [innerText = Arcade]
+click -> Button [innerText = Aujourd’hui]
+//click -> @IMAGE [error = 0.5%, source = ios/store/202010916133.png]
+//click -> @IMAGE [error = 0.5%, source = ios/store/2020109161329.png]
+//click -> @IMAGE [error = 0.5%, source = ios/store/2020109161359.png]
+channel-close -> store

@@ -4,19 +4,8 @@
   <test name="testMain" preserve-order="true">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="android.emulateur.GenyMotion_S9_andoid9_calendar"/>
-      <class name="android.emulateur.GenyMotion_S9_andoid9_horloge"/>
-      <class name="android.emulateur.GenyMotion_S9_andoid9_message"/>
-      <class name="android.emulateur.GenyMotion_S9_android9_calculator"/>
-      <class name="android.emulateur.GenyMotion_S9_android9_contact"/>
-      <class name="API_editeur"/>
-      <class name="appels_conditionnes.parent"/>
-      <class name="desktop_editeur"/>
-      <class name="password.passwords"/>
       <class name="scripting.scripting"/>
-      <class name="special_features.check_null_versus_zero"/>
-      <class name="special_features.random_input"/>
-      <class name="Web_editeur"/>
+      <class name="special_features.iterations"/>
     </classes>
   </test>
 </suite>
