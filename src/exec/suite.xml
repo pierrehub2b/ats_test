@@ -1,5 +1,9 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="suite" verbose="0">
   <parameter name="ats.log.level" value="silent"/>
-  <test name="testMain" preserve-order="true"/>
+  <test name="testMain" preserve-order="true">
+    <classes>
+      <class name="special_features.iterations"/>
+    </classes>
+  </test>
 </suite>
