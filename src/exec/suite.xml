@@ -4,6 +4,7 @@
   <test name="testMain" preserve-order="true">
     <classes>
       <class name="special_features.iterations"/>
+      <class name="web.calc_web"/>
     </classes>
   </test>
 </suite>
