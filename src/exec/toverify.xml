@@ -4,6 +4,7 @@
   <test name="testMain" preserve-order="true">
     <parameter name="browser" value="chrome"/>
     <classes>
+      <class name="scripting.scripting"/>
       <class name="special_features.iterations"/>
     </classes>
   </test>
