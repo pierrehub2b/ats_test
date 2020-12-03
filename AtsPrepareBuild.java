@@ -1,8 +1,10 @@
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
@@ -26,7 +28,7 @@ public class AtsPrepareBuild {
 		System.out.println("[Ats-Tools] " + data);
 	}
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, InterruptedException {
 
 		deleteDirectory(Paths.get("target"));
 		deleteDirectory(Paths.get("test-output"));
@@ -41,6 +43,29 @@ public class AtsPrepareBuild {
 		createEnVar(sj, "jdk", atsTools);
 
 		Files.write(Paths.get("build.properties"), sj.toString().getBytes(), StandardOpenOption.CREATE);
+		
+		
+		final Process p = Runtime.getRuntime().exec("java -cp C:\\Users\\Administrator\\.actiontestscript\\tools\\ats-1.9.0\\* -prj " + Paths.get("").toAbsolutePath().toString() + " -dest target/generated -force -suites suitePH");
+
+		new Thread(new Runnable() {
+		    public void run() {
+		        BufferedReader input = new BufferedReader(new InputStreamReader(p.getInputStream()));
+		        String line = null;
+
+		        try {
+		            while ((line = input.readLine()) != null)
+		                System.out.println(line);
+		        } catch (IOException e) {
+		            e.printStackTrace();
+		        }
+		    }
+		}).start();
+
+		p.waitFor();
+		
+		
+		
+		
 	}
 
 	private static void createEnVar(StringJoiner sj, String toolName, Path atsTools) throws IOException {
