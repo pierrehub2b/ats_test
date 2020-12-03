@@ -46,10 +46,6 @@ public class AtsLauncher {
 		printLog("Using tools folder : " + atsTools.toString());
 
 		List<String> envList = new ArrayList<String>();
-		Map<String, String> userEnv = System.getenv();
-		for (String envName : userEnv.keySet()) {
-			envList.add(envName + "=" + userEnv.get(envName));
-		}
 		
 		String[] env = createEnVar("jasper", atsTools);
 		envList.add(env[0] + "=" + env[1]);
@@ -64,10 +60,14 @@ public class AtsLauncher {
 		
 		Files.write(Paths.get("build.properties"), String.join("\n", envList).getBytes(), StandardOpenOption.CREATE);
 			
+		Map<String, String> userEnv = System.getenv();
+		for (String envName : userEnv.keySet()) {
+			envList.add(0, envName + "=" + userEnv.get(envName));
+		}
 		
-		Path tempFolder = Paths.get(System.getProperty("java.io.tmpdir"));
-		envList.add("TMP=" + tempFolder.toString());
-		envList.add("TEMP=" + tempFolder.toString());
+		//Path tempFolder = Paths.get(System.getProperty("java.io.tmpdir"));
+		//envList.add("TMP=" + tempFolder.toString());
+		//envList.add("TEMP=" + tempFolder.toString());
 				
 		File currentDirectory = Paths.get("").toAbsolutePath().toFile();
 		String[] envArray = envList.toArray(new String[envList.size()]);
@@ -129,7 +129,6 @@ public class AtsLauncher {
     }
 	
 	private static void execute(String commandLine, String[] envp, File currentDir) throws IOException, InterruptedException {
-		System.out.println(commandLine);
 		final Process p = Runtime.getRuntime().exec(commandLine, envp, currentDir);
 		new Thread(new Runnable() {
 		    public void run() {
