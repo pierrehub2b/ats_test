@@ -34,8 +34,18 @@ public class AtsLauncher {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 
-		String suiteFiles = "suitePH";
+		String suiteFiles = "suite";
 		String reportLevel = "1";
+		
+		for(int i=0; i<args.length; i++) {
+			if(args[i].startsWith("--suites=")) {
+				suiteFiles = args[i].substring(9);
+			}else if(args[i].startsWith("--reportLevel=")) {
+				reportLevel = args[i].substring(14);
+			}else if(args[i].startsWith("--toolsUrl=")) {
+				atsToolsUrl = args[i].substring(11);
+			}
+		}		
 				
 		deleteDirectory(Paths.get("target"));
 		deleteDirectory(Paths.get("test-output"));
