@@ -132,7 +132,7 @@ public class AtsLauncher {
 	
 	private static void execute(String commandLine, String[] envp, File currentDir) throws IOException, InterruptedException {
 				System.out.println(commandLine);
-		final Process p = Runtime.getRuntime().exec(commandLine, envp, currentDir);
+		final Process p = Runtime.getRuntime().exec(commandLine, null, currentDir);
 
 		new Thread(new Runnable() {
 		    public void run() {
