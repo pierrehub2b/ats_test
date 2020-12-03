@@ -26,15 +26,14 @@ import java.util.zip.ZipInputStream;
 
 public class AtsLauncher {
 
-	private static String atsToolsUrl = "http://www.actiontestscript.com";
-	private static String suiteFiles = "suite";
-	
 	private static void printLog(String data) {
 		System.out.println("[ATS-TOOLS] " + data);
 	}
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 
+		String atsToolsUrl = "http://www.actiontestscript.com";
+		String suiteFiles = "suite";
 		String reportLevel = "0";
 		
 		for(int i=0; i<args.length; i++) {
@@ -57,12 +56,12 @@ public class AtsLauncher {
 
 		List<String> envList = new ArrayList<String>();
 		
-		createEnVar(envList, "jasper", atsTools);
+		createEnVar(atsToolsUrl, envList, "jasper", atsTools);
 		
-		String[] env = createEnVar(envList, "ats", atsTools);
+		String[] env = createEnVar(atsToolsUrl, envList, "ats", atsTools);
 		String atsHomePath = Paths.get(env[1]).toAbsolutePath().toString();
 		
-		env = createEnVar(envList, "jdk", atsTools);
+		env = createEnVar(atsToolsUrl, envList, "jdk", atsTools);
 		String jdkHomePath = Paths.get(env[1]).toAbsolutePath().toString();
 		
 		Files.write(Paths.get("build.properties"), String.join("\n", envList).getBytes(), StandardOpenOption.TRUNCATE_EXISTING);
@@ -148,8 +147,8 @@ public class AtsLauncher {
 		p.waitFor();
 	}
 	
-	private static String[] createEnVar(List<String> envList, String toolName, Path atsTools) throws IOException {
-		final String toolPath = installTool(atsTools, toolName);
+	private static String[] createEnVar(String atsToolsUrl, List<String> envList, String toolName, Path atsTools) throws IOException {
+		final String toolPath = installTool(atsToolsUrl + "/tools/", atsTools, toolName);
 		final String envName = toolName.toUpperCase() + "_HOME";
 
 		printLog("Set environment variable [" + envName + "] to " + toolPath);
@@ -159,9 +158,9 @@ public class AtsLauncher {
 		return new String[]{envName, toolPath};
 	}
 
-	private static String installTool(Path atsTools, String toolName) throws IOException {
+	private static String installTool(String atsToolsUrl, Path atsTools, String toolName) throws IOException {
 
-		final URLConnection connection = new URL(atsToolsUrl + "/tools/" + toolName + ".zip").openConnection();
+		final URLConnection connection = new URL(atsToolsUrl + toolName + ".zip").openConnection();
 		final String lastModified = connection.getHeaderField("Last-Modified");
 
 		final String toolPath = checkTool(lastModified, atsTools, toolName);
@@ -172,7 +171,7 @@ public class AtsLauncher {
 		printLog("Unpacking tool [" + toolName + "] to folder : " + atsTools.toString());
 
 		final Path tmpZip = Files.createTempDirectory("atsTool_").resolve(toolName + ".zip");
-		final InputStream in = new URL(atsToolsUrl + "/tools/" + toolName + ".zip").openStream();
+		final InputStream in = new URL(atsToolsUrl + toolName + ".zip").openStream();
 		Files.copy(in, tmpZip, StandardCopyOption.REPLACE_EXISTING);
 
 		String newToolPath = null;
@@ -225,11 +224,15 @@ public class AtsLauncher {
 		if(fs != null) {
 			for(File f : fs) {
 				if(f.isDirectory()) {
-					final Path ts = f.toPath().resolve(".timestamp");
-					if(Files.exists(ts) && lastModified.equals(Files.readString(ts, StandardCharsets.UTF_8))) {
+					if(lastModified == null) {
 						return f.getAbsolutePath();
+					}else {
+						final Path ts = f.toPath().resolve(".timestamp");
+						if(Files.exists(ts) && lastModified.equals(Files.readString(ts, StandardCharsets.UTF_8))) {
+							return f.getAbsolutePath();
+						}
+						deleteDirectory(f.toPath());
 					}
-					deleteDirectory(f.toPath());
 				}
 			}
 		}
