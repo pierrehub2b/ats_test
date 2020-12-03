@@ -72,7 +72,7 @@ public class AtsLauncher {
 
 		if(buildOnly) {
 			
-			Files.write(Paths.get("build.properties"), String.join("\n", envList).getBytes(), StandardOpenOption.TRUNCATE_EXISTING);
+			Files.write(Paths.get("build.properties"), String.join("\n", envList).getBytes(), StandardOpenOption.CREATE);
 		
 		}else {
 
