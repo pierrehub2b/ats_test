@@ -72,6 +72,7 @@
             <suiteXmlFile>src/exec/default.xml</suiteXmlFile>
             <suiteXmlFile>src/exec/bug.xml</suiteXmlFile>
             <suiteXmlFile>src/exec/SpecialFeatures.xml</suiteXmlFile>
+            <suiteXmlFile>src/exec/ios14.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>

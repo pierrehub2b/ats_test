@@ -8,8 +8,8 @@ created -> 2020-10-09 at 16:44:10
 
 [ats-actions]
 
-channel-start -> newChannel -> mobile://192.168.0.35:8080/com.apple.calculator
-click -> Button [innerText = effacer]
+channel-start -> newChannel -> mobile://192.168.0.35:8081/com.apple.calculator
+click -> Button [innerText = tout effacer]
 click -> Button [innerText = 8]
 click -> Button [innerText = multiplier]
 click -> Button [innerText = 8]
