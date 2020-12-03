@@ -47,16 +47,13 @@ public class AtsLauncher {
 
 		List<String> envList = new ArrayList<String>();
 		
-		String[] env = createEnVar("jasper", atsTools);
-		envList.add(env[0] + "=" + env[1]);
+		createEnVar(envList, "jasper", atsTools);
 		
-		env = createEnVar("ats", atsTools);
+		String[] env = createEnVar(envList, "ats", atsTools);
 		String atsHomePath = Paths.get(env[1]).toAbsolutePath().toString();
-		envList.add(env[0] + "=" + env[1]);
 		
-		env = createEnVar("jdk", atsTools);
+		env = createEnVar(envList, "jdk", atsTools);
 		String jdkHomePath = Paths.get(env[1]).toAbsolutePath().toString();
-		envList.add(env[0] + "=" + env[1]);
 		
 		Files.write(Paths.get("build.properties"), String.join("\n", envList).getBytes(), StandardOpenOption.CREATE);
 			
@@ -64,10 +61,6 @@ public class AtsLauncher {
 		for (String envName : userEnv.keySet()) {
 			envList.add(0, envName + "=" + userEnv.get(envName));
 		}
-		
-		//Path tempFolder = Paths.get(System.getProperty("java.io.tmpdir"));
-		//envList.add("TMP=" + tempFolder.toString());
-		//envList.add("TEMP=" + tempFolder.toString());
 				
 		File currentDirectory = Paths.get("").toAbsolutePath().toFile();
 		String[] envArray = envList.toArray(new String[envList.size()]);
@@ -145,11 +138,13 @@ public class AtsLauncher {
 		p.waitFor();
 	}
 	
-	private static String[] createEnVar(String toolName, Path atsTools) throws IOException {
+	private static String[] createEnVar(List<String> envList, String toolName, Path atsTools) throws IOException {
 		final String toolPath = installTool(atsTools, toolName);
 		final String envName = toolName.toUpperCase() + "_HOME";
 
 		printLog("Set environment variable [" + envName + "] to " + toolPath);
+		
+		envList.add(envName + "=" + toolPath);
 		
 		return new String[]{envName, toolPath};
 	}
