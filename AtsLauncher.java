@@ -55,7 +55,7 @@ public class AtsLauncher {
 		env = createEnVar(envList, "jdk", atsTools);
 		String jdkHomePath = Paths.get(env[1]).toAbsolutePath().toString();
 		
-		Files.write(Paths.get("build.properties"), String.join("\n", envList).getBytes(), StandardOpenOption.CREATE);
+		Files.write(Paths.get("build.properties"), String.join("\n", envList).getBytes(), StandardOpenOption.TRUNCATE_EXISTING);
 			
 		Map<String, String> userEnv = System.getenv();
 		for (String envName : userEnv.keySet()) {
