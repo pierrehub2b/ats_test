@@ -41,6 +41,7 @@ public class AtsLauncher {
 		for(int i=0; i<args.length; i++) {
 			if(args[i].startsWith("--buildEnvironment")) {
 				buildOnly = true;
+				break;
 			}else {
 				if(args[i].startsWith("--suites=")) {
 					suiteFiles = args[i].substring(9);
@@ -71,9 +72,9 @@ public class AtsLauncher {
 		String jdkHomePath = Paths.get(env[1]).toAbsolutePath().toString();
 
 		if(buildOnly) {
-			
-			Files.write(Paths.get("build.properties"), String.join("\n", envList).getBytes(), StandardOpenOption.CREATE);
-		
+			Path buildProperties = Paths.get("build.properties");
+			Files.deleteIfExists(buildProperties);
+			Files.write(buildProperties, String.join("\n", envList).getBytes(), StandardOpenOption.CREATE);
 		}else {
 
 			Map<String, String> userEnv = System.getenv();
