@@ -40,12 +40,6 @@ public class AtsLauncher {
 		deleteDirectory(Paths.get("test-output"));
 		
 		final Path atsFolder = Paths.get(System.getProperty("user.home"),".actiontestscript");
-		final Path atsTemp = atsFolder.resolve("temp");
-		
-		if(Files.exists(atsTemp)) {
-			deleteDirectory(atsTemp);
-		}
-		atsTemp.toFile().mkdirs();
 
 		final Path atsTools = atsFolder.resolve("tools");
 		printLog("Using tools folder : " + atsTools.toString());
@@ -65,8 +59,10 @@ public class AtsLauncher {
 		
 		Files.write(Paths.get("build.properties"), String.join("\n", envList).getBytes(), StandardOpenOption.CREATE);
 			
-		envList.add("TMP=" + atsTemp.toString());
-		envList.add("TEMP=" + atsTemp.toString());
+		
+		Path tempFolder = Paths.get(System.getProperty("java.io.tmpdir"));
+		envList.add("TMP=" + tempFolder.toString());
+		envList.add("TEMP=" + tempFolder.toString());
 				
 		File currentDirectory = Paths.get("").toAbsolutePath().toFile();
 		String[] envArray = envList.toArray(new String[envList.size()]);
@@ -126,14 +122,11 @@ public class AtsLauncher {
     }
 	
 	private static void execute(String commandLine, String[] envp, File currentDir) throws IOException, InterruptedException {
-				System.out.println(commandLine);
 		final Process p = Runtime.getRuntime().exec(commandLine, envp, currentDir);
-
 		new Thread(new Runnable() {
 		    public void run() {
 		        BufferedReader input = new BufferedReader(new InputStreamReader(p.getInputStream()));
 		        String line = null;
-
 		        try {
 		            while ((line = input.readLine()) != null)
 		                System.out.println(line);
