@@ -18,6 +18,7 @@ import java.nio.file.StandardOpenOption;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.StringJoiner;
 import java.util.stream.Stream;
 import java.util.zip.ZipEntry;
@@ -28,7 +29,7 @@ public class AtsLauncher {
 	private static String atsToolsUrl = "http://www.actiontestscript.com";
 
 	private static void printLog(String data) {
-		System.out.println("[Ats-Tools] " + data);
+		System.out.println("[ATS-TOOLS] " + data);
 	}
 
 	public static void main(String[] args) throws IOException, InterruptedException {
@@ -45,6 +46,10 @@ public class AtsLauncher {
 		printLog("Using tools folder : " + atsTools.toString());
 
 		List<String> envList = new ArrayList<String>();
+		Map<String, String> userEnv = System.getenv();
+		for (String envName : userEnv.keySet()) {
+			envList.add(envName + "=" + userEnv.get(envName));
+		}
 		
 		String[] env = createEnVar("jasper", atsTools);
 		envList.add(env[0] + "=" + env[1]);
@@ -66,7 +71,8 @@ public class AtsLauncher {
 				
 		File currentDirectory = Paths.get("").toAbsolutePath().toFile();
 		String[] envArray = envList.toArray(new String[envList.size()]);
-				
+			
+		printLog("Generate java files : " + Paths.get("target", "generated").toString());
 		execute(
 				jdkHomePath + "/bin/java.exe -cp " + atsHomePath + "/libs/* com.ats.generator.Generator -prj " + currentDirectory.getAbsolutePath() + " -dest target/generated -force -suites " + suiteFiles, 
 				envArray, 
@@ -82,12 +88,13 @@ public class AtsLauncher {
 		
 		copyFolder(Paths.get("src", "assets"), classFolderAssets);
 		
+		printLog("Compile classes : " + Paths.get("target", "classes").toString());
 		Files.write(Paths.get("target","generated", "JavaClasses"), files.toString().getBytes(), StandardOpenOption.CREATE);
 		execute(jdkHomePath + "/bin/javac.exe -cp " + atsHomePath + "/libs/* -d " + classFolder.toString() + " -sourcepath @JavaClasses", 
 				envArray, 
 				Paths.get("target", "generated").toAbsolutePath().toFile());
 
-		
+		printLog("Launch suites execution : " + suiteFiles);
 		execute(jdkHomePath + "/bin/java.exe -Doutput-folder=target/ats-output -Dats-report=" + reportLevel + " -cp " + atsHomePath + "/libs/*" + File.pathSeparator + "target/classes" + File.pathSeparator + "lib/* org.testng.TestNG target/suites.xml", 
 				envArray, 
 				currentDirectory);
@@ -122,6 +129,7 @@ public class AtsLauncher {
     }
 	
 	private static void execute(String commandLine, String[] envp, File currentDir) throws IOException, InterruptedException {
+		System.out.println(commandLine);
 		final Process p = Runtime.getRuntime().exec(commandLine, envp, currentDir);
 		new Thread(new Runnable() {
 		    public void run() {
