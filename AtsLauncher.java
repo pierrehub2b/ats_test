@@ -25,7 +25,7 @@ import java.util.zip.ZipInputStream;
 
 public class AtsLauncher {
 
-	private static final String atsToolsUrl = "http://www.actiontestscript.com";
+	private static String atsToolsUrl = "http://www.actiontestscript.com";
 
 	private static void printLog(String data) {
 		System.out.println("[Ats-Tools] " + data);
@@ -35,8 +35,7 @@ public class AtsLauncher {
 
 		String suiteFiles = "suitePH";
 		String reportLevel = "1";
-		
-		
+				
 		deleteDirectory(Paths.get("target"));
 		deleteDirectory(Paths.get("test-output"));
 		
@@ -46,6 +45,7 @@ public class AtsLauncher {
 		if(Files.exists(atsTemp)) {
 			deleteDirectory(atsTemp);
 		}
+		atsTemp.toFile().mkdirs();
 
 		final Path atsTools = atsFolder.resolve("tools");
 		printLog("Using tools folder : " + atsTools.toString());
@@ -65,11 +65,8 @@ public class AtsLauncher {
 		
 		Files.write(Paths.get("build.properties"), String.join("\n", envList).getBytes(), StandardOpenOption.CREATE);
 			
-		File temp = atsTemp.toFile();
-		temp.mkdirs();
-		
-		envList.add("TMP=" + temp.getAbsolutePath());
-		envList.add("TEMP=" + temp.getAbsolutePath());
+		envList.add("TMP=" + atsTemp.toString());
+		envList.add("TEMP=" + atsTemp.toString());
 				
 		File currentDirectory = Paths.get("").toAbsolutePath().toFile();
 		String[] envArray = envList.toArray(new String[envList.size()]);
@@ -93,8 +90,6 @@ public class AtsLauncher {
 		execute(jdkHomePath + "/bin/javac.exe -cp " + atsHomePath + "/libs/* -d " + classFolder.toString() + " -sourcepath @JavaClasses", 
 				envArray, 
 				Paths.get("target", "generated").toAbsolutePath().toFile());
-
-
 
 		
 		execute(jdkHomePath + "/bin/java.exe -Doutput-folder=target/ats-output -Dats-report=" + reportLevel + " -cp " + atsHomePath + "/libs/*" + File.pathSeparator + "target/classes" + File.pathSeparator + "lib/* org.testng.TestNG target/suites.xml", 
@@ -132,7 +127,7 @@ public class AtsLauncher {
 	
 	private static void execute(String commandLine, String[] envp, File currentDir) throws IOException, InterruptedException {
 				System.out.println(commandLine);
-		final Process p = Runtime.getRuntime().exec(commandLine, null, currentDir);
+		final Process p = Runtime.getRuntime().exec(commandLine, envp, currentDir);
 
 		new Thread(new Runnable() {
 		    public void run() {
