@@ -16,11 +16,14 @@ import java.nio.file.SimpleFileVisitor;
 import java.nio.file.StandardCopyOption;
 import java.nio.file.StandardOpenOption;
 import java.nio.file.attribute.BasicFileAttributes;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.StringJoiner;
+import java.util.stream.Stream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-public class AtsPrepareBuild {
+public class AtsLauncher {
 
 	private static final String atsToolsUrl = "http://www.actiontestscript.com";
 
@@ -30,22 +33,106 @@ public class AtsPrepareBuild {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 
+		String suiteFiles = "suitePH";
+		String reportLevel = "1";
+		
+		
 		deleteDirectory(Paths.get("target"));
 		deleteDirectory(Paths.get("test-output"));
+		
+		final Path atsFolder = Paths.get(System.getProperty("user.home"),".actiontestscript");
+		final Path atsTemp = atsFolder.resolve("temp");
+		
+		if(Files.exists(atsTemp)) {
+			deleteDirectory(atsTemp);
+		}
 
-		final Path atsTools = Paths.get(System.getProperty("user.home"),".actiontestscript", "tools");
+		final Path atsTools = atsFolder.resolve("tools");
 		printLog("Using tools folder : " + atsTools.toString());
 
-		final StringJoiner sj = new StringJoiner("\n");
-
-		createEnVar(sj, "jasper", atsTools);
-		createEnVar(sj, "ats", atsTools);
-		createEnVar(sj, "jdk", atsTools);
-
-		Files.write(Paths.get("build.properties"), sj.toString().getBytes(), StandardOpenOption.CREATE);
+		List<String> envList = new ArrayList<String>();
 		
+		String[] env = createEnVar("jasper", atsTools);
+		envList.add(env[0] + "=" + env[1]);
 		
-		final Process p = Runtime.getRuntime().exec("java -cp C:\\Users\\Administrator\\.actiontestscript\\tools\\ats-1.9.0\\* -prj " + Paths.get("").toAbsolutePath().toString() + " -dest target/generated -force -suites suitePH");
+		env = createEnVar("ats", atsTools);
+		String atsHomePath = Paths.get(env[1]).toAbsolutePath().toString();
+		envList.add(env[0] + "=" + env[1]);
+		
+		env = createEnVar("jdk", atsTools);
+		String jdkHomePath = Paths.get(env[1]).toAbsolutePath().toString();
+		envList.add(env[0] + "=" + env[1]);
+		
+		Files.write(Paths.get("build.properties"), String.join("\n", envList).getBytes(), StandardOpenOption.CREATE);
+			
+		File temp = atsTemp.toFile();
+		temp.mkdirs();
+		
+		envList.add("TMP=" + temp.getAbsolutePath());
+		envList.add("TEMP=" + temp.getAbsolutePath());
+				
+		File currentDirectory = Paths.get("").toAbsolutePath().toFile();
+		String[] envArray = envList.toArray(new String[envList.size()]);
+				
+		execute(
+				jdkHomePath + "/bin/java.exe -cp " + atsHomePath + "/libs/* com.ats.generator.Generator -prj " + currentDirectory.getAbsolutePath() + " -dest target/generated -force -suites " + suiteFiles, 
+				envArray, 
+				currentDirectory);
+				
+		File sourceDir = Paths.get("target", "generated").toFile();
+		StringJoiner files = new StringJoiner("\n");
+		listJavaClasses(files, sourceDir.getAbsolutePath().length()+1, sourceDir);
+		
+		Path classFolder = Paths.get("target", "classes").toAbsolutePath();
+		Path classFolderAssets = classFolder.resolve("assets");
+		classFolderAssets.toFile().mkdirs();
+		
+		copyFolder(Paths.get("src", "assets"), classFolderAssets);
+		
+		Files.write(Paths.get("target","generated", "JavaClasses"), files.toString().getBytes(), StandardOpenOption.CREATE);
+		execute(jdkHomePath + "/bin/javac.exe -cp " + atsHomePath + "/libs/* -d " + classFolder.toString() + " -sourcepath @JavaClasses", 
+				envArray, 
+				Paths.get("target", "generated").toAbsolutePath().toFile());
+
+
+
+		
+		execute(jdkHomePath + "/bin/java.exe -Doutput-folder=target/ats-output -Dats-report=" + reportLevel + " -cp " + atsHomePath + "/libs/*" + File.pathSeparator + "target/classes" + File.pathSeparator + "lib/* org.testng.TestNG target/suites.xml", 
+				envArray, 
+				currentDirectory);
+
+	}
+	
+	private static void copyFolder(Path src, Path dest) throws IOException {
+        try (Stream<Path> stream = Files.walk(src)) {
+            stream.forEach(source -> copy(source, dest.resolve(src.relativize(source))));
+        }
+    }
+ 
+    private static void copy(Path source, Path dest) {
+        try {
+            Files.copy(source, dest, StandardCopyOption.REPLACE_EXISTING);
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage(), e);
+        }
+    }
+	
+    private static void listJavaClasses(StringJoiner list, int subLen, File directory) {
+        File[] fList = directory.listFiles();
+        for (File file : fList) {
+            if (file.isFile()) {
+            	if(file.getName().endsWith(".java")) {
+            		list.add(file.getAbsolutePath().substring(subLen).replaceAll("\\\\", "/"));
+            	}
+            } else if (file.isDirectory()) {
+            	listJavaClasses(list, subLen, file);
+            }
+        }
+    }
+	
+	private static void execute(String commandLine, String[] envp, File currentDir) throws IOException, InterruptedException {
+				System.out.println(commandLine);
+		final Process p = Runtime.getRuntime().exec(commandLine, envp, currentDir);
 
 		new Thread(new Runnable() {
 		    public void run() {
@@ -60,24 +147,16 @@ public class AtsPrepareBuild {
 		        }
 		    }
 		}).start();
-
 		p.waitFor();
-		
-		
-		
-		
 	}
-
-	private static void createEnVar(StringJoiner sj, String toolName, Path atsTools) throws IOException {
+	
+	private static String[] createEnVar(String toolName, Path atsTools) throws IOException {
 		final String toolPath = installTool(atsTools, toolName);
 		final String envName = toolName.toUpperCase() + "_HOME";
 
 		printLog("Set environment variable [" + envName + "] to " + toolPath);
-
-		sj.add(envName + "=" + toolPath);
-		if("jdk".equals(toolName)) {
-			sj.add("JAVA_HOME=" + toolPath);
-		}
+		
+		return new String[]{envName, toolPath};
 	}
 
 	private static String installTool(Path atsTools, String toolName) throws IOException {
@@ -157,7 +236,7 @@ public class AtsPrepareBuild {
 		return null;
 	}
 
-	public static File newFile(File destinationDir, ZipEntry zipEntry) throws IOException {
+	private static File newFile(File destinationDir, ZipEntry zipEntry) throws IOException {
 		final File destFile = new File(destinationDir, zipEntry.getName());
 		if (destFile.getCanonicalPath().startsWith(destinationDir.getCanonicalPath() + File.separator)) {
 			return destFile;
@@ -165,7 +244,7 @@ public class AtsPrepareBuild {
 		return null;
 	}
 
-	public static void deleteDirectory(Path directory) throws IOException
+	private static void deleteDirectory(Path directory) throws IOException
 	{
 		if (Files.exists(directory))
 		{
