@@ -37,11 +37,11 @@ public class AtsLauncher {
 		String reportLevel = "0";
 		
 		for(int i=0; i<args.length; i++) {
-			if(args[i].startsWith("--suites=")) {
+			if(args[i].startsWith("-suiteXmlFiles=")) {
 				suiteFiles = args[i].substring(9);
-			}else if(args[i].startsWith("--reportLevel=")) {
+			}else if(args[i].startsWith("-ats-report=")) {
 				reportLevel = args[i].substring(14);
-			}else if(args[i].startsWith("--toolsUrl=")) {
+			}else if(args[i].startsWith("-toolsUrl=")) {
 				atsToolsUrl = args[i].substring(11);
 			}
 		}		
