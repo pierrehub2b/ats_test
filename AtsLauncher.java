@@ -39,16 +39,16 @@ public class AtsLauncher {
 		String reportLevel = "1";
 
 		for(int i=0; i<args.length; i++) {
-			if(args[i].startsWith("--buildEnvironment")) {
+			if(args[i].startsWith("-buildEnvironment")) {
 				buildOnly = true;
 				break;
 			}else {
 				if(args[i].startsWith("-suiteXmlFiles=")) {
-					suiteFiles = args[i].substring(9);
+					suiteFiles = args[i].substring(15);
 				}else if(args[i].startsWith("-ats-report=")) {
-					reportLevel = args[i].substring(14);
+					reportLevel = args[i].substring(12);
 				}else if(args[i].startsWith("-toolsUrl=")) {
-					atsToolsUrl = args[i].substring(11);
+					atsToolsUrl = args[i].substring(10);
 				}
 			}
 		}		
