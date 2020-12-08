@@ -8,4 +8,4 @@ created -> 2020-11-05 at 15:45:20
 
 [ats-actions]
 
-subscript -> test_axuys
+subscript -> test_axuys -> assets:///data/names.csv

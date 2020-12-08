@@ -10,17 +10,18 @@ var -> ip_port -> $env(android_ip_port)
 [ats-actions]
 
 channel-start -> horloge -> mobile://$env(android_ip_port)/com.android.deskclock
-property -> text => date -> TextView [viewId = date]
+comment -> summary -> app-name = $sys(app-name)<br>app-version = $sys(app-version)<br>manchine-name = $sys(machine-name)<br>user-name = $sys(user-name)<br>os-name = $sys(os-name)
+property-get -> text => date -> TextView [viewId = date]
 click -> ImageButton [viewId = fab]
 click -> ImageView [viewId = search_button]
 keyboard -> paris -> EditText [viewId = search_src_text]
 click -> CheckBox [viewId = city_onoff]
 click -> ImageButton [description = Navigate up]
-property -> text => time -> TextView [viewId = digital_clock] -> LinearLayout [innerText =~ Paris.*]
+property-get -> text => time -> TextView [viewId = digital_clock] -> LinearLayout [innerText =~ Paris.*]
 click -> TextView [innerText = STOPWATCH, viewId = text1]
 click -> ImageButton [viewId = fab]
-property -> text => timer -> TextView [viewId = stopwatch_time_text]
-property -> description => pause -> ImageButton [description = Pause]
+property-get -> text => timer -> TextView [viewId = stopwatch_time_text]
+property-get -> description => pause -> ImageButton [description = Pause]
 subscript [pause = Pause] -> android.emulateur.sousscripts.stop_timer => timer_stop
 click -> Button [viewId = left_button]
 check-property -> text = 0 -> TextView [viewId = stopwatch_time_text]

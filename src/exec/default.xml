@@ -9,8 +9,7 @@
     <parameter name="android_ip_port" value="192.168.0.50:8081"/>
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="special_features.random_input"/>
-      <class name="web.selection"/>
+      <class name="scripting.scripting"/>
     </classes>
   </test>
 </suite>

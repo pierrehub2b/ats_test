@@ -10,7 +10,6 @@
       <class name="android.emulateur.GenyMotion_S10_andoid10_horloge"/>
       <class name="android.emulateur.GenyMotion_S10_andoid10_message"/>
       <class name="android.emulateur.GenyMotion_S10_android10_contact"/>
-      <class name="android.emulateur.GenyMotion_S10_android10_WebviewTester"/>
     </classes>
   </test>
 </suite>
