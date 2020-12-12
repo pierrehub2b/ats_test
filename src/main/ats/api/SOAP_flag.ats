@@ -13,35 +13,36 @@ var -> Country_ISO_Code3 -> GB
 [ats-actions]
 
 channel-start -> soapAdd -> http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL
+comment -> summary -> app-name = $sys(app-name)<br>app-version = $sys(app-version)<br>manchine-name = $sys(machine-name)<br>user-name = $sys(user-name)<br>os-name = $sys(os-name)
 api-soap -> CountryISOCode -> <sCountryName>$var(Country1)</sCountryName>
 check-property -> value = ES -> ELEMENT [name = CountryISOCodeResult]
-property -> value => Country_ISO_Code1 -> ELEMENT [name = CountryISOCodeResult]
+property-get -> value => Country_ISO_Code1 -> ELEMENT [name = CountryISOCodeResult]
 api-soap -> CapitalCity -> <sCountryISOCode>$var(Country_ISO_Code1)</sCountryISOCode>
-property -> value => Capital1 -> ELEMENT [name = CapitalCityResult]
+property-get -> value => Capital1 -> ELEMENT [name = CapitalCityResult]
 api-soap -> CountryFlag -> <sCountryISOCode>$var(Country_ISO_Code1)</sCountryISOCode>
-property -> value => flag1 -> ELEMENT [name = CountryFlagResult]
+property-get -> value => flag1 -> ELEMENT [name = CountryFlagResult]
 comment -> step -> <b>Capitale : </b> $var(Capital1)<br><b>Apperçu du drapeau</b> <br><img src="$var(flag1)" width="90" height="50"/>
 api-soap -> CapitalCity -> <sCountryISOCode>$var(Country_ISO_Code2)</sCountryISOCode>
-property -> value => Capital2 -> ELEMENT [name = CapitalCityResult]
+property-get -> value => Capital2 -> ELEMENT [name = CapitalCityResult]
 api-soap -> CountryFlag -> <sCountryISOCode>$var(Country_ISO_Code2)</sCountryISOCode>
-property -> value => flag2 -> ELEMENT [name = CountryFlagResult]
+property-get -> value => flag2 -> ELEMENT [name = CountryFlagResult]
 comment -> step -> <b>Capitale : </b> $var(Capital2)<br><b>Apperçu du drapeau</b><br><img src="$var(flag2)" width="90" height="50"/>
 api-soap -> CapitalCity -> <sCountryISOCode>$var(Country_ISO_Code3)</sCountryISOCode>
-property -> value => Capital3 -> ELEMENT [name = CapitalCityResult]
+property-get -> value => Capital3 -> ELEMENT [name = CapitalCityResult]
 api-soap -> CountryFlag -> <sCountryISOCode>$var(Country_ISO_Code3)</sCountryISOCode>
-property -> value => flag3 -> ELEMENT [name = CountryFlagResult]
+property-get -> value => flag3 -> ELEMENT [name = CountryFlagResult]
 comment -> step -> <b>Synthèse</b><br><br><b>Pays :</b> $var(Country_ISO_Code1)<br><b>Capitale : </b> $var(Capital1)<br><b>Drapeau : <img src="$var(flag1)" width="60" height="30"/><br><br><b>Pays :</b> $var(Country_ISO_Code2)<br><b>Capitale : </b> $var(Capital2)<br><b>Drapeau : <img src="$var(flag2)" width="60" height="30"/><br><br><b>Pays :</b> $var(Country_ISO_Code3)<br><b>Capitale : </b> $var(Capital3)<br><b>Drapeau : <img src="$var(flag3)" width="60" height="30"/>
 channel-close -> soapAdd
 channel-start -> Web_check -> chrome
 goto-url -> http://www.drapeauxdespays.fr/
 click -> BUTTON [id = search-toggler]
 keyboard -> $var(Country_ISO_Code1)$key(ENTER) -> INPUT [id = search-input]
-property -> src => Flag_Check1 -> IMG [alt =~ (?i)Drapeau.*] -> P [class = flag-detail]
+property-get -> src => Flag_Check1 -> IMG [alt =~ (?i)Drapeau.*] -> P [class = flag-detail]
 click -> BUTTON [id = search-toggler]
 keyboard -> $var(Country_ISO_Code2)$key(ENTER) -> INPUT [id = search-input]
-property -> src => Flag_Check2 -> IMG [alt =~ (?i)Drapeau.*] -> P [class = flag-detail]
+property-get -> src => Flag_Check2 -> IMG [alt =~ (?i)Drapeau.*] -> P [class = flag-detail]
 click -> BUTTON [id = search-toggler]
 keyboard -> $var(Country_ISO_Code3)$key(ENTER) -> INPUT [id = search-input]
-property -> src => Flag_Check3 -> IMG [alt =~ (?i)Drapeau.*] -> P [class = flag-detail]
+property-get -> src => Flag_Check3 -> IMG [alt =~ (?i)Drapeau.*] -> P [class = flag-detail]
 comment -> step -> <b>Synthèse de vérification</b><br><br><b>Pays :</b> $var(Country_ISO_Code1)<br><b>Capitale : </b> $var(Capital1)<br><b>Drapeau : <img src="$var(flag1)" width="50" height="30"/><br><b>Vérification : <img src="$var(Flag_Check1)" width="50" height="30"/><br><br><b>Pays :</b> $var(Country_ISO_Code2)<br><b>Capitale : </b> $var(Capital2)<br><b>Drapeau : <img src="$var(flag2)" width="50" height="30"/><br><b>Vérification : <img src="$var(Flag_Check2)" width="50" height="30"/><br><br><b>Pays :</b> $var(Country_ISO_Code3)<br><b>Capitale : </b> $var(Capital3)<br><b>Drapeau : <img src="$var(flag3)" width="50" height="30"/><br><b>Vérification : <img src="$var(Flag_Check3)" width="50" height="30"/>
 channel-close -> Web_check

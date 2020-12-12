@@ -10,10 +10,11 @@ var -> ip_port -> $env(android_ip_port)
 [ats-actions]
 
 channel-start -> calendar -> mobile://$env(android_ip_port)/com.android.calendar
-property -> text => date_MMMMyyyy -> TextView [viewId = top_button_date]
+comment -> summary -> app-name = $sys(app-name)<br>app-version = $sys(app-version)<br>manchine-name = $sys(machine-name)<br>user-name = $sys(user-name)<br>os-name = $sys(os-name)
+property-get -> text => date_MMMMyyyy -> TextView [viewId = top_button_date]
 click -> TextView [viewId = top_button_date]
 click -> TextView [innerText = Day, viewId = button_view]
-property -> text => date_MMMMddyyyy -> TextView [viewId = top_button_date]
+property-get -> text => date_MMMMddyyyy -> TextView [viewId = top_button_date]
 click -> TextView [viewId = top_button_date]
 click -> TextView [innerText = Month, viewId = button_view]
 check-count -> 1 -> LinearLayout [innerText = SUN MON TUE WED THU FRI SAT, viewId = month]
