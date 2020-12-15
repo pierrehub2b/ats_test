@@ -102,8 +102,8 @@ public class AtsLauncher {
 			copyFolder(Paths.get("src", "assets"), classFolderAssets);
 
 			printLog("Compile classes : " + Paths.get("target", "classes").toString());
-			Files.write(Paths.get("target","generated", "JavaClasses"), files.toString().getBytes(), StandardOpenOption.CREATE);
-			execute(jdkHomePath + "/bin/javac.exe -cp " + atsHomePath + "/libs/* -d " + classFolder.toString() + " -sourcepath @JavaClasses", 
+			Files.write(Paths.get("target","generated", "JavaClasses.list"), files.toString().getBytes(), StandardOpenOption.CREATE);
+			execute(jdkHomePath + "/bin/javac.exe -cp " + atsHomePath + "/libs/* -d " + classFolder.toString() + " @JavaClasses.list", 
 					envArray, 
 					Paths.get("target", "generated").toAbsolutePath().toFile());
 
