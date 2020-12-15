@@ -99,7 +99,11 @@
     <dependency>
       <groupId>com.actiontestscript</groupId>
       <artifactId>ats-automated-testing</artifactId>
+<<<<<<< Updated upstream
       <version>1.9.2</version>
+=======
+      <version>1.9.0</version>
+>>>>>>> Stashed changes
     </dependency>
   </dependencies>
 </project>

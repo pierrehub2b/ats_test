@@ -17,6 +17,7 @@
       <class name="sousscripts.DemoVerification"/>
       <class name="web.selection"/>
       <class name="web.specialKey"/>
+      <class name="web.subscripts.AngularJS_MATSelect"/>
       <class name="web.subscripts.Dialog"/>
     </classes>
   </test>

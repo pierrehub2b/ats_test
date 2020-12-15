@@ -9,6 +9,9 @@
       <class name="special_features.check_null_versus_zero"/>
       <class name="special_features.iterations"/>
       <class name="special_features.random_input"/>
+      <class name="special_features.system_data_comment"/>
+      <class name="special_features.TopVar"/>
+      <class name="web.subscripts.PRE_element"/>
     </classes>
   </test>
 </suite>

@@ -1,0 +1,18 @@
+[ats-header]
+
+author -> AGILITEST-DUPER\Emmanuel DUPERRAY
+created -> 2020-11-18 at 20:33:17
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> web_pre_element -> chrome
+goto-url -> http://localhost:9090/script
+check-count -> 1 -> PRE [text = 1]
+check-property -> background-color = rgba(0&co; 0&co; 0&co; 0) -> PRE [text = 1]
+click -> @IMAGE [error = 0.5%, source = web/subscripts/PRE_element/20201018203851.png]
+keyboard -> saisie de test -> @IMAGE [error = 0.5%, source = web/subscripts/PRE_element/20201018203851.png]
+check-property -> text = saisie de test -> PRE [text =~ (?i)saisie\s*de\s*test] -> DIV [text =~ (?i)saisie\s*de\s*test]
+channel-close -> web_pre_element

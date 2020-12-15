@@ -19,6 +19,7 @@
       <class name="web.calc_web"/>
       <class name="web.fenetres"/>
       <class name="web.selection"/>
+      <class name="web.subscripts.AngularJS_MATSelect"/>
       <class name="web.subscripts.Dialog"/>
     </classes>
   </test>

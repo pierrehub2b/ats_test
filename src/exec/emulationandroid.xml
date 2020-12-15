@@ -5,7 +5,7 @@
   <parameter name="ats.suite.description" value=""/>
   <parameter name="ats.log.level" value="all"/>
   <test name="testMain" preserve-order="true">
-    <parameter name="android_ip_port" value="192.168.0.20:8081"/>
+    <parameter name="android_ip_port" value="192.168.0.50:8082"/>
     <classes>
       <class name="android.emulateur.GenyMotion_S10_andoid10_calendar"/>
       <class name="android.emulateur.GenyMotion_S10_andoid10_horloge"/>

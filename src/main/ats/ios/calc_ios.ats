@@ -8,7 +8,11 @@ created -> 2020-10-09 at 16:44:10
 
 [ats-actions]
 
+<<<<<<< Updated upstream
 channel-start -> newChannel -> mobile://192.168.0.25:8081/com.apple.calculator
+=======
+channel-start -> newChannel -> mobile://192.168.0.35:8081/com.apple.calculator
+>>>>>>> Stashed changes
 click -> Button [innerText = tout effacer]
 click -> Button [innerText = 8]
 click -> Button [innerText = multiplier]

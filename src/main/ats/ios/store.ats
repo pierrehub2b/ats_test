@@ -9,6 +9,7 @@ created -> 2020-11-06 at 15:26:42
 [ats-actions]
 
 channel-start -> store -> mobile://192.168.0.4:8080/com.apple.mobilecal
+click [nofail] -> StaticText [innerText = Continue]
 click -> @IMAGE [error = 0.5%, source = ios/store/2020101016112.png]
 click -> Button [innerText = Search]
 keyboard -> 25 december -> SearchField [innerText = Search]
