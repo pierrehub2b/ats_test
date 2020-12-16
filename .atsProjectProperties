@@ -6,15 +6,6 @@
   <useMaven>false</useMaven>
   <autoUpdateAts>true</autoUpdateAts>
   <useProjectDomain>false</useProjectDomain>
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-  <uuid>24997BB6-609B-28D6-BE7B-65925A3EFCC2</uuid>
-=======
-  <uuid>39ACF77C-A247-5C4D-7816-159FDF4F7D28</uuid>
->>>>>>> Stashed changes
-=======
-  <uuid>D21C51A9-EFF6-E77E-DD47-421AA97750DF</uuid>
->>>>>>> parent of 533360c... updates of tests
   <groups>
     <group>bug</group>
     <group>default</group>
