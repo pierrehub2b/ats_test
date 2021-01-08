@@ -1,0 +1,36 @@
+[ats-header]
+
+author -> LAPTOP-LT8QHS42\Agilitest
+created -> 2021-01-08 at 10:31:04
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> fullScriptChannel -> chrome
+comment-step -> <i>Start full script</i>
+check-count -> 1 -> @IMAGE [error = 0.5%, source = fullScript/202108103316.png]
+click-wheel -> IMG [alt = ActionTestScript]
+window-switch -> 0
+goto-url -> http://www.agilitest.com/fichiers/test.html
+keyboard -> Agilitest -> INPUT [name = fname]
+keyboard -> text on Root
+subscript -> fullScript_Addition
+click-right -> BUTTON [text = Right Click Button]
+click-double -> BUTTON [text = Double Click Button]
+check-count -> 1 -> SPAN [id = rightclickbutton, text = OK]
+check-count -> 1 -> SPAN [id = doubleclickbutton, text = OK]
+window-resize -> x = 200, y = 500, width = 100, height = 100
+window-state -> maximize
+scroll -> 500
+click -> INPUT [name = file, type = file]
+click -> Edit [@index = 1, Value =~ (.*)+(.txt)] -> syscomp
+click -> Button [AutomationId = 1] -> syscomp
+scroll -> 500
+select -> index = 1 -> SELECT [@index = 1, value = volvo]
+scripting -> alert("test")
+click
+subscript -> fullScript_mobile
+comment -> <i>End full script</i>
+channel-close -> fullScriptChannel
