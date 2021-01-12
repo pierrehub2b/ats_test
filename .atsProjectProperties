@@ -6,6 +6,7 @@
   <useMaven>false</useMaven>
   <autoUpdateAts>true</autoUpdateAts>
   <useProjectDomain>false</useProjectDomain>
+  <uuid>2F86DE4E-C911-DA4A-9B40-F6F0FED35944</uuid>
   <groups>
     <group>bug</group>
     <group>default</group>
@@ -21,5 +22,6 @@
     <property>var_env1</property>
     <property>var_env2</property>
     <property>var_env3</property>
+    <property>mobileIpAddress</property>
   </environment>
 </atsProject>

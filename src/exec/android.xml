@@ -2,8 +2,10 @@
 <suite name="android" verbose="10">
   <parameter name="xml.report" value="true"/>
   <parameter name="visual.report" value="2"/>
+  <parameter name="ats.suite.description" value=""/>
   <parameter name="ats.log.level" value="all"/>
   <test name="testMain" preserve-order="true">
+    <parameter name="mobileIpAddress" value="192.168.1.30:8080"/>
     <parameter name="android_ip_port" value="192.168.0.13:8080"/>
     <classes>
       <class name="android.ISS_live"/>

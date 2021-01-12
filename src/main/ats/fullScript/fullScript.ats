@@ -16,7 +16,7 @@ window-switch -> 0
 goto-url -> http://www.agilitest.com/fichiers/test.html
 keyboard -> Agilitest -> INPUT [name = fname]
 keyboard -> text on Root
-subscript -> fullScript_Addition
+subscript -> fullScript.subscripts.ss_Addition
 click-right -> BUTTON [text = Right Click Button]
 click-double -> BUTTON [text = Double Click Button]
 check-count -> 1 -> SPAN [id = rightclickbutton, text = OK]
@@ -31,6 +31,6 @@ scroll -> 500
 select -> index = 1 -> SELECT [@index = 1, value = volvo]
 scripting -> alert("test")
 click
-subscript -> fullScript_mobile
 comment -> <i>End full script</i>
+subscript -> fullScript.subscripts.ss_mobile
 channel-close -> fullScriptChannel

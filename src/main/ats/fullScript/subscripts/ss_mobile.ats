@@ -1,0 +1,21 @@
+[ats-header]
+
+author -> LAPTOP-LT8QHS42\Agilitest
+created -> 2021-01-08 at 11:59:44
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> fullScript_mobile -> mobile://$env(mobileIpAddress)/com.android.calculator2
+click -> Button [viewId = digit_9]
+click -> @IMAGE [error = 0.5%, source = fullScript_mobile/202101115432.png]
+click -> Button [viewId = digit_1]
+click -> Button [viewId = eq]
+check-property -> text = 10 -> EditText [viewId = formula]
+button -> volumeUp
+//property-set -> wifiEnabled -> false
+property-set -> wifiEnabled -> true
+button -> volumeDown
+channel-close -> fullScript_mobile

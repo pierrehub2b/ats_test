@@ -8,9 +8,9 @@ created -> 2021-01-08 at 11:03:44
 
 [ats-actions]
 
-click -> @IMAGE [error = 0.5%, source = fullScript_Addition/20210811535.png]
+click [nofail] -> @IMAGE [error = 0.5%, source = fullScript_Addition/20210811535.png]
 click -> INPUT [class = calc_btn, value = 1]
-click -> @IMAGE [error = 0.5%, source = fullScript/20210811258.png]
+click [nofail] -> @IMAGE [error = 0.5%, source = fullScript/20210811258.png]
 click -> INPUT [class = calc_btn, value = 9]
 click -> INPUT [type = button, value = &eq;]
-check-property -> value = 10 -> INPUT [id = calc_resultat]
+check-property [nofail] -> value = 10 -> INPUT [id = calc_resultat]
