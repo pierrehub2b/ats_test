@@ -5,32 +5,38 @@ created -> 2021-01-08 at 10:31:04
 
 [ats-variables]
 
+var -> uuid -> $uuid
 
 [ats-actions]
 
 channel-start -> fullScriptChannel -> chrome
-comment-step -> <i>Start full script</i>
+channel-start -> textEditor -> file:///C:/Windows/notepad.exe
+channel-switch -> fullScriptChannel
+comment-step -> <i>Occurence checking</i>
 check-count -> 1 -> @IMAGE [error = 0.5%, source = fullScript/202108103316.png]
+check-count [nofail] -> 2 -> IMG
+check-count [try = -3] -> 10 -> DIV
+comment-step -> <i>Window management</i>
 click-wheel -> IMG [alt = ActionTestScript]
 window-switch -> 0
-goto-url -> http://www.agilitest.com/fichiers/test.html
-keyboard -> Agilitest -> INPUT [name = fname]
-keyboard -> text on Root
-subscript -> fullScript.subscripts.ss_Addition
-click-right -> BUTTON [text = Right Click Button]
-click-double -> BUTTON [text = Double Click Button]
-check-count -> 1 -> SPAN [id = rightclickbutton, text = OK]
-check-count -> 1 -> SPAN [id = doubleclickbutton, text = OK]
 window-resize -> x = 200, y = 500, width = 100, height = 100
 window-state -> maximize
-scroll -> 500
+comment -> <i>Basic actions</i>
+goto-url -> http://www.agilitest.com/fichiers/test.html
+subscript -> fullScript.subscripts.ss_textActions
+subscript -> fullScript.subscripts.ss_Addition
+subscript -> fullScript.subscripts.ss_clickActions
 click -> INPUT [name = file, type = file]
 click -> Edit [@index = 1, Value =~ (.*)+(.txt)] -> syscomp
-click -> Button [AutomationId = 1] -> syscomp
+click [try = 12] -> Button [AutomationId = 1] -> syscomp
 scroll -> 500
 select -> index = 1 -> SELECT [@index = 1, value = volvo]
 scripting -> alert("test")
 click
 comment -> <i>End full script</i>
-subscript -> fullScript.subscripts.ss_mobile
 channel-close -> fullScriptChannel
+subscript -> fullScript.subscripts.ss_mobile
+comment -> <i>Supose to be on notePad application</i>
+keyboard -> $uuid$key(ENTER) -> Edit [ClassName = Edit]
+check-count [nofail] -> 1 -> @IMAGE [error = 0.5%, source = fullScript/fullScript/2021013172624.png]
+channel-close -> textEditor

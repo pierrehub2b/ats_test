@@ -1,0 +1,19 @@
+[ats-header]
+
+author -> LAPTOP-LT8QHS42\Agilitest
+created -> 2021-01-13 at 16:57:35
+
+[ats-variables]
+
+
+[ats-actions]
+
+keyboard -> text on Root
+keyboard -> Agilitest -> INPUT [name = fname]
+comment -> <i>Special keys</i>
+keyboard -> $key(CONTROL--A)$key(CONTROL--C) -> INPUT [name = fname]
+keyboard -> $key(CONTROL--V) -> INPUT [name = lname]
+keyboard -> $key(ENTER) -> INPUT [name = lname]
+comment -> <i>After a ENTER key, form will be empty</i>
+check-property -> value =  -> INPUT [name = fname]
+check-property -> value =  -> INPUT [name = lname]
