@@ -11,7 +11,7 @@ created -> 2021-01-13 at 17:09:21
 //click-right -> BUTTON [text = Right Click Button]
 click
 click-double -> BUTTON [text = Double Click Button]
-check-count -> 1 -> SPAN [id = rightclickbutton, text = OK]
+//check-count -> 1 -> SPAN [id = rightclickbutton, text = OK]
 check-count -> 1 -> SPAN [id = doubleclickbutton, text = OK]
 goto-url -> https://www.w3schools.com/html/tryit.asp?filename=tryhtml5_draganddrop
 click [nofail, delay = 5] -> DIV [id = accept-choices]
