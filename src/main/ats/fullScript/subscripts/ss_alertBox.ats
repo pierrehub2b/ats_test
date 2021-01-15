@@ -1,0 +1,24 @@
+[ats-header]
+
+author -> LAPTOP-LT8QHS42\Agilitest
+created -> 2021-01-14 at 16:08:46
+
+[ats-variables]
+
+
+[ats-actions]
+
+channel-start -> newChannel -> chrome
+goto-url -> https://jsfiddle.net/rag3lib/pkxnb9ja/2/
+click -> BUTTON [text = confirm] -> IFRAME [name = result]
+click -> dialog [type = accept]
+click -> BUTTON [text = confirm] -> IFRAME [name = result]
+click -> dialog [type = dismiss]
+click -> BUTTON [text = prompt] -> IFRAME [name = result]
+keyboard -> Agilitest -> dialog
+click -> dialog [type = accept]
+click -> BUTTON [text = confirm] -> IFRAME [name = result]
+check-count -> 1 -> dialog
+property-get -> text => propertyVar -> dialog
+check-property -> text = $var(propertyVar) -> dialog
+channel-close -> newChannel

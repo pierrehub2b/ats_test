@@ -34,6 +34,7 @@ select -> index = 1 -> SELECT [@index = 1, value = volvo]
 scripting -> alert("test")
 click
 comment -> <i>End full script</i>
+subscript -> fullScript.subscripts.ss_alertBox
 channel-close -> fullScriptChannel
 subscript -> fullScript.subscripts.ss_mobile
 comment -> <i>Supose to be on notePad application</i>
