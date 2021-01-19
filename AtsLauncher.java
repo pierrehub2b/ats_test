@@ -88,7 +88,7 @@ public class AtsLauncher {
 
 			printLog("Generate java files : " + Paths.get("target", "generated").toString());
 			execute(
-					jdkHomePath + "/bin/java.exe -cp " + atsHomePath + "/libs/* com.ats.generator.Generator -prj " + currentDirectory.getAbsolutePath() + " -dest target/generated -force -suites " + suiteFiles, 
+					jdkHomePath + "/bin/java.exe -cp " + atsHomePath + "/libs/* com.ats.generator.Generator -prj \"" + currentDirectory.getAbsolutePath() + "\" -dest target/generated -force -suites " + suiteFiles, 
 					envArray, 
 					currentDirectory);
 
