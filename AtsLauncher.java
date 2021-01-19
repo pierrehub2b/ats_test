@@ -83,6 +83,7 @@ public class AtsLauncher {
 			}
 
 			File currentDirectory = Paths.get("").toAbsolutePath().toFile();
+			printLog("Current directory : " + currentDirectory.getAbsolutePath());
 			String[] envArray = envList.toArray(new String[envList.size()]);
 
 			printLog("Generate java files : " + Paths.get("target", "generated").toString());
@@ -108,7 +109,7 @@ public class AtsLauncher {
 					Paths.get("target", "generated").toAbsolutePath().toFile());
 
 			printLog("Launch suites execution : " + suiteFiles);
-			execute(jdkHomePath + "/bin/java.exe -Doutput-folder=target/ats-output -Dats-report=" + reportLevel + " -cp " + atsHomePath + "/libs/*" + File.pathSeparator + "target/classes" + File.pathSeparator + "lib/* org.testng.TestNG target/suites.xml", 
+			execute(jdkHomePath + "/bin/java.exe -Doutput-folder=target/ats-output -Dats-report=" + reportLevel + " -cp " + atsHomePath + "/libs/*" + File.pathSeparator + "target/classes" + File.pathSeparator + "libs/* org.testng.TestNG target/suites.xml", 
 					envArray, 
 					currentDirectory);
 		}
