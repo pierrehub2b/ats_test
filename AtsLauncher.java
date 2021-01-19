@@ -104,7 +104,7 @@ public class AtsLauncher {
 
 			printLog("Compile classes : " + Paths.get("target", "classes").toString());
 			Files.write(Paths.get("target","generated", "JavaClasses.list"), files.toString().getBytes(), StandardOpenOption.CREATE);
-			execute(jdkHomePath + "/bin/javac.exe -cp " + atsHomePath + "/libs/* -d " + classFolder.toString() + " @JavaClasses.list", 
+			execute(jdkHomePath + "/bin/javac.exe -cp " + atsHomePath + "/libs/* -d \"" + classFolder.toString() + "\" @JavaClasses.list", 
 					envArray, 
 					Paths.get("target", "generated").toAbsolutePath().toFile());
 
