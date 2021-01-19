@@ -56,7 +56,7 @@ public class AtsLauncher {
 		deleteDirectory(Paths.get("target"));
 		deleteDirectory(Paths.get("test-output"));
 
-		final Path atsFolder = Paths.get(System.getProperty("user.home"),".actiontestscript");
+		final Path atsFolder = Paths.get(System.getProperty("user.home"), ".actiontestscript");
 
 		final Path atsTools = atsFolder.resolve("tools");
 		printLog("Using tools folder : " + atsTools.toString());
@@ -88,7 +88,7 @@ public class AtsLauncher {
 
 			printLog("Generate java files : " + Paths.get("target", "generated").toString());
 			execute(
-					jdkHomePath + "/bin/java.exe -cp " + atsHomePath + "/libs/* com.ats.generator.Generator -prj \"" + currentDirectory.getAbsolutePath() + "\" -dest target/generated -force -suites " + suiteFiles, 
+					"\"" + jdkHomePath + "/bin/java.exe\" -cp " + atsHomePath + "/libs/* com.ats.generator.Generator -prj \"" + currentDirectory.getAbsolutePath() + "\" -dest target/generated -force -suites " + suiteFiles, 
 					envArray, 
 					currentDirectory);
 
@@ -103,13 +103,13 @@ public class AtsLauncher {
 			copyFolder(Paths.get("src", "assets"), classFolderAssets);
 
 			printLog("Compile classes : " + Paths.get("target", "classes").toString());
-			Files.write(Paths.get("target","generated", "JavaClasses.list"), files.toString().getBytes(), StandardOpenOption.CREATE);
-			execute(jdkHomePath + "/bin/javac.exe -cp " + atsHomePath + "/libs/* -d \"" + classFolder.toString() + "\" @JavaClasses.list", 
+			Files.write(Paths.get("target", "generated", "JavaClasses.list"), files.toString().getBytes(), StandardOpenOption.CREATE);
+			execute("\"" + jdkHomePath + "/bin/javac.exe\" -cp " + atsHomePath + "/libs/* -d \"" + classFolder.toString() + "\" @JavaClasses.list", 
 					envArray, 
 					Paths.get("target", "generated").toAbsolutePath().toFile());
 
 			printLog("Launch suites execution : " + suiteFiles);
-			execute(jdkHomePath + "/bin/java.exe -Doutput-folder=target/ats-output -Dats-report=" + reportLevel + " -cp " + atsHomePath + "/libs/*" + File.pathSeparator + "target/classes" + File.pathSeparator + "libs/* org.testng.TestNG target/suites.xml", 
+			execute("\"" + jdkHomePath + "/bin/java.exe\" -Doutput-folder=target/ats-output -Dats-report=" + reportLevel + " -cp " + atsHomePath + "/libs/*" + File.pathSeparator + "target/classes" + File.pathSeparator + "libs/* org.testng.TestNG target/suites.xml", 
 					envArray, 
 					currentDirectory);
 		}
