@@ -29,7 +29,7 @@ public class AtsLauncher {
 	private static String atsToolsUrl = "http://www.actiontestscript.com";
 
 	private static void printLog(String data) {
-		System.out.println("[ATS-TOOLS] " + data);
+		System.out.println("[ATS-LAUNCHER] " + data);
 	}
 
 	public static void main(String[] args) throws IOException, InterruptedException {
