@@ -2,6 +2,8 @@
 <suite name="toverify" verbose="10">
   <parameter name="ats.suite.description" value=""/>
   <parameter name="ats.log.level" value="warning"/>
+  <parameter name="ats.suite.description" value=""/>
+  <parameter name="ats.log.level" value="warning"/>
   <test name="testMain" preserve-order="true">
     <parameter name="browser" value="chrome"/>
     <classes>
