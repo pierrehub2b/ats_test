@@ -16,6 +16,10 @@
   <parameter name="visual.report" value="4"/>
   <parameter name="ats.suite.description" value="simple description feature"/>
   <parameter name="ats.log.level" value="all"/>
+  <parameter name="xml.report" value="true"/>
+  <parameter name="visual.report" value="4"/>
+  <parameter name="ats.suite.description" value="simple description feature"/>
+  <parameter name="ats.log.level" value="all"/>
   <test name="testMain" preserve-order="true">
     <classes>
       <class name="special_features.iterations"/>
