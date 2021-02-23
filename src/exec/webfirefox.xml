@@ -8,6 +8,14 @@
   <parameter name="visual.report" value="2"/>
   <parameter name="ats.suite.description" value=""/>
   <parameter name="ats.log.level" value="all"/>
+  <parameter name="xml.report" value="true"/>
+  <parameter name="visual.report" value="2"/>
+  <parameter name="ats.suite.description" value=""/>
+  <parameter name="ats.log.level" value="all"/>
+  <parameter name="xml.report" value="true"/>
+  <parameter name="visual.report" value="2"/>
+  <parameter name="ats.suite.description" value=""/>
+  <parameter name="ats.log.level" value="all"/>
   <test name="testMain" preserve-order="true">
     <parameter name="browser" value="firefox"/>
     <classes>
